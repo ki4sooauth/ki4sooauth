@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN" "http://tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+	<!-- 通用字典添加 -->
+	<rule>
+		<from>^/dictadd$</from>
+		<to>/mis.do?method=doService&amp;CType=sysDictionaryService&amp;MType=addDic</to>
+	</rule>
+	<!-- 通用字典编辑 -->
+	<rule>
+		<from>^/dictedit$</from>
+		<to>/mis.do?method=doService&amp;CType=sysDictionaryService&amp;MType=editDic</to>
+	</rule>
+	<!-- 通用字典删除 -->
+	<rule>
+		<from>^/dictdel$</from>
+		<to>/mis.do?method=doService&amp;CType=sysDictionaryService&amp;MType=delDic</to>
+	</rule>
+	<!-- 查询通用字典详细信息 -->
+	<rule>
+		<from>^/dictDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=sysDictionaryService&amp;MType=findSysDictDetail</to>
+	</rule>
+	<!-- 查询通用字典信息 -->
+	<rule>
+		<from>^/dictAllInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=sysDictionaryService&amp;MType=findAllDict</to>
+	</rule>
+	<!-- 提示信息字典添加 -->
+	<rule>
+		<from>^/dictaddProm$</from>
+		<to>/mis.do?method=doService&amp;CType=promptingDictionaryService&amp;MType=addPromptingDic</to>
+	</rule>
+	<!-- 提示信息字典编辑 -->
+	<rule>
+		<from>^/dicteditProm$</from>
+		<to>/mis.do?method=doService&amp;CType=promptingDictionaryService&amp;MType=editPromptingDic</to>
+	</rule>
+	<!-- 提示信息字典删除 -->
+	<rule>
+		<from>^/dictdelProm$</from>
+		<to>/mis.do?method=doService&amp;CType=promptingDictionaryService&amp;MType=delPromptingDic</to>
+	</rule>
+	<!-- 查询提示信息字典信息 -->
+	<rule>
+		<from>^/dictProtingInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=promptingDictionaryService&amp;MType=findPromptingMessageDict</to>
+	</rule>
+	<!-- 查询提示信息字典详细信息 -->
+	<rule>
+		<from>^/dictProtingDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=promptingDictionaryService&amp;MType=findPromptingMessageDetail</to>
+	</rule>
+	<!-- 省份城市字典添加 -->
+	<rule>
+		<from>^/dictaddUser$</from>
+		<to>/mis.do?method=doService&amp;CType=userCityDictionaryService&amp;MType=addUserDic</to>
+	</rule>
+	<!-- 省份城市字典编辑 -->
+	<rule>
+		<from>^/dicteditUser$</from>
+		<to>/mis.do?method=doService&amp;CType=userCityDictionaryService&amp;MType=editUserDic</to>
+	</rule>
+	<!-- 省份城市字典删除 -->
+	<rule>
+		<from>^/dictdelUser$</from>
+		<to>/mis.do?method=doService&amp;CType=userCityDictionaryService&amp;MType=delUserDic</to>
+	</rule>
+	<!-- 查询省份城市字典信息 -->
+	<rule>
+		<from>^/dictUserInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=userCityDictionaryService&amp;MType=findUserCityareaDict</to>
+	</rule>
+	<!-- 查询省份城市字典详细信息 -->
+	<rule>
+		<from>^/dictUserDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=userCityDictionaryService&amp;MType=findUserCityDetail</to>
+	</rule>
+	<!-- 商家类型字典添加 -->
+	<rule>
+		<from>^/dictaddShopTy$</from>
+		<to>/mis.do?method=doService&amp;CType=shopTypeDictionaryService&amp;MType=addShopTypeDic</to>
+	</rule>
+	<!-- 商家类型字典编辑 -->
+	<rule>
+		<from>^/dicteditShopTy$</from>
+		<to>/mis.do?method=doService&amp;CType=shopTypeDictionaryService&amp;MType=editShopTypeDic</to>
+	</rule>
+	<!-- 商家类型字典删除 -->
+	<rule>
+		<from>^/dictdelShopTy$</from>
+		<to>/mis.do?method=doService&amp;CType=shopTypeDictionaryService&amp;MType=delShopTypeDic</to>
+	</rule>
+	<!-- 查询商家类型字典信息 -->
+	<rule>
+		<from>^/dictShopInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=shopTypeDictionaryService&amp;MType=findShopTypeDict</to>
+	</rule>
+	<!-- 查询商家类型字典详细信息 -->
+	<rule>
+		<from>^/dictShopDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=shopTypeDictionaryService&amp;MType=findShopTypeDetail</to>
+	</rule>
+	<!-- 商家服务工具字典添加 -->
+	<rule>
+		<from>^/dictaddShopTo$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolDictionaryService&amp;MType=addShopToolDic</to>
+	</rule>
+	<!-- 商家服务工具字典编辑 -->
+	<rule>
+		<from>^/dicteditShopTo$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolDictionaryService&amp;MType=editShopToolDic</to>
+	</rule>
+	<!-- 商家服务工具字典删除 -->
+	<rule>
+		<from>^/dictdelShopTo$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolDictionaryService&amp;MType=delShopToolDic</to>
+	</rule>
+	<!-- 查询商家服务工具字典信息 -->
+	<rule>
+		<from>^/dictShopToolInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolDictionaryService&amp;MType=findShopToolDict</to>
+	</rule>
+	<!-- 查询商家服务工具字典详细信息 -->
+	<rule>
+		<from>^/dictShopToolDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolDictionaryService&amp;MType=findShopToolDetail</to>
+	</rule>
+	<!-- 营销渠道字典添加 -->
+	<rule>
+		<from>^/dictaddMark$</from>
+		<to>/mis.do?method=doService&amp;CType=marketingDictionaryService&amp;MType=addMarketingDic</to>
+	</rule>
+	<!-- 营销渠道字典编辑 -->
+	<rule>
+		<from>^/dicteditMark$</from>
+		<to>/mis.do?method=doService&amp;CType=marketingDictionaryService&amp;MType=editMarketingDic</to>
+	</rule>
+	<!-- 营销渠道字典删除 -->
+	<rule>
+		<from>^/dictdelMark$</from>
+		<to>/mis.do?method=doService&amp;CType=marketingDictionaryService&amp;MType=delMarketingDic</to>
+	</rule>
+	<!-- 查询营销渠道字典信息 -->
+	<rule>
+		<from>^/dictMarketingInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=marketingDictionaryService&amp;MType=findMarketingChannelDict</to>
+	</rule>
+	<!-- 查询营销渠道字典详细信息 -->
+	<rule>
+		<from>^/dictMarketingDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=marketingDictionaryService&amp;MType=findMarketingDetail</to>
+	</rule>
+	<!-- 购物清单商品类型字典添加 -->
+	<rule>
+		<from>^/dictaddShopp$</from>
+		<to>/mis.do?method=doService&amp;CType=shoppingDictionaryService&amp;MType=addShoppingDic</to>
+	</rule>
+	<!-- 购物清单商品类型字典编辑 -->
+	<rule>
+		<from>^/dicteditShopp$</from>
+		<to>/mis.do?method=doService&amp;CType=shoppingDictionaryService&amp;MType=editShoppingDic</to>
+	</rule>
+	<!-- 购物清单商品类型字典删除 -->
+	<rule>
+		<from>^/dictdelShopp$</from>
+		<to>/mis.do?method=doService&amp;CType=shoppingDictionaryService&amp;MType=delShoppingDic</to>
+	</rule>
+	<!-- 查询购物清单商品类型字典信息 -->
+	<rule>
+		<from>^/dictShoppingInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=shoppingDictionaryService&amp;MType=findShoppingListDict</to>
+	</rule>
+	<!-- 查询购物清单商品类型字典详细信息 -->
+	<rule>
+		<from>^/dictShoppingDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=shoppingDictionaryService&amp;MType=findShoppingListDetail</to>
+	</rule>
+	<!-- 精品广场商品类型字典添加 -->
+	<rule>
+		<from>^/dictaddQual$</from>
+		<to>/mis.do?method=doService&amp;CType=qualityDictionaryService&amp;MType=addQualityDic</to>
+	</rule>
+	<!-- 精品广场商品类型字典编辑 -->
+	<rule>
+		<from>^/dicteditQual$</from>
+		<to>/mis.do?method=doService&amp;CType=qualityDictionaryService&amp;MType=editQualityDic</to>
+	</rule>
+	<!-- 精品广场商品类型字典删除 -->
+	<rule>
+		<from>^/dictdelQual$</from>
+		<to>/mis.do?method=doService&amp;CType=qualityDictionaryService&amp;MType=delQualityDic</to>
+	</rule>
+	<!-- 查询精品广场商品类型字典信息 -->
+	<rule>
+		<from>^/dictQualityInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=qualityDictionaryService&amp;MType=findQualitySquareDict</to>
+	</rule>
+	<!-- 查询精品广场商品类型字典详细信息 -->
+	<rule>
+		<from>^/dictQualityDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=qualityDictionaryService&amp;MType=findQualitySquareDetail</to>
+	</rule>
+	<!-- 手机型号字典添加 -->
+	<rule>
+		<from>^/dictaddPhone$</from>
+		<to>/mis.do?method=doService&amp;CType=phoneDictionaryService&amp;MType=addPhoneDic</to>
+	</rule>
+	<!-- 手机型号字典编辑 -->
+	<rule>
+		<from>^/dicteditPhone$</from>
+		<to>/mis.do?method=doService&amp;CType=phoneDictionaryService&amp;MType=editPhoneDic</to>
+	</rule>
+	<!-- 手机型号字典删除 -->
+	<rule>
+		<from>^/dictdelPhone$</from>
+		<to>/mis.do?method=doService&amp;CType=phoneDictionaryService&amp;MType=delPhoneDic</to>
+	</rule>
+	<!-- 查询手机型号字典信息 -->
+	<rule>
+		<from>^/dictPhoneInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=phoneDictionaryService&amp;MType=findPhoneAllDict</to>
+	</rule>
+	<!-- 查询手机型号字典详细信息 -->
+	<rule>
+		<from>^/dictPhoneDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=phoneDictionaryService&amp;MType=findPhoneDictDetail</to>
+	</rule>
+	<!-- 商家平台界面名称管理字典添加 -->
+	<rule>
+		<from>^/dictaddShopIn$</from>
+		<to>/mis.do?method=doService&amp;CType=shopInterfaceDictionaryService&amp;MType=addShopInterfaceDic</to>
+	</rule>
+	<!-- 商家平台界面名称管理字典编辑 -->
+	<rule>
+		<from>^/dicteditShopIn$</from>
+		<to>/mis.do?method=doService&amp;CType=shopInterfaceDictionaryService&amp;MType=editShopInterfaceDic</to>
+	</rule>
+	<!-- 商家平台界面名称管理字典删除 -->
+	<rule>
+		<from>^/dictdelShopIn$</from>
+		<to>/mis.do?method=doService&amp;CType=shopInterfaceDictionaryService&amp;MType=delShopInterfaceDic</to>
+	</rule>
+	<!-- 查询商家平台界面名称管理字典信息 -->
+	<rule>
+		<from>^/dictShopInInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=shopInterfaceDictionaryService&amp;MType=findShopInterfaceDict</to>
+	</rule>
+	<!-- 查询商家平台界面名称管理字典详细信息 -->
+	<rule>
+		<from>^/dictShopInDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=shopInterfaceDictionaryService&amp;MType=findShopInterfaceDetail</to>
+	</rule>
+	<!-- 接口基础信息表添加 -->
+	<rule>
+		<from>^/dictaddInterBase$</from>
+		<to>/mis.do?method=doService&amp;CType=interFaceBaseDictionaryService&amp;MType=addInterfactBase</to>
+	</rule>
+	<!-- 接口基础信息表删除 -->
+	<rule>
+		<from>^/dictdelInterBase$</from>
+		<to>/mis.do?method=doService&amp;CType=interFaceBaseDictionaryService&amp;MType=delInterfactBase</to>
+	</rule>
+	<!-- 接口基础信息表编辑 -->
+	<rule>
+		<from>^/dicteditInterBase$</from>
+		<to>/mis.do?method=doService&amp;CType=interFaceBaseDictionaryService&amp;MType=editInterfactBase</to>
+	</rule>
+	<!-- 查询接口基础信息表信息 -->
+	<rule>
+		<from>^/dictInterBaseInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=interFaceBaseDictionaryService&amp;MType=findInterfactBaseAllDict</to>
+	</rule>
+	<!-- 查询接口基础信息表详细信息 -->
+	<rule>
+		<from>^/dictInterBaseDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=interFaceBaseDictionaryService&amp;MType=findInterfactBaseDetail</to>
+	</rule>
+	<!-- 接口请求参数信息表添加 -->
+	<rule>
+		<from>^/dictaddInterRequ$</from>
+		<to>/mis.do?method=doService&amp;CType=interfaceRequestDictionaryService&amp;MType=addInterfactRequest</to>
+	</rule>
+	<!-- 接口请求参数信息表删除 -->
+	<rule>
+		<from>^/dictdelInterRequ$</from>
+		<to>/mis.do?method=doService&amp;CType=interfaceRequestDictionaryService&amp;MType=delInterfactRequest</to>
+	</rule>
+	<!-- 接口请求参数信息表编辑 -->
+	<rule>
+		<from>^/dicteditInterRequ$</from>
+		<to>/mis.do?method=doService&amp;CType=interfaceRequestDictionaryService&amp;MType=editInterfactRequest</to>
+	</rule>
+	<!-- 查询接口请求参数信息表信息 -->
+	<rule>
+		<from>^/dictInterRequInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=interfaceRequestDictionaryService&amp;MType=findInterfactRequestAllDict</to>
+	</rule>
+	<!-- 查询接口请求参数信息表详细信息 -->
+	<rule>
+		<from>^/dictInterRequDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=interfaceRequestDictionaryService&amp;MType=findInterfactRequestDetail</to>
+	</rule>
+	<!-- 校验接口编码是否存在 -->
+	<rule>
+		<from>^/dictInterBaseCheckIcode$</from>
+		<to>/mis.do?method=doService&amp;CType=interfaceRequestDictionaryService&amp;MType=checkIcode</to>
+	</rule>
+	<!-- 后台管理权限表添加 -->
+	<rule>
+		<from>^/dictaddSysAuth$</from>
+		<to>/mis.do?method=doService&amp;CType=sysAuthorityDictionaryService&amp;MType=addSysAuthority</to>
+	</rule>
+	<!-- 后台管理权限表删除 -->
+	<rule>
+		<from>^/dictdelSysAuth$</from>
+		<to>/mis.do?method=doService&amp;CType=sysAuthorityDictionaryService&amp;MType=delSysAuthority</to>
+	</rule>
+	<!-- 后台管理权限表编辑 -->
+	<rule>
+		<from>^/dicteditSysAuth$</from>
+		<to>/mis.do?method=doService&amp;CType=sysAuthorityDictionaryService&amp;MType=editSysAuthority</to>
+	</rule>
+	<!-- 查询后台管理权限表信息 -->
+	<rule>
+		<from>^/dictSysAuthInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=sysAuthorityDictionaryService&amp;MType=findSysAuthorityAllDict</to>
+	</rule>
+	<!-- 查询后台管理权限表详细信息 -->
+	<rule>
+		<from>^/dictSysAuthDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=sysAuthorityDictionaryService&amp;MType=findSysAuthorityDetail</to>
+	</rule>
+	<!-- 商家管理权限表添加 -->
+	<rule>
+		<from>^/dictaddShopAuth$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAuthorityDictionaryService&amp;MType=addShopAuthority</to>
+	</rule>
+	<!-- 商家管理权限表删除 -->
+	<rule>
+		<from>^/dictdelShopAuth$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAuthorityDictionaryService&amp;MType=delShopAuthority</to>
+	</rule>
+	<!-- 商家管理权限表编辑 -->
+	<rule>
+		<from>^/dicteditShopAuth$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAuthorityDictionaryService&amp;MType=editShopAuthority</to>
+	</rule>
+	<!-- 查询商家管理权限表信息 -->
+	<rule>
+		<from>^/dictShopAuthInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAuthorityDictionaryService&amp;MType=findShopAuthorityAllDict</to>
+	</rule>
+	<!-- 查询商家管理权限表详细信息 -->
+	<rule>
+		<from>^/dictShopAuthDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAuthorityDictionaryService&amp;MType=findShopAuthorityDetail</to>
+	</rule>
+	<!-- 批量新增通用字典表 -->
+	<rule>
+		<from>^/dictImport$</from>
+		<to>/mis.do?method=doService&amp;CType=sysDictionaryService&amp;MType=addAllDicList</to>
+	</rule>
+	<!-- 批量新增提示信息字典表 -->
+	<rule>
+		<from>^/dictImportProm$</from>
+		<to>/mis.do?method=doService&amp;CType=promptingDictionaryService&amp;MType=addAllPromptingMessage</to>
+	</rule>
+	<!-- 批量新增省份城市字典表 -->
+	<rule>
+		<from>^/dictImportUser$</from>
+		<to>/mis.do?method=doService&amp;CType=userCityDictionaryService&amp;MType=addAllUserCity</to>
+	</rule>
+	<!-- 批量新增商家类型字典表 -->
+	<rule>
+		<from>^/dictImportShopTy$</from>
+		<to>/mis.do?method=doService&amp;CType=shopTypeDictionaryService&amp;MType=addAllShopType</to>
+	</rule>
+	<!-- 批量新增商家服务工具字典表 -->
+	<rule>
+		<from>^/dictImportShopTo$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolDictionaryService&amp;MType=addAllShopTool</to>
+	</rule>
+	<!-- 批量新增营销渠道字典表 -->
+	<rule>
+		<from>^/dictImportMark$</from>
+		<to>/mis.do?method=doService&amp;CType=marketingDictionaryService&amp;MType=addAllMarketingChannelDict</to>
+	</rule>
+	<!-- 批量新增购物清单商品类型字典表 -->
+	<rule>
+		<from>^/dictImportShopp$</from>
+		<to>/mis.do?method=doService&amp;CType=shoppingDictionaryService&amp;MType=addAllShoppingList</to>
+	</rule>
+	<!-- 批量新增精品广场商品类型字典表 -->
+	<rule>
+		<from>^/dictImportQual$</from>
+		<to>/mis.do?method=doService&amp;CType=qualityDictionaryService&amp;MType=addAllQualitySquare</to>
+	</rule>
+	<!-- 批量新增商家平台界面名称管理字典表 -->
+	<rule>
+		<from>^/dictImportShopIn$</from>
+		<to>/mis.do?method=doService&amp;CType=shopInterfaceDictionaryService&amp;MType=addAllShopInterface</to>
+	</rule>
+	<!-- 批量新增接口基础信息表 -->
+	<rule>
+		<from>^/dictImportInterBase$</from>
+		<to>/mis.do?method=doService&amp;CType=interFaceBaseDictionaryService&amp;MType=addAllInterfactBaseDetail</to>
+	</rule>
+	<!-- 批量新增接口请求参数信息表 -->
+	<rule>
+		<from>^/dictImportInterRequ$</from>
+		<to>/mis.do?method=doService&amp;CType=interfaceRequestDictionaryService&amp;MType=addAllInterfactRequestDetail</to>
+	</rule>
+	<!-- 批量新增后台管理权限表 -->
+	<rule>
+		<from>^/dictImportSysAuth$</from>
+		<to>/mis.do?method=doService&amp;CType=sysAuthorityDictionaryService&amp;MType=addAllSysAuthority</to>
+	</rule>
+	<!-- 批量新增商家管理权限表 -->
+	<rule>
+		<from>^/dictImportShopAuth$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAuthorityDictionaryService&amp;MType=addAllShopAuthority</to>
+	</rule>
+	<!-- 登录校验 -->
+	<rule>
+		<from>^/checklogin$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=checkLogin</to>
+	</rule>
+	<!-- 修改密码 -->
+	<rule>
+		<from>^/modifyPwd$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=modifyPassword</to>
+	</rule>
+	<!-- 校验用户名是否存在 -->
+	<rule>
+		<from>^/checkUserIsExist$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=isExistUser</to>
+	</rule>
+	<!-- 保存管理员信息 -->
+	<rule>
+		<from>^/saveSysUser$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=addSysUser</to>
+	</rule>
+	<!-- 查询管理员详细信息 -->
+	<rule>
+		<from>^/sysUserDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=searchSysUserDetail</to>
+	</rule>
+	<!-- 修改管理员信息 -->
+	<rule>
+		<from>^/updateSysUser$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=updateSysUser</to>
+	</rule>
+	<!-- 删除管理员信息 -->
+	<rule>
+		<from>^/delSysUser$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=delSysUser</to>
+	</rule>
+	<!-- 查询所有管理员信息 -->
+	<rule>
+		<from>^/findAllSysUser$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=searchAllSysUser</to>
+	</rule>
+	<!-- 用户分配角色 -->
+	<rule>
+		<from>^/saveUserRole$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=allotRole</to>
+	</rule>
+	<!-- 查询所有角色 -->
+	<rule>
+		<from>^/searchAllListRole$</from>
+		<to>/mis.do?method=doService&amp;CType=roleService&amp;MType=searchAllListRole</to>
+	</rule>
+	<!-- 查询登录用户信息 -->
+	<rule>
+		<from>^/searchUserAuthority$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=searchUserAuthority</to>
+	</rule>
+	<!-- 查询用户拥有的角色 -->
+	<rule>
+		<from>^/searchUserRole$</from>
+		<to>/mis.do?method=doService&amp;CType=sysUserService&amp;MType=searchUserRoles</to>
+	</rule>
+	<!-- 查询所有日志 -->
+	<rule>
+		<from>^/searchAllLog$</from>
+		<to>/mis.do?method=doService&amp;CType=logService&amp;MType=searchLogInfo</to>
+	</rule>
+	<!-- 保存日志 -->
+	<rule>
+		<from>^/saveLog$</from>
+		<to>/mis.do?method=doService&amp;CType=logService&amp;MType=saveLog</to>
+	</rule>
+	<!-- 添加角色 -->
+	<rule>
+		<from>^/addRole$</from>
+		<to>/mis.do?method=doService&amp;CType=roleService&amp;MType=addRole</to>
+	</rule>
+	<!-- 查看角色详细信息 -->
+	<rule>
+		<from>^/searchRoleDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=roleService&amp;MType=searchRoleDetail</to>
+	</rule>
+	<!-- 修改角色 -->
+	<rule>
+		<from>^/updateRole$</from>
+		<to>/mis.do?method=doService&amp;CType=roleService&amp;MType=editRole</to>
+	</rule>
+	<!-- 删除角色 -->
+	<rule>
+		<from>^/delRole$</from>
+		<to>/mis.do?method=doService&amp;CType=roleService&amp;MType=delRole</to>
+	</rule>
+	<!-- 查询所有角色(分页) -->
+	<rule>
+		<from>^/searchAllRole$</from>
+		<to>/mis.do?method=doService&amp;CType=roleService&amp;MType=searchAllRoles</to>
+	</rule>
+	<!-- 查询所有权限 -->
+	<rule>
+		<from>^/searchAllAuthority$</from>
+		<to>/mis.do?method=doService&amp;CType=roleService&amp;MType=searchAllAuthorities</to>
+	</rule>
+	<!-- 查询角色拥有权限 -->
+	<rule>
+		<from>^/searchRoleAuthority$</from>
+		<to>/mis.do?method=doService&amp;CType=roleService&amp;MType=searchRoleAuthority</to>
+	</rule>
+	<!-- 保存角色权限 -->
+	<rule>
+		<from>^/saveRoleAuthority$</from>
+		<to>/mis.do?method=doService&amp;CType=roleService&amp;MType=setRoleAuthority</to>
+	</rule>
+	<!-- 审核商家（是否通过） -->
+	<rule>
+		<from>^/auditShop$</from>
+		<to>/mis.do?method=doService&amp;CType=shopService&amp;MType=verify</to>
+	</rule>
+	<!-- 审核商家（未通过） -->
+	<rule>
+		<from>^/notApprovedShop$</from>
+		<to>/mis.do?method=doService&amp;CType=shopService&amp;MType=notApproved</to>
+	</rule>
+	<!-- 锁定商家 -->
+	<rule>
+		<from>^/lockShop$</from>
+		<to>/mis.do?method=doService&amp;CType=shopService&amp;MType=lock</to>
+	</rule>
+	<!-- 查询商家信息列表(分页) -->
+	<rule>
+		<from>^/ims_p$</from>
+		<to>/mis.do?method=doService&amp;CType=shopService&amp;MType=searchShopList</to>
+	</rule>
+	<!-- 查询商家信息列表(不分页) -->
+	<rule>
+		<from>^/ims_np$</from>
+		<to>/mis.do?method=doService&amp;CType=shopService&amp;MType=searchShopListNo</to>
+	</rule>
+	<!-- 查询商家接口信息列表(分页) -->
+	<rule>
+		<from>^/imsi_p$</from>
+		<to>/mis.do?method=doService&amp;CType=interfShopService&amp;MType=searchShopInterfList</to>
+	</rule>
+	<!-- 查询商家接口信息(详细) -->
+	<rule>
+		<from>^/imsi_dt$</from>
+		<to>/mis.do?method=doService&amp;CType=interfShopService&amp;MType=getShopInterfDetail</to>
+	</rule>
+	<!-- 商家接口信息修改 -->
+	<rule>
+		<from>^/imsi_u$</from>
+		<to>/mis.do?method=doService&amp;CType=interfShopService&amp;MType=update</to>
+	</rule>
+	<!-- 商家接口信息删除 -->
+	<rule>
+		<from>^/imsi_d$</from>
+		<to>/mis.do?method=doService&amp;CType=interfShopService&amp;MType=delete</to>
+	</rule>
+	<!-- 商家接口分配 -->
+	<rule>
+		<from>^/imsi_al$</from>
+		<to>/mis.do?method=doService&amp;CType=interfShopService&amp;MType=allotShopInterf</to>
+	</rule>
+	<!-- 分配保存lid -->
+	<rule>
+		<from>^/allotLid$</from>
+		<to>/mis.do?method=doService&amp;CType=shopLidService&amp;MType=allotLid</to>
+	</rule>
+	<!-- 删除lid -->
+	<rule>
+		<from>^/delLid$</from>
+		<to>/mis.do?method=doService&amp;CType=shopLidService&amp;MType=delShopLid</to>
+	</rule>
+	<!-- 查询lid -->
+	<rule>
+		<from>^/searchAllLid$</from>
+		<to>/mis.do?method=doService&amp;CType=shopLidService&amp;MType=searchLidInfo</to>
+	</rule>
+	<!-- 查询实体店列表 -->
+	<rule>
+		<from>^/searchAllShopEntity$</from>
+		<to>/mis.do?method=doService&amp;CType=shopService&amp;MType=searchAllShopEntity</to>
+	</rule>
+	<!-- 查询商家服务工具信息列表(分页) -->
+	<rule>
+		<from>^/imst_p$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolService&amp;MType=searchShopToolList</to>
+	</rule>
+	<!-- 查询服务工具信息(详细) -->
+	<rule>
+		<from>^/imst_dt$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolService&amp;MType=getShopToolDetail</to>
+	</rule>
+	<!-- 查询商家详细信息 -->
+	<rule>
+		<from>^/searchServerToolShopDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolService&amp;MType=searchServerToolShopDetail</to>
+	</rule>
+	<!-- 修改服务工具信息 -->
+	<rule>
+		<from>^/imst_u$</from>
+		<to>/mis.do?method=doService&amp;CType=shopToolService&amp;MType=update</to>
+	</rule>
+	<!-- 保存addShopTranspc -->
+	<rule>
+		<from>^/addTranspc$</from>
+		<to>/mis.do?method=doService&amp;CType=transponderService&amp;MType=addShopTranspc</to>
+	</rule>
+	<!-- 删除Transpc -->
+	<rule>
+		<from>^/delTranspc$</from>
+		<to>/mis.do?method=doService&amp;CType=transponderService&amp;MType=delShopTranspc</to>
+	</rule>
+	<!-- 查询TranspcList -->
+	<rule>
+		<from>^/searchAllTranspc$</from>
+		<to>/mis.do?method=doService&amp;CType=transponderService&amp;MType=searchShopTranspc</to>
+	</rule>
+	<!-- 保存商家店员助理 -->
+	<rule>
+		<from>^/addAssistant$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAssistantService&amp;MType=addShopAssistant</to>
+	</rule>
+	<!-- 删除商家店员助理 -->
+	<rule>
+		<from>^/delAssistant$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAssistantService&amp;MType=delShopAssistant</to>
+	</rule>
+	<!-- 查询商家店员助理 -->
+	<rule>
+		<from>^/searchAssistantList$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAssistantService&amp;MType=searchShopAssistant</to>
+	</rule>
+	<!-- 保存Wifisensor -->
+	<rule>
+		<from>^/addWifisensor$</from>
+		<to>/mis.do?method=doService&amp;CType=shopWifisensorService&amp;MType=addShopWifisensor</to>
+	</rule>
+	<!-- 删除Wifisensor -->
+	<rule>
+		<from>^/delWifisensor$</from>
+		<to>/mis.do?method=doService&amp;CType=shopWifisensorService&amp;MType=delShopWifisensor</to>
+	</rule>
+	<!-- 查询Wifisensor -->
+	<rule>
+		<from>^/searchWifisensorList$</from>
+		<to>/mis.do?method=doService&amp;CType=shopWifisensorService&amp;MType=searchShopWifisensor</to>
+	</rule>
+	<!-- 查询所有顶级渠道 -->
+	<rule>
+		<from>^/searchAllTopChannel$</from>
+		<to>/mis.do?method=doService&amp;CType=channelService&amp;MType=searchAllTopChannel</to>
+	</rule>
+	<!-- 根据顶级渠道code查询渠道树 -->
+	<rule>
+		<from>^/searchAllChannel$</from>
+		<to>/mis.do?method=doService&amp;CType=channelService&amp;MType=searchAllChannel</to>
+	</rule>
+	<!-- 保存渠道 -->
+	<rule>
+		<from>^/addChannel$</from>
+		<to>/mis.do?method=doService&amp;CType=channelService&amp;MType=addChannel</to>
+	</rule>
+	<!-- 删除渠道 -->
+	<rule>
+		<from>^/delChannel$</from>
+		<to>/mis.do?method=doService&amp;CType=channelService&amp;MType=delChannel</to>
+	</rule>
+	<!-- 编辑渠道 -->
+	<rule>
+		<from>^/updateChannel$</from>
+		<to>/mis.do?method=doService&amp;CType=channelService&amp;MType=editChannel</to>
+	</rule>
+	<!-- 排序渠道 -->
+	<rule>
+		<from>^/sortChannel$</from>
+		<to>/mis.do?method=doService&amp;CType=channelService&amp;MType=sortChannel</to>
+	</rule>
+	<!-- 服务工具添加 -->
+	<rule>
+		<from>^/addShopServerTool$</from>
+		<to>/mis.do?method=doService&amp;CType=shopServerToolService&amp;MType=addShopServerTool</to>
+	</rule>
+	<!-- 服务工具编辑 -->
+	<rule>
+		<from>^/editServerTool$</from>
+		<to>/mis.do?method=doService&amp;CType=shopServerToolService&amp;MType=editServerTool</to>
+	</rule>
+	<!-- 服务工具查询 -->
+	<rule>
+		<from>^/showServerToolContent$</from>
+		<to>/mis.do?method=doService&amp;CType=shopServerToolService&amp;MType=showServerToolContent</to>
+	</rule>
+	<!-- 服务工具详细信息 -->
+	<rule>
+		<from>^/searchServerToolDetail$</from>
+		<to>/mis.do?method=doService&amp;CType=shopServerToolService&amp;MType=searchServerToolDetail</to>
+	</rule>
+	<!-- 查询所有商家的商品信息 -->
+	<rule>
+		<from>^/mish_qga$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateGoodsService&amp;MType=queryGoodsList</to>
+	</rule>
+	<!-- 推荐商品操作 -->
+	<rule>
+		<from>^/mish_ang$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateGoodsService&amp;MType=addNominateGoods</to>
+	</rule>
+	<!-- 查询推荐商品信息 -->
+	<rule>
+		<from>^/mish_qnga$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateGoodsService&amp;MType=queryNominateGoods</to>
+	</rule>
+	<!-- 取消推荐商品操作 -->
+	<rule>
+		<from>^/mish_ung$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateGoodsService&amp;MType=updateNominateGoods</to>
+	</rule>
+	<!-- 查询所有活动信息 -->
+	<rule>
+		<from>^/mish_qaa$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateActivityService&amp;MType=queryActivityList</to>
+	</rule>
+	<!-- 推荐活动操作 -->
+	<rule>
+		<from>^/mish_ana$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateActivityService&amp;MType=addNominateActivity</to>
+	</rule>
+	<!-- 查询推荐活动信息 -->
+	<rule>
+		<from>^/mish_qnaa$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateActivityService&amp;MType=queryNominateActivity</to>
+	</rule>
+	<!-- 取消推荐活动操作 -->
+	<rule>
+		<from>^/mish_una$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateActivityService&amp;MType=updateNominateActivity</to>
+	</rule>
+	<!-- 查询所有优惠凭证信息 -->
+	<rule>
+		<from>^/mish_qac$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateCouponService&amp;MType=queryCouponList</to>
+	</rule>
+	<!-- 推荐优惠凭证操作 -->
+	<rule>
+		<from>^/mish_anc$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateCouponService&amp;MType=addNominateCoupon</to>
+	</rule>
+	<!-- 查询推荐优惠凭证信息 -->
+	<rule>
+		<from>^/mish_qnca$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateCouponService&amp;MType=queryNominateCoupon</to>
+	</rule>
+	<!-- 取消推荐优惠凭证操作 -->
+	<rule>
+		<from>^/mish_unc$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateCouponService&amp;MType=updateNominateCoupon</to>
+	</rule>
+	<!-- 查询商品详细信息-->
+	<rule>
+		<from>^/mish_qgi$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateGoodsService&amp;MType=addNominateGoodsPage</to>
+	</rule>
+	<!-- 查询活动详细信息-->
+	<rule>
+		<from>^/mish_qgac$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateActivityService&amp;MType=addNominateActivityPage</to>
+	</rule>
+	<!-- 查询优惠凭证详细信息-->
+	<rule>
+		<from>^/mish_qgc$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateCouponService&amp;MType=addNominateCouponPage</to>
+	</rule>
+	<!-- 查询推荐商品详细信息-->
+	<rule>
+		<from>^/mish_ugip$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateGoodsService&amp;MType=updateNominateGoodsTPage</to>
+	</rule>
+	<!-- 查询推荐活动详细信息-->
+	<rule>
+		<from>^/mish_ugacp$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateActivityService&amp;MType=updateNominateActivityTPage</to>
+	</rule>
+	<!-- 查询推荐优惠凭证详细信息-->
+	<rule>
+		<from>^/mish_ugcp$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateCouponService&amp;MType=updateNominateCouponTPage</to>
+	</rule>
+	<!-- 验证商品是否已推荐-->
+	<rule>
+		<from>^/mish_cg$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateGoodsService&amp;MType=checkNominateGoodsT</to>
+	</rule>
+	<!-- 验证活动是否已推荐-->
+	<rule>
+		<from>^/mish_ca$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateActivityService&amp;MType=checkNominateActivityT</to>
+	</rule>
+	<!-- 验证优惠凭证是否已推荐-->
+	<rule>
+		<from>^/mish_cc$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateCouponService&amp;MType=checkNominateCouponT</to>
+	</rule>
+	<!-- 修改推荐商品-->
+	<rule>
+		<from>^/mish_ungt$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateGoodsService&amp;MType=updateNominateGoodsT</to>
+	</rule>
+	<!-- 修改推荐活动-->
+	<rule>
+		<from>^/mish_unat$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateActivityService&amp;MType=updateNominateActivityT</to>
+	</rule>
+	<!-- 修改推荐优惠凭证-->
+	<rule>
+		<from>^/mish_unct$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateCouponService&amp;MType=updateNominateCouponT</to>
+	</rule>
+	<!-- 查询所有商家信息-->
+	<rule>
+		<from>^/mish_qas$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateShopService&amp;MType=queryShopList</to>
+	</rule>
+	<!-- 查询推荐商家信息-->
+	<rule>
+		<from>^/mish_qnsa$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateShopService&amp;MType=queryNominateShop</to>
+	</rule>
+	<!-- 推荐商家-->
+	<rule>
+		<from>^/mish_ans$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateShopService&amp;MType=addNominateShop</to>
+	</rule>
+	<!-- 取消推荐商家-->
+	<rule>
+		<from>^/mish_uns$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateShopService&amp;MType=updateNominateShop</to>
+	</rule>
+	<!-- 修改推荐商家-->
+	<rule>
+		<from>^/mish_unst$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateShopService&amp;MType=updateNominateShopT</to>
+	</rule>
+	<!-- 查询推荐商家详细-->
+	<rule>
+		<from>^/mish_ugsp$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateShopService&amp;MType=updateNominateShopTPage</to>
+	</rule>
+	<!-- 验证商家是否已推荐-->
+	<rule>
+		<from>^/mish_cs$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateShopService&amp;MType=checkNominateShopT</to>
+	</rule>
+	<!-- 查询商家详细信息-->
+	<rule>
+		<from>^/mish_qgs$</from>
+		<to>/mis.do?method=doService&amp;CType=nominateShopService&amp;MType=addNominateShopPage</to>
+	</rule>
+	<!-- 新增规则配置-->
+	<rule>
+		<from>^/misi_ra$</from>
+		<to>/mis.do?method=doService&amp;CType=ruleConfigService&amp;MType=addRuleConfig</to>
+	</rule>
+	<!-- 修改规则配置-->
+	<rule>
+		<from>^/misi_ru$</from>
+		<to>/mis.do?method=doService&amp;CType=ruleConfigService&amp;MType=updateRuleConfig</to>
+	</rule>
+	<!-- 删除规则配置-->
+	<rule>
+		<from>^/misi_rd$</from>
+		<to>/mis.do?method=doService&amp;CType=ruleConfigService&amp;MType=deleteRuleConfig</to>
+	</rule>
+	<!-- 查询所有规则配置-->
+	<rule>
+		<from>^/misi_rqa$</from>
+		<to>/mis.do?method=doService&amp;CType=ruleConfigService&amp;MType=queryAllRuleConfig</to>
+	</rule>
+	<!-- 查询规则配置详细-->
+	<rule>
+		<from>^/misi_rq$</from>
+		<to>/mis.do?method=doService&amp;CType=ruleConfigService&amp;MType=queryRuleConfig</to>
+	</rule>
+	
+	
+	
+	
+	
+	
+	<!-- 新增商家角色-->
+	<rule>
+		<from>^/mise_sa$</from>
+		<to>/mis.do?method=doService&amp;CType=shopRoleManageService&amp;MType=addShopRoleManage</to>
+	</rule>
+	<!-- 修改商家角色-->
+	<rule>
+		<from>^/mise_su$</from>
+		<to>/mis.do?method=doService&amp;CType=shopRoleManageService&amp;MType=updateShopRoleManage</to>
+	</rule>
+	<!-- 删除商家角色-->
+	<rule>
+		<from>^/mise_sd$</from>
+		<to>/mis.do?method=doService&amp;CType=shopRoleManageService&amp;MType=deleteShopRoleManage</to>
+	</rule>
+	<!-- 查询所有商家角色-->
+	<rule>
+		<from>^/mise_sqa$</from>
+		<to>/mis.do?method=doService&amp;CType=shopRoleManageService&amp;MType=queryAllShopRoleManage</to>
+	</rule>
+	<!-- 查询商家角色详细-->
+	<rule>
+		<from>^/mise_sq$</from>
+		<to>/mis.do?method=doService&amp;CType=shopRoleManageService&amp;MType=queryShopRoleManage</to>
+	</rule>
+	<!-- 查询角色权限-关联表-->
+	<rule>
+		<from>^/mise_saq$</from>
+		<to>/mis.do?method=doService&amp;CType=shopRoleManageService&amp;MType=queryShopRoleAuthority2</to>
+	</rule>
+	<!-- 分配商家角色权限-->
+	<rule>
+		<from>^/mise_sas$</from>
+		<to>/mis.do?method=doService&amp;CType=shopRoleManageService&amp;MType=assignShopRoleManage</to>
+	</rule>
+	<!-- 查询商家用户详细-->
+	<rule>
+		<from>^/mise_suq$</from>
+		<to>/mis.do?method=doService&amp;CType=shopUserManageService&amp;MType=queryShopUserManage</to>
+	</rule>
+	<!-- 查询所有商家角色-->
+	<rule>
+		<from>^/mise_suqa$</from>
+		<to>/mis.do?method=doService&amp;CType=shopUserManageService&amp;MType=queryAssignShopUserManange</to>
+	</rule>
+	<!-- 分配商家角色权限-->
+	<rule>
+		<from>^/mise_sua$</from>
+		<to>/mis.do?method=doService&amp;CType=shopUserManageService&amp;MType=sssignShopUserManange</to>
+	</rule>
+	<!-- 查询所有广告位信息-->
+	<rule>
+		<from>^/misj_sqa$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAdService&amp;MType=queryAllShopAd</to>
+	</rule>
+	<!-- 查询广告位信息详细-->
+	<rule>
+		<from>^/misj_sq$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAdService&amp;MType=queryShopAd</to>
+	</rule>
+	<!-- 新增广告位信息-->
+	<rule>
+		<from>^/misj_sa$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAdService&amp;MType=addShopAd</to>
+	</rule>
+	<!-- 编辑广告位信息-->
+	<rule>
+		<from>^/misj_su$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAdService&amp;MType=updateShopAd</to>
+	</rule>
+	<!-- 删除广告位信息-->
+	<rule>
+		<from>^/misj_sd$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAdService&amp;MType=deleteShopAd</to>
+	</rule>
+	<!-- 关联查询广告位信息、广告位管理，以广告位管理为主-->
+	<rule>
+		<from>^/misj_amqa$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=queryAllAdsManage</to>
+	</rule>
+	<!-- 查询广告位管理详细-->
+	<rule>
+		<from>^/misj_amq$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=queryAdsManage</to>
+	</rule>
+	<!-- 新增广告位管理-->
+	<rule>
+		<from>^/misj_ama$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=addAdsManage</to>
+	</rule>
+	<!-- 编辑广告位管理-->
+	<rule>
+		<from>^/misj_amu$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=updateAdsManageOperation</to>
+	</rule>
+	<!-- 删除广告位管理-->
+	<rule>
+		<from>^/misj_amd$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=deleteAdsManage</to>
+	</rule>
+	<!-- 发布-->
+	<rule>
+		<from>^/misj_amr$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=releaseAdsManage</to>
+	</rule>
+	<!-- 查询提交资料-->
+	<rule>
+		<from>^/misj_amqs$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=submitAdsManagePage</to>
+	</rule>
+	<!-- 提交资料-->
+	<rule>
+		<from>^/misj_ams$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=submitAdsManage</to>
+	</rule>
+	<!-- 审核-->
+	<rule>
+		<from>^/misj_amc$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=checkedAdsManage</to>
+	</rule>
+	<!-- 收款-->
+	<rule>
+		<from>^/misj_amm$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=moneyReceiptAdManage</to>
+	</rule>
+	<!-- 卖出-->
+	<rule>
+		<from>^/misj_amb$</from>
+		<to>/mis.do?method=doService&amp;CType=adsManageService&amp;MType=bearPositionAdManage</to>
+	</rule>
+	<!-- 查询通用字典信息（无分页）-->
+	<rule>
+		<from>^/dictAllInfoNotPage$</from>
+		<to>/mis.do?method=doService&amp;CType=sysDictionaryService&amp;MType=findAllDictInfo</to>
+	</rule>
+	<!-- 查询日志详细-->
+	<rule>
+		<from>^/searchAllLogInfo$</from>
+		<to>/mis.do?method=doService&amp;CType=logService&amp;MType=queryMessageLogInfo</to>
+	</rule>
+	<!-- 查询设备类型信息-->
+	<rule>
+		<from>^/misk_mvq$</from>
+		<to>/mis.do?method=doService&amp;CType=mobileVersionService&amp;MType=queryMobileVersion</to>
+	</rule>
+	<!-- 新增设备类型-->
+	<rule>
+		<from>^/misk_mvi$</from>
+		<to>/mis.do?method=doService&amp;CType=mobileVersionService&amp;MType=addMobileVersion</to>
+	</rule>
+	<!-- 查询TRANSPC详细-->
+	<rule>
+		<from>^/misst_si$</from>
+		<to>/mis.do?method=doService&amp;CType=transponderService&amp;MType=searchShopTranspcInfo</to>
+	</rule>
+	<!-- 编辑TRANSPC-->
+	<rule>
+		<from>^/misst_u$</from>
+		<to>/mis.do?method=doService&amp;CType=transponderService&amp;MType=updateShopTranspc</to>
+	</rule>
+	<!-- 查询商家工具助手详细-->
+	<rule>
+		<from>^/missa_si$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAssistantService&amp;MType=searchShopAssistantInfo</to>
+	</rule>
+	<!-- 编辑商家工具助手-->
+	<rule>
+		<from>^/missa_u$</from>
+		<to>/mis.do?method=doService&amp;CType=shopAssistantService&amp;MType=updateShopAssistant</to>
+	</rule>
+	<!-- 查询Wifisensor详细-->
+	<rule>
+		<from>^/missw_si$</from>
+		<to>/mis.do?method=doService&amp;CType=shopWifisensorService&amp;MType=searchShopWifisensorInfo</to>
+	</rule>
+	<!-- 编辑Wifisensor-->
+	<rule>
+		<from>^/missw_u$</from>
+		<to>/mis.do?method=doService&amp;CType=shopWifisensorService&amp;MType=updateShopWifisensor</to>
+	</rule>
+	<!-- 查询小平台信息-->
+	<rule>
+		<from>^/misl_shpq$</from>
+		<to>/mis.do?method=doService&amp;CType=platformRegionService&amp;MType=queryPlatformRegionList</to>
+	</rule>
+	<!-- 查询小平台信息详细-->
+	<rule>
+		<from>^/misl_shpqi$</from>
+		<to>/mis.do?method=doService&amp;CType=platformRegionService&amp;MType=queryPlatformRegionInfo</to>
+	</rule>
+	<!-- 新增小平台信息-->
+	<rule>
+		<from>^/misl_shpa$</from>
+		<to>/mis.do?method=doService&amp;CType=platformRegionService&amp;MType=addPlatformRegion</to>
+	</rule>
+	<!-- 编辑小平台信息-->
+	<rule>
+		<from>^/misl_shpu$</from>
+		<to>/mis.do?method=doService&amp;CType=platformRegionService&amp;MType=updatePlatformRegion</to>
+	</rule>
+	<!-- 删除小平台信息-->
+	<rule>
+		<from>^/misl_shpd$</from>
+		<to>/mis.do?method=doService&amp;CType=platformRegionService&amp;MType=deletePlatformRegion</to>
+	</rule>
+	<!-- 查询商圈信息-->
+	<rule>
+		<from>^/misl_shtq$</from>
+		<to>/mis.do?method=doService&amp;CType=tradeAreaService&amp;MType=queryTradeAreaList</to>
+	</rule>
+	<!-- 查询商圈信息详细-->
+	<rule>
+		<from>^/misl_shtqi$</from>
+		<to>/mis.do?method=doService&amp;CType=tradeAreaService&amp;MType=queryTradeAreaInfo</to>
+	</rule>
+	<!-- 新增商圈信息-->
+	<rule>
+		<from>^/misl_shta$</from>
+		<to>/mis.do?method=doService&amp;CType=tradeAreaService&amp;MType=addTradeArea</to>
+	</rule>
+	<!-- 编辑商圈信息-->
+	<rule>
+		<from>^/misl_shtu$</from>
+		<to>/mis.do?method=doService&amp;CType=tradeAreaService&amp;MType=updateTradeArea</to>
+	</rule>
+	<!-- 删除商圈信息-->
+	<rule>
+		<from>^/misl_shtd$</from>
+		<to>/mis.do?method=doService&amp;CType=tradeAreaService&amp;MType=deleteTradeArea</to>
+	</rule>
+</urlrewrite>
