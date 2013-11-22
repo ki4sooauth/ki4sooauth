@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<bean id="SpringBeanUtils" class="com.gooagoo.common.utils.SpringBeanUtils"></bean>
+	
+	<context:component-scan base-package="com.gooagoo">
+		<context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect" />
+	</context:component-scan>
+	
+	<!-- 消息转换器 -->
+	<bean id="mqConvert" class="com.gooagoo.common.jms.MQConvert"></bean>
+	
+	<!-- 发送-日志处理 -->
+	<bean id="logFactory" class="org.apache.activemq.pool.PooledConnectionFactory"
+		destroy-method="stop">
+		<property name="connectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL">
+					<value>tcp://192.168.3.214:61616</value>
+				</property>
+				<property name="useAsyncSend">
+			   		<value>true</value>
+			    </property>
+			</bean>
+		</property>
+		<property name="maxConnections" value="100"></property>
+	</bean>
+	<bean id="logTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory">
+			<ref local="logFactory" />
+		</property>
+		<property name="pubSubDomain" value="false" />
+		<property name="messageConverter" ref="mqConvert"></property>
+	</bean>
+    <bean id="logdestination" class="org.apache.activemq.command.ActiveMQQueue">  
+        <!-- Set the Queue Name -->  
+        <constructor-arg index="0" value="AAAAA"/>  
+    </bean>
+</beans>
