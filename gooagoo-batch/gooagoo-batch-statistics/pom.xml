@@ -1,0 +1,13 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>gooagoo-batch</artifactId>
+    <groupId>com.gooagoo</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.gooagoo</groupId>
+  <artifactId>gooagoo-batch-statistics</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>gooagoo-batch-statistics</name>
+  <description>统计跑批</description>
+</project>

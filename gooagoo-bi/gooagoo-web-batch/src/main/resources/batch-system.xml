@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<bean id="GeneralEvery" class="com.googoo.batch.trigger.GeneralEvery"></bean>
+	<bean id="GeneralOntime" class="com.googoo.batch.trigger.GeneralOntime"></bean>
+	<bean id="StartInit" class="com.googoo.batch.trigger.StartInit"></bean>
+	
+	<bean id="EveryMinutes" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject"><ref bean="GeneralEvery"/></property>  <!-- 业务类对象 -->
+	    <property name="targetMethod"><value>minutes</value></property>  <!-- 要执行的方法名称 -->
+	</bean>
+	<bean id="EveryTenMinutes" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject"><ref bean="GeneralEvery"/></property>  <!-- 业务类对象 -->
+	    <property name="targetMethod"><value>tenminutes</value></property>  <!-- 要执行的方法名称 -->
+	</bean>
+	<bean id="EveryHalfhour" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject"><ref bean="GeneralEvery"/></property>  <!-- 业务类对象 -->
+	    <property name="targetMethod"><value>halfhour</value></property>  <!-- 要执行的方法名称 -->
+	</bean>
+	<bean id="EveryHour" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject"><ref bean="GeneralEvery"/></property>  <!-- 业务类对象 -->
+	    <property name="targetMethod"><value>hour</value></property>  <!-- 要执行的方法名称 -->
+	</bean>
+	<bean id="OnMidnight" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject"><ref bean="GeneralOntime"/></property>  <!-- 业务类对象 -->
+	    <property name="targetMethod"><value>midnight</value></property>  <!-- 要执行的方法名称 -->
+	</bean>
+	<bean id="OnMonday" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject"><ref bean="GeneralOntime"/></property>  <!-- 业务类对象 -->
+	    <property name="targetMethod"><value>monday</value></property>  <!-- 要执行的方法名称 -->
+	</bean>
+	<bean id="IntegralPoint" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject"><ref bean="GeneralOntime"/></property>  <!-- 业务类对象 -->
+	    <property name="targetMethod"><value>integralPoint</value></property>  <!-- 要执行的方法名称 -->
+	</bean>
+	<bean id="StartInitBean" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject"><ref bean="StartInit"/></property>  <!-- 业务类对象 -->
+	    <property name="targetMethod"><value>init</value></property>  <!-- 要执行的方法名称 -->
+	</bean>
+	<!-- ======================== 定时发布触发器 ======================== -->
+    <bean id="EveryMinutesTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail"><ref bean="EveryMinutes"/></property>
+        <property name="cronExpression" value="0 0/1 * * * ?"></property><!-- 每分钟执行一次 -->
+    </bean>
+    <bean id="EveryTenMinutesTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail"><ref bean="EveryTenMinutes"/></property>
+        <property name="cronExpression" value="0 0/10 * * * ?"></property><!-- 每10分钟执行一次 -->
+    </bean>
+<!--     <bean id="EveryHalfhourTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail"><ref bean="EveryHalfhour"/></property>
+        <property name="cronExpression" value="0 0/30 * * * ?"></property>每30分钟执行一次
+    </bean> -->
+    <bean id="EveryHourTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail"><ref bean="EveryHour"/></property>
+        <property name="cronExpression" value="0 0 /1 * * ?"></property><!-- 每小时执行一次 -->
+    </bean>
+    <bean id="OnMidnightTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail"><ref bean="OnMidnight"/></property>
+        <property name="cronExpression" value="0 0 /1 * * ?"></property><!-- 24时 -->
+    </bean>
+    <bean id="OnMondayTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail"><ref bean="OnMonday"/></property>
+        <property name="cronExpression" value="0 0 /1 * * ?"></property><!-- 每周日24时 -->
+    </bean>
+    <bean id="IntegralPointTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail"><ref bean="IntegralPoint"/></property>
+        <property name="cronExpression" value="0 0 0-23 * * ?"></property><!-- 每周日24时 -->
+    </bean>
+    <bean id="EveryHalfhourTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">  
+        <property name="jobDetail" ref="EveryHalfhour" /><!-- 每半小时一次 项目启动时首次执行 -->
+        <property name="startDelay" value="0" />  
+        <property name="repeatInterval" value="1800000" />  
+    </bean>
+    <bean id="StartInitTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">  
+        <property name="jobDetail" ref="StartInitBean"/>
+        <property name="startDelay" value="10"/>
+        <property name="repeatInterval" value="0"/>
+        <property name="repeatCount" value="0"/>
+    </bean> 
+    <!-- ======================== 调度工厂 ======================== -->  
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+            	<ref local="EveryMinutesTrigger"/>
+            	<ref local="EveryTenMinutesTrigger"/>
+            	<ref local="EveryHalfhourTrigger"/>
+            	<ref local="EveryHourTrigger"/>
+            	<ref local="OnMidnightTrigger"/>
+            	<ref local="OnMondayTrigger"/>
+            	<ref local="IntegralPointTrigger"/>
+            	<ref local="StartInitTrigger"/>
+            </list>
+        </property>
+    </bean>
+</beans>

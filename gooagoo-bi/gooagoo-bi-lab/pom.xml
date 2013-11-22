@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>gooagoo-bi</artifactId>
+    <groupId>com.gooagoo</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.gooagoo</groupId>
+  <artifactId>gooagoo-bi-lab</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>gooagoo-bi-lab</name>
+  <description>gooagoo-bi-lab</description>
+  <dependencies>
+  	<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+	</dependency>
+  	<dependency>
+  		<groupId>c3p0</groupId>
+  		<artifactId>c3p0</artifactId>
+  		<version>0.9.1.2</version>
+  		<type>jar</type>
+  		<scope>compile</scope>
+  	</dependency>
+  </dependencies>
+</project>
