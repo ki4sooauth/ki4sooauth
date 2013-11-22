@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+
+<body>
+<p><br />
+</p>
+<p>&nbsp;</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+
+<tr> 
+
+<th scope="col" colspan="2"><span class="row">mobf03:用户注册  </span></th> 
+
+</tr> 
+<tr> 
+
+<td width="136" class="row">功能说明：</td> 
+<td width="658" class="row">
+用户注册
+ </td> 
+</tr>
+<tr> 
+
+<td width="136" class="row">程序映射地址：</td> 
+<td width="658" class="row"></td> 
+</tr> 
+
+<tr> 
+
+<td class="alt">返回值例子：</td> 
+<td class="alt"><a href="../xml/mobf03.xml" target="_blank">mobf03.xml</a> | <a href="../xml/mobf03.txt" target="_blank">mobf03.txt</a></td> 
+</tr> 
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+		  <tr><td class="row">mac</td><td class="row">手机mac地址</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">mver</td><td class="row">手机程序版本</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">lid</td><td class="row">lid</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">entityposition</td><td class="row">实体店编号</td><td class="row">选填</td><td class="row">用户当前所在实体店编号</td></tr>
+	<tr>
+		<td class="row">email</td>
+		<td class="row">用户邮箱</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">password</td>
+		<td class="row">密码</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+1.用户邮箱格式不正确，返回false，提示：邮箱格式有误，请重新输入。<br/>
+2.用户邮箱已经被注册过，返回false，提示：该邮箱已被使用，请使用其邮箱。<br/>
+3.邮箱校验通过，返回true，提示用户需激活后使用。<br/>
+  </td>
+</tr>
+<tr>
+  <td class="row">修改日志：</td>
+  <td class="row"></td>
+</tr> 
+</table>
+</body>
+</html>

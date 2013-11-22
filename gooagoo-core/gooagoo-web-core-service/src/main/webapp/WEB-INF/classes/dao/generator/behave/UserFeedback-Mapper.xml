@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.behave.UserFeedbackMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.behave.UserFeedback" >
+    <id column="feedback_id" property="feedbackId" jdbcType="CHAR" />
+    <result column="user_id" property="userId" jdbcType="CHAR" />
+    <result column="gooagoo_id" property="gooagooId" jdbcType="CHAR" />
+    <result column="ip_address" property="ipAddress" jdbcType="CHAR" />
+    <result column="mac_address" property="macAddress" jdbcType="CHAR" />
+    <result column="host_name" property="hostName" jdbcType="CHAR" />
+    <result column="phone" property="phone" jdbcType="CHAR" />
+    <result column="phone_type" property="phoneType" jdbcType="CHAR" />
+    <result column="version" property="version" jdbcType="CHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      feedback_id, user_id, gooagoo_id, 
+      ip_address, mac_address, host_name, 
+      phone, phone_type, version, 
+      content, is_del, create_time, 
+      c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.behave.UserFeedbackExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from user_feedback
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.behave.UserFeedbackExample" resultType="java.lang.Integer">
+    select count(*) from user_feedback
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.behave.UserFeedbackKey" >
+    select 
+      feedback_id, user_id, gooagoo_id, 
+      ip_address, mac_address, host_name, 
+      phone, phone_type, version, 
+      content, is_del, create_time, 
+      c_time_stamp
+    from user_feedback where feedback_id = #{feedbackId,jdbcType=CHAR}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.behave.UserFeedbackExample">
+    delete from user_feedback
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.behave.UserFeedbackKey" >
+    delete from user_feedback where feedback_id = #{feedbackId,jdbcType=CHAR}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.behave.UserFeedback" >
+    insert into user_feedback
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "feedbackId != null">
+         feedback_id,
+      </if>
+      <if test= "userId != null">
+         user_id,
+      </if>
+      <if test= "gooagooId != null">
+         gooagoo_id,
+      </if>
+      <if test= "ipAddress != null">
+         ip_address,
+      </if>
+      <if test= "macAddress != null">
+         mac_address,
+      </if>
+      <if test= "hostName != null">
+         host_name,
+      </if>
+      <if test= "phone != null">
+         phone,
+      </if>
+      <if test= "phoneType != null">
+         phone_type,
+      </if>
+      <if test= "version != null">
+         version,
+      </if>
+      <if test= "content != null">
+         content,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "feedbackId != null">
+         #{feedbackId,jdbcType=CHAR},
+      </if>
+      <if test= "userId != null">
+         #{userId,jdbcType=CHAR},
+      </if>
+      <if test= "gooagooId != null">
+         #{gooagooId,jdbcType=CHAR},
+      </if>
+      <if test= "ipAddress != null">
+         #{ipAddress,jdbcType=CHAR},
+      </if>
+      <if test= "macAddress != null">
+         #{macAddress,jdbcType=CHAR},
+      </if>
+      <if test= "hostName != null">
+         #{hostName,jdbcType=CHAR},
+      </if>
+      <if test= "phone != null">
+         #{phone,jdbcType=CHAR},
+      </if>
+      <if test= "phoneType != null">
+         #{phoneType,jdbcType=CHAR},
+      </if>
+      <if test= "version != null">
+         #{version,jdbcType=CHAR},
+      </if>
+      <if test= "content != null">
+         #{content,jdbcType=VARCHAR},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP()
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update user_feedback
+    <set>
+        feedback_id = #{record.feedbackId,jdbcType=CHAR},
+        user_id = #{record.userId,jdbcType=CHAR},
+        gooagoo_id = #{record.gooagooId,jdbcType=CHAR},
+        ip_address = #{record.ipAddress,jdbcType=CHAR},
+        mac_address = #{record.macAddress,jdbcType=CHAR},
+        host_name = #{record.hostName,jdbcType=CHAR},
+        phone = #{record.phone,jdbcType=CHAR},
+        phone_type = #{record.phoneType,jdbcType=CHAR},
+        version = #{record.version,jdbcType=CHAR},
+        content = #{record.content,jdbcType=VARCHAR},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update user_feedback
+    <set>
+      <if test="record.feedbackId !=null">
+        feedback_id = #{record.feedbackId,jdbcType=CHAR},
+      </if>
+      <if test="record.userId !=null">
+        user_id = #{record.userId,jdbcType=CHAR},
+      </if>
+      <if test="record.gooagooId !=null">
+        gooagoo_id = #{record.gooagooId,jdbcType=CHAR},
+      </if>
+      <if test="record.ipAddress !=null">
+        ip_address = #{record.ipAddress,jdbcType=CHAR},
+      </if>
+      <if test="record.macAddress !=null">
+        mac_address = #{record.macAddress,jdbcType=CHAR},
+      </if>
+      <if test="record.hostName !=null">
+        host_name = #{record.hostName,jdbcType=CHAR},
+      </if>
+      <if test="record.phone !=null">
+        phone = #{record.phone,jdbcType=CHAR},
+      </if>
+      <if test="record.phoneType !=null">
+        phone_type = #{record.phoneType,jdbcType=CHAR},
+      </if>
+      <if test="record.version !=null">
+        version = #{record.version,jdbcType=CHAR},
+      </if>
+      <if test="record.content !=null">
+        content = #{record.content,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.behave.UserFeedback" >
+    update user_feedback
+    <set>
+      <if test="feedbackId !=null">
+      feedback_id = #{feedbackId,jdbcType=CHAR},
+      </if>
+      <if test="userId !=null">
+      user_id = #{userId,jdbcType=CHAR},
+      </if>
+      <if test="gooagooId !=null">
+      gooagoo_id = #{gooagooId,jdbcType=CHAR},
+      </if>
+      <if test="ipAddress !=null">
+      ip_address = #{ipAddress,jdbcType=CHAR},
+      </if>
+      <if test="macAddress !=null">
+      mac_address = #{macAddress,jdbcType=CHAR},
+      </if>
+      <if test="hostName !=null">
+      host_name = #{hostName,jdbcType=CHAR},
+      </if>
+      <if test="phone !=null">
+      phone = #{phone,jdbcType=CHAR},
+      </if>
+      <if test="phoneType !=null">
+      phone_type = #{phoneType,jdbcType=CHAR},
+      </if>
+      <if test="version !=null">
+      version = #{version,jdbcType=CHAR},
+      </if>
+      <if test="content !=null">
+      content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where feedback_id = #{feedbackId,jdbcType=CHAR}
+  </update>
+
+</mapper>

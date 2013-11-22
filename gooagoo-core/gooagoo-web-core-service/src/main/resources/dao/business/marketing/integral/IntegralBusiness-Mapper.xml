@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.business.marketing.integral.IntegralBusinessMapper" >
+  <update id="updateIntegralExchangeNum">
+		 UPDATE gooagoo_marketing.shop_integral
+		   SET convert_nums = IFNULL(convert_nums, 0) + 1
+		 WHERE
+		  shop_integral_id = #{shopIntegralId}
+  </update>
+</mapper>

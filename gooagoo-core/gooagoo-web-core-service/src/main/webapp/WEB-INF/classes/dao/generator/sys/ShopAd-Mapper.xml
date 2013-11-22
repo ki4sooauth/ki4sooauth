@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.sys.ShopAdMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.sys.ShopAd" >
+    <id column="ad_code" property="adCode" jdbcType="CHAR" />
+    <result column="ad_type" property="adType" jdbcType="CHAR" />
+    <result column="ad_name" property="adName" jdbcType="CHAR" />
+    <result column="ad_description" property="adDescription" jdbcType="CHAR" />
+    <result column="img_url" property="imgUrl" jdbcType="CHAR" />
+    <result column="link_url" property="linkUrl" jdbcType="CHAR" />
+    <result column="ad_url" property="adUrl" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      ad_code, ad_type, ad_name, 
+      ad_description, img_url, link_url, 
+      ad_url, is_del, create_time, 
+      c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.sys.ShopAdExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from shop_ad
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.sys.ShopAdExample" resultType="java.lang.Integer">
+    select count(*) from shop_ad
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.sys.ShopAdKey" >
+    select 
+      ad_code, ad_type, ad_name, 
+      ad_description, img_url, link_url, 
+      ad_url, is_del, create_time, 
+      c_time_stamp
+    from shop_ad where ad_code = #{adCode,jdbcType=CHAR}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.sys.ShopAdExample">
+    delete from shop_ad
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.sys.ShopAdKey" >
+    delete from shop_ad where ad_code = #{adCode,jdbcType=CHAR}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.sys.ShopAd" >
+    insert into shop_ad
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "adCode != null">
+         ad_code,
+      </if>
+      <if test= "adType != null">
+         ad_type,
+      </if>
+      <if test= "adName != null">
+         ad_name,
+      </if>
+      <if test= "adDescription != null">
+         ad_description,
+      </if>
+      <if test= "imgUrl != null">
+         img_url,
+      </if>
+      <if test= "linkUrl != null">
+         link_url,
+      </if>
+      <if test= "adUrl != null">
+         ad_url,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "adCode != null">
+         #{adCode,jdbcType=CHAR},
+      </if>
+      <if test= "adType != null">
+         #{adType,jdbcType=CHAR},
+      </if>
+      <if test= "adName != null">
+         #{adName,jdbcType=CHAR},
+      </if>
+      <if test= "adDescription != null">
+         #{adDescription,jdbcType=CHAR},
+      </if>
+      <if test= "imgUrl != null">
+         #{imgUrl,jdbcType=CHAR},
+      </if>
+      <if test= "linkUrl != null">
+         #{linkUrl,jdbcType=CHAR},
+      </if>
+      <if test= "adUrl != null">
+         #{adUrl,jdbcType=CHAR},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP()
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update shop_ad
+    <set>
+        ad_code = #{record.adCode,jdbcType=CHAR},
+        ad_type = #{record.adType,jdbcType=CHAR},
+        ad_name = #{record.adName,jdbcType=CHAR},
+        ad_description = #{record.adDescription,jdbcType=CHAR},
+        img_url = #{record.imgUrl,jdbcType=CHAR},
+        link_url = #{record.linkUrl,jdbcType=CHAR},
+        ad_url = #{record.adUrl,jdbcType=CHAR},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update shop_ad
+    <set>
+      <if test="record.adCode !=null">
+        ad_code = #{record.adCode,jdbcType=CHAR},
+      </if>
+      <if test="record.adType !=null">
+        ad_type = #{record.adType,jdbcType=CHAR},
+      </if>
+      <if test="record.adName !=null">
+        ad_name = #{record.adName,jdbcType=CHAR},
+      </if>
+      <if test="record.adDescription !=null">
+        ad_description = #{record.adDescription,jdbcType=CHAR},
+      </if>
+      <if test="record.imgUrl !=null">
+        img_url = #{record.imgUrl,jdbcType=CHAR},
+      </if>
+      <if test="record.linkUrl !=null">
+        link_url = #{record.linkUrl,jdbcType=CHAR},
+      </if>
+      <if test="record.adUrl !=null">
+        ad_url = #{record.adUrl,jdbcType=CHAR},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.sys.ShopAd" >
+    update shop_ad
+    <set>
+      <if test="adCode !=null">
+      ad_code = #{adCode,jdbcType=CHAR},
+      </if>
+      <if test="adType !=null">
+      ad_type = #{adType,jdbcType=CHAR},
+      </if>
+      <if test="adName !=null">
+      ad_name = #{adName,jdbcType=CHAR},
+      </if>
+      <if test="adDescription !=null">
+      ad_description = #{adDescription,jdbcType=CHAR},
+      </if>
+      <if test="imgUrl !=null">
+      img_url = #{imgUrl,jdbcType=CHAR},
+      </if>
+      <if test="linkUrl !=null">
+      link_url = #{linkUrl,jdbcType=CHAR},
+      </if>
+      <if test="adUrl !=null">
+      ad_url = #{adUrl,jdbcType=CHAR},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where ad_code = #{adCode,jdbcType=CHAR}
+  </update>
+
+</mapper>

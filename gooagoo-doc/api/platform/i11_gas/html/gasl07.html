@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title></title>
+<style type="text/css">
+body {
+       margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+<body>
+<p><br />
+</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+<tr>
+<th scope="col" colspan="2"><span class="row">接口gasl07:减菜申请</span></th> 
+</tr> 
+<tr>
+  <td width="136" class="row">功能说明:</td> 
+  <td width="658" class="row">店员助理提交减菜申请（商家落单，转发器生成商家订单后，可申请减菜）
+</td> 
+</tr>
+<tr>
+  <td width="136" class="row">程序映射地址:</td> 
+  <td width="658" class="row">
+  </td>
+</tr>
+<tr>
+  <td class="alt">返回值例子:</td> 
+  <td class="alt"><a href="../xml/gasl07.xml" target="_blank">gasl07.xml</a> | <a href="../xml/gasl07.txt"target="_blank">gasl07.txt</a></td>
+</tr>
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">mac</td>
+		<td class="row">店员助理MAC地址</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopuserid</td>
+		<td class="row">店员登录账号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopid</td>
+		<td class="row">商家编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopentityid</td>
+		<td class="row">实体店编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">tablename</td>
+		<td class="row">桌号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">goodsinfo</td>
+		<td class="row">点餐信息json数组字符串</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">[ { "goodsid": </br>
+		"00017STNPL7NIGF1T0000LEIISQNS0DL",</br>
+		 "goodsnum":"2"}, { "goodsid": </br>
+		 "00017STNPL7NIGF1T0000LEIISQNS0DL", 
+		 </br>"goodsnum":"20"}]</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+	1.首先校验用户是否已有商家订单，如果有商家订单，则继续以下步骤；否则提示用户“该用户已结账，需重新下单”。<br />
+	2.根据入参插入bill_add_info表。<br />
+	3.将操作结果true-提交成功，false-提交失败，返回店员助理。
+  </td>
+</tr>
+<tr>
+  <td class="alt">修改日志:</td>
+  <td class="alt"></td>
+</tr>
+</table>
+</body>
+</html>

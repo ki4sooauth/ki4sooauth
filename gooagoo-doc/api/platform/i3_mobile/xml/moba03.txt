@@ -1,0 +1,27 @@
+{
+    "result": "",
+    "msg": "",
+    "usermembercardhead": [
+        {
+            "cardtopinfoid": "",
+            "cardid": "",
+            "shopid": "",
+            "line1title": "",
+            "line1size": "",
+            "line1font": "",
+            "line1color": "",
+            "line1url": "",
+            "line2title": "",
+            "line2size": "",
+            "line2font": "",
+            "line2color": "",
+            "line2url": "",
+            "begindate": "",
+            "enddate": "",
+            "releaseid": "",
+            "isdel": "",
+            "createtime": "",
+            "ctimestamp": ""
+        }
+    ]
+}

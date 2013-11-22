@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="getConsumeRecordByDateRoot"><!-- 消费记录-->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<consumelists><!-- 消费记录信息-->
+		<ordernum></ordernum><!--当日订单数目 -->
+		<billnum></billnum><!--当日账单数目 -->
+		<activitynum></activitynum><!--当日活动 -->
+		<shopinglistnum></shopinglistnum><!--购物清单 -->
+	</consumelists>
+</root>

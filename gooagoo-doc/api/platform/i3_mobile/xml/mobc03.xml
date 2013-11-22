@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root  alias="CryoutPlazaShopListRoot"><!--吆喝广场商家查询:输入参数:分类编码 |关键字 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<shoplist cycle="1"><!--吆喝广场商家查询 -->
+		<shopid></shopid><!--商家id -->
+		<shopurl></shopurl><!--商家图片url -->
+		<shopname></shopname><!--商家名称 -->
+		<attentionnum></attentionnum><!--关注数量 -->
+		<membernum></membernum><!--会员数量 -->
+	</shoplist>
+</root>

@@ -1,0 +1,16 @@
+{
+    "result": "",
+    "msg": "",
+    "goodsdetail": {
+        "goodsid": "",
+        "goodsname": "",
+        "price": "",
+        "discountprice": "",
+        "goodsimg": "",
+        "positionname": "",
+        "goodscontent": "",
+        "goodsscore": "",
+        "shopid": "",
+        "shopentityid": ""
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="GetReceiptInfoRoot"><!-- 獲取用户未删除的用户发票抬头信息-->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<receiptinfo cycle="1"><!-- 用户发票抬头信息-->
+		<receiptid></receiptid><!-- 发票信息编号，UUID-->
+		<companyname></companyname><!-- 公司名称 -->
+		<isdefault></isdefault><!--是否默认选项，Y-是，N-否-->
+	</receiptinfo>
+</root>

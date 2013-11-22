@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.business.member.info.MemberInfoAdapterMapper">
+	<resultMap id="BaseResultMap" type="com.gooagoo.entity.business.member.MemberBaseInfoAdapter" >
+	    <id column="id" property="id" jdbcType="CHAR" />
+	    <result column="user_id" property="userId" jdbcType="CHAR" />
+	    <result column="card_id" property="cardId" jdbcType="CHAR" />
+	    <result column="id" property="id" jdbcType="CHAR" />
+	    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+	    <result column="phy_no" property="phyNo" jdbcType="CHAR" />
+	    <result column="phy_name" property="phyName" jdbcType="CHAR" />
+	    <result column="name" property="name" jdbcType="CHAR" />
+	    <result column="sex" property="sex" jdbcType="CHAR" />
+	    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+	    <result column="id_type" property="idType" jdbcType="CHAR" />
+	    <result column="id_no" property="idNo" jdbcType="CHAR" />
+	    <result column="mobile" property="mobile" jdbcType="CHAR" />
+	    <result column="telephone" property="telephone" jdbcType="CHAR" />
+	    <result column="email" property="email" jdbcType="CHAR" />
+	    <result column="postcode" property="postcode" jdbcType="CHAR" />
+	    <result column="address" property="address" jdbcType="VARCHAR" />
+	    <result column="is_del" property="isDel" jdbcType="CHAR" />
+	    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+	    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  	</resultMap>
+
+	<select id="countMemberBaseInfo" resultType="java.lang.Integer">
+		SELECT COUNT(*) FROM
+			member_of_card c,
+			member_base_info b
+		WHERE
+			c.shop_id = b.shop_id
+		AND b.phy_no = c.phy_card_no
+		AND b.is_del = 'N'
+		<if test="shopId !=null">
+			AND b.shop_id = #{shopId}
+		</if>
+		<if test="phyNo !=null">
+			AND b.phy_no LIKE CONCAT('%',#{phyNo},'%')
+		</if>
+		<if test="name !=null">
+			AND b.name LIKE CONCAT('%',#{name},'%')
+		</if>
+	</select>
+
+	<select id="findMemberBaseInfo" resultMap="BaseResultMap">
+		SELECT c.user_id,c.card_id,b.* FROM
+			member_of_card c,
+			member_base_info b
+		WHERE
+			c.shop_id = b.shop_id
+		AND b.phy_no = c.phy_card_no
+		AND b.is_del = 'N'
+		<if test="shopId !=null">
+			AND b.shop_id = #{shopId}
+		</if>
+		<if test="phyNo !=null">
+			AND b.phy_no LIKE CONCAT('%',#{phyNo},'%')
+		</if>
+		<if test="name !=null">
+			AND b.name LIKE CONCAT('%',#{name},'%')
+		</if>
+		<if test="pageIndex !=null and pageSize !=null">
+			LIMIT ${pageIndex},${pageSize}
+		</if>
+	</select>
+</mapper>

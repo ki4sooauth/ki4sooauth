@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="FindBillAddOrSubRoot"><!--加菜减菜申请查询 -->
+	<result></result><!--结果编码，true查询成功，false查询失败 -->
+	<msg></msg><!--结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<orderAddOrSubbaseinfo cycle="1"><!--加减菜信息 -->
+		<deskno></deskno><!--桌号 -->
+		<orderAddOrSubdetailinfo cycle="1"><!-- 订单详细信息 -->
+			<orderid></orderid><!--订单编号 -->
+			<orderdetailid></orderdetailid><!-- 订单明细编号-->
+			<typedeal></typedeal><!-- 类型，0-加菜，1-减菜 -->
+			<goodsid></goodsid><!-- 商品id -->
+			<goodsimg></goodsimg><!-- 商品图片地址 -->
+			<itemserial></itemserial><!-- 商品条形码(自定义序列号) -->
+			<goodsname></goodsname><!-- 商品名称 -->
+			<goodsnum></goodsnum><!-- 商品数量 -->
+			<goodsprice></goodsprice><!-- 商品单价 -->
+			<cookingmethods/><!-- 做法 -->
+			<waitcallmark/><!-- 等叫标记（从缓存中获取） -->
+			<createtime></createtime><!-- 申请时间 -->
+		</orderAddOrSubdetailinfo>
+	</orderAddOrSubbaseinfo>
+</root>

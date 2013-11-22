@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="exchangeTableRoot"><!--换台信息 -->
+	<result></result><!--结果编码，true成功，false失败 -->
+	<msg></msg><!--结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<exchangetablelist cycle="1"><!-- 换台信息 -->
+		<exchangeid/><!-- 换台信息单编号 -->
+		<oldtablename/><!-- 原餐桌桌号 -->  
+		<newtablename/><!-- 新餐桌桌号 -->  
+		<ctimestamp/><!-- 时间戳 -->
+	</exchangetablelist>
+</root>

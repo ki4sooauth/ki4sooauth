@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="mapActivityRoot"><!-- 查询当前地图范围内全部商家活动。-->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<mapactivitylists cycle="1"><!-- 活动列表-->
+		<name></name><!--活动名称 -->
+		<url></url><!--活动URL -->
+		<px></px><!--svg 图上的，x轴坐标 -->
+		<py></py><!--svg 图上的，y轴坐标 -->
+	</mapactivitylists>
+</root>

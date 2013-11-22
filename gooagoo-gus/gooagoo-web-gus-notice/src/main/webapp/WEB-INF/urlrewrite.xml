@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"  
+        "http://tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+	<rule>
+		<from>^/$</from>
+		<to>/notice.do?method=index</to>
+	</rule>
+	<rule>
+		<from>^/index$</from>
+		<to>/notice.do?method=index</to>
+	</rule>
+	<rule>
+		<from>^/shop$</from>
+		<to>/notice.do?method=shopNotice</to>
+	</rule>
+</urlrewrite>  

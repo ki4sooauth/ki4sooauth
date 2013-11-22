@@ -1,0 +1,12 @@
+delete from gooagoo_base.quality_square_goods_type;
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('1', '服装', '-1', null, null, '2', 'N', '2012-06-07 10:04:32', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('2', '家居', '-1', null, null, '2', 'N', '2012-06-07 10:04:32', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('3', '护理', '-1', null, null, '2', 'N', '2012-06-07 10:04:32', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('4', '食品', '-1', null, null, '2', 'N', '2012-06-07 10:04:32', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('5', '饮料', '-1', null, null, '2', 'N', '2012-06-07 10:04:32', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('6', '海鲜', '-1', null, null, '2', 'N', '2012-06-07 10:04:32', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('8', '生活用品', '-1', null, null, '2', 'N', '2012-06-07 10:04:32', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('18', '有机及天然', '-1', null, null, '2', 'N', '2012-06-07 10:04:32', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('19', '酒水', '-1', null, null, '2', 'N', '2013-01-08 10:53:35', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('20', '饰品', '-1', null, null, '2', 'N', '2013-01-08 10:54:52', '2013-05-10 14:46:50');
+INSERT INTO gooagoo_base.quality_square_goods_type VALUES ('21', '住宿', '-1', null, null, '2', 'N', '2013-01-08 10:54:52', '2013-05-10 14:46:50');

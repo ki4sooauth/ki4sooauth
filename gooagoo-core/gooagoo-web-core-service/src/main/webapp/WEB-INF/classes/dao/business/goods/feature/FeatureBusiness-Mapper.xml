@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="com.gooagoo.dao.business.goods.feature.FeatureBusinessMapper">
+	<resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.goods.GoodsFeatureInfo">
+		<id column="id" property="id" jdbcType="CHAR" />
+		<result column="goods_id" property="goodsId" jdbcType="CHAR" />
+		<result column="goods_name" property="goodsName" jdbcType="CHAR" />
+		<result column="shop_id" property="shopId" jdbcType="CHAR" />
+		<result column="feature_code" property="featureCode" jdbcType="CHAR" />
+		<result column="feature_name" property="featureName" jdbcType="CHAR" />
+		<result column="feature_value" property="featureValue"
+			jdbcType="CHAR" />
+		<result column="is_del" property="isDel" jdbcType="CHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<select id="findSingleGoodsFeatureInfo" resultMap="BaseResultMap">
+		SELECT
+		*
+		FROM
+		goods_feature_info f
+		WHERE
+		f.is_del = 'N'
+		AND f.goods_id IN (
+		SELECT
+		b.goods_id
+		FROM
+		goods_base_info b
+		WHERE
+		b.is_del = 'N'
+		AND b.publish_status = 'P'
+		<if test= "shopId != null">
+		AND b.shop_id = #{shopId}
+    	</if>
+		<if test= "goodsSerial != null">
+		AND b.goods_serial = #{goodsSerial}
+    	</if>
+		)
+		AND f.feature_code IN (
+		SELECT
+		type_code
+		FROM
+		goods_feature
+		WHERE
+		is_display = 'Y'
+		AND is_del = 'N'
+		<if test= "shopId != null">
+		AND shop_id = #{shopId}
+    	</if>
+		<if test= "goodsSerial != null">
+		AND goods_serial = #{goodsSerial}
+    	</if>
+		)
+		GROUP BY
+		f.feature_name,
+		f.feature_value
+		ORDER BY
+		feature_code ASC
+	</select>
+</mapper>

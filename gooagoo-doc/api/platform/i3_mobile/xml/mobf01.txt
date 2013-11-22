@@ -1,0 +1,9 @@
+{
+    "result":"",
+    "msg":"",
+    "login":{
+        "userid":"",
+        "sessionid":"",
+        "scardno":""
+    }
+}

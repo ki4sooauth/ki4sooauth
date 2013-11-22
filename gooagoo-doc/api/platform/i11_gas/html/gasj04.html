@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title></title>
+<style type="text/css">
+body {
+       margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+<body>
+<p><br />
+</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+<tr>
+<th scope="col" colspan="2"><span class="row">接口gasj04:店员扫桌号获取用户点菜单信息</span></th> 
+</tr> 
+<tr>
+  <td width="136" class="row">功能说明:</td> 
+  <td width="658" class="row">店员扫桌号获取用户点菜单信息</td> 
+</tr>
+<tr>
+  <td width="136" class="row">程序映射地址:</td> 
+  <td width="658" class="row">
+  </td>
+</tr>
+<tr>
+  <td class="alt">返回值例子:</td> 
+  <td class="alt"><a href="../xml/gasj04.xml" target="_blank">gasj04.xml</a> | <a href="../xml/gasj04.txt"target="_blank">gasj04.txt</a></td>
+</tr>
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">mac</td>
+		<td class="row">店员助理MAC地址</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopuserid</td>
+		<td class="row">店员登录账号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopentityid</td>
+		<td class="row">实体店编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+	</tr>
+	<tr>
+		<td class="row">pageindex</td>
+		<td class="row">页码</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">pagesize</td>
+		<td class="row">每页信息显示条数</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">tablename</td>
+		<td class="row">桌号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+  一.主业务逻辑<br/>
+       1.根据shopentityid、“tablename”查询order_info表中订单状态不等于“3-已结账”的数据，获取到order_id（订单编号）、bill_img(点菜单图片)、pay_price（订单金额，即合计）;<br/>
+       2.根据“shopentityid”、orderid在表order_detail_info查询goods_id(菜品编号)、goods_name(菜品名称)、pay_price（实际支付单间）、goods_num（菜品数量）等信息;<br/>
+       3.根据goods_id在表goods_base_info查询出goods_category_root（品类根节点）;<br />
+       4.根据goods_category_root（对应goods_category中字段category_id-品类编号）在表goods_category查询出品类名称<br />
+       5.组合查询结果返回给店员助理.
+  </td>
+</tr>
+<tr>
+  <td class="alt">修改日志:</td>
+  <td class="alt"></td>
+</tr>
+</table>
+</body>
+</html>

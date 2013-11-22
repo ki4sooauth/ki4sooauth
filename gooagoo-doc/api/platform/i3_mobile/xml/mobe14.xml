@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="goodsSequenceRoot"><!-- 品类销售排行  -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<goodssequencelist cycle="1"><!--品类销售排行 -->
+		<goodsid></goodsid><!--商品编号，uuid -->
+		<goodsname></goodsname><!--商品名称 -->
+		<goodscategoryleaf></goodscategoryleaf><!--品类编号（叶节点） -->
+		<categoryname></categoryname><!--品类名称（叶节点） -->
+		<goodsimg></goodsimg><!--商品图片url，多张图以逗号分隔 -->
+		<price></price><!--商品价格 -->
+		<sellnum></sellnum><!--历史售出数量 -->
+		<introduceurl></introduceurl><!-- 商品详情url,商品详情介绍url -->
+	</goodssequencelist>
+</root>

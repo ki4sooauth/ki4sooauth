@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root alias="findCouponRoot"><!--查询优惠劵信息-->
+	<result></result><!--结果编码，true-提交成功，false-提交失败-->
+	<msg></msg><!--查询结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<voucherdetail cycle="1"><!-- 优惠劵信息 -->
+		<shopid></shopid><!--店铺id -->
+		<couponuserid></couponuserid><!--优惠凭证与用户关联编号，UUID-->
+		<couponname></couponname><!--优惠劵名称 -->
+		<couponurl></couponurl><!--优惠劵正面图 -->
+		<publishstarttime></publishstarttime><!--优惠劵开始时间 -->
+		<publishendtime></publishendtime><!--优惠劵结束时间 -->
+		<couponcontent></couponcontent><!--优惠劵权限说明 -->
+		<coupontype></coupontype><!--优惠凭证类型，参考通用字典表的coupon_type -->
+		<couponvalue></couponvalue><!--优惠券数值 -->
+	</voucherdetail>
+</root>

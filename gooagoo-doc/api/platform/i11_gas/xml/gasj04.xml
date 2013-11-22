@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="GetMenuByDeskNoRoot"><!--扫桌号获取点菜单-->
+	<result/><!--结果编码，true成功，false失败-->
+	<msg/><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<orderid></orderid><!--订单编号,订单编号对应order_info中的order_id-->
+	<orderurl></orderurl><!--定单图片URL-->
+	<totalpay></totalpay><!-- 总额 即 合计 -->
+	<menulist cycle="1"><!-- 菜品详情列表 -->
+		<foodid></foodid><!--菜品id,取得是商品自定义序列号 -->
+		<foodkind></foodkind><!--菜品类别名称,(取菜品类别叶节点名称) -->
+		<foodname></foodname><!--菜品名称 -->
+		<foodprice></foodprice><!--单价 -->
+		<num></num><!-- 数量 -->
+		<foodspay></foodspay><!--需支付金额-->
+		<ischeck></ischeck><!--是否已上菜 -->
+	</menulist>
+ </root>

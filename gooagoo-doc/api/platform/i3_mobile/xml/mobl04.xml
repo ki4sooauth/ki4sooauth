@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="approvePlayInvoiceSoundRoot"><!--是否允许播放取发票音频 -->
+	<result></result><!--结果编码，true成功，false失败 -->
+	<msg></msg><!--结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+</root>

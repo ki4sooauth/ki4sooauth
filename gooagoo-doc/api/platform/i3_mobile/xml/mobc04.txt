@@ -1,0 +1,10 @@
+{
+    "resultCode": "",
+    "message": "",
+    "shopdetail": {
+        "shopid": "",
+        "cardheaderurl": "",
+        "attentionnum": "",
+        "membernum": ""
+    }
+}

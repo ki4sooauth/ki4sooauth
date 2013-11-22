@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="findCouponInfoByCouponidRoot"><!--根据优惠劵编号查询商家优惠劵信息 -->
+	<result></result><!--结果编码，true成功，false失败 -->
+	<msg></msg><!--结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<couponinfo><!--优惠凭证相关信息-->
+		<tablename/><!-- 桌号 （零售无，餐饮有）-->
+		<orderid/><!-- 订单编号 -->
+		<couponuserid/><!-- 优惠凭证与用户关联编号，UUID -->
+		<couponcontent/><!-- 优惠劵权限说明  -->
+		<coupontype/><!-- 优惠凭证类型，参考通用字典表的coupon_type  -->
+		<couponvalue/><!-- 优惠券数值  -->
+		<ctimestamp/><!-- 最大时间戳  -->
+	</couponinfo>
+</root>

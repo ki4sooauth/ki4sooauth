@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <mappers>
+    <mapper resource="dao/generator/member/CardUpInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/member/ConvertApply-Mapper.xml" /> 
+    <mapper resource="dao/generator/member/IntegralDetailInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/member/IntegralInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/member/MemberApply-Mapper.xml" /> 
+    <mapper resource="dao/generator/member/MemberBaseInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/member/MemberCard-Mapper.xml" /> 
+    <mapper resource="dao/generator/member/MemberFeature-Mapper.xml" /> 
+    <mapper resource="dao/generator/member/MemberFeatureInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/member/MemberOfCard-Mapper.xml" /> 
+  </mappers>
+</configuration>

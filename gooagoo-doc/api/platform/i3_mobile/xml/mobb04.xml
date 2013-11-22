@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="GoodsDetailRoot"><!-- 获取商品详细信息及评论 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<goodsdetail cycle="1"><!-- 商品信息 -->
+		<goodsid></goodsid><!--商品的id -->
+		<goodsname></goodsname><!--商品名称 -->
+		<price></price><!--商品价格 -->
+		<discountprice></discountprice><!--商品促销价 -->
+		<linkurl></linkurl><!--访问链接url -->
+		<goodsimg></goodsimg><!--商品小图 -->
+		<goodscontent></goodscontent><!--商品概要描述 -->
+		<goodsscore></goodsscore><!--商品评分 -->
+		<shopid></shopid><!--店铺id -->
+		<shopentityid></shopentityid><!--实体店id -->
+		<bought cycle="1"><!--买过此商品的还购买过哪些商品 -->
+			<goodsid></goodsid><!--商品的id -->
+			<shopid></shopid><!--店铺id -->
+			<goodsimg></goodsimg><!--商品小图 -->
+			<goodsname></goodsname><!--商品名称 -->
+			<price></price><!--商品价格 -->
+			<salenums></salenums><!--销售数量-->
+		</bought>
+	</goodsdetail>
+</root>

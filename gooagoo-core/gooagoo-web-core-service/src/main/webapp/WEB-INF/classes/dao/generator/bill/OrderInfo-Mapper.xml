@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.bill.OrderInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.bill.OrderInfo" >
+    <id column="order_id" property="orderId" jdbcType="CHAR" />
+    <result column="bill_type" property="billType" jdbcType="CHAR" />
+    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="shop_entity_id" property="shopEntityId" jdbcType="CHAR" />
+    <result column="user_id" property="userId" jdbcType="CHAR" />
+    <result column="mac" property="mac" jdbcType="CHAR" />
+    <result column="request_time" property="requestTime" jdbcType="TIMESTAMP" />
+    <result column="third_order_id" property="thirdOrderId" jdbcType="CHAR" />
+    <result column="scard_no" property="scardNo" jdbcType="CHAR" />
+    <result column="goods_total_num" property="goodsTotalNum" jdbcType="INTEGER" />
+    <result column="original_price" property="originalPrice" jdbcType="DOUBLE" />
+    <result column="discount_rate" property="discountRate" jdbcType="DOUBLE" />
+    <result column="pay_price" property="payPrice" jdbcType="DOUBLE" />
+    <result column="take_method" property="takeMethod" jdbcType="CHAR" />
+    <result column="consignee_id" property="consigneeId" jdbcType="CHAR" />
+    <result column="delivery_status" property="deliveryStatus" jdbcType="CHAR" />
+    <result column="room_name" property="roomName" jdbcType="CHAR" />
+    <result column="desk_name" property="deskName" jdbcType="CHAR" />
+    <result column="is_sa_commit" property="isSaCommit" jdbcType="CHAR" />
+    <result column="account" property="account" jdbcType="CHAR" />
+    <result column="user_order_time" property="userOrderTime" jdbcType="TIMESTAMP" />
+    <result column="shop_order_time" property="shopOrderTime" jdbcType="TIMESTAMP" />
+    <result column="payment_application_time" property="paymentApplicationTime" jdbcType="TIMESTAMP" />
+    <result column="payment_time" property="paymentTime" jdbcType="TIMESTAMP" />
+    <result column="invoice_application_time" property="invoiceApplicationTime" jdbcType="TIMESTAMP" />
+    <result column="is_invoice" property="isInvoice" jdbcType="CHAR" />
+    <result column="invoice_time" property="invoiceTime" jdbcType="TIMESTAMP" />
+    <result column="invoice_latest_time" property="invoiceLatestTime" jdbcType="TIMESTAMP" />
+    <result column="avoid_item" property="avoidItem" jdbcType="CHAR" />
+    <result column="dining_numbers" property="diningNumbers" jdbcType="INTEGER" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      order_id, bill_type, shop_id, 
+      shop_entity_id, user_id, mac, 
+      request_time, third_order_id, scard_no, 
+      goods_total_num, original_price, discount_rate, 
+      pay_price, take_method, consignee_id, 
+      delivery_status, room_name, desk_name, 
+      is_sa_commit, account, user_order_time, 
+      shop_order_time, payment_application_time, payment_time, 
+      invoice_application_time, is_invoice, invoice_time, 
+      invoice_latest_time, avoid_item, dining_numbers, 
+      is_del, create_time, c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.bill.OrderInfoExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from order_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.bill.OrderInfoExample" resultType="java.lang.Integer">
+    select count(*) from order_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.bill.OrderInfoKey" >
+    select 
+      order_id, bill_type, shop_id, 
+      shop_entity_id, user_id, mac, 
+      request_time, third_order_id, scard_no, 
+      goods_total_num, original_price, discount_rate, 
+      pay_price, take_method, consignee_id, 
+      delivery_status, room_name, desk_name, 
+      is_sa_commit, account, user_order_time, 
+      shop_order_time, payment_application_time, payment_time, 
+      invoice_application_time, is_invoice, invoice_time, 
+      invoice_latest_time, avoid_item, dining_numbers, 
+      is_del, create_time, c_time_stamp
+    from order_info where order_id = #{orderId,jdbcType=CHAR}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.bill.OrderInfoExample">
+    delete from order_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.bill.OrderInfoKey" >
+    delete from order_info where order_id = #{orderId,jdbcType=CHAR}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.bill.OrderInfo" >
+    insert into order_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "orderId != null">
+         order_id,
+      </if>
+      <if test= "billType != null">
+         bill_type,
+      </if>
+      <if test= "shopId != null">
+         shop_id,
+      </if>
+      <if test= "shopEntityId != null">
+         shop_entity_id,
+      </if>
+      <if test= "userId != null">
+         user_id,
+      </if>
+      <if test= "mac != null">
+         mac,
+      </if>
+      <if test= "requestTime != null">
+         request_time,
+      </if>
+      <if test= "thirdOrderId != null">
+         third_order_id,
+      </if>
+      <if test= "scardNo != null">
+         scard_no,
+      </if>
+      <if test= "goodsTotalNum != null">
+         goods_total_num,
+      </if>
+      <if test= "originalPrice != null">
+         original_price,
+      </if>
+      <if test= "discountRate != null">
+         discount_rate,
+      </if>
+      <if test= "payPrice != null">
+         pay_price,
+      </if>
+      <if test= "takeMethod != null">
+         take_method,
+      </if>
+      <if test= "consigneeId != null">
+         consignee_id,
+      </if>
+      <if test= "deliveryStatus != null">
+         delivery_status,
+      </if>
+      <if test= "roomName != null">
+         room_name,
+      </if>
+      <if test= "deskName != null">
+         desk_name,
+      </if>
+      <if test= "isSaCommit != null">
+         is_sa_commit,
+      </if>
+      <if test= "account != null">
+         account,
+      </if>
+      <if test= "userOrderTime != null">
+         user_order_time,
+      </if>
+      <if test= "shopOrderTime != null">
+         shop_order_time,
+      </if>
+      <if test= "paymentApplicationTime != null">
+         payment_application_time,
+      </if>
+      <if test= "paymentTime != null">
+         payment_time,
+      </if>
+      <if test= "invoiceApplicationTime != null">
+         invoice_application_time,
+      </if>
+      <if test= "isInvoice != null">
+         is_invoice,
+      </if>
+      <if test= "invoiceTime != null">
+         invoice_time,
+      </if>
+      <if test= "invoiceLatestTime != null">
+         invoice_latest_time,
+      </if>
+      <if test= "avoidItem != null">
+         avoid_item,
+      </if>
+      <if test= "diningNumbers != null">
+         dining_numbers,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "orderId != null">
+         #{orderId,jdbcType=CHAR},
+      </if>
+      <if test= "billType != null">
+         #{billType,jdbcType=CHAR},
+      </if>
+      <if test= "shopId != null">
+         #{shopId,jdbcType=CHAR},
+      </if>
+      <if test= "shopEntityId != null">
+         #{shopEntityId,jdbcType=CHAR},
+      </if>
+      <if test= "userId != null">
+         #{userId,jdbcType=CHAR},
+      </if>
+      <if test= "mac != null">
+         #{mac,jdbcType=CHAR},
+      </if>
+      <if test= "requestTime != null">
+         #{requestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "thirdOrderId != null">
+         #{thirdOrderId,jdbcType=CHAR},
+      </if>
+      <if test= "scardNo != null">
+         #{scardNo,jdbcType=CHAR},
+      </if>
+      <if test= "goodsTotalNum != null">
+         #{goodsTotalNum,jdbcType=INTEGER},
+      </if>
+      <if test= "originalPrice != null">
+         #{originalPrice,jdbcType=DOUBLE},
+      </if>
+      <if test= "discountRate != null">
+         #{discountRate,jdbcType=DOUBLE},
+      </if>
+      <if test= "payPrice != null">
+         #{payPrice,jdbcType=DOUBLE},
+      </if>
+      <if test= "takeMethod != null">
+         #{takeMethod,jdbcType=CHAR},
+      </if>
+      <if test= "consigneeId != null">
+         #{consigneeId,jdbcType=CHAR},
+      </if>
+      <if test= "deliveryStatus != null">
+         #{deliveryStatus,jdbcType=CHAR},
+      </if>
+      <if test= "roomName != null">
+         #{roomName,jdbcType=CHAR},
+      </if>
+      <if test= "deskName != null">
+         #{deskName,jdbcType=CHAR},
+      </if>
+      <if test= "isSaCommit != null">
+         #{isSaCommit,jdbcType=CHAR},
+      </if>
+      <if test= "account != null">
+         #{account,jdbcType=CHAR},
+      </if>
+      <if test= "userOrderTime != null">
+         #{userOrderTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "shopOrderTime != null">
+         #{shopOrderTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "paymentApplicationTime != null">
+         #{paymentApplicationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "paymentTime != null">
+         #{paymentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "invoiceApplicationTime != null">
+         #{invoiceApplicationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "isInvoice != null">
+         #{isInvoice,jdbcType=CHAR},
+      </if>
+      <if test= "invoiceTime != null">
+         #{invoiceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "invoiceLatestTime != null">
+         #{invoiceLatestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "avoidItem != null">
+         #{avoidItem,jdbcType=CHAR},
+      </if>
+      <if test= "diningNumbers != null">
+         #{diningNumbers,jdbcType=INTEGER},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP()
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update order_info
+    <set>
+        order_id = #{record.orderId,jdbcType=CHAR},
+        bill_type = #{record.billType,jdbcType=CHAR},
+        shop_id = #{record.shopId,jdbcType=CHAR},
+        shop_entity_id = #{record.shopEntityId,jdbcType=CHAR},
+        user_id = #{record.userId,jdbcType=CHAR},
+        mac = #{record.mac,jdbcType=CHAR},
+        request_time = #{record.requestTime,jdbcType=TIMESTAMP},
+        third_order_id = #{record.thirdOrderId,jdbcType=CHAR},
+        scard_no = #{record.scardNo,jdbcType=CHAR},
+        goods_total_num = #{record.goodsTotalNum,jdbcType=INTEGER},
+        original_price = #{record.originalPrice,jdbcType=DOUBLE},
+        discount_rate = #{record.discountRate,jdbcType=DOUBLE},
+        pay_price = #{record.payPrice,jdbcType=DOUBLE},
+        take_method = #{record.takeMethod,jdbcType=CHAR},
+        consignee_id = #{record.consigneeId,jdbcType=CHAR},
+        delivery_status = #{record.deliveryStatus,jdbcType=CHAR},
+        room_name = #{record.roomName,jdbcType=CHAR},
+        desk_name = #{record.deskName,jdbcType=CHAR},
+        is_sa_commit = #{record.isSaCommit,jdbcType=CHAR},
+        account = #{record.account,jdbcType=CHAR},
+        user_order_time = #{record.userOrderTime,jdbcType=TIMESTAMP},
+        shop_order_time = #{record.shopOrderTime,jdbcType=TIMESTAMP},
+        payment_application_time = #{record.paymentApplicationTime,jdbcType=TIMESTAMP},
+        payment_time = #{record.paymentTime,jdbcType=TIMESTAMP},
+        invoice_application_time = #{record.invoiceApplicationTime,jdbcType=TIMESTAMP},
+        is_invoice = #{record.isInvoice,jdbcType=CHAR},
+        invoice_time = #{record.invoiceTime,jdbcType=TIMESTAMP},
+        invoice_latest_time = #{record.invoiceLatestTime,jdbcType=TIMESTAMP},
+        avoid_item = #{record.avoidItem,jdbcType=CHAR},
+        dining_numbers = #{record.diningNumbers,jdbcType=INTEGER},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update order_info
+    <set>
+      <if test="record.orderId !=null">
+        order_id = #{record.orderId,jdbcType=CHAR},
+      </if>
+      <if test="record.billType !=null">
+        bill_type = #{record.billType,jdbcType=CHAR},
+      </if>
+      <if test="record.shopId !=null">
+        shop_id = #{record.shopId,jdbcType=CHAR},
+      </if>
+      <if test="record.shopEntityId !=null">
+        shop_entity_id = #{record.shopEntityId,jdbcType=CHAR},
+      </if>
+      <if test="record.userId !=null">
+        user_id = #{record.userId,jdbcType=CHAR},
+      </if>
+      <if test="record.mac !=null">
+        mac = #{record.mac,jdbcType=CHAR},
+      </if>
+      <if test="record.requestTime !=null">
+        request_time = #{record.requestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.thirdOrderId !=null">
+        third_order_id = #{record.thirdOrderId,jdbcType=CHAR},
+      </if>
+      <if test="record.scardNo !=null">
+        scard_no = #{record.scardNo,jdbcType=CHAR},
+      </if>
+      <if test="record.goodsTotalNum !=null">
+        goods_total_num = #{record.goodsTotalNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.originalPrice !=null">
+        original_price = #{record.originalPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.discountRate !=null">
+        discount_rate = #{record.discountRate,jdbcType=DOUBLE},
+      </if>
+      <if test="record.payPrice !=null">
+        pay_price = #{record.payPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.takeMethod !=null">
+        take_method = #{record.takeMethod,jdbcType=CHAR},
+      </if>
+      <if test="record.consigneeId !=null">
+        consignee_id = #{record.consigneeId,jdbcType=CHAR},
+      </if>
+      <if test="record.deliveryStatus !=null">
+        delivery_status = #{record.deliveryStatus,jdbcType=CHAR},
+      </if>
+      <if test="record.roomName !=null">
+        room_name = #{record.roomName,jdbcType=CHAR},
+      </if>
+      <if test="record.deskName !=null">
+        desk_name = #{record.deskName,jdbcType=CHAR},
+      </if>
+      <if test="record.isSaCommit !=null">
+        is_sa_commit = #{record.isSaCommit,jdbcType=CHAR},
+      </if>
+      <if test="record.account !=null">
+        account = #{record.account,jdbcType=CHAR},
+      </if>
+      <if test="record.userOrderTime !=null">
+        user_order_time = #{record.userOrderTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.shopOrderTime !=null">
+        shop_order_time = #{record.shopOrderTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.paymentApplicationTime !=null">
+        payment_application_time = #{record.paymentApplicationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.paymentTime !=null">
+        payment_time = #{record.paymentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.invoiceApplicationTime !=null">
+        invoice_application_time = #{record.invoiceApplicationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.isInvoice !=null">
+        is_invoice = #{record.isInvoice,jdbcType=CHAR},
+      </if>
+      <if test="record.invoiceTime !=null">
+        invoice_time = #{record.invoiceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.invoiceLatestTime !=null">
+        invoice_latest_time = #{record.invoiceLatestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.avoidItem !=null">
+        avoid_item = #{record.avoidItem,jdbcType=CHAR},
+      </if>
+      <if test="record.diningNumbers !=null">
+        dining_numbers = #{record.diningNumbers,jdbcType=INTEGER},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.bill.OrderInfo" >
+    update order_info
+    <set>
+      <if test="orderId !=null">
+      order_id = #{orderId,jdbcType=CHAR},
+      </if>
+      <if test="billType !=null">
+      bill_type = #{billType,jdbcType=CHAR},
+      </if>
+      <if test="shopId !=null">
+      shop_id = #{shopId,jdbcType=CHAR},
+      </if>
+      <if test="shopEntityId !=null">
+      shop_entity_id = #{shopEntityId,jdbcType=CHAR},
+      </if>
+      <if test="userId !=null">
+      user_id = #{userId,jdbcType=CHAR},
+      </if>
+      <if test="mac !=null">
+      mac = #{mac,jdbcType=CHAR},
+      </if>
+      <if test="requestTime !=null">
+      request_time = #{requestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="thirdOrderId !=null">
+      third_order_id = #{thirdOrderId,jdbcType=CHAR},
+      </if>
+      <if test="scardNo !=null">
+      scard_no = #{scardNo,jdbcType=CHAR},
+      </if>
+      <if test="goodsTotalNum !=null">
+      goods_total_num = #{goodsTotalNum,jdbcType=INTEGER},
+      </if>
+      <if test="originalPrice !=null">
+      original_price = #{originalPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="discountRate !=null">
+      discount_rate = #{discountRate,jdbcType=DOUBLE},
+      </if>
+      <if test="payPrice !=null">
+      pay_price = #{payPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="takeMethod !=null">
+      take_method = #{takeMethod,jdbcType=CHAR},
+      </if>
+      <if test="consigneeId !=null">
+      consignee_id = #{consigneeId,jdbcType=CHAR},
+      </if>
+      <if test="deliveryStatus !=null">
+      delivery_status = #{deliveryStatus,jdbcType=CHAR},
+      </if>
+      <if test="roomName !=null">
+      room_name = #{roomName,jdbcType=CHAR},
+      </if>
+      <if test="deskName !=null">
+      desk_name = #{deskName,jdbcType=CHAR},
+      </if>
+      <if test="isSaCommit !=null">
+      is_sa_commit = #{isSaCommit,jdbcType=CHAR},
+      </if>
+      <if test="account !=null">
+      account = #{account,jdbcType=CHAR},
+      </if>
+      <if test="userOrderTime !=null">
+      user_order_time = #{userOrderTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shopOrderTime !=null">
+      shop_order_time = #{shopOrderTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paymentApplicationTime !=null">
+      payment_application_time = #{paymentApplicationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paymentTime !=null">
+      payment_time = #{paymentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="invoiceApplicationTime !=null">
+      invoice_application_time = #{invoiceApplicationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isInvoice !=null">
+      is_invoice = #{isInvoice,jdbcType=CHAR},
+      </if>
+      <if test="invoiceTime !=null">
+      invoice_time = #{invoiceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="invoiceLatestTime !=null">
+      invoice_latest_time = #{invoiceLatestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="avoidItem !=null">
+      avoid_item = #{avoidItem,jdbcType=CHAR},
+      </if>
+      <if test="diningNumbers !=null">
+      dining_numbers = #{diningNumbers,jdbcType=INTEGER},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where order_id = #{orderId,jdbcType=CHAR}
+  </update>
+
+</mapper>

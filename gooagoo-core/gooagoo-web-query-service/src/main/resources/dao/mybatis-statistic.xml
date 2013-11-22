@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <mappers>
+    <mapper resource="dao/generator/statistic/CouponStatisticInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/CouponStatisticInfo2-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/GoodsStatisticInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/ShopStatisticInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumActivityArrive-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumAreaBill-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumAreaPayConsumers-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumBill-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingBrand-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingBrowse-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingCategory-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingCollect-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingConsume-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingCoupon-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingCryout-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingEvent-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingGoods-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingNotice-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingPublish-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingToStore-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingTool-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumMarketingVb-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumPassStore-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumPayConsumers-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumToArea-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/SumToStore-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/UserLastTime-Mapper.xml" /> 
+    <mapper resource="dao/generator/statistic/UserStoreRecord-Mapper.xml" /> 
+  </mappers>
+</configuration>

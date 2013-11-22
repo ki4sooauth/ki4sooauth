@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root alias="getFoodByIdRoot"><!--按名称编号查询菜品-->
+	<result></result><!--查询结果编码，true-查询成功，false-查询失败-->
+	<msg></msg><!--查询结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<foodinfolist cycle="1"><!--餐饮商品详细返回信息-->
+		<foodid></foodid><!--菜品id-->
+		<onedimensioncode></onedimensioncode><!--菜品一维码,对应手机页面上显示的编号  -->
+		<foodkind></foodkind><!--菜品类别名称-->
+		<foodtype></foodtype><!--菜品类别编码-->
+		<foodname></foodname><!--菜品名称-->
+		<foodprice></foodprice><!--单价-->
+		<foodhot></foodhot><!--人气-->
+		<inventory></inventory><!--商品库存量：0：无，1：有-->
+	</foodinfolist>
+</root>
+

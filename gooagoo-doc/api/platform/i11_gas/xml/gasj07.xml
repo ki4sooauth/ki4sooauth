@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="openTableManageRoot"><!--开台管理-->
+	<result/><!--结果编码，true开台成功，false开台失败-->
+	<msg/><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+ </root>

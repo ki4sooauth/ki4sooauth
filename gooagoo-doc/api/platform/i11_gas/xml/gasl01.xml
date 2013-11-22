@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root alias="SingleMemberCardRoot"><!--单一会员卡确认-->
+	<result></result><!--查询结果编码，true-查询成功，false-查询失败-->
+	<msg></msg><!--查询结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<scardno></scardno><!--会员卡卡号  -->
+　　　<cardname></cardname><!--会员卡名称  -->
+　　　<jifen></jifen><!--当前可用积分  -->
+　　　<lasttime></lasttime><!--上次到店时间  -->
+</root>
+

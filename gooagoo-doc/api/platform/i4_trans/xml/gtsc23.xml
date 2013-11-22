@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="updatePeopleNumsRoot"><!--修改台头信息 -->
+	<result></result><!--结果编码，true成功，false失败 -->
+	<msg></msg><!--结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<updatepeoplenumslist cycle="1"><!-- 修改台头信息 -->
+		<updateheaderid/><!-- 修改台头信息单编号 -->
+		<tablename/><!-- 餐桌桌号 -->  
+		<guestsnumber/><!-- 客人人数 -->	
+		<ctimestamp/><!-- 时间戳 -->
+	</updatepeoplenumslist>
+</root>

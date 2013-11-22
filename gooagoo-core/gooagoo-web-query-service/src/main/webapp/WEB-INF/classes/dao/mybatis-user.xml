@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <mappers>
+    <mapper resource="dao/generator/user/ConsigneeInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/ProductSerialNumber-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/ReceiptInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/SysSecurityQuestion-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/UserAccountBind-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/UserEmailactiveCode-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/UserInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/UserMobileCode-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/UserMobileInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/UserProfile-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/UserSecurityCard-Mapper.xml" /> 
+    <mapper resource="dao/generator/user/UserSecurityQuestion-Mapper.xml" /> 
+  </mappers>
+</configuration>

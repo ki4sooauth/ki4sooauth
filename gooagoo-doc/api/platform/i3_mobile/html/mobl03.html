@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+<body>
+<p><br />
+</p>
+<p>&nbsp;</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+	<tr> 
+		<th scope="col" colspan="2"><span class="row">mobl03:是否允许用户播放提货凭证音频  </span></th> 
+	</tr> 
+	<tr> 
+		<td width="136" class="row">功能说明：</td> 
+		<td width="658" class="row">是否允许用户播放提货凭证音频 。（用户提货播放音频之前调用接口） </td> 
+	</tr>
+	<tr> 
+		<td width="136" class="row">程序映射地址：</td> 
+		<td width="658" class="row"></td> 
+	</tr> 
+	<tr> 
+		<td class="alt">返回值例子：</td> 
+		<td class="alt"><a href="../xml/mobl03.xml" target="_blank">mobl03.xml</a> | <a href="../xml/mobl03.txt" target="_blank">mobl03.txt</a></td> 
+	</tr> 
+	<tr>
+	  <td valign="top" class="row">参数说明：</td>
+	  <td class="row">
+		<table >
+			<tr>
+				<td class="alt" align="center">CODE</td>
+				<td class="alt" align="center">NAME</td>
+				<td class="alt" align="center">是否必填</td>
+				<td class="alt" align="center">备注说明</td>
+			</tr>
+			<tr>
+				<td class="row">voucherid</td>
+				<td class="row">提货凭证编号</td>
+				<td class="row" style="color: #FF0000">必填</td>
+				<td class="row">6位年月+8位唯一标识+ 04</td>
+			</tr>
+			<tr>
+				<td class="row">userid</td>
+				<td class="row">用户名</td>
+				<td class="row" style="color: #FF0000">必填</td>
+				<td class="row"></td>
+			</tr>
+			<tr>
+				<td class="row">shopid</td>
+				<td class="row">商家编号</td>
+				<td class="row" style="color: #FF0000">必填</td>
+				<td class="row"></td>
+			</tr>
+		</table>
+ 	 </td>
+	</tr>
+	<tr>
+	  <td class="alt">业务逻辑说明：</td>
+	  <td class="alt">提货凭证使用流程：</br>  	
+		手机将提货凭证提交给服务器端，服务器端允许用户提货后，根据提货凭证生成一个提货凭证的音频文件，手机端下载音频文件，并播放该音频文件，转发器接收到有效音频信号后，发送至服务器，服务器分析出是提货凭证使用请求，然后将订单信息返回给转发器，转发器将提货凭证信息发送给PC端，由服务人员给予提货。提货凭证的使用流程结束。 
+	  </td>
+	</tr>
+	<tr>
+	  <td class="row">修改日志：</td>
+	  <td class="row"></td>
+	</tr> 
+</table>
+</body>
+</html>

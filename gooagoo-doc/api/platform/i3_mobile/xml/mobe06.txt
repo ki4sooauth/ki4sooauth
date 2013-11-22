@@ -1,0 +1,11 @@
+{
+    "result":"",
+    "msg":"",
+    "checkout":{
+        "userid":"",
+        "shopid":"",
+        "orderid":"",
+        "deskno":"",
+        "roomid":""
+    }
+}

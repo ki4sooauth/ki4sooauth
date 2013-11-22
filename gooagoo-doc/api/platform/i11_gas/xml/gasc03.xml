@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root alias="UserBaseInfoRoot"><!--会员信息查询 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<userbaseinfo><!--会员信息-->
+		<userid></userid><!--用户id member_of_card.user_id -->
+		<realname></realname><!--真实姓名,member_base_info.name -->
+		<cardname></cardname><!--会员卡名称,member_card.card_name -->
+		<scardno></scardno><!--会员卡音频编号 member_of_card.scardno -->
+		<useableintegralnumber></useableintegralnumber><!--可用积分 integral_info.useable_integral_number -->
+	</userbaseinfo>
+</root>

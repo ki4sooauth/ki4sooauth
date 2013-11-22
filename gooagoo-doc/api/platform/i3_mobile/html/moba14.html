@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+
+<body>
+<p><br />
+</p>
+<p>&nbsp;</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+
+<tr> 
+
+<th scope="col" colspan="2"><span class="row">moba14:修改会员信息  </span></th> 
+
+</tr> 
+<tr> 
+
+<td width="136" class="row">功能说明：</td> 
+<td width="658" class="row">
+修改会员信息
+ </td> 
+</tr>
+<tr> 
+
+<td width="136" class="row">程序映射地址：</td> 
+<td width="658" class="row"></td> 
+</tr> 
+
+<tr> 
+
+<td class="alt">返回值例子：</td> 
+<td class="alt"><a href="../xml/moba14.xml" target="_blank">moba14.xml</a> | <a href="../xml/moba14.txt" target="_blank">moba14.txt</a></td> 
+</tr> 
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">userid</td>
+		<td class="row">用户id</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">用户编号，唯一，通过UUID产生</td>
+	</tr>
+	<tr>
+		<td class="row">sessionid</td>
+		<td class="row">sessionid值</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">手机登录后的sessionid值</td>
+	</tr>
+	
+  <tr><td class="row">mac</td><td class="row">手机mac地址</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">mver</td><td class="row">手机程序版本</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">lid</td><td class="row">lid</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">entityposition</td><td class="row">实体店编号</td><td class="row">选填</td><td class="row">用户当前所在实体店编号</td></tr>
+	
+	<tr>
+		<td class="row">shopid</td>
+		<td class="row">店铺id</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">name</td>
+		<td class="row">姓名</td>
+		<td class="row" >选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">sex</td>
+		<td class="row">性别</td>
+		<td class="row" >选填</td>
+		<td class="row">性别：M-男，F-女</td>
+	</tr>
+	<tr>
+		<td class="row">birthday</td>
+		<td class="row">生日</td>
+		<td class="row" >选填</td>
+		<td class="row">YYYY-MM-DD</td>
+	</tr>
+	<tr>
+		<td class="row">idtype</td>
+		<td class="row">证件类型</td>
+		<td class="row" >选填</td>
+		<td class="row">证件类型，00-身份证，01-护照，</br>02-军官证，03-其他</td>
+	</tr>
+	<tr>
+		<td class="row">idno</td>
+		<td class="row">证件号码</td>
+		<td class="row" >选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">mobile</td>
+		<td class="row">手机号</td>
+		<td class="row" >选填</td>
+		<td class="row"></td>
+	</tr>	
+	<tr>
+		<td class="row">telephone</td>
+		<td class="row">联系电话</td>
+		<td class="row" >选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">email</td>
+		<td class="row">电子邮箱</td>
+		<td class="row" >选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">postcode</td>
+		<td class="row">邮编</td>
+		<td class="row" >选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">address</td>
+		<td class="row">地址</td>
+		<td class="row" >选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">memberspecialinfo</td>
+		<td class="row">特征值</td>
+		<td class="row" >选填</td>
+		<td class="row">[{"featurecode":"101","featurename":<br/>"颜色","featurevalue":"红色"},<br/>{"featurecode":"104","featurename":<br/>"地址","featurevalue":"北京"}]</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+	  1.根据userid、sessionid校验登录状态；<br/>
+	  2.根据shopid、userid修改member_of_card表，在根据member_of_card表中的phy_card_no修改member_base_info相关属性信息。<br />
+	  3.在根据shopid、phy_card_no、userid、scardno、memberspecialinfo修改member_feature_info相关特征信息<br />
+	  4.返回操作结果true/false。
+  </td>
+</tr>
+<tr>
+  <td class="row">修改日志：</td>
+  <td class="row"></td>
+</tr> 
+</table>
+</body>
+</html>

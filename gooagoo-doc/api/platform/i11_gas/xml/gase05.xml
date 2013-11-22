@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root alias="UserTrackRoot"><!--店内踪迹查询-->
+	<result></result><!--查询结果编码，true-查询成功，false-查询失败-->
+	<msg></msg><!--查询结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<userTrackInfo cycle="1"><!--店内踪迹信息-->
+		<trackCount></trackCount><!--停留次数-->
+		<storeArea></storeArea><!--主区域名称-->
+	</userTrackInfo>
+</root>
+

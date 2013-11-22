@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root alias="getDishCategoryRoot"><!--菜品类别信息获取-->
+	<result></result><!--查询结果编码，true-成功，false-失败-->
+	<msg></msg><!--查询结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<foodkinds cycle="1"><!--品类信息-->
+		<foodkindid></foodkindid><!--分类id-->
+		<foodkindname></foodkindname><!--分类名称-->
+		<url></url><!-- 示例图片地址-->
+	</foodkinds>
+</root>
+

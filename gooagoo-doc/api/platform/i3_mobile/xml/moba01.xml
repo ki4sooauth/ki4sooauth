@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="UserMemberCardRoot"><!-- 用户会员卡 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<usermembercard cycle="1"><!-- 用户会员卡 -->
+		<scardno></scardno><!--会员卡音频编号 -->
+		<scardnotdcurl></scardnotdcurl><!--会员卡音频编号二维码地址 -->
+		<scardnourl></scardnourl><!--会员卡音频编号音频地址 -->
+		<phycardno></phycardno><!--物理卡号 -->
+		<cardid></cardid><!--会员卡编号 -->
+		<userid></userid><!--用户编号 -->
+		<shopid></shopid><!--商家编号 -->
+		<useableintegralnumber></useableintegralnumber><!--用户在此商家积分 -->
+		<expiredate></expiredate><!--过期时间 -->
+		<createtime></createtime><!--创建时间 -->
+		<ctimestamp></ctimestamp><!--最后一次修改时间 -->
+		<needshare></needshare><!--是否允许分享,Y-允许分享，N-不允许分享 -->
+		<sharetimes></sharetimes><!--分享次数 -->
+		<shareuserid></shareuserid><!--分享者id -->
+		<sharedemail></sharedemail><!--分享者用户名 -->
+		<sharednickname></sharednickname><!--分享者昵称 -->
+		<shareexpiredate></shareexpiredate><!--分享结束时间 -->
+	</usermembercard>
+	<noreadnoticeinfo cycle="1"><!-- 未读通知信息 -->
+		<shopid></shopid><!-- 商家编号 -->
+		<noreadnoticenums></noreadnoticenums><!--未读通知条数-->
+	</noreadnoticeinfo>
+	<isdeleted><!-- 已删除的会员卡信息 -->
+		<scardnostr></scardnostr><!-- 已删除的会员卡字符串，多条用“逗号”分隔 -->
+		<count></count><!--用户会员卡总数（用户所拥有的所有商家的会员卡总和）-->
+	</isdeleted>
+</root>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.business.marketing.notice.MarketingNoticeAdapterMapper">
+	<resultMap id="BaseResultMap" type="com.gooagoo.entity.business.marketing.notice.MarketingNoticeAdapter">
+		<result column="page_id" property="pageId" jdbcType="VARCHAR" />
+		<association property="marketingUserLink" column="id" javaType="com.gooagoo.entity.generator.marketing.MarketingUserLink"  resultMap="marketingUserLinkResultMap"/>  
+	</resultMap>
+	<resultMap id="marketingUserLinkResultMap" type="com.gooagoo.entity.generator.marketing.MarketingUserLink" >
+	    <id column="id" property="id" jdbcType="CHAR" />
+	    <result column="marketing_type" property="marketingType" jdbcType="CHAR" />
+	    <result column="marketing_id" property="marketingId" jdbcType="CHAR" />
+	    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+	    <result column="account_type" property="accountType" jdbcType="CHAR" />
+	    <result column="account" property="account" jdbcType="CHAR" />
+	    <result column="activity_id" property="activityId" jdbcType="CHAR" />
+	    <result column="is_pushed" property="isPushed" jdbcType="CHAR" />
+	    <result column="push_time" property="pushTime" jdbcType="TIMESTAMP" />
+	    <result column="is_read" property="isRead" jdbcType="CHAR" />
+	    <result column="is_del" property="isDel" jdbcType="CHAR" />
+	    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+	    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  	</resultMap>
+
+	<select id="pageNoticeInfo" resultMap="BaseResultMap">
+		<if test="pageType==&quot;P&quot;">
+			SELECT * FROM (SELECT * FROM (
+		</if>
+		SELECT
+		CONCAT(
+		l.push_time,
+		l.id
+		) page_id,
+		l.*
+		FROM
+		gooagoo_marketing.marketing_user_link l
+		WHERE
+		l.is_pushed='Y'
+		AND l.is_del='N'
+		AND l.account_type='0'
+		AND l.marketing_type='2'
+		<if test="pageId != null">
+			AND CONCAT(
+			l.push_time,
+			l.id
+			)
+			<if test="pageType==&quot;P&quot;">
+				>
+			</if>
+			<if test="pageType==&quot;N&quot;">
+				&lt;
+			</if>
+			 #{pageId}
+		</if>
+		<if test="userId != null">
+			AND l.account=#{userId}
+		</if>
+		<if test= "shopId != null">
+         AND l.shop_id = #{shopId}
+    	</if>
+		<if test= "startPushTime != null">
+         AND l.push_time >= #{startPushTime}
+    	</if>
+		<if test= "endPushTime != null">
+         AND l.push_time &lt;= #{endPushTime}
+    	</if>
+		ORDER BY
+		CONCAT(
+		l.push_time,
+		l.id
+		) DESC
+		<if test="pageType==&quot;P&quot;">
+			)x ORDER BY x.page_id ASC
+		</if>
+		<if test="pageSize !=null">
+		limit ${pageSize}
+		</if>
+		<if test="pageType==&quot;P&quot;">
+			)y ORDER BY y.page_id DESC
+		</if>
+		</select>
+	
+	<!-- 查询商家吆喝 （用于手机端）-->		
+	<select id="pageNoticeInfoM" resultMap="BaseResultMap">
+		SELECT
+		CONCAT(
+		l.push_time,
+		l.id
+		) page_id,
+		l.*
+		FROM
+		gooagoo_marketing.marketing_user_link l
+		WHERE
+		l.is_pushed='Y'
+		AND l.is_del='N'
+		AND l.account_type='0'
+		AND l.marketing_type='2'
+		<if test="pageId != null">
+			AND CONCAT(
+			l.push_time,
+			l.id
+			)
+			<if test="pageType==&quot;P&quot;">
+				>
+			</if>
+			<if test="pageType==&quot;N&quot;">
+				&lt;
+			</if>
+			 #{pageId}
+		</if>
+		<if test="userId != null">
+			AND l.account=#{userId}
+		</if>
+		<if test= "shopId != null">
+         AND l.shop_id = #{shopId}
+    	</if>
+		<if test= "startPushTime != null">
+         AND l.push_time >= #{startPushTime}
+    	</if>
+		<if test= "endPushTime != null">
+         AND l.push_time &lt;= #{endPushTime}
+    	</if>
+		ORDER BY
+		CONCAT(
+		l.push_time,
+		l.id
+		) DESC
+		<if test="pageSize !=null">
+		limit ${pageSize}
+		</if>
+	</select>
+		
+	<!-- 查询商家吆喝条数 （用于手机端） -->
+	<select id="countPageNoticeInfo" resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM
+		gooagoo_marketing.marketing_user_link l
+		WHERE
+		l.is_pushed='Y'
+		AND l.is_del='N'
+		AND l.account_type='0'
+		AND l.marketing_type='2'
+		<if test="pageId != null">
+			AND CONCAT(
+			l.push_time,
+			l.id
+			)
+			<if test="pageType==&quot;P&quot;">
+				>
+			</if>
+			<if test="pageType==&quot;N&quot;">
+				&lt;
+			</if>
+			 #{pageId}
+		</if>
+		<if test="userId != null">
+			AND l.account=#{userId}
+		</if>
+		<if test= "shopId != null">
+         AND l.shop_id = #{shopId}
+    	</if>
+    	<if test= "startPushTime != null">
+         AND l.push_time >= #{startPushTime}
+    	</if>
+		<if test= "endPushTime != null">
+         AND l.push_time &lt;= #{endPushTime}
+    	</if>
+	</select>
+</mapper>

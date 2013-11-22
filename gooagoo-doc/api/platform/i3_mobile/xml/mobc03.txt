@@ -1,0 +1,13 @@
+{
+    "result": "",
+    "msg": "",
+    "shoplist": [
+        {
+            "shopid": "",
+            "shopurl": "",
+            "shopname": "",
+            "attentionnum": "",
+            "membernum": ""
+        }
+    ]
+}

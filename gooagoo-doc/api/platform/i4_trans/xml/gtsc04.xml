@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="GetBillRoot"><!--拿账单-->
+	<result></result><!--结果编码，true获取账单成功，false获取账单失败-->
+	<msg></msg><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<billimg></billimg><!--账单url地址-->
+</root>

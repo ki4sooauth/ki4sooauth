@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans 
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <bean id="goodsBrandQueryService" class="com.gooagoo.query.business.goods.brand.GoodsBrandQueryServiceImpl"/>
+    <bean name="/goodsBrandQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="goodsBrandQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.goods.brand.GoodsBrandQueryService"/>
+    </bean>
+    <bean id="goodsCacheQueryService" class="com.gooagoo.query.business.goods.cache.GoodsCacheQueryServiceImpl"/>
+    <bean name="/goodsCacheQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="goodsCacheQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.goods.cache.GoodsCacheQueryService"/>
+    </bean>
+    <bean id="goodsCategoryQueryService" class="com.gooagoo.query.business.goods.category.GoodsCategoryQueryServiceImpl"/>
+    <bean name="/goodsCategoryQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="goodsCategoryQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.goods.category.GoodsCategoryQueryService"/>
+    </bean>
+    <bean id="goodsQueryService" class="com.gooagoo.query.business.goods.query.GoodsQueryServiceImpl"/>
+    <bean name="/goodsQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="goodsQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.goods.query.GoodsQueryService"/>
+    </bean>
+    <bean id="shopGoodsQueryService" class="com.gooagoo.query.business.goods.query.ShopGoodsQueryServiceImpl"/>
+    <bean name="/shopGoodsQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopGoodsQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.goods.query.ShopGoodsQueryService"/>
+    </bean>
+    <bean id="statisticalQueryService" class="com.gooagoo.query.business.goods.statistical.StatisticalQueryServiceImpl"/>
+    <bean name="/statisticalQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="statisticalQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.goods.statistical.StatisticalQueryService"/>
+    </bean>
+    <bean id="logQueryService" class="com.gooagoo.query.business.log.LogQueryServiceImpl"/>
+    <bean name="/logQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="logQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.log.LogQueryService"/>
+    </bean>
+    <bean id="activityQueryService" class="com.gooagoo.query.business.marketing.activity.ActivityQueryServiceImpl"/>
+    <bean name="/activityQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="activityQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.activity.ActivityQueryService"/>
+    </bean>
+    <bean id="analysisTypeService" class="com.gooagoo.query.business.marketing.analysis.AnalysisTypeServiceImpl"/>
+    <bean name="/analysisTypeService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="analysisTypeService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.AnalysisTypeService"/>
+    </bean>
+    <bean id="guessYouLikeQueryService" class="com.gooagoo.query.business.marketing.analysis.GuessYouLikeQueryServiceImpl"/>
+    <bean name="/guessYouLikeQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="guessYouLikeQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.GuessYouLikeQueryService"/>
+    </bean>
+    <bean id="hotCommentQueryService" class="com.gooagoo.query.business.marketing.analysis.HotCommentQueryServiceImpl"/>
+    <bean name="/hotCommentQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="hotCommentQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.HotCommentQueryService"/>
+    </bean>
+    <bean id="hotSellersQueryService" class="com.gooagoo.query.business.marketing.analysis.HotSellersQueryServiceImpl"/>
+    <bean name="/hotSellersQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="hotSellersQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.HotSellersQueryService"/>
+    </bean>
+    <bean id="newGoodsQueryService" class="com.gooagoo.query.business.marketing.analysis.NewGoodsQueryServiceImpl"/>
+    <bean name="/newGoodsQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="newGoodsQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.NewGoodsQueryService"/>
+    </bean>
+    <bean id="couponCacheQueryService" class="com.gooagoo.query.business.marketing.cache.CouponCacheQueryServiceImpl"/>
+    <bean name="/couponCacheQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="couponCacheQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cache.CouponCacheQueryService"/>
+    </bean>
+    <bean id="cryoutCacheQueryService" class="com.gooagoo.query.business.marketing.cache.CryoutCacheQueryServiceImpl"/>
+    <bean name="/cryoutCacheQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="cryoutCacheQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cache.CryoutCacheQueryService"/>
+    </bean>
+    <bean id="couponQueryService" class="com.gooagoo.query.business.marketing.coupon.CouponQueryServiceImpl"/>
+    <bean name="/couponQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="couponQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.coupon.CouponQueryService"/>
+    </bean>
+    <bean id="cryoutPlaceQueryService" class="com.gooagoo.query.business.marketing.cryout.CryoutPlaceQueryServiceImpl"/>
+    <bean name="/cryoutPlaceQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="cryoutPlaceQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cryout.CryoutPlaceQueryService"/>
+    </bean>
+    <bean id="cryoutQueryService" class="com.gooagoo.query.business.marketing.cryout.CryoutQueryServiceImpl"/>
+    <bean name="/cryoutQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="cryoutQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cryout.CryoutQueryService"/>
+    </bean>
+    <bean id="shopCryoutQueryService" class="com.gooagoo.query.business.marketing.cryout.ShopCryoutQueryServiceImpl"/>
+    <bean name="/shopCryoutQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopCryoutQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cryout.ShopCryoutQueryService"/>
+    </bean>
+    <bean id="eventQueryService" class="com.gooagoo.query.business.marketing.event.EventQueryServiceImpl"/>
+    <bean name="/eventQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="eventQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.event.EventQueryService"/>
+    </bean>
+    <bean id="navigateQueryService" class="com.gooagoo.query.business.marketing.navigate.NavigateQueryServiceImpl"/>
+    <bean name="/navigateQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="navigateQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.navigate.NavigateQueryService"/>
+    </bean>
+    <bean id="noticeQueryService" class="com.gooagoo.query.business.marketing.notice.NoticeQueryServiceImpl"/>
+    <bean name="/noticeQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="noticeQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.notice.NoticeQueryService"/>
+    </bean>
+    <bean id="shopNoticeQueryService" class="com.gooagoo.query.business.marketing.notice.ShopNoticeQueryServiceImpl"/>
+    <bean name="/shopNoticeQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopNoticeQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.notice.ShopNoticeQueryService"/>
+    </bean>
+    <bean id="preferentialQueryService" class="com.gooagoo.query.business.marketing.preferential.PreferentialQueryServiceImpl"/>
+    <bean name="/preferentialQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="preferentialQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.preferential.PreferentialQueryService"/>
+    </bean>
+    <bean id="qualityGoodsQueryService" class="com.gooagoo.query.business.marketing.qualitygoods.QualityGoodsQueryServiceImpl"/>
+    <bean name="/qualityGoodsQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="qualityGoodsQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.qualitygoods.QualityGoodsQueryService"/>
+    </bean>
+    <bean id="recommendQueryService" class="com.gooagoo.query.business.marketing.recommend.RecommendQueryServiceImpl"/>
+    <bean name="/recommendQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="recommendQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.recommend.RecommendQueryService"/>
+    </bean>
+    <bean id="ruleResultQueryService" class="com.gooagoo.query.business.marketing.rule.RuleResultQueryServiceImpl"/>
+    <bean name="/ruleResultQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="ruleResultQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.rule.RuleResultQueryService"/>
+    </bean>
+    <bean id="shopIntegralQueryService" class="com.gooagoo.query.business.marketing.shopintegral.ShopIntegralQueryServiceImpl"/>
+    <bean name="/shopIntegralQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopIntegralQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.shopintegral.ShopIntegralQueryService"/>
+    </bean>
+    <bean id="shortMessageQueryService" class="com.gooagoo.query.business.marketing.shortmessage.ShortMessageQueryServiceImpl"/>
+    <bean name="/shortMessageQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shortMessageQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.shortmessage.ShortMessageQueryService"/>
+    </bean>
+    <bean id="synQueryService" class="com.gooagoo.query.business.marketing.syn.SynQueryServiceImpl"/>
+    <bean name="/synQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="synQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.syn.SynQueryService"/>
+    </bean>
+    <bean id="memberCacheQueryService" class="com.gooagoo.query.business.member.cache.MemberCacheQueryServiceImpl"/>
+    <bean name="/memberCacheQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="memberCacheQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.cache.MemberCacheQueryService"/>
+    </bean>
+    <bean id="auditCardQueryService" class="com.gooagoo.query.business.member.card.AuditCardQueryServiceImpl"/>
+    <bean name="/auditCardQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="auditCardQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.AuditCardQueryService"/>
+    </bean>
+    <bean id="checkCardQueryService" class="com.gooagoo.query.business.member.card.CheckCardQueryServiceImpl"/>
+    <bean name="/checkCardQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="checkCardQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.CheckCardQueryService"/>
+    </bean>
+    <bean id="memberCardRuleQueryService" class="com.gooagoo.query.business.member.card.MemberCardRuleQueryServiceImpl"/>
+    <bean name="/memberCardRuleQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="memberCardRuleQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.MemberCardRuleQueryService"/>
+    </bean>
+    <bean id="shopCardQueryService" class="com.gooagoo.query.business.member.card.ShopCardQueryServiceImpl"/>
+    <bean name="/shopCardQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopCardQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.ShopCardQueryService"/>
+    </bean>
+    <bean id="userCardQueryService" class="com.gooagoo.query.business.member.card.UserCardQueryServiceImpl"/>
+    <bean name="/userCardQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userCardQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.UserCardQueryService"/>
+    </bean>
+    <bean id="integralQueryService" class="com.gooagoo.query.business.member.integral.IntegralQueryServiceImpl"/>
+    <bean name="/integralQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="integralQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.integral.IntegralQueryService"/>
+    </bean>
+    <bean id="shopMemberQueryService" class="com.gooagoo.query.business.member.query.ShopMemberQueryServiceImpl"/>
+    <bean name="/shopMemberQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopMemberQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.query.ShopMemberQueryService"/>
+    </bean>
+    <bean id="userMemberQueryService" class="com.gooagoo.query.business.member.query.UserMemberQueryServiceImpl"/>
+    <bean name="/userMemberQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userMemberQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.query.UserMemberQueryService"/>
+    </bean>
+    <bean id="swipeCardQueryService" class="com.gooagoo.query.business.member.swipe.SwipeCardQueryServiceImpl"/>
+    <bean name="/swipeCardQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="swipeCardQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.member.swipe.SwipeCardQueryService"/>
+    </bean>
+    <bean id="shopAuthorityQueryService" class="com.gooagoo.query.business.shop.auth.ShopAuthorityQueryServiceImpl"/>
+    <bean name="/shopAuthorityQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopAuthorityQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.auth.ShopAuthorityQueryService"/>
+    </bean>
+    <bean id="shopCacheQueryService" class="com.gooagoo.query.business.shop.cache.ShopCacheQueryServiceImpl"/>
+    <bean name="/shopCacheQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopCacheQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.cache.ShopCacheQueryService"/>
+    </bean>
+    <bean id="shopEntityCacheQueryService" class="com.gooagoo.query.business.shop.cache.ShopEntityCacheQueryServiceImpl"/>
+    <bean name="/shopEntityCacheQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopEntityCacheQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.cache.ShopEntityCacheQueryService"/>
+    </bean>
+    <bean id="shopPositionCacheQueryService" class="com.gooagoo.query.business.shop.cache.ShopPositionCacheQueryServiceImpl"/>
+    <bean name="/shopPositionCacheQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopPositionCacheQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.cache.ShopPositionCacheQueryService"/>
+    </bean>
+    <bean id="tableCacheQueryService" class="com.gooagoo.query.business.shop.cache.TableCacheQueryServiceImpl"/>
+    <bean name="/tableCacheQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="tableCacheQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.cache.TableCacheQueryService"/>
+    </bean>
+    <bean id="gpsNavigationService" class="com.gooagoo.query.business.shop.map.GpsNavigationServiceImpl"/>
+    <bean name="/gpsNavigationService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="gpsNavigationService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.map.GpsNavigationService"/>
+    </bean>
+    <bean id="mapQueryService" class="com.gooagoo.query.business.shop.map.MapQueryServiceImpl"/>
+    <bean name="/mapQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="mapQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.map.MapQueryService"/>
+    </bean>
+    <bean id="shopPositionQueryService" class="com.gooagoo.query.business.shop.position.ShopPositionQueryServiceImpl"/>
+    <bean name="/shopPositionQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopPositionQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.position.ShopPositionQueryService"/>
+    </bean>
+    <bean id="shopQueryService" class="com.gooagoo.query.business.shop.query.ShopQueryServiceImpl"/>
+    <bean name="/shopQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.query.ShopQueryService"/>
+    </bean>
+    <bean id="userShopQueryService" class="com.gooagoo.query.business.shop.query.UserShopQueryServiceImpl"/>
+    <bean name="/userShopQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userShopQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.query.UserShopQueryService"/>
+    </bean>
+    <bean id="tableStatusQueryService" class="com.gooagoo.query.business.shop.table.TableStatusQueryServiceImpl"/>
+    <bean name="/tableStatusQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="tableStatusQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.table.TableStatusQueryService"/>
+    </bean>
+    <bean id="toolQueryService" class="com.gooagoo.query.business.shop.tool.ToolQueryServiceImpl"/>
+    <bean name="/toolQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="toolQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.tool.ToolQueryService"/>
+    </bean>
+    <bean id="shopUserLoginQueryService" class="com.gooagoo.query.business.shop.user.ShopUserLoginQueryServiceImpl"/>
+    <bean name="/shopUserLoginQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopUserLoginQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.shop.user.ShopUserLoginQueryService"/>
+    </bean>
+    <bean id="adClickRateQueryService" class="com.gooagoo.query.business.statistics.AdClickRateQueryServiceImpl"/>
+    <bean name="/adClickRateQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="adClickRateQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.AdClickRateQueryService"/>
+    </bean>
+    <bean id="browseStatisticQueryService" class="com.gooagoo.query.business.statistics.BrowseStatisticQueryServiceImpl"/>
+    <bean name="/browseStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="browseStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.BrowseStatisticQueryService"/>
+    </bean>
+    <bean id="buyStatisticQueryService" class="com.gooagoo.query.business.statistics.BuyStatisticQueryServiceImpl"/>
+    <bean name="/buyStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="buyStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.BuyStatisticQueryService"/>
+    </bean>
+    <bean id="collectStatisticQueryService" class="com.gooagoo.query.business.statistics.CollectStatisticQueryServiceImpl"/>
+    <bean name="/collectStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="collectStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.CollectStatisticQueryService"/>
+    </bean>
+    <bean id="commentsStatisticQueryService" class="com.gooagoo.query.business.statistics.CommentsStatisticQueryServiceImpl"/>
+    <bean name="/commentsStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="commentsStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.CommentsStatisticQueryService"/>
+    </bean>
+    <bean id="consumeStatisticQueryService" class="com.gooagoo.query.business.statistics.ConsumeStatisticQueryServiceImpl"/>
+    <bean name="/consumeStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="consumeStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ConsumeStatisticQueryService"/>
+    </bean>
+    <bean id="crowdOperationQueryService" class="com.gooagoo.query.business.statistics.CrowdOperationQueryServiceImpl"/>
+    <bean name="/crowdOperationQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="crowdOperationQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.CrowdOperationQueryService"/>
+    </bean>
+    <bean id="exchangeStatisticQueryService" class="com.gooagoo.query.business.statistics.ExchangeStatisticQueryServiceImpl"/>
+    <bean name="/exchangeStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="exchangeStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ExchangeStatisticQueryService"/>
+    </bean>
+    <bean id="interactiveQueryService" class="com.gooagoo.query.business.statistics.InteractiveQueryServiceImpl"/>
+    <bean name="/interactiveQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="interactiveQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.InteractiveQueryService"/>
+    </bean>
+    <bean id="memberStatisticQueryService" class="com.gooagoo.query.business.statistics.MemberStatisticQueryServiceImpl"/>
+    <bean name="/memberStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="memberStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.MemberStatisticQueryService"/>
+    </bean>
+    <bean id="queryParametersQueryService" class="com.gooagoo.query.business.statistics.QueryParametersQueryServiceImpl"/>
+    <bean name="/queryParametersQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="queryParametersQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.QueryParametersQueryService"/>
+    </bean>
+    <bean id="recordStatisticQueryService" class="com.gooagoo.query.business.statistics.RecordStatisticQueryServiceImpl"/>
+    <bean name="/recordStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="recordStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.RecordStatisticQueryService"/>
+    </bean>
+    <bean id="shareStatisticQueryService" class="com.gooagoo.query.business.statistics.ShareStatisticQueryServiceImpl"/>
+    <bean name="/shareStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shareStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ShareStatisticQueryService"/>
+    </bean>
+    <bean id="shopEntityPeopleStatisticsQueryService" class="com.gooagoo.query.business.statistics.ShopEntityPeopleStatisticsQueryServiceImpl"/>
+    <bean name="/shopEntityPeopleStatisticsQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopEntityPeopleStatisticsQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ShopEntityPeopleStatisticsQueryService"/>
+    </bean>
+    <bean id="shopPeopleStatisticsQueryService" class="com.gooagoo.query.business.statistics.ShopPeopleStatisticsQueryServiceImpl"/>
+    <bean name="/shopPeopleStatisticsQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shopPeopleStatisticsQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ShopPeopleStatisticsQueryService"/>
+    </bean>
+    <bean id="statisticAnalysisService" class="com.gooagoo.query.business.statistics.StatisticAnalysisServiceImpl"/>
+    <bean name="/statisticAnalysisService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="statisticAnalysisService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.StatisticAnalysisService"/>
+    </bean>
+    <bean id="tableStatisticQueryService" class="com.gooagoo.query.business.statistics.TableStatisticQueryServiceImpl"/>
+    <bean name="/tableStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="tableStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.TableStatisticQueryService"/>
+    </bean>
+    <bean id="activityStatisticQueryService" class="com.gooagoo.query.business.statistics.user.ActivityStatisticQueryServiceImpl"/>
+    <bean name="/activityStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="activityStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.user.ActivityStatisticQueryService"/>
+    </bean>
+    <bean id="couponStatisticQueryService" class="com.gooagoo.query.business.statistics.user.CouponStatisticQueryServiceImpl"/>
+    <bean name="/couponStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="couponStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.user.CouponStatisticQueryService"/>
+    </bean>
+    <bean id="cryoutStatisticQueryService" class="com.gooagoo.query.business.statistics.user.CryoutStatisticQueryServiceImpl"/>
+    <bean name="/cryoutStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="cryoutStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.user.CryoutStatisticQueryService"/>
+    </bean>
+    <bean id="goodsStatisticQueryService" class="com.gooagoo.query.business.statistics.user.GoodsStatisticQueryServiceImpl"/>
+    <bean name="/goodsStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="goodsStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.user.GoodsStatisticQueryService"/>
+    </bean>
+    <bean id="userPositionStatisticQueryService" class="com.gooagoo.query.business.statistics.UserPositionStatisticQueryServiceImpl"/>
+    <bean name="/userPositionStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userPositionStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.UserPositionStatisticQueryService"/>
+    </bean>
+    <bean id="useStatisticQueryService" class="com.gooagoo.query.business.statistics.UseStatisticQueryServiceImpl"/>
+    <bean name="/useStatisticQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="useStatisticQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.UseStatisticQueryService"/>
+    </bean>
+    <bean id="sysShopBidQueryService" class="com.gooagoo.query.business.system.bid.SysShopBidQueryServiceImpl"/>
+    <bean name="/sysShopBidQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="sysShopBidQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.system.bid.SysShopBidQueryService"/>
+    </bean>
+    <bean id="marketingChannelQueryService" class="com.gooagoo.query.business.system.channel.MarketingChannelQueryServiceImpl"/>
+    <bean name="/marketingChannelQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="marketingChannelQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.system.channel.MarketingChannelQueryService"/>
+    </bean>
+    <bean id="sysCmsContentQueryService" class="com.gooagoo.query.business.system.cms.SysCmsContentQueryServiceImpl"/>
+    <bean name="/sysCmsContentQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="sysCmsContentQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.system.cms.SysCmsContentQueryService"/>
+    </bean>
+    <bean id="nominateActivityQueryService" class="com.gooagoo.query.business.system.nominate.NominateActivityQueryServiceImpl"/>
+    <bean name="/nominateActivityQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="nominateActivityQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.system.nominate.NominateActivityQueryService"/>
+    </bean>
+    <bean id="nominateCouponQueryService" class="com.gooagoo.query.business.system.nominate.NominateCouponQueryServiceImpl"/>
+    <bean name="/nominateCouponQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="nominateCouponQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.system.nominate.NominateCouponQueryService"/>
+    </bean>
+    <bean id="nominateGoodsQueryService" class="com.gooagoo.query.business.system.nominate.NominateGoodsQueryServiceImpl"/>
+    <bean name="/nominateGoodsQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="nominateGoodsQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.system.nominate.NominateGoodsQueryService"/>
+    </bean>
+    <bean id="nominateShopQueryService" class="com.gooagoo.query.business.system.nominate.NominateShopQueryServiceImpl"/>
+    <bean name="/nominateShopQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="nominateShopQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.system.nominate.NominateShopQueryService"/>
+    </bean>
+    <bean id="sysUserLoginQueryService" class="com.gooagoo.query.business.system.sys.user.SysUserLoginQueryServiceImpl"/>
+    <bean name="/sysUserLoginQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="sysUserLoginQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.system.sys.user.SysUserLoginQueryService"/>
+    </bean>
+    <bean id="applyQueryService" class="com.gooagoo.query.business.transaction.apply.ApplyQueryServiceImpl"/>
+    <bean name="/applyQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="applyQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.apply.ApplyQueryService"/>
+    </bean>
+    <bean id="manuaQueryService" class="com.gooagoo.query.business.transaction.manua.ManuaQueryServiceImpl"/>
+    <bean name="/manuaQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="manuaQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.manua.ManuaQueryService"/>
+    </bean>
+    <bean id="changeTableQueryService" class="com.gooagoo.query.business.transaction.order.ChangeTableQueryServiceImpl"/>
+    <bean name="/changeTableQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="changeTableQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.order.ChangeTableQueryService"/>
+    </bean>
+    <bean id="orderQueryService" class="com.gooagoo.query.business.transaction.order.OrderQueryServiceImpl"/>
+    <bean name="/orderQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="orderQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.order.OrderQueryService"/>
+    </bean>
+    <bean id="serveFoodQueryService" class="com.gooagoo.query.business.transaction.order.ServeFoodQueryServiceImpl"/>
+    <bean name="/serveFoodQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="serveFoodQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.order.ServeFoodQueryService"/>
+    </bean>
+    <bean id="shoppingCartQueryService" class="com.gooagoo.query.business.transaction.order.ShoppingCartQueryServiceImpl"/>
+    <bean name="/shoppingCartQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shoppingCartQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.order.ShoppingCartQueryService"/>
+    </bean>
+    <bean id="behaveQueryService" class="com.gooagoo.query.business.user.behave.BehaveQueryServiceImpl"/>
+    <bean name="/behaveQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="behaveQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.behave.BehaveQueryService"/>
+    </bean>
+    <bean id="userCacheQueryService" class="com.gooagoo.query.business.user.cache.UserCacheQueryServiceImpl"/>
+    <bean name="/userCacheQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userCacheQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.cache.UserCacheQueryService"/>
+    </bean>
+    <bean id="commentQueryService" class="com.gooagoo.query.business.user.comment.CommentQueryServiceImpl"/>
+    <bean name="/commentQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="commentQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.comment.CommentQueryService"/>
+    </bean>
+    <bean id="calendarQueryService" class="com.gooagoo.query.business.user.favorite.calendar.CalendarQueryServiceImpl"/>
+    <bean name="/calendarQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="calendarQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.favorite.calendar.CalendarQueryService"/>
+    </bean>
+    <bean id="favoritePlaceQueryService" class="com.gooagoo.query.business.user.favorite.FavoritePlaceQueryServiceImpl"/>
+    <bean name="/favoritePlaceQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="favoritePlaceQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.favorite.FavoritePlaceQueryService"/>
+    </bean>
+    <bean id="favoriteQueryService" class="com.gooagoo.query.business.user.favorite.FavoriteQueryServiceImpl"/>
+    <bean name="/favoriteQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="favoriteQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.favorite.FavoriteQueryService"/>
+    </bean>
+    <bean id="invoiceQueryService" class="com.gooagoo.query.business.user.invoice.InvoiceQueryServiceImpl"/>
+    <bean name="/invoiceQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="invoiceQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.invoice.InvoiceQueryService"/>
+    </bean>
+    <bean id="userSecurityQueryService" class="com.gooagoo.query.business.user.password.UserSecurityQueryServiceImpl"/>
+    <bean name="/userSecurityQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userSecurityQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.password.UserSecurityQueryService"/>
+    </bean>
+    <bean id="userAccountQueryService" class="com.gooagoo.query.business.user.query.UserAccountQueryServiceImpl"/>
+    <bean name="/userAccountQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userAccountQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.query.UserAccountQueryService"/>
+    </bean>
+    <bean id="userActiveCodeQueryService" class="com.gooagoo.query.business.user.query.UserActiveCodeQueryServiceImpl"/>
+    <bean name="/userActiveCodeQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userActiveCodeQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.query.UserActiveCodeQueryService"/>
+    </bean>
+    <bean id="userLoginQueryService" class="com.gooagoo.query.business.user.query.UserLoginQueryServiceImpl"/>
+    <bean name="/userLoginQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userLoginQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.query.UserLoginQueryService"/>
+    </bean>
+    <bean id="userQueryService" class="com.gooagoo.query.business.user.query.UserQueryServiceImpl"/>
+    <bean name="/userQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="userQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.query.UserQueryService"/>
+    </bean>
+    <bean id="queueQueryService" class="com.gooagoo.query.business.user.queue.QueueQueryServiceImpl"/>
+    <bean name="/queueQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="queueQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.queue.QueueQueryService"/>
+    </bean>
+    <bean id="shoppingMatchQueryService" class="com.gooagoo.query.business.user.shoppingmatch.ShoppingMatchQueryServiceImpl"/>
+    <bean name="/shoppingMatchQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shoppingMatchQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.shoppingmatch.ShoppingMatchQueryService"/>
+    </bean>
+    <bean id="shoppingPlanQueryService" class="com.gooagoo.query.business.user.shoppingplan.ShoppingPlanQueryServiceImpl"/>
+    <bean name="/shoppingPlanQueryService"	class="org.springframework.remoting.caucho.HessianServiceExporter">
+       <property name="service" ref="shoppingPlanQueryService" />
+       <property name="serviceInterface" value="com.gooagoo.api.business.query.user.shoppingplan.ShoppingPlanQueryService"/>
+    </bean>
+</beans>

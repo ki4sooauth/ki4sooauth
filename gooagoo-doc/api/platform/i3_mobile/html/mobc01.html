@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+
+<body>
+<p><br />
+</p>
+<p>&nbsp;</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+
+<tr> 
+
+<th scope="col" colspan="2"><span class="row">mobc01:商家吆喝(Gooagoo服务器)  </span></th> 
+
+</tr> 
+<tr> 
+
+<td width="136" class="row">功能说明：</td> 
+<td width="658" class="row">
+	商家吆喝(Gooagoo服务器) 
+ </td> 
+</tr>
+<tr> 
+
+<td width="136" class="row">程序映射地址：</td> 
+<td width="658" class="row"></td> 
+</tr> 
+
+<tr> 
+
+<td class="alt">返回值例子：</td> 
+<td class="alt"><a href="../xml/mobc01.xml" target="_blank">mobc01.xml</a> | <a href="../xml/mobc01.txt" target="_blank">mobc01.txt</a></td> 
+</tr> 
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">userid</td>
+		<td class="row">用户编号</td>
+		<td class="row">选填</td>
+		<td class="row">用户编号</td>
+	</tr>
+	<tr>
+		<td class="row">sessionid</td>
+		<td class="row">sessionid值</td>
+		<td class="row">选填</td>
+		<td class="row">手机登录后的sessionid值</td>
+	</tr>
+  <tr><td class="row">mac</td><td class="row">手机mac地址</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">mver</td><td class="row">手机程序版本</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">lid</td><td class="row">lid</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">entityposition</td><td class="row">实体店编号</td><td class="row">选填</td><td class="row">用户当前所在实体店编号</td></tr>
+	<tr>
+		<td class="row">ctimestamp</td>
+		<td class="row">时间戳</td>
+		<td class="row">选填</td>
+		<td class="row">当时间戳不为空时，返回平台上所有大于</br>时间戳的、已删除的吆喝编号，并记录返回信息的</br> 总条数是否大于“每页显示信息条数</br> （pagesize）“，Y/N</td>
+	</tr>
+	<tr>
+		<td class="row">shopid</td>
+		<td class="row">商家编号</td>
+		<td class="row">选填</td>
+		<td class="row"></td>
+	</tr>	
+	<tr>
+		<td class="row">pageid</td>
+		<td class="row">分页编号</td>
+		<td class="row">选填</td>
+		<td class="row">平台通过此参数返回大于或小于此<br/> "吆喝分页编号"的吆喝。</td>
+	</tr>
+	<tr>
+		<td class="row">pagetype</td>
+		<td class="row">翻页类型</td>
+		<td class="row">选填</td>
+		<td class="row">
+		统一分页规则：
+		p-上一页（查询新数据） ，ID传当页第一条数据，平台查询此ID上一页数据
+		N-下一页（查询旧数据），ID传当页最后一条数据，平台查询此ID下一页数据
+		例如：
+		1.数据正序排列
+		分页大小为3，
+		全部数据为123，456，789
+		当前页数据为456
+		查询上一页数据：pagetype=P,pageid=4,查询结果为123
+		查询下一页数据：pagetype=N,pageid=6,查询结果为789
+		1.数据倒序排列
+		分页大小为3，
+		全部数据为987，654，321
+		当前页数据为654
+		查询上一页数据：pagetype=P,pageid=6,查询结果为987
+		查询下一页数据：pagetype=N,pageid=4,查询结果为321
+		</td>
+	</tr>
+	<tr>
+		<td class="row">pagesize</td>
+		<td class="row">分页大小</td>
+		<td class="row">选填</td>
+		<td class="row">默认值为50</td>
+	</tr>
+	<tr>
+		<td class="row">type</td>
+		<td class="row">查询吆喝类型</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">A-全部商家;B-会员商家;C-关注商家</br> ;D-周边商家;E-系统吆喝;F-本店吆喝</td>
+	</tr>
+	<tr>
+		<td class="row">gpsx</td>
+		<td class="row">维度</td>
+		<td class="row">选填</td>
+		<td class="row"style="color: #FF0000">当“type-查询吆喝类型”为“D-周边商家”</br> 时此参数必填</td>
+	</tr>
+	<tr>
+		<td class="row">gpsy</td>
+		<td class="row">经度</td>
+		<td class="row">选填</td>
+		<td class="row"style="color: #FF0000">当“type-查询吆喝类型”为“D-周边商家”</br> 时此参数必填</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+	  1.当“type”不为“E”时校验登录状态（暂时没有系统吆喝，此校验先不用考虑）；<br/>
+	  2.平台根据type查询到商家信息，然后在根据商家信息查询吆喝信息。 <br/>
+	  <font style="color: #FF0000">备注：</font><br/>    、
+	  1.默认查询最新吆喝，当最新吆喝条数大于pageSize时，只返回最新pageSize条；<br/> 
+	  2.本接口用于查询“Gooagoo服务器”中的吆喝列表，返回数据不包含部署在商家服务器中“本店吆喝”的吆喝列表。
+
+  </td>
+</tr>
+<tr>
+  <td class="row">修改日志：</td>
+  <td class="row"></td>
+</tr> 
+</table>
+</body>
+</html>

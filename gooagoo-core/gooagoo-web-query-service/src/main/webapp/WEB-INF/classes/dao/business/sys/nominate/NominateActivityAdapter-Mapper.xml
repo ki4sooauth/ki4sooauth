@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="com.gooagoo.dao.business.sys.nominate.NominateActivityAdapterMapper">
+	<resultMap id="BaseResultMap"
+		type="com.gooagoo.entity.business.system.nominate.NominateActivityBusiness">
+		<id column="gsna_id" property="id" jdbcType="CHAR" />
+		<result column="shop_id" property="shopId" jdbcType="CHAR" />
+		<result column="activity_id" property="activityId" jdbcType="CHAR" />
+		<result column="c_time_stamp" property="nominateActivityCTimeStamp"
+			jdbcType="TIMESTAMP" />
+		<result column="shop_name" property="shopName" jdbcType="CHAR" />
+		<result column="activity_name" property="activityName"
+			jdbcType="CHAR" />
+		<result column="title" property="title" jdbcType="CHAR" />
+		<result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+		<result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+		<result column="activity_start_time" property="activityStartTime"
+			jdbcType="TIMESTAMP" />
+		<result column="activity_end_time" property="activityEndTime"
+			jdbcType="TIMESTAMP" />
+		<result column="publish_status" property="publishStatus"
+			jdbcType="CHAR" />
+		<result column="c_time_stamps" property="marketingActivityCTimeStamp"
+			jdbcType="TIMESTAMP" />
+		<result column="isNominate" property="isNominate" jdbcType="CHAR" />
+	</resultMap>
+
+	<select id="findNominateActivityBusiness" resultMap="BaseResultMap">
+		SELECT
+		gmmas.shop_id AS shop_id,
+		gmmas.activity_id AS activity_id,
+		gmmas.shop_name AS shop_name,
+		gmmas.activity_name AS activity_name,
+		gmmas.title AS title,
+		gmmas.activity_start_time AS activity_start_time,
+		gmmas.activity_end_time AS activity_end_time,
+		gmmas.publish_status AS
+		publish_status,
+		gmmas.c_time_stamps AS c_time_stamps,
+		gmmas.isNominate
+		AS
+		isNominate
+		FROM
+		(
+		SELECT
+		gssi.shop_id AS shop_id,
+		gmma.activity_id AS
+		activity_id,
+		gssi.shop_name AS shop_name,
+		gmma.activity_name AS
+		activity_name,
+		gmma.title AS title,
+		gmma.start_time AS
+		activity_start_time,
+		gmma.end_time AS activity_end_time,
+		gmma.publish_status AS publish_status,
+		gmma.c_time_stamp AS
+		c_time_stamps,
+		(
+		CASE
+		WHEN (
+		SELECT
+		count(*)
+		FROM
+		gooagoo_sys.nominate_activity gsna
+		WHERE
+		gmma.activity_id =
+		gsna.activity_id
+		AND gsna.start_time &lt;= SYSDATE()
+		AND gsna.end_time
+		>= SYSDATE()
+		AND gsna.is_del = 'N'
+		) > 0 THEN
+		'Y'
+		ELSE
+		'N'
+		END
+		) isNominate
+		FROM
+		gooagoo_marketing.marketing_activity gmma
+		LEFT JOIN
+		gooagoo_shop.shop_info gssi ON gmma.shop_id =
+		gssi.shop_id
+		WHERE
+		1 = 1
+		AND gmma.is_del = 'N'
+		AND gmma.publish_status = 'P'
+		AND gmma.end_time >= SYSDATE()
+		) gmmas where 1=1
+		<if test="nominateActivityBusiness.isNominate=='Y'.toString()">
+			AND gmmas.isNominate='Y'
+		</if>
+		<if test="nominateActivityBusiness.isNominate=='N'.toString()">
+			AND gmmas.isNominate='N'
+		</if>
+		<if test="nominateActivityBusiness.shopName !=null">
+			AND gmmas.shop_name like
+			CONCAT('%',#{nominateActivityBusiness.shopName},'%')
+		</if>
+		<if test="nominateActivityBusiness.activityName !=null">
+			AND gmmas.activity_name like
+			CONCAT('%',#{nominateActivityBusiness.activityName},'%')
+		</if>
+		<if test="nominateActivityBusiness.title != null">
+			AND gmmas.title like
+			CONCAT('%',#{nominateActivityBusiness.title},'%')
+		</if>
+		<if test="nominateActivityBusiness.activityStartTime !=null">
+			AND gmmas.activity_start_time >=
+			#{nominateActivityBusiness.activityStartTime}
+		</if>
+		<if test="nominateActivityBusiness.activityEndTime !=null">
+			AND gmmas.activity_end_time &lt;=
+			#{nominateActivityBusiness.activityEndTime}
+		</if>
+		<if test="nominateActivityBusiness.shopId !=null">
+			AND gmmas.shop_id =
+			#{nominateActivityBusiness.shopId}
+		</if>
+		<if test="nominateActivityBusiness.activityId !=null">
+			AND gmmas.activity_id =
+			#{nominateActivityBusiness.activityId}
+		</if>
+		<!-- group by gmma.activity_id -->
+		<if test="pageSize != null">
+			limit
+			<if test="pageIndex != null">
+				${pageIndex},
+			</if>
+			${pageSize}
+		</if>
+	</select>
+	<select id="countNominateActivityBusiness" resultType="java.lang.Integer">
+		SELECT COUNT(gmmass.activity_id) FROM (
+		SELECT
+		gmmas.shop_id AS shop_id,
+		gmmas.activity_id AS activity_id,
+		gmmas.shop_name AS shop_name,
+		gmmas.activity_name AS activity_name,
+		gmmas.title AS title,
+		gmmas.activity_start_time AS activity_start_time,
+		gmmas.activity_end_time AS activity_end_time,
+		gmmas.publish_status AS
+		publish_status,
+		gmmas.c_time_stamps AS c_time_stamps,
+		gmmas.isNominate
+		AS
+		isNominate
+		FROM
+		(
+		SELECT
+		gssi.shop_id AS shop_id,
+		gmma.activity_id AS
+		activity_id,
+		gssi.shop_name AS shop_name,
+		gmma.activity_name AS
+		activity_name,
+		gmma.title AS title,
+		gmma.start_time AS
+		activity_start_time,
+		gmma.end_time AS activity_end_time,
+		gmma.publish_status AS publish_status,
+		gmma.c_time_stamp AS
+		c_time_stamps,
+		(
+		CASE
+		WHEN (
+		SELECT
+		count(*)
+		FROM
+		gooagoo_sys.nominate_activity gsna
+		WHERE
+		gmma.activity_id =
+		gsna.activity_id
+		AND gsna.start_time &lt;= SYSDATE()
+		AND gsna.end_time
+		>= SYSDATE()
+		AND gsna.is_del = 'N'
+		) > 0 THEN
+		'Y'
+		ELSE
+		'N'
+		END
+		) isNominate
+		FROM
+		gooagoo_marketing.marketing_activity gmma
+		LEFT JOIN
+		gooagoo_shop.shop_info gssi ON gmma.shop_id =
+		gssi.shop_id
+		WHERE
+		1 = 1
+		AND gmma.is_del = 'N'
+		AND gmma.publish_status = 'P'
+		AND gmma.end_time >= SYSDATE()
+		) gmmas
+		WHERE 1=1
+		<if test="nominateActivityBusiness.isNominate=='Y'.toString()">
+			AND gmmas.isNominate='Y'
+		</if>
+		<if test="nominateActivityBusiness.isNominate=='N'.toString()">
+			AND gmmas.isNominate='N'
+		</if>
+		<if test="nominateActivityBusiness.shopName !=null">
+			AND gmmas.shop_name like
+			CONCAT('%',#{nominateActivityBusiness.shopName},'%')
+		</if>
+		<if test="nominateActivityBusiness.activityName !=null">
+			AND gmmas.activity_name like
+			CONCAT('%',#{nominateActivityBusiness.activityName},'%')
+		</if>
+		<if test="nominateActivityBusiness.title != null">
+			AND gmmas.title like
+			CONCAT('%',#{nominateActivityBusiness.title},'%')
+		</if>
+		<if test="nominateActivityBusiness.activityStartTime !=null">
+			AND gmmas.activity_start_time >=
+			#{nominateActivityBusiness.activityStartTime}
+		</if>
+		<if test="nominateActivityBusiness.activityEndTime !=null">
+			AND gmmas.activity_end_time &lt;=
+			#{nominateActivityBusiness.activityEndTime}
+		</if>
+		<if test="nominateActivityBusiness.shopId !=null">
+			AND gmmas.shop_id =
+			#{nominateActivityBusiness.shopId}
+		</if>
+		<if test="nominateActivityBusiness.activityId !=null">
+			AND gmmas.activity_id =
+			#{nominateActivityBusiness.activityId}
+		</if>
+		<!-- group by gmma.activity_id -->
+		) gmmass
+	</select>
+	<select id="findNominateActivity" resultMap="BaseResultMap">
+		SELECT
+		gsna.id AS gsna_id,
+		gsna.shop_id AS shop_id,
+		gsna.activity_id AS
+		activity_id,
+		gsna.start_time AS start_time,
+		gsna.end_time AS end_time,
+		gsna.c_time_stamp AS c_time_stamp,
+		gssi.shop_name AS shop_name,
+		gmma.activity_name AS activity_name,
+		gmma.title AS title
+		FROM
+		gooagoo_sys.nominate_activity gsna
+		LEFT JOIN gooagoo_shop.shop_info
+		gssi ON gsna.shop_id = gssi.shop_id
+		LEFT JOIN
+		gooagoo_marketing.marketing_activity gmma ON gsna.activity_id =
+		gmma.activity_id
+		WHERE
+		1 = 1
+		AND gsna.is_del = 'N'
+		<if test="nominateActivityBusiness.activityId != null">
+			AND gsna.activity_id like
+			CONCAT('%',#{nominateActivityBusiness.activityId},'%')
+		</if>
+		<if test="nominateActivityBusiness.Id != null">
+			AND gsna.id = #{nominateActivityBusiness.Id}
+		</if>
+		<if test="nominateActivityBusiness.shopName != null">
+			AND gssi.shop_name like
+			CONCAT('%',#{nominateActivityBusiness.shopName},'%')
+		</if>
+		<if test="nominateActivityBusiness.shopId != null">
+			AND gsna.shop_id like
+			CONCAT('%',#{nominateActivityBusiness.shopId},'%')
+		</if>
+		<if test="nominateActivityBusiness.activityName != null">
+			AND gmma.activity_name like
+			CONCAT('%',#{nominateActivityBusiness.activityName},'%')
+		</if>
+		<if test="nominateActivityBusiness.title != null">
+			AND gmmas.title like
+			CONCAT('%',#{nominateActivityBusiness.title},'%')
+		</if>
+		<if test="nominateActivityBusiness.startTime !=null">
+			AND gsna.start_time >=
+			#{nominateActivityBusiness.startTime}
+		</if>
+		<if test="nominateActivityBusiness.endTime !=null">
+			AND gsna.end_time &lt;=
+			#{nominateActivityBusiness.endTime}
+		</if>
+		<if test="pageSize != null">
+			limit
+			<if test="pageIndex != null">
+				${pageIndex},
+			</if>
+			${pageSize}
+		</if>
+	</select>
+	<select id="countNominateActivity" resultType="java.lang.Integer">
+		select count(1) from (
+		SELECT
+		gsna.id AS gsna_id,
+		gsna.shop_id AS shop_id,
+		gsna.activity_id AS
+		activity_id,
+		gsna.start_time AS start_time,
+		gsna.end_time AS end_time,
+		gsna.c_time_stamp AS c_time_stamp,
+		gssi.shop_name AS shop_name,
+		gmma.activity_name AS activity_name,
+		gmma.title AS title
+		FROM
+		gooagoo_sys.nominate_activity gsna
+		LEFT JOIN gooagoo_shop.shop_info
+		gssi ON gsna.shop_id = gssi.shop_id
+		LEFT JOIN
+		gooagoo_marketing.marketing_activity gmma ON gsna.activity_id =
+		gmma.activity_id
+		WHERE
+		1 = 1
+		AND gsna.is_del = 'N'
+		<if test="nominateActivityBusiness.activityId != null">
+			AND gsna.activity_id like
+			CONCAT('%',#{nominateActivityBusiness.activityId},'%')
+		</if>
+		<if test="nominateActivityBusiness.Id != null">
+			AND gsna.id = #{nominateActivityBusiness.Id}
+		</if>
+		<if test="nominateActivityBusiness.shopName != null">
+			AND gssi.shop_name like
+			CONCAT('%',#{nominateActivityBusiness.shopName},'%')
+		</if>
+		<if test="nominateActivityBusiness.shopId != null">
+			AND gsna.shop_id like
+			CONCAT('%',#{nominateActivityBusiness.shopId},'%')
+		</if>
+		<if test="nominateActivityBusiness.activityName != null">
+			AND gmma.activity_name like
+			CONCAT('%',#{nominateActivityBusiness.activityName},'%')
+		</if>
+		<if test="nominateActivityBusiness.title != null">
+			AND gmmas.title like
+			CONCAT('%',#{nominateActivityBusiness.title},'%')
+		</if>
+		<if test="nominateActivityBusiness.startTime !=null">
+			AND gsna.start_time >=
+			#{nominateActivityBusiness.startTime}
+		</if>
+		<if test="nominateActivityBusiness.endTime !=null">
+			AND gsna.end_time &lt;=
+			#{nominateActivityBusiness.endTime}
+		</if>
+		)gsnas where 1=1
+	</select>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"  
+        "http://tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+    <rule>
+		<from>^/$</from>
+		<to>/shoppingList.do?method=index</to>
+	</rule>
+	<rule>
+		<from>^/index$</from>
+		<to>/shoppingList.do?method=index</to>
+	</rule>
+	<rule>
+		<from>^/purchased$</from>
+		<to>/purchased.do?method=index</to>
+	</rule>
+	<rule>
+		<from>^/detail$</from>
+		<to>/shoppingList.do?method=personalshoplist</to>
+	</rule>
+</urlrewrite>  

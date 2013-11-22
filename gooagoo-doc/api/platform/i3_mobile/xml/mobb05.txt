@@ -1,0 +1,16 @@
+{
+    "result": "",
+    "msg": "",
+    "totalrec": "",
+    "usercomment": [
+        {
+            "commentid": "",
+            "nickname": "",
+            "description": "",
+            "commentlevel": "",
+            "content": "",
+            "source": "",
+            "createtime": ""
+        }
+    ]
+}

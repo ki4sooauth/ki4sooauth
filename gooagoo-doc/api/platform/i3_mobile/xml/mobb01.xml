@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root  alias="FavoriteListgRoot"><!-- 收藏列表 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<favoritelistg cycle="1"><!-- 收藏信息 -->
+		<favoriteid></favoriteid><!--收藏信息的id -->
+		<shopid></shopid><!--店铺的id -->
+		<shopname></shopname><!--商家名称 -->
+		<logo2></logo2><!--商家logo长方形 -->
+		<shopentityid></shopentityid><!--实体店id -->
+		<objectid></objectid><!--收藏对象的id -->
+		<infourl></infourl><!--相应信息的网址（如活动） -->
+		<infotype></infotype><!--信息类型，A-活动，G-商品，C-优惠券 -->
+		<infotitle></infotitle><!--信息标题，如商品的名称 -->
+		<infobegindate></infobegindate><!--信息开始日期，优惠和活动的期间 -->
+		<infoenddate></infoenddate><!--信息结束日期 -->
+		<isoverdate></isoverdate><!--信息是否已过期Y/N -->
+		<price></price><!--商品价格 -->
+		<isused></isused><!--优惠是否已使用，Y-已使用，N-未使用  -->
+		<infopic></infopic><!--信息的小图片 -->
+	</favoritelistg>
+	<isdeleted><!--平台已删除的收藏编号信息 -->
+		<favoriteidstr></favoriteidstr><!--，字符串，已删除收藏的编号，多个用逗号分隔开 -->
+		<flag></flag><!--返回收藏信息的总条数是否大于每页信息显示条数，若大于flag=Y，反之Flag=N -->
+		<ctimestamp></ctimestamp><!-- 记录平台返回收藏信息中 最大的时间戳 -->
+	</isdeleted>
+</root>

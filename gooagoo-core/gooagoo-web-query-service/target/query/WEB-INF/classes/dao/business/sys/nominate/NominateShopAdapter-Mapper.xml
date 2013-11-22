@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="com.gooagoo.dao.business.sys.nominate.NominateShopAdapterMapper">
+	<resultMap id="BaseResultMap"
+		type="com.gooagoo.entity.business.system.nominate.NominateShopBusiness">
+		<id column="id" property="id" jdbcType="CHAR" />
+		<result column="shop_id" property="shopId" jdbcType="CHAR" />
+		<result column="color" property="color" jdbcType="CHAR" />
+		<result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+		<result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+		<result column="nominate_shop_c_time_stamp" property="nominateShopCTimeStamp"
+			jdbcType="TIMESTAMP" />
+		<result column="email" property="email" jdbcType="CHAR" />
+		<result column="nick_name" property="nickName" jdbcType="CHAR" />
+		<result column="shop_status" property="shopStatus" jdbcType="CHAR" />
+		<result column="is_chain" property="isChain" jdbcType="CHAR" />
+		<result column="service_style" property="serviceStyle"
+			jdbcType="CHAR" />
+		<result column="shop_name" property="shopName" jdbcType="CHAR" />
+		<result column="shop_info_c_time_stamp" property="shopInfoCTimeStamp"
+			jdbcType="TIMESTAMP" />
+		<result column="is_nominate" property="isNominate" jdbcType="CHAR" />
+	</resultMap>
+	<select id="findNominateShopBusinessList" resultMap="BaseResultMap">
+		SELECT
+		gssis.shop_id AS shop_id,
+		gssis.email AS email,
+		gssis.nick_name AS
+		nick_name,
+		gssis.shop_status AS shop_status,
+		gssis.is_chain AS is_chain,
+		gssis.service_style AS
+		service_style,
+		gssis.shop_name AS shop_name,
+		gssis.c_time_stamp AS
+		shop_info_c_time_stamp,
+		gssis.isNominate AS
+		isNominate
+		FROM
+		(
+		SELECT
+		gssi.shop_id AS
+		shop_id,
+		gssi.email AS email,
+		gssi.nick_name AS
+		nick_name,
+		gssi.shop_status AS shop_status,
+		gssi.is_chain AS is_chain,
+		gssi.service_style AS service_style,
+		gssi.shop_name AS shop_name,
+		gssi.c_time_stamp AS c_time_stamp,
+		(
+		CASE
+		WHEN (
+		SELECT
+		count(*)
+		FROM
+		gooagoo_sys.nominate_shop gsns
+		WHERE
+		gssi.shop_id = gsns.shop_id
+		AND
+		gsns.start_time &lt;= SYSDATE()
+		AND
+		gsns.end_time >= SYSDATE()
+		AND
+		gsns.is_del = 'N'
+		) > 0 THEN
+		'Y'
+		ELSE
+		'N'
+		END
+		) isNominate
+		FROM
+		gooagoo_shop.shop_info gssi
+		WHERE
+		1 = 1
+		AND gssi.is_del =
+		'N'
+		) gssis
+		WHERE
+		1 = 1
+		<if test="nominateShopBusiness.isNominate=='Y'.toString()">
+			AND gssis.isNominate = 'Y'
+		</if>
+		<if test="nominateShopBusiness.isNominate=='N'.toString()">
+			AND gssis.isNominate = 'N'
+		</if>
+		<if test="nominateShopBusiness.serviceStyle!=null">
+			AND gssis.service_style =
+			#{nominateShopBusiness.serviceStyle}
+		</if>
+		<if test="nominateShopBusiness.isChain!=null">
+			AND gssis.is_chain = #{nominateShopBusiness.isChain}
+		</if>
+		<if test="nominateShopBusiness.shopStatus!=null">
+			AND gssis.shop_status = #{nominateShopBusiness.shopStatus}
+		</if>
+		<if test="nominateShopBusiness.nickName!=null">
+			AND gssis.nick_name LIKE
+			CONCAT('%',#{nominateShopBusiness.nickName},'%')
+		</if>
+		<if test="nominateShopBusiness.shopName!=null">
+			AND gssis.shop_name LIKE
+			CONCAT('%',#{nominateShopBusiness.shopName},'%')
+		</if>
+		<if test="nominateShopBusiness.email!=null">
+			AND gssis.email LIKE
+			CONCAT('%',#{nominateShopBusiness.email},'%')
+		</if>
+		<if test="nominateShopBusiness.shopId!=null">
+			AND gssis.shop_id =#{nominateShopBusiness.shopId}
+		</if>
+		<if test="pageSize != null">
+			limit
+			<if test="pageIndex != null">
+				${pageIndex},
+			</if>
+			${pageSize}
+		</if>
+	</select>
+	<select id="CountNominateShopBusiness" resultType="java.lang.Integer">
+		SELECT
+		COUNT(1)
+		FROM
+		(
+		SELECT
+		gssi.shop_id AS
+		shop_id,
+		gssi.email AS email,
+		gssi.nick_name AS
+		nick_name,
+		gssi.shop_status AS shop_status,
+		gssi.is_chain AS is_chain,
+		gssi.service_style AS service_style,
+		gssi.shop_name AS shop_name,
+		gssi.c_time_stamp AS c_time_stamp,
+		(
+		CASE
+		WHEN (
+		SELECT
+		count(*)
+		FROM
+		gooagoo_sys.nominate_shop gsns
+		WHERE
+		gssi.shop_id = gsns.shop_id
+		AND
+		gsns.start_time &lt;= SYSDATE()
+		AND
+		gsns.end_time >= SYSDATE()
+		AND
+		gsns.is_del = 'N'
+		) > 0 THEN
+		'Y'
+		ELSE
+		'N'
+		END
+		) isNominate
+		FROM
+		gooagoo_shop.shop_info gssi
+		WHERE
+		1 = 1
+		AND gssi.is_del =
+		'N'
+		) gssis
+		WHERE
+		1 = 1
+		<if test="nominateShopBusiness.isNominate=='Y'.toString()">
+			AND gssis.isNominate = 'Y'
+		</if>
+		<if test="nominateShopBusiness.isNominate=='N'.toString()">
+			AND gssis.isNominate = 'N'
+		</if>
+		<if test="nominateShopBusiness.serviceStyle!=null">
+			AND gssis.service_style =
+			#{nominateShopBusiness.serviceStyle}
+		</if>
+		<if test="nominateShopBusiness.isChain!=null">
+			AND gssis.is_chain = #{nominateShopBusiness.isChain}
+		</if>
+		<if test="nominateShopBusiness.shopStatus!=null">
+			AND gssis.shop_status = #{nominateShopBusiness.shopStatus}
+		</if>
+		<if test="nominateShopBusiness.nickName!=null">
+			AND gssis.nick_name LIKE
+			CONCAT('%',#{nominateShopBusiness.nickName},'%')
+		</if>
+		<if test="nominateShopBusiness.shopName!=null">
+			AND gssis.shop_name LIKE
+			CONCAT('%',#{nominateShopBusiness.shopName},'%')
+		</if>
+		<if test="nominateShopBusiness.shopId!=null">
+			AND gssis.shop_id =#{nominateShopBusiness.shopId}
+		</if>
+		<if test="nominateShopBusiness.email!=null">
+			AND gssis.email LIKE
+			CONCAT('%',#{nominateShopBusiness.email},'%')
+		</if>
+	</select>
+	<select id="findNominateShopList" resultMap="BaseResultMap">
+		SELECT
+		gsns.id AS id,
+		gsns.shop_id AS shop_id,
+		gsns.color AS color,
+		gsns.start_time AS start_time,
+		gsns.end_time AS end_time,
+		gsns.c_time_stamp AS nominate_shop_c_time_stamp,
+		gssi.email AS email,
+		gssi.nick_name AS nick_name,
+		gssi.shop_status AS shop_status,
+		gssi.is_chain AS is_chain,
+		gssi.service_style AS service_style,
+		gssi.shop_name AS shop_name
+		FROM
+		gooagoo_sys.nominate_shop gsns
+		LEFT JOIN
+		gooagoo_shop.shop_info gssi ON
+		gsns.shop_id = gssi.shop_id
+		WHERE
+		1 = 1
+		AND
+		gsns.is_del = 'N'
+		<if test="nominateShopBusiness.startTime!=null">
+			AND gsns.start_time >=#{nominateShopBusiness.startTime}
+		</if>
+		<if test="nominateShopBusiness.endTime!=null">
+			AND gsns.end_time &lt;=#{nominateShopBusiness.endTime}
+		</if>
+		<if test="nominateShopBusiness.shopName!=null">
+			AND gssi.shop_name LIKE
+			CONCAT('%',#{nominateShopBusiness.shopName},'%')
+		</if>
+		<if test="nominateShopBusiness.shopId!=null">
+			AND gsns.shop_id =#{nominateShopBusiness.shopId}
+		</if>
+		<if test="nominateShopBusiness.id!=null">
+			AND gsns.id =#{nominateShopBusiness.id}
+		</if>
+		<if test="pageSize != null">
+			limit
+			<if test="pageIndex != null">
+				${pageIndex},
+			</if>
+			${pageSize}
+		</if>
+	</select>
+	<select id="countNominateShop" resultType="java.lang.Integer">
+		select count(1) from(
+		SELECT
+		gsns.id AS id,
+		gsns.shop_id AS shop_id,
+		gsns.color
+		AS color,
+		gsns.start_time AS start_time,
+		gsns.end_time AS end_time,
+		gsns.c_time_stamp AS nominate_shop_c_time_stamp,
+		gssi.email AS email,
+		gssi.nick_name AS nick_name,
+		gssi.shop_status AS shop_status,
+		gssi.is_chain AS is_chain,
+		gssi.service_style AS service_style,
+		gssi.shop_name AS shop_name
+		FROM
+		gooagoo_sys.nominate_shop gsns
+		LEFT JOIN
+		gooagoo_shop.shop_info gssi ON
+		gsns.shop_id = gssi.shop_id
+		WHERE
+		1 = 1
+		AND
+		gsns.is_del = 'N'
+		<if test="nominateShopBusiness.startTime!=null">
+			AND gsns.start_time >=#{nominateShopBusiness.startTime}
+		</if>
+		<if test="nominateShopBusiness.endTime!=null">
+			AND gsns.end_time &lt;=#{nominateShopBusiness.endTime}
+		</if>
+		<if test="nominateShopBusiness.shopName!=null">
+			AND gssi.shop_name LIKE
+			CONCAT('%',#{nominateShopBusiness.shopName},'%')
+		</if>
+		<if test="nominateShopBusiness.shopId!=null">
+			AND gsns.shop_id =#{nominateShopBusiness.shopId}
+		</if>
+		<if test="nominateShopBusiness.id!=null">
+			AND gsns.id =#{nominateShopBusiness.id}
+		</if>
+		) gsnss where 1=1
+	</select>
+</mapper>

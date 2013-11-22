@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+
+<body>
+<p><br />
+</p>
+<p>&nbsp;</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+
+<tr> 
+
+<th scope="col" colspan="2"><span class="row">mobb01:收藏列表（Gooagoo服务器）  </span></th> 
+
+</tr> 
+<tr> 
+
+<td width="136" class="row">功能说明：</td> 
+<td width="658" class="row">
+收藏列表（Gooagoo服务器）
+ </td> 
+</tr>
+<tr> 
+
+<td width="136" class="row">程序映射地址：</td> 
+<td width="658" class="row"></td> 
+</tr> 
+
+<tr> 
+
+<td class="alt">返回值例子：</td> 
+<td class="alt"><a href="../xml/mobb01.xml" target="_blank">mobb01.xml</a> | <a href="../xml/mobb01.txt" target="_blank">mobb01.txt</a></td> 
+</tr> 
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">userid</td>
+		<td class="row">用户编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">用户编号，唯一，通过UUID产生</td>
+	</tr>
+	<tr>
+		<td class="row">sessionid</td>
+		<td class="row">sessionid值</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">手机登录后的sessionid值</td>
+	</tr>
+  	<tr><td class="row">mac</td><td class="row">手机mac地址</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">mver</td><td class="row">手机程序版本</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">lid</td><td class="row">lid</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">entityposition</td><td class="row">实体店编号</td><td class="row">选填</td><td class="row">用户当前所在实体店编号</td></tr>
+	<tr>
+		<td class="row">pagesize</td>
+		<td class="row">每页显示信息条数</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">ctimestamp</td>
+		<td class="row">时间戳</td>
+		<td class="row">选填</td>
+		<td class="row">当时间戳不为空时，返回平台上所有大于<br/>时间戳的、已删除的收藏编号，并记录<br/>返回信息的总条数是否<br/>大于"每页显示信息条数（pagesize）"</td>
+	</tr>
+	<tr>
+		<td class="row">shopid</td>
+		<td class="row">商家编号</td>
+		<td class="row">选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopentityid</td>
+		<td class="row">商家实体店编号</td>
+		<td class="row">选填</td>
+		<td class="row">如果shopentityid不为空，则查询本店<br/>所有收藏类型列表（包括商品、活动、<br/>优惠劵），此时无需考虑type的值。</td>
+	</tr>
+	<tr>
+		<td class="row">favoriteid</td>
+		<td class="row">收藏编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">根据“收藏信息编号”返回大于或小于<br/>该参数的一页收藏信息列表</td>
+	</tr>
+	<tr>
+		<td class="row">type</td>
+		<td class="row">收藏类型</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">商品编号-G、活动编号-A、<br/>或者优惠劵编号-C</td>
+	</tr>
+	<tr>
+		<td class="row">pagetype</td>
+		<td class="row">翻页类型</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">
+		统一分页规则：
+		p-上一页（查询新数据） ，ID传当页第一条数据，平台查询此ID上一页数据
+		N-下一页（查询旧数据），ID传当页最后一条数据，平台查询此ID下一页数据
+		例如：
+		1.数据正序排列
+		分页大小为3，
+		全部数据为123，456，789
+		当前页数据为456
+		查询上一页数据：pagetype=P,pageid=4,查询结果为123
+		查询下一页数据：pagetype=N,pageid=6,查询结果为789
+		1.数据倒序排列
+		分页大小为3，
+		全部数据为987，654，321
+		当前页数据为654
+		查询上一页数据：pagetype=P,pageid=6,查询结果为987
+		查询下一页数据：pagetype=N,pageid=4,查询结果为321
+		</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+	1.根据userid、sessionid校验登录状态；<br/>
+	2.根据favoriteid、pagesize、type，查询与用户关联的favorite_info表的数据。 <br/>
+	3.封装查询结果，返回数据。 <br/>
+<font style="color: #FF0000">备注：</font>只有实体店编号，那么查询结果只有用户收藏本实体店的收藏列表信息。  本接口用于查询“gooagoo服务器”中的收藏列表，返回数据不包含部署在商家服务器中“本店收藏”的收藏列表。
+  </td>
+</tr>
+<tr>
+  <td class="row">修改日志：</td>
+  <td class="row"></td>
+</tr> 
+</table>
+</body>
+</html>

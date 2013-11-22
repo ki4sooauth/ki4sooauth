@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="mergerTableRoot"><!--并台信息 -->
+	<result></result><!--结果编码，true成功，false失败 -->
+	<msg></msg><!--结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<mergertablelist cycle="1"><!-- 并台信息 -->
+		<mergerid/><!-- 并台信息单编号 -->
+		<tablename/><!-- 目标餐桌桌号 -->  
+		<othertablename/><!-- 被合并餐桌桌号 -->  
+		<ctimestamp/><!-- 时间戳 -->
+	</mergertablelist>
+</root>

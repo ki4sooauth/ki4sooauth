@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+
+<body>
+<p><br />
+</p>
+<p>&nbsp;</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+
+<tr> 
+
+<th scope="col" colspan="2"><span class="row">mobe15:绑定桌号、订单号、用户id    </span></th> 
+
+</tr> 
+<tr> 
+
+<td width="136" class="row">功能说明：</td> 
+<td width="658" class="row">
+远程订餐到店后将桌号与订单绑定。
+ </td> 
+</tr>
+<tr> 
+
+<td width="136" class="row">程序映射地址：</td> 
+<td width="658" class="row"></td> 
+</tr> 
+
+<tr> 
+
+<td class="alt">返回值例子：</td> 
+<td class="alt"><a href="../xml/mobe15.xml" target="_blank">mobe15.xml</a> | <a href="../xml/mobe15.txt" target="_blank">mobe15.txt</a></td> 
+</tr> 
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">userid</td>
+		<td class="row">用户id</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">用户编号，唯一，通过UUID产生</td>
+	</tr>
+	<tr>
+		<td class="row">sessionid</td>
+		<td class="row">sessionid值</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">手机登录后的sessionid值</td>
+	</tr>
+  <tr><td class="row">mac</td><td class="row">手机mac地址</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">mver</td><td class="row">手机程序版本</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">lid</td><td class="row">lid</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">entityposition</td><td class="row">实体店编号</td><td class="row">选填</td><td class="row">用户当前所在实体店编号</td></tr>
+	
+	<tr>
+		<td class="row">orderid</td>
+		<td class="row">订单号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">tableno2d</td>
+		<td class="row">桌号二维码</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">tableno2d 格式["gooagoo","00",</br>"实体店编号","桌号","房间号"]</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+  		1.根据orderid查询出订单信息，将tablename、userid写入order_info表，关联订单号、桌号、用户编号。<br/>
+  </td>
+</tr>
+<tr>
+  <td class="row">修改日志：</td>
+  <td class="row"></td>
+</tr> 
+</table>
+</body>
+</html>

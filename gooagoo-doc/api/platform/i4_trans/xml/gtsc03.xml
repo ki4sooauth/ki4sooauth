@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="OpenInvoiceRoot"><!--打印发票申请-->
+	<result></result><!--结果编码，true查询成功，false查询失败-->
+	<msg></msg><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+    <openinvoiceinfo cycle="1"><!--所要打印票信息-->
+		<billid></billid><!--账单id-->
+		<ctimestamp></ctimestamp><!--时间戳-->
+		<invoiceditem></invoiceditem><!--发票类型-->
+		<invoicedprice></invoicedprice><!--发票金额-->
+		<invoicedtitle></invoicedtitle><!--发票标题-->
+		<invoicedrequesttime></invoicedrequesttime><!--申请时间-->
+		<shopid></shopid><!--商铺id-->
+		<userid></userid><!--用户id-->
+		<deskno></deskno><!-- 桌号 -->
+		<invoicedtime></invoicedtime><!--开票时间-->
+		<needinvoiceddetail></needinvoiceddetail><!-- 是否需要发票明细，Y-需要，N-不需要-->
+		<invoiceddetail cycle="1"><!-- 发票明细详细信息 -->
+			<goodsname></goodsname><!-- 商品名称 -->
+			<goodsnum></goodsnum><!-- 商品数量 -->
+			<goodsprice></goodsprice><!-- 商品单价 -->
+			<payprice></payprice><!-- 商品总价 -->
+		</invoiceddetail>
+	</openinvoiceinfo>
+</root>

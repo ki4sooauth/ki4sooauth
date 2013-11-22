@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title></title>
+<style type="text/css">
+body {
+       margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+<body>
+<p><br />
+</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+<tr>
+<th scope="col" colspan="2"><span class="row">接口gasl05:结账申请</span></th> 
+</tr> 
+<tr>
+  <td width="136" class="row">功能说明:</td> 
+  <td width="658" class="row">店员助理帮用户提交结账申请</td> 
+</tr>
+<tr>
+  <td width="136" class="row">程序映射地址:</td> 
+  <td width="658" class="row">
+  </td>
+</tr>
+<tr>
+  <td class="alt">返回值例子:</td> 
+  <td class="alt"><a href="../xml/gasl05.xml" target="_blank">gasl05.xml</a> | <a href="../xml/gasl05.txt"target="_blank">gasl05.txt</a></td>
+</tr>
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">mac</td>
+		<td class="row">店员助理MAC地址</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopuserid</td>
+		<td class="row">店员登录账号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">orderid</td>
+		<td class="row">订单编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopid</td>
+		<td class="row">商家编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopentityid</td>
+		<td class="row">实体店编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">scardno</td>
+		<td class="row">会员卡号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">couponid</td>
+		<td class="row">优惠凭证编号</td>
+		<td class="row">选填</td>
+		<td class="row">对应表coupon_user_link中的</br>coupon_user_id,如果有多个，则组成</br>以逗号分隔的字符串,如：“1,2,3”</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+  一.主业务逻辑<br/>
+  	   1.根据“orderid”查询发票申请数据是否存在，存在提示已经提交过结账申请，不存在继续下面的步骤;<br />
+       2.平台根据“scardno”, “tablename”、"orderid", shopentityid修改order_info表中的“payment_application_time（结账申请时间）”，“is_sa_commit（是否结账助理提交）”<br />
+       3.如果传入的“couponid”不为空，则根据“couponid”、“info_type为收藏”两个条件来修改favorite_info中的 “coupon_status”为已使用<br />；如果“couponid”为空，则继续4步骤
+       4.根据“scardno”、“shopentityid”查询member_of_card得到userid。<br />
+       5.根据“orderid”、“userid”、“shopid”、“shopentityid”插入bill_pay_application表。<br />
+       6.组合处理结果返回给店员助理.<br/>
+  </td>
+</tr>
+<tr>
+  <td class="alt">修改日志:</td>
+  <td class="alt"></td>
+</tr>
+</table>
+</body>
+</html>

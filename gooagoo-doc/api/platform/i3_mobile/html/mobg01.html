@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+
+<body>
+<p><br />
+</p>
+<p>&nbsp;</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+
+<tr> 
+
+<th scope="col" colspan="2"><span class="row">mobg01:基本信息  </span></th> 
+
+</tr> 
+<tr> 
+
+<td width="136" class="row">功能说明：</td> 
+<td width="658" class="row">
+基本信息
+ </td> 
+</tr>
+<tr> 
+
+<td width="136" class="row">程序映射地址：</td> 
+<td width="658" class="row"></td> 
+</tr> 
+
+<tr> 
+
+<td class="alt">返回值例子：</td> 
+<td class="alt"><a href="../xml/mobg01.xml" target="_blank">mobg01.xml</a> | <a href="../xml/mobg01.txt" target="_blank">mobg01.txt</a></td> 
+</tr> 
+<tr>
+  <td valign="top" class="row" nowrap="nowrap">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center" nowrap="nowrap">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">userid</td>
+		<td class="row">用户id</td>
+		<td class="row">选填</td>
+		<td class="row">用户编号，唯一，通过UUID产生</td>
+	</tr>
+	<tr>
+		<td class="row">sessionid</td>
+		<td class="row">sessionid值</td>
+		<td class="row">选填</td>
+		<td class="row">手机登录后的sessionid值</td>
+	</tr>
+  <tr><td class="row">mac</td><td class="row">手机mac地址</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">mver</td><td class="row">手机程序版本</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">lid</td><td class="row">lid</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">entityposition</td><td class="row">实体店编号</td><td class="row">选填</td><td class="row">用户当前所在实体店编号</td></tr>
+	<tr>
+		<td class="row">type</td>
+		<td class="row">同步方式</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">1-根据syninfo获得同步信息，2-根据entityposition获得同步信息</td>
+	</tr>
+	<tr>
+		<td class="row">syninfo</td>
+		<td class="row">同步信息</td>
+		<td class="row">选填</td>
+		<td class="row">json串，格式：
+		{
+		    "shopinfo": [
+		        {
+		            "shopid": "183F09S65984M12K0IJBFOR5OI6FCVML",
+		            "ctimestamp": "2012-01-01 01:01:01"
+		        }
+		    ],
+		    "shoppinglistgoodstype": [
+		        {
+		            "ctimestamp": "2012-01-01 01:01:01"
+		        }
+		    ],
+		    "shoptype": [
+		        {
+		            "ctimestamp": "2012-01-01 01:01:01"
+		        }
+		    ]
+		}
+		</td>
+	</tr>
+	<tr>
+		<td class="row">containcode</td>
+		<td class="row">同步范围</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">对应返回报文中“containcode”，多个时以逗号分隔，例如“A,B,C”;为空时查询所有,A-商家基本信息 B- 购物计划商品分类 信息 C-商家类型信息</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+1.根据type查询基本信息。<br/>
+<font style="color: #FF0000">备注：</font><br/> 基本信息包括：<br/> 
+1、  商家基本信息<br/>
+	     a)基本信息shopinfo<br/>
+	     b)辅助信息shopprofile<br/>
+	     c)实体店基本信息shopentityinfo<br/>
+	     d)实体店联系方式shopentitylink<br/>
+	     e)实体店Wifi信息shopwifiinfo<br/>
+	     f)实体店Gps信息shopgpsinfo<br/>
+	     g)服务工具信息shoptoollist<br/>
+	     h)发票项目类型invoicetype<br/>
+	     I)积分商城地址shopintegralurl<br/>
+	     J)接口地址列表shop_interface_info<br/>
+	     k)会员卡基本信息membercard<br/>
+    2、  购物计划商品分类shopping_list_goods_type<br/>
+     3、  商家类型shop_type<br/>
+  </td>
+</tr>
+<tr>
+  <td class="row">修改日志：</td>
+  <td class="row"></td>
+</tr> 
+</table>
+</body>
+</html>

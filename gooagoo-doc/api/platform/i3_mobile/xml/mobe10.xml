@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="BillListsRoot"><!-- 用户根据账单信息开发票 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<billlists cycle="1"><!--账单信息 -->
+		<billid></billid><!--账单id -->
+		<billtype></billtype><!--账单类型（类型，0-账单，1-用户订单，2-商家订单） -->
+		<orderid></orderid><!--商家订单编号 -->
+		<shopid></shopid><!--店铺id -->
+		<shopentityid></shopentityid><!--实体店编号 -->
+		<userid></userid><!--用户id -->
+		<requesttime></requesttime><!--账单得到时间（手机端用以表示消费时间） -->
+		<scardno></scardno><!--用户卡id -->
+		<discountrate></discountrate><!--打折率 -->
+		<goodstotalnum></goodstotalnum><!--商品累计数，当前订单商品总数 -->
+		<originalprice></originalprice><!--原始总价 -->
+		<payprice></payprice><!--实收总价 -->
+		<integralnumber></integralnumber><!--本次积分 -->
+		<isinvoiced></isinvoiced><!--是否开具发票，N-未开发票，Y-已开发票 -->
+		<invoicedtime></invoicedtime><!--开票时间 -->
+		<isdel></isdel><!--是否删除 -->
+		<ctimestamp></ctimestamp><!--时间戳 -->
+		<billimg></billimg><!--账单图片，如有多个，以json保存，如["year","month"] -->
+		<latestinvoicetime></latestinvoicetime><!--最晚开发票时间 -->
+		<proofcode></proofcode><!--账单中的取货凭证二维码 -->
+		<goodslists cycle="1"><!--账单商品列表 -->
+			<goodsid></goodsid><!--商品id -->
+			<goodsname></goodsname><!--商品名称 -->
+			<goodsprice></goodsprice><!--商品价格 -->
+			<goodsimg></goodsimg><!--商品图片 -->
+			<promotionprice></promotionprice><!--促销价格 -->
+			<goodsnum></goodsnum><!--商品数量 -->
+		</goodslists>
+	</billlists>
+</root>

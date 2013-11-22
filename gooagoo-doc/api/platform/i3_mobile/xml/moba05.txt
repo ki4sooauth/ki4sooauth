@@ -1,0 +1,13 @@
+{
+    "result": "",
+    "msg": "",
+    "recommendcard": [
+        {
+            "cardid": "",
+            "cardname": "",
+            "shopid": "",
+            "cardurl": "",
+            "colortype": ""
+        }
+    ]
+}

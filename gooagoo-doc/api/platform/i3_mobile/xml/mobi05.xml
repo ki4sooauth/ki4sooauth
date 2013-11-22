@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="shopListRoot"><!-- 导航（起点{x,y}，实体店编号或商品编号） -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<shopListlists cycle="1"><!-- 导航信息-->
+		<svgid></svgid><!--区域id -->
+		<shopid></shopid><!--商家id -->
+		<shopentityid></shopentityid><!--实体店编号 -->
+		<shopentityname></shopentityname><!--实体店名称 -->
+		<shoptyperootid></shoptyperootid><!--商家类型编号（根节点）-->
+		<shoptyperootname></shoptyperootname><!--商家类型编号（根节点）-->
+		<mapid></mapid><!--地图编号 -->
+		<px></px><!--svg 图上的，x轴坐标  -->
+		<py></py><!--svg 图上的，y轴坐标  -->
+	</shopListlists>
+</root>

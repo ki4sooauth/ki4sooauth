@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="RecommendShopRoot"><!-- 用户搜索卡时，得到系统推荐的卡 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<recommendshop cycle="1"><!-- 商家信息 -->
+		<logo></logo><!--商家logo -->
+		<shopid></shopid><!--商家编号-->
+		<shopname></shopname><!--商家名称 -->
+		<membernums></membernums><!--会员数量 -->
+		<attentionnums></attentionnums><!--关注数量 -->
+		<colortype></colortype><!--背景颜色（RGB） -->
+	</recommendshop>
+</root>

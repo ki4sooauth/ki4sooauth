@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title></title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+
+.STYLE1 {
+	color: #FF0000
+}
+</style>
+</head>
+<body>
+	<p>
+		<br />
+	</p>
+	<table id="righttable" cellspacing="0"
+		summary="The technical specifications of the Apple PowerMac G5 series">
+		<tr>
+			<th scope="col" colspan="2"><span class="row">接口gtsc28:上传博立协议房台汇总信息（餐桌状态）</span></th>
+		</tr>
+		<tr>
+			<td width="136" class="row">功能说明:</td>
+			<td width="658" class="row">上传博立协议房台汇总信息（餐桌状态</td>
+		</tr>
+		<tr>
+			<td width="136" class="row">程序映射地址:</td>
+			<td width="658" class="row"></td>
+		</tr>
+		<tr>
+			<td class="alt">返回值例子:</td>
+			<td class="alt"><a href="../xml/gtsc28.xml" target="_blank">gtsc28.xml</a>
+				| <a href="../xml/gtsc28.txt" target="_blank">gtsc28.txt</a></td>
+		</tr>
+		<tr>
+			<td valign="top" class="row">参数说明：</td>
+			<td class="row">
+				<table>
+					<tr>
+						<td class="alt" align="center">CODE</td>
+						<td class="alt" align="center">NAME</td>
+						<td class="alt" align="center">是否必填</td>
+						<td class="alt" align="center">备注说明</td>
+					</tr>
+					<tr>
+						<td class="row">mac</td>
+						<td class="row">转发器MAC地址</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+					<tr>
+						<td class="row">shopentityid</td>
+						<td class="row">实体店编号</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+					<tr>
+						<td class="row">tablesinfo</td>
+						<td class="row">餐桌状态信息</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row">
+							[{tableno:””,tablename:””,</br>
+							payment:””,	tablestate:””,</br>
+							tabletype:””,tablearea:””},{}...]</br>
+							tableno 餐桌编号</br>
+							tablestate 餐桌状态</br>
+							tablename 餐桌名称</br>
+							payment 消费金额</br>
+							tabletype 餐桌类型</br>
+							tablearea 餐桌区域</br>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="alt">业务逻辑说明：</td>
+			<td class="alt">
+			1. 此接口主要针对店内的餐桌状态进行管理汇总。转发器发送请求给gooagoo的截获软件，<br/>
+			然后截获软件获取餐饮软件的餐桌状态，最后返回给转发器，转发器将餐桌状态信息发送给平台，<br/>
+			平台将其放入缓存中，待用到时直接查询即可.<br/>
+			</td>
+		</tr>
+		<tr>
+			<td class="alt">修改日志:</td>
+			<td class="alt"></td>
+		</tr>
+	</table>
+</body>
+</html>

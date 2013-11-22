@@ -1,0 +1,23 @@
+{
+    "result":"",
+    "msg":"",
+    "shoppingguide":{
+        "categoryid":"",
+        "parentcategoryid":"",
+        "categoryname":"",
+        "positionname":"",
+        "shoppingguide":[
+            {
+                "goodsid":"",
+                "goodsname":"",
+                "price":"",
+                "goodsimg":"",
+                "shopid":"",
+                "position_name":"",
+                "goods_content":"",
+                "url":"",
+                "shopname":""
+            }
+        ]
+    }
+}

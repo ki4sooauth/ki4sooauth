@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="ChoiceListRoot"><!-- 商家精品查询 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<shopinfo><!-- 商家信息 -->
+		<shopid></shopid><!-- 商家id -->
+		<logo1></logo1><!--商家logo，正方形 -->
+		<cardheadurl></cardheadurl><!-- 会员卡卡头url -->
+		<attentionnums></attentionnums><!-- 商家关注数量 -->
+		<membernums></membernums><!-- 商家会员数量 -->
+		<numbers></numbers><!-- 精品数量-->
+	</shopinfo>
+	<objinfo cycle="1"><!-- 精品信息 -->
+		<objid></objid><!-- 精品商品id） -->
+		<objpicurl></objpicurl><!-- 精品图片url -->
+		<objname></objname><!-- 精品名称 -->
+		<favnums></favnums><!-- 精品收藏人数 -->
+		<isfav></isfav><!-- 是否收藏，Y-已收藏，N-未收藏 -->
+		<introduceurl></introduceurl><!-- 详情url,详情介绍url -->
+	</objinfo>
+</root>

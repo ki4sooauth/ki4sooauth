@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="GetCategoryByDeskNoRoot"><!--根据菜品类别查询-->
+	<result/><!--结果编码，true成功，false失败-->
+	<msg/><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+   <foodinfolists cycle="1"><!--菜品信息列表  -->
+		<foodid></foodid><!--菜品id -->
+		<foodkind></foodkind><!--菜品类别 -->
+		<foottype ></foottype ><!--单价 -->
+		<foodname></foodname><!--菜品类别 -->
+		<foodprice></foodprice><!-- 单价 -->
+		<foodhot></foodhot><!--人气-->
+		<inventory></inventory><!--商品库存量：0：无，1：有-->
+	</foodinfolists>
+ </root>

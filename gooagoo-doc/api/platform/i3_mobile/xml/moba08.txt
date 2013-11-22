@@ -1,0 +1,16 @@
+{
+    "result": "",
+    "msg": "",
+    "shoplist": [
+        {
+            "shopid": "",
+            "shopname": "",
+            "squarelogo": "",
+            "oblonglogo": "",
+            "shopfirstchar": "",
+            "shoptypeleaf": "",
+            "isdel": "",
+            "ctimestamp": ""
+        }
+    ]
+}

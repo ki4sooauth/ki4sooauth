@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="getAllDeskStatusRoot"><!--获取所用餐桌状态-->
+	<result/><!--结果编码，true成功，false失败-->
+	<msg/><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<deskStatusList cycle="1"><!-- 餐桌状态列表 -->
+		<deskno></deskno><!--餐桌编号名称,对应desk_no -->
+		<deskstate></deskstate><!--餐桌状态,1-空闲 2-点餐 3-正在结账 -->
+		<minnums></minnums><!--建议最小人数 -->
+		<maxnums></maxnums><!--建议最大人数-->
+		<mealtime></mealtime><!--当前状态出现时间 -->
+	</deskStatusList>
+ </root>

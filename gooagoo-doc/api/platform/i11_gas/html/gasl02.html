@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title></title>
+<style type="text/css">
+body {
+       margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+<body>
+<p><br />
+</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+<tr>
+<th scope="col" colspan="2"><span class="row">接口gasl02:查看全部订单</span></th> 
+</tr> 
+<tr>
+  <td width="136" class="row">功能说明:</td> 
+  <td width="658" class="row">查看已开台的餐桌的用餐状态</td> 
+</tr>
+<tr>
+  <td width="136" class="row">程序映射地址:</td> 
+  <td width="658" class="row">
+  </td>
+</tr>
+<tr>
+  <td class="alt">返回值例子:</td> 
+  <td class="alt"><a href="../xml/gasl02.xml" target="_blank">gasl02.xml</a> | <a href="../xml/gasl02.txt"target="_blank">gasl02.txt</a></td>
+</tr>
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">mac</td>
+		<td class="row">店员助理MAC地址</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopuserid</td>
+		<td class="row">店员登录账号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopentityid</td>
+		<td class="row">实体店编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">pageindex</td>
+		<td class="row">页码</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">pagesize</td>
+		<td class="row">每页信息显示条数</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">tablename</td>
+		<td class="row">餐桌号</td>
+		<td class="row" >选填</td>
+		<td class="row">此参数有值时只返回此餐桌对应订单</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+  一.主业务逻辑<br/>
+	  1.平台根据“shopentityid”、“tablename”查询order_info表信息。<br />
+	            如果查询结果中scard_no(会员卡编号)不为空，则是"会员"，否则为"非会员"<br />
+	  2.平台根据“shopentityid”、“tablename”查询redis缓存中的数据<br />
+	  	获取餐桌状态【0-空闲 1-已点餐 2-正在结账】。<br />
+	  3.组合数据返回给店员助理；<br/>
+  </td>
+</tr>
+<tr>
+  <td class="alt">修改日志:</td>
+  <td class="alt"></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context-3.0.xsd
+      http://www.springframework.org/schema/aop
+      http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+      http://www.springframework.org/schema/tx 
+      http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	<bean class="com.gooagoo.common.monitor.MonitorService">
+		<constructor-arg value="core"></constructor-arg>
+		<constructor-arg value="1.0.1"></constructor-arg>
+	</bean>
+	<bean id="SpringBeanUtils" class="com.gooagoo.common.utils.SpringBeanUtils"></bean>
+	
+	<context:component-scan base-package="com.gooagoo">
+		<context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect" />
+	</context:component-scan>
+	
+	<!-- 启动@AspectJ支持 -->
+	<aop:aspectj-autoproxy />
+	
+	<!--JOTM本地实例 -->
+	<bean id="jotm" class="org.springframework.transaction.jta.JotmFactoryBean" />
+	
+	<!--JTA事务管理器 -->
+	<bean id="txManager"
+		class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="userTransaction" ref="jotm" /><!--指定userTransaction属性引用JOTM本地实例 -->
+	</bean>
+
+	<!--注解事务驱动 -->
+	<tx:annotation-driven transaction-manager="txManager"
+		proxy-target-class="true" />
+	<!-- 配置JMS连接工厂 -->  
+    <bean id="connectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory">  
+        <property name="brokerURL" value="tcp://192.168.6.15:61616"/>  
+    </bean>  
+  
+    <!-- 配置JMS模版 -->  
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">  
+        <property name="connectionFactory" ref="connectionFactory"/>  
+    </bean>  
+  
+    <!-- 发送消息的目的地（一个队列） -->  
+    <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">  
+        <!-- Set the Queue Name -->  
+        <constructor-arg index="0" value="HelloWorldQueue"/>  
+    </bean>
+	<!--配置gooagoo_user库 -->
+	<bean id="userSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${user.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${user.username}" />
+		<property name="password" value="${user.password}" />
+	</bean>
+	<bean id="userSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="userSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-user.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="userMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.generator.user" />
+		<property name="sqlSessionFactoryBeanName" value="userSqlSessionFactory" />
+	</bean>
+	
+	<!--配置gooagoo_sys库 -->
+	<bean id="sysSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${sys.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${sys.username}" />
+		<property name="password" value="${sys.password}" />
+	</bean>
+	<bean id="sysSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="sysSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-sys.xml</value>
+				<value>classpath*:dao/mybatis-sys-adapter.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="sysMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.*.sys" />
+		<property name="sqlSessionFactoryBeanName" value="sysSqlSessionFactory" />
+	</bean>
+	
+	<!--配置gooagoo_shop库 -->
+	<bean id="shopSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${shop.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${shop.username}" />
+		<property name="password" value="${shop.password}" />
+	</bean>
+	<bean id="shopSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="shopSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-shop.xml</value>
+<!-- 				<value>classpath*:dao/mybatis-shop-adapter.xml</value> -->
+			</list>
+		</property>
+	</bean>
+	<bean name="shopMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.generator.shop" />
+		<property name="sqlSessionFactoryBeanName" value="shopSqlSessionFactory" />
+	</bean>
+	
+	<!--配置gooagoo_goods库 -->
+	<bean id="goodsSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${goods.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${goods.username}" />
+		<property name="password" value="${goods.password}" />
+	</bean>
+	<bean id="goodsSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="goodsSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-goods.xml</value>
+				<value>classpath*:dao/mybatis-goods-adapter.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="goodsMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.*.goods" />
+		<property name="sqlSessionFactoryBeanName" value="goodsSqlSessionFactory" />
+	</bean>
+	
+	<!--配置gooagoo_base库 -->
+	<bean id="baseSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${base.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${base.username}" />
+		<property name="password" value="${base.password}" />
+	</bean>
+	<bean id="baseSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="baseSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-base.xml</value>
+<!-- 				<value>classpath*:dao/mybatis-base-adapter.xml</value> -->
+			</list>
+		</property>
+	</bean>
+	<bean name="baseMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.generator.base" />
+		<property name="sqlSessionFactoryBeanName" value="baseSqlSessionFactory" />
+	</bean>
+	
+	<!--配置gooagoo_member库 -->
+	<bean id="memberSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${member.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${member.username}" />
+		<property name="password" value="${member.password}" />
+	</bean>
+	<bean id="memberSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="memberSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-member.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="memberMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.generator.member" />
+		<property name="sqlSessionFactoryBeanName" value="memberSqlSessionFactory" />
+	</bean>
+			
+	<!--配置gooagoo_marketing库 -->
+	<bean id="marketingSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${marketing.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${marketing.username}" />
+		<property name="password" value="${marketing.password}" />
+	</bean>
+	<bean id="marketingSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="marketingSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-marketing.xml</value>
+				<value>classpath*:dao/mybatis-marketing-adapter.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="marketingMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.*.marketing" />
+		<property name="sqlSessionFactoryBeanName" value="marketingSqlSessionFactory" />
+	</bean>
+		
+	<!--配置gooagoo_behave库 -->
+	<bean id="behaveSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${behave.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${behave.username}" />
+		<property name="password" value="${behave.password}" />
+	</bean>
+	<bean id="behaveSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="behaveSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-behave.xml</value>
+<!-- 				<value>classpath*:dao/mybatis-behave-adapter.xml</value> -->
+			</list>
+		</property>
+	</bean>
+	<bean name="behaveMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.generator.behave" />
+		<property name="sqlSessionFactoryBeanName" value="behaveSqlSessionFactory" />
+	</bean>
+	
+	<!--配置gooagoo_bill库 -->
+	<bean id="billSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${bill.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${bill.username}" />
+		<property name="password" value="${bill.password}" />
+	</bean>
+	<bean id="billSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="billSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-bill.xml</value>
+<!-- 				<value>classpath*:dao/mybatis-bill-adapter.xml</value> -->
+			</list>
+		</property>
+	</bean>
+	<bean name="billMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.generator.bill" />
+		<property name="sqlSessionFactoryBeanName" value="billSqlSessionFactory" />
+	</bean>
+</beans>

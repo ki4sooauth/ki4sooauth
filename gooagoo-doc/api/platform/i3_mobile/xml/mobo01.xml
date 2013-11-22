@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="GetConsigneeInfoRoot"><!-- 獲取未删除收货人地址信息 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<consigneeinfo cycle="1"><!-- 收货人地址信息-->
+		<consigneeid></consigneeid><!-- 收货人信息编号，UUID-->
+		<consigneename></consigneename><!-- 收货人姓名 -->
+		<province></province><!--省-->
+		<city></city><!--市-->
+		<area></area><!--区县-->
+		<address></address><!--详细地址 -->
+		<phone></phone><!-- 手机号码 -->
+		<telephone></telephone><!--联系电话-->
+		<postcode></postcode><!-- 邮政编码 -->
+		<isdefault></isdefault><!-- 是否默认选项，Y-是，N-否 -->
+	</consigneeinfo>
+</root>

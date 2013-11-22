@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="BillListoRoot"><!-- 通过“账单/订单编号”查询“账单/订单”信息  -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<billlisto ><!--包含一个账单信息 -->
+		<billtype></billtype><!--账单类型（类型，0-订单，3-账单） -->
+		<billid></billid><!--账单编号 -->
+		<orderid></orderid><!--订单编号 -->
+	    <industrytype></industrytype><!-- 訂單所屬行業類型,0-餐飲業, 1-零售業 -->
+		<shopid></shopid><!--店铺id -->
+		<shopentityid></shopentityid><!--实体店编号 -->
+		<userid></userid><!--用户id -->
+		<requesttime></requesttime><!--账单得到时间（手机端用以表示消费时间） -->
+		<scardno></scardno><!--用户卡id -->
+		<discountrate></discountrate><!--打折率 -->
+		<goodstotalnum></goodstotalnum><!--商品累计数，当前订单商品总数 -->
+		<originalprice></originalprice><!--原始总价 -->
+		<payprice></payprice><!--实收总价 -->
+		<integralnumber></integralnumber><!--本次积分 -->
+		<isinvoiced></isinvoiced><!--是否开过发票（0，否，1，申请中，2，已开） -->
+		<invoicedtime></invoicedtime><!--开票时间 -->
+		<isdel></isdel><!--是否删除 -->
+		<ctimestamp></ctimestamp><!--时间戳 -->
+		<billimg></billimg><!--账单图片，如有多个，以json保存，如["year","month"] -->
+		<latestinvoicetime></latestinvoicetime><!--最晚开发票时间 -->
+		<goodslist cycle="1"><!--账单商品列表 -->
+			<goodsid></goodsid><!--商品id -->
+			<goodsname></goodsname><!--商品名称 -->
+			<goodsprice></goodsprice><!--商品价格 -->
+			<goodsimg></goodsimg><!--商品图片 -->
+			<promotionprice></promotionprice><!--促销价格 -->
+			<goodsnum></goodsnum><!--商品数量 -->
+			<introduceurl></introduceurl><!-- 商品详情url,商品详情介绍url -->
+		</goodslist>
+	</billlisto>
+</root>

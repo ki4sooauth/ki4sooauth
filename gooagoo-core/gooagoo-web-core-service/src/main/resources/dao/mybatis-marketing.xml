@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <mappers>
+    <mapper resource="dao/generator/marketing/Coupon-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/CouponGrantInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/CryoutInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/MarketingActivity-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/MarketingEvent-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/MarketingItemLink-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/MarketingQualityGoods-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/MarketingUserLink-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/MarketingView-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/NoticeInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/RuleConfig-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/RuleInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/RuleResult-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/ShopIntegral-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/ShopIntegralConvert-Mapper.xml" /> 
+    <mapper resource="dao/generator/marketing/ShortMessage-Mapper.xml" /> 
+  </mappers>
+</configuration>

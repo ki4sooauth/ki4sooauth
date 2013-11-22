@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="orderHandleRoot"><!--订单处理-->
+	<result></result><!--结果编码，true上传账单成功，false上传账单失败-->
+	<msg></msg><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+</root>

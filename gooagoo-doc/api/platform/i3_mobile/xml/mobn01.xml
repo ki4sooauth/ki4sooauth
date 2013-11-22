@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="AddGoodsToShoppingCartRoot"><!--添加商品到购物车 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<existflag></existflag><!-- 商品是否已存在标识，Y-表示添加的商品已经在购物中存在 ，N-表示要添加的商品不在购物车种 -->
+</root>

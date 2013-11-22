@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.goods.GoodsBaseInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.goods.GoodsBaseInfo" >
+    <id column="goods_id" property="goodsId" jdbcType="CHAR" />
+    <result column="goods_name" property="goodsName" jdbcType="CHAR" />
+    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="shop_entity_id" property="shopEntityId" jdbcType="CHAR" />
+    <result column="goods_category_root" property="goodsCategoryRoot" jdbcType="CHAR" />
+    <result column="goods_category_leaf" property="goodsCategoryLeaf" jdbcType="CHAR" />
+    <result column="goods_brand" property="goodsBrand" jdbcType="CHAR" />
+    <result column="goods_serial" property="goodsSerial" jdbcType="CHAR" />
+    <result column="item_serial" property="itemSerial" jdbcType="CHAR" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+    <result column="template_id" property="templateId" jdbcType="CHAR" />
+    <result column="template_data" property="templateData" jdbcType="VARCHAR" />
+    <result column="publish_status" property="publishStatus" jdbcType="CHAR" />
+    <result column="audit_note" property="auditNote" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      goods_id, goods_name, shop_id, 
+      shop_entity_id, goods_category_root, goods_category_leaf, 
+      goods_brand, goods_serial, item_serial, 
+      price, template_id, template_data, 
+      publish_status, audit_note, is_del, 
+      create_time, c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.goods.GoodsBaseInfoExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from goods_base_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.goods.GoodsBaseInfoExample" resultType="java.lang.Integer">
+    select count(*) from goods_base_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.goods.GoodsBaseInfoKey" >
+    select 
+      goods_id, goods_name, shop_id, 
+      shop_entity_id, goods_category_root, goods_category_leaf, 
+      goods_brand, goods_serial, item_serial, 
+      price, template_id, template_data, 
+      publish_status, audit_note, is_del, 
+      create_time, c_time_stamp
+    from goods_base_info where goods_id = #{goodsId,jdbcType=CHAR}
+    <if test= "isDel != null">
+         and is_del=#{isDel}
+    </if>
+  </select>
+
+</mapper>

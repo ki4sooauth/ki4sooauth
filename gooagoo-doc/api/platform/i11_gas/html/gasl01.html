@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title></title>
+<style type="text/css">
+body {
+       margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+<body>
+<p><br />
+</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+<tr>
+<th scope="col" colspan="2"><span class="row">接口gasl01:单一会员卡确认</span></th> 
+</tr> 
+<tr>
+  <td width="136" class="row">功能说明:</td> 
+  <td width="658" class="row">单一会员卡确认</td> 
+</tr>
+<tr>
+  <td width="136" class="row">程序映射地址:</td> 
+  <td width="658" class="row">
+  </td>
+</tr>
+<tr>
+  <td class="alt">返回值例子:</td> 
+  <td class="alt"><a href="../xml/gasl01.xml" target="_blank">gasl01.xml</a> | <a href="../xml/gasl01.txt"target="_blank">gasl01.txt</a></td>
+</tr>
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">mac</td>
+		<td class="row">店员助理MAC地址</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">scardno</td>
+		<td class="row">会员卡号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopuserid</td>
+		<td class="row">店员登录账号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+  一.主业务逻辑<br/>
+	  1.平台根据根据"scardno"在表member_of_card查询出scardno（会员卡卡号）、card_id(会员卡编号)、shop_id(商家编号)、user_id(用户编号);<br/>
+	  2.平台根据“shopuserid”在表shop_user_info中查询出shop_id(商家编号)<br />
+	  3.平台根据“mac”在表device_assistant查询出shop_id<br />
+	  4.比较"scardno"、“shopuserid”、“mac”分别查询出来的shop_id,如果不相等，则表示不是单一会员卡，则跳至步骤9<br />
+	  5.平台根据card_id在表member_card中查出会员卡名称<br />
+	  6.平台根据user_id、shop_id在表integral_info查询useable_integral_number（用户当前可用积分）<br/>
+	  7.平台根据查询出来的user_id在表user_mobile_info查询出来mac_address（用户mac地址）<br />
+	  8.根据user_id和mac_address、shop_id、shop_entity_id及到店行为标志在表behave_log中查询用户最后一次到店时间（按行为时间降序,取第一条数据的行为时间）<br />
+	  9.组合数据返回给店员助理.<br/>
+  </td>
+</tr>
+<tr>
+  <td class="alt">修改日志:</td>
+  <td class="alt"></td>
+</tr>
+</table>
+</body>
+</html>

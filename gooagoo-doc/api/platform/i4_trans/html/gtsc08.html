@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title></title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+
+.STYLE1 {
+	color: #FF0000
+}
+</style>
+</head>
+<body>
+	<p>
+		<br />
+	</p>
+	<table id="righttable" cellspacing="0"
+		summary="The technical specifications of the Apple PowerMac G5 series">
+		<tr>
+			<th scope="col" colspan="2"><span class="row">接口gtsc08:优惠凭证确认</span></th>
+		</tr>
+		<tr>
+			<td width="136" class="row">功能说明:</td>
+			<td width="658" class="row">优惠凭证确认</td>
+		</tr>
+		<tr>
+			<td width="136" class="row">程序映射地址:</td>
+			<td width="658" class="row"></td>
+		</tr>
+		<tr>
+			<td class="alt">返回值例子:</td>
+			<td class="alt"><a href="../xml/gtsc08.xml" target="_blank">gtsc08.xml</a>
+				| <a href="../xml/gtsc08.txt" target="_blank">gtsc08.txt</a></td>
+		</tr>
+		<tr>
+			<td valign="top" class="row">参数说明：</td>
+			<td class="row">
+				<table>
+					<tr>
+						<td class="alt" align="center">CODE</td>
+						<td class="alt" align="center">NAME</td>
+						<td class="alt" align="center">是否必填</td>
+						<td class="alt" align="center">备注说明</td>
+					</tr>
+					<tr>
+						<td class="row">mac</td>
+						<td class="row">转发器MAC地址</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+					<tr>
+						<td class="row">orderid</td>
+						<td class="row">商家订单编号</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+					<tr>
+						<td class="row">agreeyinfo</td>
+						<td class="row">是否同意</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row">[{"favoriteid":"","agreetype":""}]</br>agreetype取值范围：Y-同意，N-不同意</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="alt">业务逻辑说明：</td>
+			<td class="alt">一.主业务逻辑<br />
+			1.根据oderid查询order_coupon_info中使用的优惠劵。<br />
+			2.如果商家同意使用，则更新favorite_info中的优惠券的use_time（使用时间），不同意则删除订单优惠券信息并对该优惠券解锁。<br />
+			3.修改order_coupon_info中is_deal、status、deal_time等信息。<br />
+				
+			</td>
+		</tr>
+		<tr>
+			<td class="alt">修改日志:</td>
+			<td class="alt"></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="mapPositionRoot"><!-- 查询当前地图范围内全部商家活动。-->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<mappositionlists cycle="1"><!-- 位置信息-->
+		<objid></objid><!--商家\商品编号 -->
+		<objname></objname><!--商家\商品名称 -->
+		<type></type><!--type：S-商家，G-商品-->
+		<mapid></mapid><!-- 地图编号 -->
+		<px></px><!--svg 图上的，x轴坐标 -->
+		<py></py><!--svg 图上的，y轴坐标 -->
+	</mappositionlists>
+</root>

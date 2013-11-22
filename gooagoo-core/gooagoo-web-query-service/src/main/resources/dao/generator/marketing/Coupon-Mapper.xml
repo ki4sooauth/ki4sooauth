@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.marketing.CouponMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.marketing.Coupon" >
+    <id column="coupon_id" property="couponId" jdbcType="CHAR" />
+    <result column="coupon_name" property="couponName" jdbcType="CHAR" />
+    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="publish_start_time" property="publishStartTime" jdbcType="TIMESTAMP" />
+    <result column="publish_end_time" property="publishEndTime" jdbcType="TIMESTAMP" />
+    <result column="use_start_time" property="useStartTime" jdbcType="TIMESTAMP" />
+    <result column="use_end_time" property="useEndTime" jdbcType="TIMESTAMP" />
+    <result column="coupon_mode" property="couponMode" jdbcType="CHAR" />
+    <result column="coupon_type" property="couponType" jdbcType="CHAR" />
+    <result column="coupon_value" property="couponValue" jdbcType="DOUBLE" />
+    <result column="amount" property="amount" jdbcType="INTEGER" />
+    <result column="max_num_owner" property="maxNumOwner" jdbcType="INTEGER" />
+    <result column="coupon_url" property="couponUrl" jdbcType="CHAR" />
+    <result column="coupon_content" property="couponContent" jdbcType="VARCHAR" />
+    <result column="coupon_channle" property="couponChannle" jdbcType="CHAR" />
+    <result column="coupon_source" property="couponSource" jdbcType="CHAR" />
+    <result column="check_json" property="checkJson" jdbcType="VARCHAR" />
+    <result column="template_id" property="templateId" jdbcType="CHAR" />
+    <result column="template_data" property="templateData" jdbcType="VARCHAR" />
+    <result column="publish_status" property="publishStatus" jdbcType="CHAR" />
+    <result column="audit_note" property="auditNote" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      coupon_id, coupon_name, shop_id, 
+      publish_start_time, publish_end_time, use_start_time, 
+      use_end_time, coupon_mode, coupon_type, 
+      coupon_value, amount, max_num_owner, 
+      coupon_url, coupon_content, coupon_channle, 
+      coupon_source, check_json, template_id, 
+      template_data, publish_status, audit_note, 
+      is_del, create_time, c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.marketing.CouponExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from coupon
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.marketing.CouponExample" resultType="java.lang.Integer">
+    select count(*) from coupon
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.marketing.CouponKey" >
+    select 
+      coupon_id, coupon_name, shop_id, 
+      publish_start_time, publish_end_time, use_start_time, 
+      use_end_time, coupon_mode, coupon_type, 
+      coupon_value, amount, max_num_owner, 
+      coupon_url, coupon_content, coupon_channle, 
+      coupon_source, check_json, template_id, 
+      template_data, publish_status, audit_note, 
+      is_del, create_time, c_time_stamp
+    from coupon where coupon_id = #{couponId,jdbcType=CHAR}
+    <if test= "isDel != null">
+         and is_del=#{isDel}
+    </if>
+  </select>
+
+</mapper>

@@ -1,0 +1,29 @@
+{
+    "result": "",
+    "msg": "",
+    "usershoppingplanS": [
+        {
+            "shoppinglistid": "",
+            "title": "",
+            "preshoppingtime": "",
+            "infosource": "",
+            "isdel": "",
+            "createtime": "",
+            "ctimestamp": "",
+            "shoppinggoodslistS": [
+                {
+                    "shoppinggoodsid": "",
+                    "goodsid": "",
+                    "goodsname": "",
+                    "goodstypeid": "",
+                    "goodstypename": "",
+                    "shopid": "",
+                    "shopname": "",
+                    "isdel": "",
+                    "createtime": "",
+                    "ctimestamp": ""
+                }
+            ]
+        }
+    ]
+}

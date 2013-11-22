@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="FavoritePlazaRoot"><!-- 收藏广场列表（查询） -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!-- 查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<favoriteplaza cycle="1"><!-- 对象信息 -->
+		<objtype></objtype><!-- 类型，A-活动，G-商品，C-优惠券 -->
+		<objid></objid><!-- id -->
+		<objimg></objimg><!-- 图片 -->
+		<objname></objname><!-- 名称 -->
+		<linkurl></linkurl><!-- 链接 -->
+		<shopid></shopid><!-- 商家id -->
+		<shopname></shopname><!-- 商家名称 -->
+		<favnums></favnums><!-- 收藏人数 -->
+		<commentnums></commentnums><!-- 评论数量 -->
+		<isfav></isfav><!-- 是否收藏，Y-已收藏，N-未收藏 -->
+	</favoriteplaza>
+</root>

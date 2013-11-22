@@ -1,0 +1,15 @@
+{
+    "memberNoticeRoot": "",
+    "msg": "",
+    "membernotice": [
+        {
+            "noticeinfoid": "",
+            "shopid": "",
+            "logo": "",
+            "title": "",
+            "img": "",
+            "noticetextmobile": "",
+            "ctimestamp": ""
+        }
+    ]
+}

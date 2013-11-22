@@ -1,0 +1,16 @@
+{
+    "result":"",
+    "msg":"",
+    "userinfo":{
+        "nickname":"",
+        "realname":"",
+        "sex":"",
+        "birthday":"",
+        "idtype":"",
+        "idno":"",
+        "phone":"",
+        "postcode":"",
+        "address":"",
+        "isallowfriend":""
+    }
+}

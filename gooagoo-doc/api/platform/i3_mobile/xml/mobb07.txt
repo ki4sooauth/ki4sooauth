@@ -1,0 +1,18 @@
+{
+    "result": "",
+    "msg": "",
+    "favoriteplaza": [
+        {
+            "objtype": "",
+            "objid": "",
+            "objimg": "",
+            "objname": "",
+            "linkurl": "",
+            "shopid": "",
+            "shopname": "",
+            "favnums": "",
+            "commentnums": "",
+            "isfav": ""
+        }
+    ]
+}

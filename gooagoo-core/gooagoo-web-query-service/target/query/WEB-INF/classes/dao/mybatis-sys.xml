@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <mappers>
+    <mapper resource="dao/generator/sys/AdsManage-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/CmsContent-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/InterfaceBaseInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/InterfaceRequestInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/MobileVersion-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/NominateActivity-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/NominateCoupon-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/NominateGoods-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/NominateShop-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/PlatformRegion-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/ShopAd-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/ShopBid-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/ShopInterfaceInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/SysAuthority-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/SysRole-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/SysRoleAuthority-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/SysUserInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/SysUserRole-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/TemplateInfo-Mapper.xml" /> 
+    <mapper resource="dao/generator/sys/TradeArea-Mapper.xml" /> 
+  </mappers>
+</configuration>

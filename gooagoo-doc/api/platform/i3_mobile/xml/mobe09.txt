@@ -1,0 +1,12 @@
+{
+    "result":"",
+    "msg":"",
+    "onedimensioncode":{
+        "goodsid":"",
+        "shopid":"",
+        "goodsname":"",
+        "price":"",
+        "goodscontent":"",
+        "goodsimg":""
+    }
+}

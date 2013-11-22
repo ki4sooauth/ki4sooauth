@@ -1,0 +1,18 @@
+{
+    "result":"",
+    "msg":"",
+    "cookbook":[
+        {
+            "goodsid":"",
+            "shopid":"",
+            "goodsname":"",
+            "price":"",
+            "goodsnamefirst":"",
+            "onedimensioncode":"",
+            "goodscategoryleaf":"",
+            "goodsimg":"",
+            "goodsconten":"",
+            "goodsscore":""
+        }
+    ]
+}

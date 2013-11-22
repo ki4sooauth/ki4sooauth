@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root alias="UserShoppingPlanBTARoot"><!-- 计划列表与服务器同步 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<mobilechange></mobilechange><!--手机修改过的清单编号，包括：新增、修改、删除；以逗号隔开的字符串，例如“123”，“234” -->
+	<usershoppingplanmob cycle="1"><!-- 购物计划 -->
+		<shoppinglistid></shoppinglistid><!--购物清单编号，UUID -->
+		<title></title><!--购物清单标题 -->
+		<preshoppingtime></preshoppingtime><!--预计购物时间 -->
+		<infosource></infosource><!--信息来源，参考通用字典表的infosource -->
+		<isdel></isdel><!--是否删除，Y-已删除，N-未删除 -->
+		<createtime></createtime><!--创建时间 -->
+		<ctimestamp></ctimestamp><!--最后一次修改时间 -->
+		<shoppingplangoodsmob cycle="1"><!-- 商品列表 -->
+			<shoppinggoodsid></shoppinggoodsid><!--购物清单详细编号，UUID -->
+			<goodsid></goodsid><!--商品编号 -->
+			<goodsname></goodsname><!--商品名称 -->
+			<goodstypeid></goodstypeid><!--商品类型编号 -->
+			<goodstypename></goodstypename><!--商品类型名称 -->
+			<shopid></shopid><!--商家编号 -->
+			<shopname></shopname><!--商家名称 -->
+			<isdel></isdel><!--是否删除，Y-已删除，N-未删除 -->
+			<createtime></createtime><!--创建时间 -->
+			<ctimestamp></ctimestamp><!--最后一次修改时间 -->
+		</shoppingplangoodsmob>
+	</usershoppingplanmob>
+</root>

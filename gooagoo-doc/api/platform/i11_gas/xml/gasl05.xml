@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="PayBillApplyRoot"><!--结账申请-->
+	<result/><!--结果编码，true-申请成功，false-申请失败-->
+	<msg/><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+</root>

@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans 
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="goodsBrandQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/goodsBrandQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.goods.brand.GoodsBrandQueryService"/>
+	</bean>
+
+	<bean id="goodsCacheQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/goodsCacheQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.goods.cache.GoodsCacheQueryService"/>
+	</bean>
+
+	<bean id="goodsCategoryQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/goodsCategoryQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.goods.category.GoodsCategoryQueryService"/>
+	</bean>
+
+	<bean id="goodsQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/goodsQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.goods.query.GoodsQueryService"/>
+	</bean>
+
+	<bean id="shopGoodsQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopGoodsQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.goods.query.ShopGoodsQueryService"/>
+	</bean>
+
+	<bean id="statisticalQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/statisticalQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.goods.statistical.StatisticalQueryService"/>
+	</bean>
+
+	<bean id="logQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/logQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.log.LogQueryService"/>
+	</bean>
+
+	<bean id="activityQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/activityQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.activity.ActivityQueryService"/>
+	</bean>
+
+	<bean id="analysisTypeServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/analysisTypeService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.AnalysisTypeService"/>
+	</bean>
+
+	<bean id="guessYouLikeQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/guessYouLikeQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.GuessYouLikeQueryService"/>
+	</bean>
+
+	<bean id="hotCommentQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/hotCommentQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.HotCommentQueryService"/>
+	</bean>
+
+	<bean id="hotSellersQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/hotSellersQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.HotSellersQueryService"/>
+	</bean>
+
+	<bean id="newGoodsQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/newGoodsQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.analysis.NewGoodsQueryService"/>
+	</bean>
+
+	<bean id="couponCacheQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/couponCacheQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cache.CouponCacheQueryService"/>
+	</bean>
+
+	<bean id="cryoutCacheQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/cryoutCacheQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cache.CryoutCacheQueryService"/>
+	</bean>
+
+	<bean id="couponQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/couponQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.coupon.CouponQueryService"/>
+	</bean>
+
+	<bean id="cryoutPlaceQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/cryoutPlaceQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cryout.CryoutPlaceQueryService"/>
+	</bean>
+
+	<bean id="cryoutQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/cryoutQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cryout.CryoutQueryService"/>
+	</bean>
+
+	<bean id="shopCryoutQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopCryoutQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.cryout.ShopCryoutQueryService"/>
+	</bean>
+
+	<bean id="eventQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/eventQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.event.EventQueryService"/>
+	</bean>
+
+	<bean id="navigateQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/navigateQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.navigate.NavigateQueryService"/>
+	</bean>
+
+	<bean id="noticeQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/noticeQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.notice.NoticeQueryService"/>
+	</bean>
+
+	<bean id="shopNoticeQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopNoticeQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.notice.ShopNoticeQueryService"/>
+	</bean>
+
+	<bean id="preferentialQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/preferentialQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.preferential.PreferentialQueryService"/>
+	</bean>
+
+	<bean id="qualityGoodsQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/qualityGoodsQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.qualitygoods.QualityGoodsQueryService"/>
+	</bean>
+
+	<bean id="recommendQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/recommendQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.recommend.RecommendQueryService"/>
+	</bean>
+
+	<bean id="ruleResultQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/ruleResultQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.rule.RuleResultQueryService"/>
+	</bean>
+
+	<bean id="shopIntegralQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopIntegralQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.shopintegral.ShopIntegralQueryService"/>
+	</bean>
+
+	<bean id="shortMessageQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shortMessageQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.shortmessage.ShortMessageQueryService"/>
+	</bean>
+
+	<bean id="synQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/synQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.marketing.syn.SynQueryService"/>
+	</bean>
+
+	<bean id="memberCacheQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/memberCacheQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.cache.MemberCacheQueryService"/>
+	</bean>
+
+	<bean id="auditCardQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/auditCardQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.AuditCardQueryService"/>
+	</bean>
+
+	<bean id="checkCardQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/checkCardQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.CheckCardQueryService"/>
+	</bean>
+
+	<bean id="memberCardRuleQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/memberCardRuleQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.MemberCardRuleQueryService"/>
+	</bean>
+
+	<bean id="shopCardQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopCardQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.ShopCardQueryService"/>
+	</bean>
+
+	<bean id="userCardQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userCardQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.card.UserCardQueryService"/>
+	</bean>
+
+	<bean id="integralQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/integralQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.integral.IntegralQueryService"/>
+	</bean>
+
+	<bean id="shopMemberQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopMemberQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.query.ShopMemberQueryService"/>
+	</bean>
+
+	<bean id="userMemberQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userMemberQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.query.UserMemberQueryService"/>
+	</bean>
+
+	<bean id="swipeCardQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/swipeCardQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.member.swipe.SwipeCardQueryService"/>
+	</bean>
+
+	<bean id="shopAuthorityQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopAuthorityQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.auth.ShopAuthorityQueryService"/>
+	</bean>
+
+	<bean id="shopCacheQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopCacheQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.cache.ShopCacheQueryService"/>
+	</bean>
+
+	<bean id="shopEntityCacheQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopEntityCacheQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.cache.ShopEntityCacheQueryService"/>
+	</bean>
+
+	<bean id="shopPositionCacheQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopPositionCacheQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.cache.ShopPositionCacheQueryService"/>
+	</bean>
+
+	<bean id="tableCacheQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/tableCacheQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.cache.TableCacheQueryService"/>
+	</bean>
+
+	<bean id="gpsNavigationServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/gpsNavigationService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.map.GpsNavigationService"/>
+	</bean>
+
+	<bean id="mapQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/mapQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.map.MapQueryService"/>
+	</bean>
+
+	<bean id="shopPositionQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopPositionQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.position.ShopPositionQueryService"/>
+	</bean>
+
+	<bean id="shopQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.query.ShopQueryService"/>
+	</bean>
+
+	<bean id="userShopQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userShopQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.query.UserShopQueryService"/>
+	</bean>
+
+	<bean id="tableStatusQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/tableStatusQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.table.TableStatusQueryService"/>
+	</bean>
+
+	<bean id="toolQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/toolQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.tool.ToolQueryService"/>
+	</bean>
+
+	<bean id="shopUserLoginQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopUserLoginQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.shop.user.ShopUserLoginQueryService"/>
+	</bean>
+
+	<bean id="adClickRateQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/adClickRateQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.AdClickRateQueryService"/>
+	</bean>
+
+	<bean id="browseStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/browseStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.BrowseStatisticQueryService"/>
+	</bean>
+
+	<bean id="buyStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/buyStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.BuyStatisticQueryService"/>
+	</bean>
+
+	<bean id="collectStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/collectStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.CollectStatisticQueryService"/>
+	</bean>
+
+	<bean id="commentsStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/commentsStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.CommentsStatisticQueryService"/>
+	</bean>
+
+	<bean id="consumeStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/consumeStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ConsumeStatisticQueryService"/>
+	</bean>
+
+	<bean id="crowdOperationQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/crowdOperationQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.CrowdOperationQueryService"/>
+	</bean>
+
+	<bean id="exchangeStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/exchangeStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ExchangeStatisticQueryService"/>
+	</bean>
+
+	<bean id="interactiveQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/interactiveQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.InteractiveQueryService"/>
+	</bean>
+
+	<bean id="memberStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/memberStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.MemberStatisticQueryService"/>
+	</bean>
+
+	<bean id="queryParametersQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/queryParametersQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.QueryParametersQueryService"/>
+	</bean>
+
+	<bean id="recordStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/recordStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.RecordStatisticQueryService"/>
+	</bean>
+
+	<bean id="shareStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shareStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ShareStatisticQueryService"/>
+	</bean>
+
+	<bean id="shopEntityPeopleStatisticsQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopEntityPeopleStatisticsQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ShopEntityPeopleStatisticsQueryService"/>
+	</bean>
+
+	<bean id="shopPeopleStatisticsQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shopPeopleStatisticsQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.ShopPeopleStatisticsQueryService"/>
+	</bean>
+
+	<bean id="statisticAnalysisServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/statisticAnalysisService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.StatisticAnalysisService"/>
+	</bean>
+
+	<bean id="tableStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/tableStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.TableStatisticQueryService"/>
+	</bean>
+
+	<bean id="activityStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/activityStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.user.ActivityStatisticQueryService"/>
+	</bean>
+
+	<bean id="couponStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/couponStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.user.CouponStatisticQueryService"/>
+	</bean>
+
+	<bean id="cryoutStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/cryoutStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.user.CryoutStatisticQueryService"/>
+	</bean>
+
+	<bean id="goodsStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/goodsStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.user.GoodsStatisticQueryService"/>
+	</bean>
+
+	<bean id="userPositionStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userPositionStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.UserPositionStatisticQueryService"/>
+	</bean>
+
+	<bean id="useStatisticQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/useStatisticQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.statistics.UseStatisticQueryService"/>
+	</bean>
+
+	<bean id="sysShopBidQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/sysShopBidQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.system.bid.SysShopBidQueryService"/>
+	</bean>
+
+	<bean id="marketingChannelQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/marketingChannelQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.system.channel.MarketingChannelQueryService"/>
+	</bean>
+
+	<bean id="sysCmsContentQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/sysCmsContentQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.system.cms.SysCmsContentQueryService"/>
+	</bean>
+
+	<bean id="nominateActivityQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/nominateActivityQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.system.nominate.NominateActivityQueryService"/>
+	</bean>
+
+	<bean id="nominateCouponQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/nominateCouponQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.system.nominate.NominateCouponQueryService"/>
+	</bean>
+
+	<bean id="nominateGoodsQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/nominateGoodsQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.system.nominate.NominateGoodsQueryService"/>
+	</bean>
+
+	<bean id="nominateShopQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/nominateShopQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.system.nominate.NominateShopQueryService"/>
+	</bean>
+
+	<bean id="sysUserLoginQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/sysUserLoginQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.system.sys.user.SysUserLoginQueryService"/>
+	</bean>
+
+	<bean id="applyQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/applyQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.apply.ApplyQueryService"/>
+	</bean>
+
+	<bean id="manuaQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/manuaQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.manua.ManuaQueryService"/>
+	</bean>
+
+	<bean id="changeTableQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/changeTableQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.order.ChangeTableQueryService"/>
+	</bean>
+
+	<bean id="orderQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/orderQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.order.OrderQueryService"/>
+	</bean>
+
+	<bean id="serveFoodQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/serveFoodQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.order.ServeFoodQueryService"/>
+	</bean>
+
+	<bean id="shoppingCartQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shoppingCartQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.transaction.order.ShoppingCartQueryService"/>
+	</bean>
+
+	<bean id="behaveQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/behaveQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.behave.BehaveQueryService"/>
+	</bean>
+
+	<bean id="userCacheQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userCacheQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.cache.UserCacheQueryService"/>
+	</bean>
+
+	<bean id="commentQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/commentQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.comment.CommentQueryService"/>
+	</bean>
+
+	<bean id="calendarQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/calendarQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.favorite.calendar.CalendarQueryService"/>
+	</bean>
+
+	<bean id="favoritePlaceQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/favoritePlaceQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.favorite.FavoritePlaceQueryService"/>
+	</bean>
+
+	<bean id="favoriteQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/favoriteQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.favorite.FavoriteQueryService"/>
+	</bean>
+
+	<bean id="invoiceQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/invoiceQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.invoice.InvoiceQueryService"/>
+	</bean>
+
+	<bean id="userSecurityQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userSecurityQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.password.UserSecurityQueryService"/>
+	</bean>
+
+	<bean id="userAccountQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userAccountQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.query.UserAccountQueryService"/>
+	</bean>
+
+	<bean id="userActiveCodeQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userActiveCodeQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.query.UserActiveCodeQueryService"/>
+	</bean>
+
+	<bean id="userLoginQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userLoginQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.query.UserLoginQueryService"/>
+	</bean>
+
+	<bean id="userQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/userQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.query.UserQueryService"/>
+	</bean>
+
+	<bean id="queueQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/queueQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.queue.QueueQueryService"/>
+	</bean>
+
+	<bean id="shoppingMatchQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shoppingMatchQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.shoppingmatch.ShoppingMatchQueryService"/>
+	</bean>
+
+	<bean id="shoppingPlanQueryServiceClient" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl">
+				<value>http://iquery.goo.com/hessian/shoppingPlanQueryService</value>
+		</property>
+		<property name="serviceInterface" value="com.gooagoo.api.business.query.user.shoppingplan.ShoppingPlanQueryService"/>
+	</bean>
+</beans>

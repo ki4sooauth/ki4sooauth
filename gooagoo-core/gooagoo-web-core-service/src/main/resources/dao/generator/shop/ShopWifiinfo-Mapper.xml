@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.shop.ShopWifiinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.shop.ShopWifiinfo" >
+    <id column="wifi_info_id" property="wifiInfoId" jdbcType="CHAR" />
+    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="shop_entity_id" property="shopEntityId" jdbcType="CHAR" />
+    <result column="wifi_ssid" property="wifiSsid" jdbcType="CHAR" />
+    <result column="wifi_mac" property="wifiMac" jdbcType="CHAR" />
+    <result column="wifi_password" property="wifiPassword" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      wifi_info_id, shop_id, shop_entity_id, 
+      wifi_ssid, wifi_mac, wifi_password, 
+      is_del, create_time, c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.shop.ShopWifiinfoExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from shop_wifiinfo
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.shop.ShopWifiinfoExample" resultType="java.lang.Integer">
+    select count(*) from shop_wifiinfo
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.shop.ShopWifiinfoKey" >
+    select 
+      wifi_info_id, shop_id, shop_entity_id, 
+      wifi_ssid, wifi_mac, wifi_password, 
+      is_del, create_time, c_time_stamp
+    from shop_wifiinfo where wifi_info_id = #{wifiInfoId,jdbcType=CHAR}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.shop.ShopWifiinfoExample">
+    delete from shop_wifiinfo
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.shop.ShopWifiinfoKey" >
+    delete from shop_wifiinfo where wifi_info_id = #{wifiInfoId,jdbcType=CHAR}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.shop.ShopWifiinfo" >
+    insert into shop_wifiinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "wifiInfoId != null">
+         wifi_info_id,
+      </if>
+      <if test= "shopId != null">
+         shop_id,
+      </if>
+      <if test= "shopEntityId != null">
+         shop_entity_id,
+      </if>
+      <if test= "wifiSsid != null">
+         wifi_ssid,
+      </if>
+      <if test= "wifiMac != null">
+         wifi_mac,
+      </if>
+      <if test= "wifiPassword != null">
+         wifi_password,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "wifiInfoId != null">
+         #{wifiInfoId,jdbcType=CHAR},
+      </if>
+      <if test= "shopId != null">
+         #{shopId,jdbcType=CHAR},
+      </if>
+      <if test= "shopEntityId != null">
+         #{shopEntityId,jdbcType=CHAR},
+      </if>
+      <if test= "wifiSsid != null">
+         #{wifiSsid,jdbcType=CHAR},
+      </if>
+      <if test= "wifiMac != null">
+         #{wifiMac,jdbcType=CHAR},
+      </if>
+      <if test= "wifiPassword != null">
+         #{wifiPassword,jdbcType=CHAR},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP()
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update shop_wifiinfo
+    <set>
+        wifi_info_id = #{record.wifiInfoId,jdbcType=CHAR},
+        shop_id = #{record.shopId,jdbcType=CHAR},
+        shop_entity_id = #{record.shopEntityId,jdbcType=CHAR},
+        wifi_ssid = #{record.wifiSsid,jdbcType=CHAR},
+        wifi_mac = #{record.wifiMac,jdbcType=CHAR},
+        wifi_password = #{record.wifiPassword,jdbcType=CHAR},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update shop_wifiinfo
+    <set>
+      <if test="record.wifiInfoId !=null">
+        wifi_info_id = #{record.wifiInfoId,jdbcType=CHAR},
+      </if>
+      <if test="record.shopId !=null">
+        shop_id = #{record.shopId,jdbcType=CHAR},
+      </if>
+      <if test="record.shopEntityId !=null">
+        shop_entity_id = #{record.shopEntityId,jdbcType=CHAR},
+      </if>
+      <if test="record.wifiSsid !=null">
+        wifi_ssid = #{record.wifiSsid,jdbcType=CHAR},
+      </if>
+      <if test="record.wifiMac !=null">
+        wifi_mac = #{record.wifiMac,jdbcType=CHAR},
+      </if>
+      <if test="record.wifiPassword !=null">
+        wifi_password = #{record.wifiPassword,jdbcType=CHAR},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.shop.ShopWifiinfo" >
+    update shop_wifiinfo
+    <set>
+      <if test="wifiInfoId !=null">
+      wifi_info_id = #{wifiInfoId,jdbcType=CHAR},
+      </if>
+      <if test="shopId !=null">
+      shop_id = #{shopId,jdbcType=CHAR},
+      </if>
+      <if test="shopEntityId !=null">
+      shop_entity_id = #{shopEntityId,jdbcType=CHAR},
+      </if>
+      <if test="wifiSsid !=null">
+      wifi_ssid = #{wifiSsid,jdbcType=CHAR},
+      </if>
+      <if test="wifiMac !=null">
+      wifi_mac = #{wifiMac,jdbcType=CHAR},
+      </if>
+      <if test="wifiPassword !=null">
+      wifi_password = #{wifiPassword,jdbcType=CHAR},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where wifi_info_id = #{wifiInfoId,jdbcType=CHAR}
+  </update>
+
+</mapper>

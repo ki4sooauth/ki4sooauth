@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="ShopMemberCardsRoot"><!--需要同步的商铺会员卡基本信息查询-->
+	<result></result><!--结果编码，true-查询成功，false-查询失败-->
+	<msg></msg><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+    <membercard cycle="1"><!--会员卡背景图片信息-->
+		<cardid></cardid><!--会员卡编号-->
+		<cardtype></cardtype><!--会员卡类型，00表示关注信息卡，10-F0表示电子卡，F1-FF表示实体卡-->
+		<shopid></shopid><!--商铺id-->
+		<cardname></cardname><!--会员卡名称-->
+		<isphysical></isphysical><!--是否是物理卡(card_type2=2为物理卡)-->
+		<cardurl></cardurl><!--卡图片地址-->
+		<ctimestamp></ctimestamp><!--时间戳-->
+		<isdel></isdel><!--是否删除，Y-已删除，N-未删除-->
+	</membercard>
+</root>

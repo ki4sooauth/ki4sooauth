@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title></title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+
+.STYLE1 {
+	color: #FF0000
+}
+</style>
+</head>
+<body>
+	<p>
+		<br />
+	</p>
+	<table id="righttable" cellspacing="0"
+		summary="The technical specifications of the Apple PowerMac G5 series">
+		<tr>
+			<th scope="col" colspan="2"><span class="row">接口gtsd04:根据发票凭证查询发票申请信息</span></th>
+		</tr>
+		<tr>
+			<td width="136" class="row">功能说明:</td>
+			<td width="658" class="row">根据发票凭证查询发票申请信息</td>
+		</tr>
+		<tr>
+			<td width="136" class="row">程序映射地址:</td>
+			<td width="658" class="row"></td>
+		</tr>
+		<tr>
+			<td class="alt">返回值例子:</td>
+			<td class="alt"><a href="../xml/gtsd04.xml" target="_blank">gtsd04.xml</a>
+				| <a href="../xml/gtsd04.txt" target="_blank">gtsd04.txt</a></td>
+		</tr>
+		<tr>
+			<td valign="top" class="row">参数说明：</td>
+			<td class="row">
+				<table>
+					<tr>
+						<td class="alt" align="center">CODE</td>
+						<td class="alt" align="center">NAME</td>
+						<td class="alt" align="center">是否必填</td>
+						<td class="alt" align="center">备注说明</td>
+					</tr>
+					<tr>
+						<td class="row">mac</td>
+						<td class="row">转发器MAC地址</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+					<tr>
+						<td class="row">shopentityid</td>
+						<td class="row">实体店编号</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+					<tr>
+						<td class="row">shopid</td>
+						<td class="row">商家编号</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+					<tr>
+						<td class="row">invoiceinfoid</td>
+						<td class="row">开发票申请信息编号</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row">6位年月+8位唯一标识+ 05</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="alt">业务逻辑说明：</td>
+			<td class="alt">
+			手机将发票信息提交至服务器，服务器判断允许开据发票后，根据手机端提供的发票信息生成一个发票的音频文件，手机端将该音频文件下载下来，播放该发票音频文件，转发器接收到该音频信号后，将其发送至服务器，服务器分析出是取发票请求，然后将发票申请信息返回给转发器，转发器将开发票详情传给发票打印机或者PC端软件。播放成功后，在发票打印机上会打印出账单的发票。取发票成功。
+			</td>
+		</tr>
+		<tr>
+			<td class="alt">修改日志:</td>
+			<td class="alt"></td>
+		</tr>
+	</table>
+</body>
+</html>

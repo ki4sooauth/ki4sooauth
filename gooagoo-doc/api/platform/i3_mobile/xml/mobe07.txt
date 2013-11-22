@@ -1,0 +1,35 @@
+{
+    "result":"",
+    "msg":"",
+    "billlistg":[
+        {
+            "billid":"",
+            "shopid":"",
+            "userid":"",
+            "email":"",
+            "scard_no":"",
+            "cardid":"",
+            "discountrate":"",
+            "goodstotalnum":"",
+            "originalprice":"",
+            "payprice":"",
+            "lid":"",
+            "shopname":"",
+            "logo":"",
+            "billimg":"",
+            "shopfirstchar":"",
+            "reserve2":"",
+            "reserve1":"",
+            "goodslist":[
+                {
+                    "goodsid":"",
+                    "goodsname":"",
+                    "goodsprice":"",
+                    "goodsimg":"",
+                    "promotionprice":"",
+                    "goodsnum":""
+                }
+            ]
+        }
+    ]
+}

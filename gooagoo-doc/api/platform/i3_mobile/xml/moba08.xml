@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="ShopListRoot"><!-- 商家列表  -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<shoplist cycle="1"><!-- 商家列表 -->
+		<shopid></shopid><!--商家id -->
+		<shopname></shopname><!--商家名称 -->
+		<squarelogo></squarelogo><!--商家正方形logo -->
+		<oblonglogo></oblonglogo><!--商家长方形logo -->
+		<shopfirstchar></shopfirstchar><!--商家名首字母 -->
+		<shoptypeleaf></shoptypeleaf><!--商家类别 -->
+		<isdel></isdel><!--是否删除，Y-已删除，N-未删除 -->
+		<ctimestamp></ctimestamp><!--最后一次修改时间 -->
+	</shoplist>
+</root>

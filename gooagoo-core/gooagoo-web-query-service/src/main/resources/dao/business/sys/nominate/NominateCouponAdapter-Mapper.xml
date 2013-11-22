@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="com.gooagoo.dao.business.sys.nominate.NominateCouponAdapterMapper">
+	<resultMap id="BaseResultMap"
+		type="com.gooagoo.entity.business.system.nominate.NominateCouponBusiness">
+		<id column="gsnc_id" property="id" jdbcType="CHAR" />
+		<result column="shop_id" property="shopId" jdbcType="CHAR" />
+		<result column="coupon_id" property="couponId" jdbcType="CHAR" />
+		<result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+		<result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+		<result column="c_time_stamp" property="nominateCouponCTimeStamp"
+			jdbcType="TIMESTAMP" />
+		<result column="shop_name" property="shopName" jdbcType="CHAR" />
+		<result column="coupon_name" property="couponName" jdbcType="CHAR" />
+		<result column="publish_start_time" property="publishStartTime"
+			jdbcType="TIMESTAMP" />
+		<result column="publish_end_time" property="publishEndTime"
+			jdbcType="TIMESTAMP" />
+		<result column="use_start_time" property="useStartTime"
+			jdbcType="TIMESTAMP" />
+		<result column="use_end_time" property="useEndTime" jdbcType="TIMESTAMP" />
+		<result column="amount" property="amount" jdbcType="CHAR" />
+		<result column="max_num_owner" property="maxNumOwner" jdbcType="CHAR" />
+		<result column="publish_status" property="publishStatus"
+			jdbcType="CHAR" />
+		<result column="c_time_stamps" property="couponCTimeStamp"
+			jdbcType="TIMESTAMP" />
+		<result column="isNominate" property="isNominate" jdbcType="CHAR" />
+		<result column="coupon_type" property="couponType" jdbcType="CHAR" />
+	</resultMap>
+
+	<select id="findNominateCouponBusiness" resultMap="BaseResultMap">
+
+		SELECT
+		gmcg.shop_id AS shop_id,
+		gmcg.coupon_id AS coupon_id,
+		gmcg.shop_name AS shop_name,
+		gmcg.coupon_name AS coupon_name,
+		gmcg.publish_start_time AS publish_start_time,
+		gmcg.publish_end_time AS
+		publish_end_time,
+		gmcg.use_start_time AS use_start_time,
+		gmcg.use_end_time AS use_end_time,
+		gmcg.amount AS amount,
+		gmcg.max_num_owner AS max_num_owner,
+		gmcg.publish_status AS
+		publish_status,
+		gmcg.coupon_type AS coupon_type,
+		gmcg.c_time_stamps AS
+		c_time_stamps,
+		gmcg.isNominate
+		FROM
+		(
+		SELECT
+		gssi.shop_id AS shop_id,
+		gmc.coupon_id AS coupon_id,
+		gssi.shop_name AS shop_name,
+		gmc.coupon_name AS coupon_name,
+		gmc.publish_start_time AS
+		publish_start_time,
+		gmc.publish_end_time AS publish_end_time,
+		gmc.use_start_time AS use_start_time,
+		gmc.use_end_time AS use_end_time,
+		gmc.amount AS amount,
+		gmc.max_num_owner AS max_num_owner,
+		gmc.publish_status AS publish_status,
+		gmc.coupon_type AS coupon_type,
+		gmc.c_time_stamp AS c_time_stamps,
+		(
+		CASE
+		WHEN (
+		SELECT
+		count(*)
+		FROM
+		gooagoo_sys.nominate_coupon gsnc
+		WHERE
+		gmc.coupon_id = gsnc.coupon_id
+		AND gsnc.start_time &lt;= SYSDATE()
+		AND gsnc.end_time >= SYSDATE()
+		AND
+		gsnc.is_del = 'N'
+		) > 0 THEN
+		'Y'
+		ELSE
+		'N'
+		END
+		) isNominate
+		FROM
+		gooagoo_marketing.coupon gmc
+		LEFT JOIN gooagoo_shop.shop_info gssi ON
+		gmc.shop_id =
+		gssi.shop_id
+		WHERE 1=1
+		AND gmc.publish_status = 'P'
+		AND gmc.coupon_channle = '1'
+		AND gmc.publish_end_time >= SYSDATE()
+		) gmcg
+		WHERE 1=1
+		<if test="nominateCouponBusiness.isNominate=='Y'.toString()">
+			AND gmcg.isNominate = 'Y'
+		</if>
+		<if test="nominateCouponBusiness.isNominate=='N'.toString()">
+			AND gmcg.isNominate = 'N'
+		</if>
+		<if test="nominateCouponBusiness.shopName != null">
+			AND gmcg.shop_name like
+			CONCAT('%',#{nominateCouponBusiness.shopName},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponName != null">
+			AND gmcg.coupon_name like
+			CONCAT('%',#{nominateCouponBusiness.couponName},'%')
+		</if>
+		<if test="nominateCouponBusiness.shopId != null">
+			AND gmcg.shop_id like
+			CONCAT('%',#{nominateCouponBusiness.shopId},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponId !=null">
+			AND gmcg.coupon_id like
+			CONCAT('%',#{nominateCouponBusiness.couponId},'%')
+		</if>
+		<if test="nominateCouponBusiness.publishStartTime != null">
+			AND gmcg.publish_start_time >=
+			#{nominateCouponBusiness.publishStartTime}
+		</if>
+		<if test="nominateCouponBusiness.publishEndTime != null">
+			AND gmcg.publish_end_time &lt;=
+			#{nominateCouponBusiness.publishEndTime}
+		</if>
+		<if test="nominateCouponBusiness.useStartTime != null">
+			AND gmcg.use_start_time >=
+			#{nominateCouponBusiness.useStartTime}
+		</if>
+		<if test="nominateCouponBusiness.useEndTime != null">
+			AND gmcg.use_end_time &lt;=
+			#{nominateCouponBusiness.useEndTime}
+		</if>
+		<if test="nominateCouponBusiness.couponType != null">
+			AND gmcg.coupon_type =#{nominateCouponBusiness.couponType}
+		</if>
+		<if test="pageSize != null">
+			limit
+			<if test="pageIndex != null">
+				${pageIndex},
+			</if>
+			${pageSize}
+		</if>
+	</select>
+	<select id="countNominateCouponBusiness" resultType="java.lang.Integer">
+		SELECT
+		COUNT(gmcgs.coupon_id)
+		FROM
+		(
+		SELECT
+		gmcg.shop_id AS shop_id,
+		gmcg.coupon_id AS coupon_id,
+		gmcg.shop_name AS
+		shop_name,
+		gmcg.coupon_name AS coupon_name,
+		gmcg.publish_start_time AS
+		publish_start_time,
+		gmcg.publish_end_time AS
+		publish_end_time,
+		gmcg.use_start_time AS use_start_time,
+		gmcg.use_end_time AS
+		use_end_time,
+		gmcg.amount AS amount,
+		gmcg.max_num_owner AS
+		max_num_owner,
+		gmcg.publish_status AS
+		publish_status,
+		gmcg.coupon_type AS
+		coupon_type,
+		gmcg.c_time_stamps AS
+		c_time_stamps,
+		gmcg.isNominate
+		FROM
+		(
+		SELECT
+		gssi.shop_id AS shop_id,
+		gmc.coupon_id AS coupon_id,
+		gssi.shop_name AS shop_name,
+		gmc.coupon_name AS coupon_name,
+		gmc.publish_start_time AS
+		publish_start_time,
+		gmc.publish_end_time AS
+		publish_end_time,
+		gmc.use_start_time AS use_start_time,
+		gmc.use_end_time AS use_end_time,
+		gmc.amount AS amount,
+		gmc.max_num_owner AS max_num_owner,
+		gmc.publish_status AS
+		publish_status,
+		gmc.coupon_type AS coupon_type,
+		gmc.c_time_stamp AS
+		c_time_stamps,
+		(
+		CASE
+		WHEN (
+		SELECT
+		count(*)
+		FROM
+		gooagoo_sys.nominate_coupon
+		gsnc
+		WHERE
+		gmc.coupon_id = gsnc.coupon_id
+		AND
+		gsnc.start_time &lt;=
+		SYSDATE()
+		AND gsnc.end_time >= SYSDATE()
+		AND
+		gsnc.is_del = 'N'
+		) > 0 THEN
+		'Y'
+		ELSE
+		'N'
+		END
+		) isNominate
+		FROM
+		gooagoo_marketing.coupon gmc
+		LEFT JOIN
+		gooagoo_shop.shop_info gssi ON
+		gmc.shop_id =
+		gssi.shop_id
+		WHERE 1=1
+		AND gmc.publish_status = 'P'
+		AND gmc.coupon_channle = '1'
+		AND gmc.publish_end_time >= SYSDATE()
+		) gmcg
+		WHERE 1=1
+		<if test="nominateCouponBusiness.isNominate=='Y'.toString()">
+			AND gmcg.isNominate = 'Y'
+		</if>
+		<if test="nominateCouponBusiness.isNominate=='N'.toString()">
+			AND gmcg.isNominate = 'N'
+		</if>
+		<if test="nominateCouponBusiness.shopName != null">
+			AND gmcg.shop_name like
+			CONCAT('%',#{nominateCouponBusiness.shopName},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponName != null">
+			AND gmcg.coupon_name like
+			CONCAT('%',#{nominateCouponBusiness.couponName},'%')
+		</if>
+		<if test="nominateCouponBusiness.shopId != null">
+			AND gmcg.shop_id like
+			CONCAT('%',#{nominateCouponBusiness.shopId},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponId !=null">
+			AND gmcg.coupon_id like
+			CONCAT('%',#{nominateCouponBusiness.couponId},'%')
+		</if>
+		<if test="nominateCouponBusiness.publishStartTime != null">
+			AND gmcg.publish_start_time >=
+			#{nominateCouponBusiness.publishStartTime}
+		</if>
+		<if test="nominateCouponBusiness.publishEndTime != null">
+			AND gmcg.publish_end_time &lt;=
+			#{nominateCouponBusiness.publishEndTime}
+		</if>
+		<if test="nominateCouponBusiness.useStartTime != null">
+			AND gmcg.use_start_time >=
+			#{nominateCouponBusiness.useStartTime}
+		</if>
+		<if test="nominateCouponBusiness.useEndTime != null">
+			AND gmcg.use_end_time &lt;=
+			#{nominateCouponBusiness.useEndTime}
+		</if>
+		<if test="nominateCouponBusiness.couponType != null">
+			AND gmcg.coupon_type =#{nominateCouponBusiness.couponType}
+		</if>
+		) gmcgs
+	</select>
+	<select id="findNominateCoupon" resultMap="BaseResultMap">
+		SELECT
+		gsnc.id AS gsnc_id,
+		gsnc.coupon_id AS coupon_id,
+		gsnc.shop_id AS
+		shop_id,
+		gssi.shop_name AS shop_name,
+		gmc.coupon_name AS coupon_name,
+		gsnc.start_time AS start_time,
+		gsnc.end_time AS end_time,
+		gsnc.c_time_stamp AS c_time_stamp,
+		gmc.publish_start_time AS
+		publish_start_time,
+		gmc.publish_end_time AS publish_end_time,
+		gmc.use_start_time AS use_start_time,
+		gmc.use_end_time AS use_end_time,
+		gmc.coupon_type AS coupon_type,
+		gmc.coupon_value AS coupon_value,
+		gmc.amount AS amount,
+		gmc.max_num_owner AS max_num_owner
+		FROM
+		gooagoo_sys.nominate_coupon gsnc
+		LEFT JOIN gooagoo_marketing.coupon gmc
+		ON gsnc.coupon_id = gmc.coupon_id
+		LEFT JOIN gooagoo_shop.shop_info gssi
+		ON gsnc.shop_id = gssi.shop_id
+		WHERE
+		1 = 1
+		AND gsnc.is_del = 'N'
+		<if test="nominateCouponBusiness.shopName !=null">
+			AND gssi.shop_name like
+			CONCAT('%',#{nominateCouponBusiness.shopName},'%')
+		</if>
+		<if test="nominateCouponBusiness.Id !=null">
+			AND gsnc.id like
+			CONCAT('%',#{nominateCouponBusiness.Id},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponName !=null">
+			AND gmc.coupon_name like
+			CONCAT('%',#{nominateCouponBusiness.couponName},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponId !=null">
+			AND gsnc.coupon_id like
+			CONCAT('%',#{nominateCouponBusiness.couponId},'%')
+		</if>
+		<if test="nominateCouponBusiness.shopId !=null">
+			AND gsnc.shop_id like
+			CONCAT('%',#{nominateCouponBusiness.shopId},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponType !=null">
+			AND gmc.coupon_type =#{nominateCouponBusiness.couponType}
+		</if>
+		<if test="nominateCouponBusiness.startTime != null">
+			AND gsnc.start_time >=
+			#{nominateCouponBusiness.startTime}
+		</if>
+		<if test="nominateCouponBusiness.endTime != null">
+			AND gsnc.end_time &lt;=
+			#{nominateCouponBusiness.endTime}
+		</if>
+		<if test="pageSize != null">
+			limit
+			<if test="pageIndex != null">
+				${pageIndex},
+			</if>
+			${pageSize}
+		</if>
+	</select>
+	<select id="countNominateCoupon" resultType="java.lang.Integer">
+		select count(1) from (SELECT
+		gsnc.id AS gsnc_id,
+		gsnc.coupon_id AS
+		coupon_id,
+		gsnc.shop_id AS shop_id,
+		gssi.shop_name AS shop_name,
+		gmc.coupon_name AS
+		coupon_name,
+		gsnc.start_time AS start_time,
+		gsnc.end_time AS end_time,
+		gsnc.c_time_stamp AS c_time_stamp,
+		gmc.publish_start_time AS
+		publish_start_time,
+		gmc.publish_end_time AS
+		publish_end_time,
+		gmc.use_start_time AS use_start_time,
+		gmc.use_end_time AS use_end_time,
+		gmc.coupon_type AS coupon_type,
+		gmc.coupon_value AS coupon_value,
+		gmc.amount AS amount,
+		gmc.max_num_owner AS max_num_owner
+		FROM
+		gooagoo_sys.nominate_coupon gsnc
+		LEFT JOIN gooagoo_marketing.coupon gmc
+		ON gsnc.coupon_id =
+		gmc.coupon_id
+		LEFT JOIN gooagoo_shop.shop_info gssi
+		ON gsnc.shop_id =
+		gssi.shop_id
+		WHERE
+		1 = 1
+		AND gsnc.is_del = 'N'
+		<if test="nominateCouponBusiness.shopName !=null">
+			AND gssi.shop_name like
+			CONCAT('%',#{nominateCouponBusiness.shopName},'%')
+		</if>
+		<if test="nominateCouponBusiness.Id !=null">
+			AND gsnc.id like
+			CONCAT('%',#{nominateCouponBusiness.Id},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponName !=null">
+			AND gmc.coupon_name like
+			CONCAT('%',#{nominateCouponBusiness.couponName},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponId !=null">
+			AND gsnc.coupon_id like
+			CONCAT('%',#{nominateCouponBusiness.couponId},'%')
+		</if>
+		<if test="nominateCouponBusiness.shopId !=null">
+			AND gsnc.shop_id like
+			CONCAT('%',#{nominateCouponBusiness.shopId},'%')
+		</if>
+		<if test="nominateCouponBusiness.couponType !=null">
+			AND gmc.coupon_type =#{nominateCouponBusiness.couponType}
+		</if>
+		<if test="nominateCouponBusiness.startTime != null">
+			AND gsnc.start_time >=
+			#{nominateCouponBusiness.startTime}
+		</if>
+		<if test="nominateCouponBusiness.endTime != null">
+			AND gsnc.end_time &lt;=
+			#{nominateCouponBusiness.endTime}
+		</if>
+		) gsncs where 1=1
+	</select>
+</mapper>

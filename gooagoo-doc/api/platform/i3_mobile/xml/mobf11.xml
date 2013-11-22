@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="updateAppInfoRoot"><!-- 獲取app最新版本信息 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<versionlist><!-- 版本信息-->
+		<appcode></appcode><!-- APP识别码 -->
+		<mobiletype></mobiletype><!-- 移动设备类型,1-Android ,2-IOS -->
+		<versioncode></versioncode><!--版本号-->
+		<versionname></versionname><!--版本名称-->
+		<platform></platform><!--所属平台-->
+		<note></note><!-- 备注 -->
+		<downloadurl></downloadurl><!--Apk下载地址-->
+		<createtime></createtime><!-- 创建时间 -->
+	</versionlist>
+</root>

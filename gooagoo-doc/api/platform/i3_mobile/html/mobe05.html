@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+
+<body>
+<p><br />
+</p>
+<p>&nbsp;</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+
+<tr> 
+
+<th scope="col" colspan="2"><span class="row">mobe05:手机提交订单（点菜单、快速结账）  </span></th> 
+
+</tr> 
+<tr> 
+
+<td width="136" class="row">功能说明：</td> 
+<td width="658" class="row">
+手机提交点菜单信息
+ </td> 
+</tr>
+<tr> 
+
+<td width="136" class="row">程序映射地址：</td> 
+<td width="658" class="row"></td> 
+</tr> 
+
+<tr> 
+
+<td class="alt">返回值例子：</td> 
+<td class="alt"><a href="../xml/mobe05.xml" target="_blank">mobe05.xml</a> | <a href="../xml/mobe05.txt" target="_blank">mobe05.txt</a></td> 
+</tr> 
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center" nowrap="nowrap">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">userid</td>
+		<td class="row">用户id</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">用户编号，唯一，通过UUID产生</td>
+	</tr>
+	<tr>
+		<td class="row">sessionid</td>
+		<td class="row">sessionid值</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">手机登录后的sessionid值</td>
+	</tr>
+  <tr><td class="row">mac</td><td class="row">手机mac地址</td>
+	  <td class="row" style="color: #FF0000">必填</td>
+	  <td class="row"></td>
+  </tr>
+    <tr><td class="row">takemethod</td><td class="row">提货方式</td>
+	  <td class="row" style="color: #FF0000">必填,0-直接拿走、1-前台提货、2-送货上门 </td>
+	  <td class="row"></td>
+  </tr>
+  <tr><td class="row">mver</td><td class="row">手机程序版本</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">lid</td><td class="row">lid</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">entityposition</td><td class="row">实体店编号</td><td class="row">选填</td><td class="row">用户当前所在实体店编号</td></tr>
+	
+	<tr>
+		<td class="row">shopid</td>
+		<td class="row">店铺id</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">shopentityid</td>
+		<td class="row">实体店编号</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">goodssource</td>
+		<td class="row">商品来源</td>
+		<td class="row" ></td>
+		<td class="row">0-表示来源购物车,其它表示不是来自购物车，当商品来自购物车，提交订单后，需把购物车中的商品清理掉</td>
+	</tr>
+	<tr>
+		<td class="row">goodsidlist</td>
+		<td class="row">商品列表</td>
+		<td class="row">选填</td>
+		<td class="row">格式如：[ { "goodsid": "00017STNPL7NIGF1T0000LEIISQNS0DL", "goodsnum":"2"}, { "goodsid": "00017STNPL7NIGF1T0000LEIISQNS0DL", "goodsnum":"20"}]</td>
+	</tr>
+	<tr>
+		<td class="row">couponid</td>
+		<td class="row">优惠凭证编号</td>
+		<td class="row">选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">tableno2d</td>
+		<td class="row">桌号二维码</td>
+		<td class="row">选填</td>
+		<td class="row"><font>tableno2d 格式["gooagoo","00","实体店编号","桌号","房间号"]</font> <font style="color: #FF0000">当type=00时,此入参必填</font></td>
+	</tr>
+	<tr>
+		<td class="row">address</td>
+		<td class="row">收货地址</td>
+		<td class="row">选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">name</td>
+		<td class="row">收货人</td>
+		<td class="row">选填</td>
+		<td class="row"></td>
+	</tr>
+	<tr>
+		<td class="row">phone</td>
+		<td class="row">联系电话</td>
+		<td class="row">选填</td>
+		<td class="row"></td>
+	</tr>
+   <tr>
+		<td class="row">type</td>
+		<td class="row">订单类型</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">00-餐饮业提交用户订单,01-餐饮业提交用户订单(远程点餐),11-零售业提交用户订单</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+		用户选购完商品后将订单提交到服务器。
+  </td>
+</tr>
+<tr>
+  <td class="row">修改日志：</td>
+  <td class="row"></td>
+</tr> 
+</table>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.shop.AreaParaMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.shop.AreaPara" >
+    <id column="map_id" property="mapId" jdbcType="CHAR" />
+    <result column="map_name" property="mapName" jdbcType="CHAR" />
+    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="position_id" property="positionId" jdbcType="CHAR" />
+    <result column="shop_entity_id" property="shopEntityId" jdbcType="CHAR" />
+    <result column="url_html" property="urlHtml" jdbcType="CHAR" />
+    <result column="url_svg" property="urlSvg" jdbcType="CHAR" />
+    <result column="grid_info" property="gridInfo" jdbcType="CHAR" />
+    <result column="is_park" property="isPark" jdbcType="CHAR" />
+    <result column="map_real_width" property="mapRealWidth" jdbcType="INTEGER" />
+    <result column="map_real_height" property="mapRealHeight" jdbcType="INTEGER" />
+    <result column="ratio_location" property="ratioLocation" jdbcType="DOUBLE" />
+    <result column="ratio_grid" property="ratioGrid" jdbcType="DOUBLE" />
+    <result column="ratio_svg" property="ratioSvg" jdbcType="DOUBLE" />
+    <result column="note" property="note" jdbcType="VARCHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      map_id, map_name, shop_id, 
+      position_id, shop_entity_id, url_html, 
+      url_svg, grid_info, is_park, 
+      map_real_width, map_real_height, ratio_location, 
+      ratio_grid, ratio_svg, note, 
+      is_del, create_time, c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.shop.AreaParaExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from area_para
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.shop.AreaParaExample" resultType="java.lang.Integer">
+    select count(*) from area_para
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.shop.AreaParaKey" >
+    select 
+      map_id, map_name, shop_id, 
+      position_id, shop_entity_id, url_html, 
+      url_svg, grid_info, is_park, 
+      map_real_width, map_real_height, ratio_location, 
+      ratio_grid, ratio_svg, note, 
+      is_del, create_time, c_time_stamp
+    from area_para where map_id = #{mapId,jdbcType=CHAR}
+    <if test= "isDel != null">
+         and is_del=#{isDel}
+    </if>
+  </select>
+
+</mapper>

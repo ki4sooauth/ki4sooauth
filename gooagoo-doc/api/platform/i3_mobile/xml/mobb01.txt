@@ -1,0 +1,22 @@
+{
+    "result": "",
+    "msg": "",
+    "favoritelistg": [
+        {
+            "favoriteid": "",
+            "shopid": "",
+            "shopentityid": "",
+            "objectid": "",
+            "infourl": "",
+            "infotype": "",
+            "infotitle": "",
+            "infobegindate": "",
+            "infoenddate": "",
+            "price": "",
+            "isused": "",
+            "infopic": "",
+            "isdel": "",
+            "ctimestamp": ""
+        }
+    ]
+} 

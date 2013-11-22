@@ -1,0 +1,10 @@
+{
+    "result": "",
+    "msg": "",
+    "boutiquerecommend": [
+        {
+            "noticetype": "",
+            "noticeimage": ""
+        }
+    ]
+}

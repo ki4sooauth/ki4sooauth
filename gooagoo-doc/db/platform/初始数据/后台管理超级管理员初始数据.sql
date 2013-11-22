@@ -1,0 +1,2 @@
+delete from gooagoo_sys.sys_user_info;
+INSERT INTO gooagoo_sys.sys_user_info VALUES ('admin', '96E79218965EB72C92A549DD5A330112', '1', '管理员', 'M', '2013-5-6', '02', '111222', NULL, 'Y','N', '2013-5-12 09:57:01', '2013-5-12 09:57:11');

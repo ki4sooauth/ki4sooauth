@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="navigationARoot"><!-- 导航（起点{x,y}，终点{x,y}）-->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<navigationtopoint cycle="1"><!-- 导航信息-->
+		<svgstr></svgstr><!--svg导航信息 -->
+	</navigationtopoint>
+</root>

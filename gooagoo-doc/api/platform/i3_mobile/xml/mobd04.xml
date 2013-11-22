@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root alias="ActivitylistRoot"><!--活动列表 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<activitylist cycle="1"><!-- 活动列表 -->
+		<activitytypename></activitytypename><!--活动分类名称，当前只有一种，“当日活动” -->
+		<activity cycle="1"><!-- 活动列表 -->
+			<activityid></activityid><!--活动编号 -->
+			<activityshoptype></activityshoptype><!--活动商家类型，根据发布活动的商家类型区分 -->
+			<shopid></shopid><!--商家编号 -->
+			<shopname></shopname><!--商家名称 -->
+			<activityname></activityname><!--活动名称 -->
+			<title></title><!--活动主题 -->
+			<starttime></starttime><!--活动开始时间 -->
+			<endtime></endtime><!--活动结束时间 -->
+			<imgurl></imgurl><!--活动图片URL -->
+			<activityurl></activityurl><!--活动地址URL -->
+			<content></content><!--活动内容 -->
+			<purpose></purpose><!--活动目的 -->
+			<description></description><!--活动描述 -->
+		</activity>
+	</activitylist>
+</root>

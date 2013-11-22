@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.sys.InterfaceBaseInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.sys.InterfaceBaseInfo" >
+    <id column="i_code" property="iCode" jdbcType="CHAR" />
+    <result column="i_name" property="iName" jdbcType="CHAR" />
+    <result column="i_type" property="iType" jdbcType="CHAR" />
+    <result column="i_function" property="iFunction" jdbcType="CHAR" />
+    <result column="i_url" property="iUrl" jdbcType="CHAR" />
+    <result column="behave_type" property="behaveType" jdbcType="CHAR" />
+    <result column="can_allocate" property="canAllocate" jdbcType="CHAR" />
+    <result column="data_xml" property="dataXml" jdbcType="CHAR" />
+    <result column="data_json" property="dataJson" jdbcType="CHAR" />
+    <result column="note" property="note" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      i_code, i_name, i_type, 
+      i_function, i_url, behave_type, 
+      can_allocate, data_xml, data_json, 
+      note, is_del, create_time, 
+      c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.sys.InterfaceBaseInfoExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from interface_base_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.sys.InterfaceBaseInfoExample" resultType="java.lang.Integer">
+    select count(*) from interface_base_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.sys.InterfaceBaseInfoKey" >
+    select 
+      i_code, i_name, i_type, 
+      i_function, i_url, behave_type, 
+      can_allocate, data_xml, data_json, 
+      note, is_del, create_time, 
+      c_time_stamp
+    from interface_base_info where i_code = #{iCode,jdbcType=CHAR}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.sys.InterfaceBaseInfoExample">
+    delete from interface_base_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.sys.InterfaceBaseInfoKey" >
+    delete from interface_base_info where i_code = #{iCode,jdbcType=CHAR}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.sys.InterfaceBaseInfo" >
+    insert into interface_base_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "iCode != null">
+         i_code,
+      </if>
+      <if test= "iName != null">
+         i_name,
+      </if>
+      <if test= "iType != null">
+         i_type,
+      </if>
+      <if test= "iFunction != null">
+         i_function,
+      </if>
+      <if test= "iUrl != null">
+         i_url,
+      </if>
+      <if test= "behaveType != null">
+         behave_type,
+      </if>
+      <if test= "canAllocate != null">
+         can_allocate,
+      </if>
+      <if test= "dataXml != null">
+         data_xml,
+      </if>
+      <if test= "dataJson != null">
+         data_json,
+      </if>
+      <if test= "note != null">
+         note,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "iCode != null">
+         #{iCode,jdbcType=CHAR},
+      </if>
+      <if test= "iName != null">
+         #{iName,jdbcType=CHAR},
+      </if>
+      <if test= "iType != null">
+         #{iType,jdbcType=CHAR},
+      </if>
+      <if test= "iFunction != null">
+         #{iFunction,jdbcType=CHAR},
+      </if>
+      <if test= "iUrl != null">
+         #{iUrl,jdbcType=CHAR},
+      </if>
+      <if test= "behaveType != null">
+         #{behaveType,jdbcType=CHAR},
+      </if>
+      <if test= "canAllocate != null">
+         #{canAllocate,jdbcType=CHAR},
+      </if>
+      <if test= "dataXml != null">
+         #{dataXml,jdbcType=CHAR},
+      </if>
+      <if test= "dataJson != null">
+         #{dataJson,jdbcType=CHAR},
+      </if>
+      <if test= "note != null">
+         #{note,jdbcType=CHAR},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP()
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update interface_base_info
+    <set>
+        i_code = #{record.iCode,jdbcType=CHAR},
+        i_name = #{record.iName,jdbcType=CHAR},
+        i_type = #{record.iType,jdbcType=CHAR},
+        i_function = #{record.iFunction,jdbcType=CHAR},
+        i_url = #{record.iUrl,jdbcType=CHAR},
+        behave_type = #{record.behaveType,jdbcType=CHAR},
+        can_allocate = #{record.canAllocate,jdbcType=CHAR},
+        data_xml = #{record.dataXml,jdbcType=CHAR},
+        data_json = #{record.dataJson,jdbcType=CHAR},
+        note = #{record.note,jdbcType=CHAR},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update interface_base_info
+    <set>
+      <if test="record.iCode !=null">
+        i_code = #{record.iCode,jdbcType=CHAR},
+      </if>
+      <if test="record.iName !=null">
+        i_name = #{record.iName,jdbcType=CHAR},
+      </if>
+      <if test="record.iType !=null">
+        i_type = #{record.iType,jdbcType=CHAR},
+      </if>
+      <if test="record.iFunction !=null">
+        i_function = #{record.iFunction,jdbcType=CHAR},
+      </if>
+      <if test="record.iUrl !=null">
+        i_url = #{record.iUrl,jdbcType=CHAR},
+      </if>
+      <if test="record.behaveType !=null">
+        behave_type = #{record.behaveType,jdbcType=CHAR},
+      </if>
+      <if test="record.canAllocate !=null">
+        can_allocate = #{record.canAllocate,jdbcType=CHAR},
+      </if>
+      <if test="record.dataXml !=null">
+        data_xml = #{record.dataXml,jdbcType=CHAR},
+      </if>
+      <if test="record.dataJson !=null">
+        data_json = #{record.dataJson,jdbcType=CHAR},
+      </if>
+      <if test="record.note !=null">
+        note = #{record.note,jdbcType=CHAR},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.sys.InterfaceBaseInfo" >
+    update interface_base_info
+    <set>
+      <if test="iCode !=null">
+      i_code = #{iCode,jdbcType=CHAR},
+      </if>
+      <if test="iName !=null">
+      i_name = #{iName,jdbcType=CHAR},
+      </if>
+      <if test="iType !=null">
+      i_type = #{iType,jdbcType=CHAR},
+      </if>
+      <if test="iFunction !=null">
+      i_function = #{iFunction,jdbcType=CHAR},
+      </if>
+      <if test="iUrl !=null">
+      i_url = #{iUrl,jdbcType=CHAR},
+      </if>
+      <if test="behaveType !=null">
+      behave_type = #{behaveType,jdbcType=CHAR},
+      </if>
+      <if test="canAllocate !=null">
+      can_allocate = #{canAllocate,jdbcType=CHAR},
+      </if>
+      <if test="dataXml !=null">
+      data_xml = #{dataXml,jdbcType=CHAR},
+      </if>
+      <if test="dataJson !=null">
+      data_json = #{dataJson,jdbcType=CHAR},
+      </if>
+      <if test="note !=null">
+      note = #{note,jdbcType=CHAR},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where i_code = #{iCode,jdbcType=CHAR}
+  </update>
+
+</mapper>

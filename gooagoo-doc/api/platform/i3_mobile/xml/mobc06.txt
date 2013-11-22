@@ -1,0 +1,22 @@
+{
+    "result": "",
+    "msg": "",
+    "cryoutlists": [
+        {
+            "cryoutid": "",
+            "userid": "",
+            "shopid": "",
+            "shopname": "",
+            "logo": "",
+            "address": "",
+            "cryouttextmobile": "",
+            "thumbnailpic": "",
+            "bmiddlepic": "",
+            "originalpic": "",
+            "source": "",
+            "createtime": "",
+            "allowat": "",
+            "relation": ""
+        }
+    ]
+}

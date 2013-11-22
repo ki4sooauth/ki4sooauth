@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="DelGoodsOfShoppingCartRoot"><!--删除购物车中的商品 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+</root>

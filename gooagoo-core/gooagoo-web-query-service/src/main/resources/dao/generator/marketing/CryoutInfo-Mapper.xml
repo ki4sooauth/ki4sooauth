@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.marketing.CryoutInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.marketing.CryoutInfo" >
+    <id column="cryout_info_id" property="cryoutInfoId" jdbcType="CHAR" />
+    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="activity_id" property="activityId" jdbcType="CHAR" />
+    <result column="cryout_title" property="cryoutTitle" jdbcType="CHAR" />
+    <result column="cryout_type" property="cryoutType" jdbcType="CHAR" />
+    <result column="marketing_link_type" property="marketingLinkType" jdbcType="CHAR" />
+    <result column="marketing_link_id" property="marketingLinkId" jdbcType="CHAR" />
+    <result column="cryout_text_mobile" property="cryoutTextMobile" jdbcType="VARCHAR" />
+    <result column="cryout_text_web" property="cryoutTextWeb" jdbcType="VARCHAR" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+    <result column="publish_status" property="publishStatus" jdbcType="CHAR" />
+    <result column="audit_note" property="auditNote" jdbcType="CHAR" />
+    <result column="rule_id" property="ruleId" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      cryout_info_id, shop_id, activity_id, 
+      cryout_title, cryout_type, marketing_link_type, 
+      marketing_link_id, cryout_text_mobile, cryout_text_web, 
+      img, publish_status, audit_note, 
+      rule_id, is_del, create_time, 
+      c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfoExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from cryout_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfoExample" resultType="java.lang.Integer">
+    select count(*) from cryout_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfoKey" >
+    select 
+      cryout_info_id, shop_id, activity_id, 
+      cryout_title, cryout_type, marketing_link_type, 
+      marketing_link_id, cryout_text_mobile, cryout_text_web, 
+      img, publish_status, audit_note, 
+      rule_id, is_del, create_time, 
+      c_time_stamp
+    from cryout_info where cryout_info_id = #{cryoutInfoId,jdbcType=CHAR}
+    <if test= "isDel != null">
+         and is_del=#{isDel}
+    </if>
+  </select>
+
+</mapper>

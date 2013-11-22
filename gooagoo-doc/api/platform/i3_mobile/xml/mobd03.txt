@@ -1,0 +1,10 @@
+{
+    "result":"",
+    "msg":"",
+    "marketingactivity":[
+        {
+            "date":"",
+            "activitystatus":""
+        }
+    ]
+}

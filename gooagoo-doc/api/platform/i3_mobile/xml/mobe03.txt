@@ -1,0 +1,11 @@
+{
+    "result":"",
+    "msg":"",
+    "shopid":"",
+    "infofromlid":[
+        {
+            "title":"",
+            "adurl":""
+        }
+    ]
+}

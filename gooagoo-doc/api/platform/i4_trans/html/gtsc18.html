@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title></title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+
+.STYLE1 {
+	color: #FF0000
+}
+</style>
+</head>
+<body>
+	<p>
+		<br />
+	</p>
+	<table id="righttable" cellspacing="0"
+		summary="The technical specifications of the Apple PowerMac G5 series">
+		<tr>
+			<th scope="col" colspan="2"><span class="row">接口gtsc18:商家查询重量确认</span></th>
+		</tr>
+		<tr>
+			<td width="136" class="row">功能说明:</td>
+			<td width="658" class="row">商家查询重量确认</td>
+		</tr>
+		<tr>
+			<td width="136" class="row">程序映射地址:</td>
+			<td width="658" class="row"></td>
+		</tr>
+		<tr>
+			<td class="alt">返回值例子:</td>
+			<td class="alt"><a href="../xml/gtsc18.xml" target="_blank">gtsc18.xml</a>
+				| <a href="../xml/gtsc18.txt" target="_blank">gtsc18.txt</a></td>
+		</tr>
+		<tr>
+			<td valign="top" class="row">参数说明：</td>
+			<td class="row">
+				<table>
+					<tr>
+						<td class="alt" align="center">CODE</td>
+						<td class="alt" align="center">NAME</td>
+						<td class="alt" align="center">是否必填</td>
+						<td class="alt" align="center">备注说明</td>
+					</tr>
+					<tr>
+						<td class="row">mac</td>
+						<td class="row">转发器MAC地址</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+					<tr>
+						<td class="row">shopentityid</td>
+						<td class="row">实体店编号</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+					<tr>
+						<td class="row">ctimestamp</td>
+						<td class="row">时间戳</td>
+						<td class="row" style="color: #FF0000">必填</td>
+						<td class="row"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="alt">业务逻辑说明：</td>
+			<td class="alt">
+			1. 转发器每隔一段时间，便请求平台，查看是否有“重量确认”的数据，平台接收到转发器的请求，将“重量确认”的数据返回给转发器，转发器拿到“重量确认”数据后，将其推送给第三方软件（餐饮软件），第三方获取“重量确认”数据后，开始下菜。
+重量确认：针对店内以重量为计量单位的菜品给予确认。例如：顾客要求点一条二斤大的鲜鱼，但是店里没有二斤的鱼，后厨称了一条三斤重的鱼，此时店员助理需要征求顾客意见，是否可以。顾客若同意，则店员助理确认重量，通知后厨开始下菜。
+			</td>
+		</tr>
+		<tr>
+			<td class="alt">修改日志:</td>
+			<td class="alt"></td>
+		</tr>
+	</table>
+</body>
+</html>

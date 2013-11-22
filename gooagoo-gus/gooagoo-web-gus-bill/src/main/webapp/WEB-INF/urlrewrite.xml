@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"  
+        "http://tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+	<rule>
+		<from>^/$</from>
+		<to>/electricBill.do?method=index</to>
+	</rule>
+	<rule>
+		<from>^/index$</from>
+		<to>/electricBill.do?method=index</to>
+	</rule>
+	<rule>
+		<from>^/shop$</from>
+		<to>/electricBill.do?method=shopbill</to>
+	</rule>
+	<rule>
+		<from>^/detail$</from>
+		<to>/electricBill.do?method=personalbill</to>
+	</rule>
+	<rule>
+		<from>^/manual$</from>
+		<to>/manualBill.do?method=index</to>
+	</rule>
+</urlrewrite>  

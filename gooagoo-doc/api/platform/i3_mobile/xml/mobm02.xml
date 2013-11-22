@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="TransactionStatusRoot"><!--订单支付交易状态查询接口 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--结果描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 ，0000 表示支付成功，其他失败-->
+</root>

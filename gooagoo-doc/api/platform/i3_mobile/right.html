@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+</head>
+<body>
+<table id="mytable" cellspacing="0">
+<tr> 
+<th scope="col">接口地址说明</th> 
+</tr> 
+<tr> 
+<td class="alt">
+1.接口规范<br/>
+a.手机接口地址统一为http://imobile.gooagoo.com/mobile.do?itype=moba01&参数&参数...<br/>
+通过itype=moba01部分区分不同接口.<br/>
+例如:<br/>
+http://imobile.gooagoo.com/mobile.do?itype=moba01为用户会员卡列表接口<br/>
+http://imobile.gooagoo.com/mobile.do?itype=moba02为手机端删除同步接口 <br/>
+b.接口地址全部为小写（包括参数部分）<br/>
+c.报文节点全部为小写（xml、json）<br/>
+2.接口地址获取方式<br/>
+a.6设置接口，7基本信息接口，写死在app里。<br/>
+b.其他接口地址通过“基本信息接口-mobg01”获得。<br/>
+3.如果用户访问接口返回信息中包含的url例如：<br/>
+<textarea rows="7" cols="80">
+<membernotice ><!--通知 -->
+<adurl>http://i3.gooagoo.com/mobile.do?itype=moba01</adurl><!--活动地址 -->
+<content>满100返50，http://i3.gooagoo.com/mobile.do?itype=moba02</content><!--活动内容 -->
+</membernotice>
+</textarea>
+，则需在此url末尾增加参数userid、手机mac，例如：<br/>
+原url为http://i3.gooagoo.com/mobile.do?itype=moba01，<br/>
+则最终的url为http://i3.gooagoo.com/mobile.do?itype=moba01&userid=000&mac=000<br/>
+</td> 
+</tr> 
+</table>
+</body>
+</html>

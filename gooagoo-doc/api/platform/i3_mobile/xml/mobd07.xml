@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root alias="UserShoppingPlanBTBRoot"><!-- 计划列表与服务器同步 -->
+	<result></result><!--查询结果编码，true-成功，false-失败 -->
+	<msg></msg><!--查询失败描述 -->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+	<usershoppingplanbtb cycle="1"><!-- 购物计划 -->
+		<shoppinglistid></shoppinglistid><!--购物清单编号，UUID -->
+		<shoppinglistidm></shoppinglistidm><!--手机端购物清单编号 -->
+	</usershoppingplanbtb>
+</root>

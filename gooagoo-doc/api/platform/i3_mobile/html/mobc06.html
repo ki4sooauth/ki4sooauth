@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../css/gooagoo_base.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	margin-left: 10px;
+}
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+
+<body>
+<p><br />
+</p>
+<p>&nbsp;</p>
+<table id="righttable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series"> 
+
+<tr> 
+
+<th scope="col" colspan="2"><span class="row">mobc06:商家吆喝(商家服务器)  </span></th> 
+
+</tr> 
+<tr> 
+
+<td width="136" class="row">功能说明：</td> 
+<td width="658" class="row">
+商家吆喝(商家服务器) 
+ </td> 
+</tr>
+<tr> 
+
+<td width="136" class="row">程序映射地址：</td> 
+<td width="658" class="row"></td> 
+</tr> 
+
+<tr> 
+
+<td class="alt">返回值例子：</td> 
+<td class="alt"><a href="../xml/mobc06.xml" target="_blank">mobc06.xml</a> | <a href="../xml/mobc06.txt" target="_blank">mobc06.txt</a></td> 
+</tr> 
+<tr>
+  <td valign="top" class="row">参数说明：</td>
+  <td class="row">
+	<table >
+	<tr>
+		<td class="alt" align="center">CODE</td>
+		<td class="alt" align="center">NAME</td>
+		<td class="alt" align="center">是否必填</td>
+		<td class="alt" align="center">备注说明</td>
+	</tr>
+	<tr>
+		<td class="row">userid</td>
+		<td class="row">用户id</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">用户编号，唯一，通过UUID产生</td>
+	</tr>
+	<tr>
+		<td class="row">sessionid</td>
+		<td class="row">sessionid值</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row">手机登录后的sessionid值</td>
+	</tr>
+	
+  <tr><td class="row">mac</td><td class="row">手机mac地址</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">mver</td><td class="row">手机程序版本</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">lid</td><td class="row">lid</td><td class="row">选填</td><td class="row"></td></tr><tr><td class="row">entityposition</td><td class="row">实体店编号</td><td class="row">选填</td><td class="row">用户当前所在实体店编号</td></tr>
+	<tr>
+		<td class="row">cryoutinfoid</td>
+		<td class="row">吆喝编号</td>
+		<td class="row">选填</td>
+		<td class="row">平台通过此参数返回大于或小于此"吆喝编号"的吆喝；<font style="color: #FF0000">当“pageType-翻页类型”为“N-下一页”时此参数必填</font> </td>
+	</tr>
+	<tr>
+		<td class="row">pagetype</td>
+		<td class="row">翻页类型</td>
+		<td class="row">选填</td>
+		<td class="row">P-上一页;N-下一页;默认值为P</td>
+	</tr>
+	<tr>
+		<td class="row">pagesize</td>
+		<td class="row">分页大小</td>
+		<td class="row">选填</td>
+		<td class="row">默认值为50</td>
+	</tr>
+	<tr>
+		<td class="row">infotype</td>
+		<td class="row">吆喝的类型</td>
+		<td class="row">选填</td>
+		<td class="row">G-商品、A-活动、C-优惠凭证</td>
+	</tr>
+	<tr>
+		<td class="row">shopid</td>
+		<td class="row">商家id</td>
+		<td class="row" style="color: #FF0000">必填</td>
+		<td class="row"></td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td class="alt">业务逻辑说明：</td>
+  <td class="alt">
+    1.校验登录状态；<br/>
+2.查询吆喝信息。 <br/>
+<font style="color: #FF0000">备注：</font><br/>    1.默认查询最新吆喝，当最新吆喝条数大于pageSize时，只返回最新pageSize条；<br/> 
+2.  本接口用于查询部署在“商家服务器”中“本店吆喝”的吆喝列表，返回数据不包含器“Gooagoo"服务器中的吆喝列表。
+  </td>
+</tr>
+<tr>
+  <td class="row">修改日志：</td>
+  <td class="row"></td>
+</tr> 
+</table>
+</body>
+</html>

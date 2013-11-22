@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.behave.UserLastTimeMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.behave.UserLastTime" >
+    <id column="id" property="id" jdbcType="CHAR" />
+    <result column="user_id" property="userId" jdbcType="CHAR" />
+    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="shop_name" property="shopName" jdbcType="CHAR" />
+    <result column="shop_type_root" property="shopTypeRoot" jdbcType="INTEGER" />
+    <result column="card_id" property="cardId" jdbcType="CHAR" />
+    <result column="card_type2" property="cardType2" jdbcType="CHAR" />
+    <result column="scardno" property="scardno" jdbcType="CHAR" />
+    <result column="shopping_time" property="shoppingTime" jdbcType="TIMESTAMP" />
+    <result column="stroll_time" property="strollTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      id, user_id, shop_id, 
+      shop_name, shop_type_root, card_id, 
+      card_type2, scardno, shopping_time, 
+      stroll_time
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.behave.UserLastTimeExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from user_last_time
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.behave.UserLastTimeExample" resultType="java.lang.Integer">
+    select count(*) from user_last_time
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.behave.UserLastTimeKey" >
+    select 
+      id, user_id, shop_id, 
+      shop_name, shop_type_root, card_id, 
+      card_type2, scardno, shopping_time, 
+      stroll_time
+    from user_last_time where id = #{id,jdbcType=CHAR}
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.behave.UserLastTimeExample">
+    delete from user_last_time
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.behave.UserLastTimeKey" >
+    delete from user_last_time where id = #{id,jdbcType=CHAR}
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.behave.UserLastTime" >
+    insert into user_last_time
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "id != null">
+         id,
+      </if>
+      <if test= "userId != null">
+         user_id,
+      </if>
+      <if test= "shopId != null">
+         shop_id,
+      </if>
+      <if test= "shopName != null">
+         shop_name,
+      </if>
+      <if test= "shopTypeRoot != null">
+         shop_type_root,
+      </if>
+      <if test= "cardId != null">
+         card_id,
+      </if>
+      <if test= "cardType2 != null">
+         card_type2,
+      </if>
+      <if test= "scardno != null">
+         scardno,
+      </if>
+      <if test= "shoppingTime != null">
+         shopping_time,
+      </if>
+      <if test= "strollTime != null">
+         stroll_time
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "id != null">
+         #{id,jdbcType=CHAR},
+      </if>
+      <if test= "userId != null">
+         #{userId,jdbcType=CHAR},
+      </if>
+      <if test= "shopId != null">
+         #{shopId,jdbcType=CHAR},
+      </if>
+      <if test= "shopName != null">
+         #{shopName,jdbcType=CHAR},
+      </if>
+      <if test= "shopTypeRoot != null">
+         #{shopTypeRoot,jdbcType=INTEGER},
+      </if>
+      <if test= "cardId != null">
+         #{cardId,jdbcType=CHAR},
+      </if>
+      <if test= "cardType2 != null">
+         #{cardType2,jdbcType=CHAR},
+      </if>
+      <if test= "scardno != null">
+         #{scardno,jdbcType=CHAR},
+      </if>
+      <if test= "shoppingTime != null">
+         #{shoppingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "strollTime != null">
+         #{strollTime,jdbcType=TIMESTAMP}
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update user_last_time
+    <set>
+        id = #{record.id,jdbcType=CHAR},
+        user_id = #{record.userId,jdbcType=CHAR},
+        shop_id = #{record.shopId,jdbcType=CHAR},
+        shop_name = #{record.shopName,jdbcType=CHAR},
+        shop_type_root = #{record.shopTypeRoot,jdbcType=INTEGER},
+        card_id = #{record.cardId,jdbcType=CHAR},
+        card_type2 = #{record.cardType2,jdbcType=CHAR},
+        scardno = #{record.scardno,jdbcType=CHAR},
+        shopping_time = #{record.shoppingTime,jdbcType=TIMESTAMP},
+        stroll_time = #{record.strollTime,jdbcType=TIMESTAMP}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update user_last_time
+    <set>
+      <if test="record.id !=null">
+        id = #{record.id,jdbcType=CHAR},
+      </if>
+      <if test="record.userId !=null">
+        user_id = #{record.userId,jdbcType=CHAR},
+      </if>
+      <if test="record.shopId !=null">
+        shop_id = #{record.shopId,jdbcType=CHAR},
+      </if>
+      <if test="record.shopName !=null">
+        shop_name = #{record.shopName,jdbcType=CHAR},
+      </if>
+      <if test="record.shopTypeRoot !=null">
+        shop_type_root = #{record.shopTypeRoot,jdbcType=INTEGER},
+      </if>
+      <if test="record.cardId !=null">
+        card_id = #{record.cardId,jdbcType=CHAR},
+      </if>
+      <if test="record.cardType2 !=null">
+        card_type2 = #{record.cardType2,jdbcType=CHAR},
+      </if>
+      <if test="record.scardno !=null">
+        scardno = #{record.scardno,jdbcType=CHAR},
+      </if>
+      <if test="record.shoppingTime !=null">
+        shopping_time = #{record.shoppingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.strollTime !=null">
+        stroll_time = #{record.strollTime,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.behave.UserLastTime" >
+    update user_last_time
+    <set>
+      <if test="id !=null">
+      id = #{id,jdbcType=CHAR},
+      </if>
+      <if test="userId !=null">
+      user_id = #{userId,jdbcType=CHAR},
+      </if>
+      <if test="shopId !=null">
+      shop_id = #{shopId,jdbcType=CHAR},
+      </if>
+      <if test="shopName !=null">
+      shop_name = #{shopName,jdbcType=CHAR},
+      </if>
+      <if test="shopTypeRoot !=null">
+      shop_type_root = #{shopTypeRoot,jdbcType=INTEGER},
+      </if>
+      <if test="cardId !=null">
+      card_id = #{cardId,jdbcType=CHAR},
+      </if>
+      <if test="cardType2 !=null">
+      card_type2 = #{cardType2,jdbcType=CHAR},
+      </if>
+      <if test="scardno !=null">
+      scardno = #{scardno,jdbcType=CHAR},
+      </if>
+      <if test="shoppingTime !=null">
+      shopping_time = #{shoppingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="strollTime !=null">
+      stroll_time = #{strollTime,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where id = #{id,jdbcType=CHAR}
+  </update>
+
+</mapper>

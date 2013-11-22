@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root alias="BillPayRoot"><!--结账申请信息查询-->
+	<result></result><!--结果编码，true查询成功，false查询失败-->
+	<msg></msg><!--结果描述-->
+	<msgcode></msgcode><!-- 提示信息编号 -->
+    <billpay cycle="1"><!--结账通知信息-->
+		<id></id><!--自动编号，uuid-->
+		<scardno></scardno><!--会员卡编号，如果没有则填写 ""-->
+		<applytime></applytime><!--申请时间-->
+		<deskno></deskno><!--桌号-->
+		<couponinfo></couponinfo><!--优惠劵信息（多条）,格式：{[favoriteid:"",couponcontent:""]} -->
+		<roomid></roomid><!--房间名称-->
+		<orderid></orderid><!--商家订单编号-->
+		<originalprice></originalprice><!--原价格-->
+	</billpay>
+</root>

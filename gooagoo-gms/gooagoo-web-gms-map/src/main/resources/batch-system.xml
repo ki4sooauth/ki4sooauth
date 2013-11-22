@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<bean id="map" class="com.gooagoo.gmap.trigger.MapTrigger"></bean>
+	
+	<bean id="mapJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject"><ref bean="map"/></property>  <!-- 业务类对象 -->
+	    <property name="targetMethod"><value>refreshGridCoordinateInfos</value></property>  <!-- 要执行的方法名称 -->
+	</bean>
+	
+	<!-- ======================== 定时发布触发器 ======================== -->
+    <bean id="mapTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail"><ref bean="mapJob"/></property>
+        <property name="cronExpression" value="0 0 /1 * * ?"></property><!-- 每小时执行一次 -->
+    </bean>
+    
+    <!-- ======================== 调度工厂 ======================== -->  
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+            	<ref local="mapTrigger"/>
+            </list>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.business.shop.ShopEntityInfoAdapterMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.business.shop.map.MappositionlistBusiness" >
+    <id column="obj_id" property="objid" jdbcType="CHAR" />
+    <result column="obj_name" property="objname" jdbcType="CHAR" />
+    <result column="map_id" property="mapid" jdbcType="CHAR" />
+    <result column="type" property="type" jdbcType="CHAR" />
+    <result column="px" property="px" jdbcType="VARCHAR" />
+    <result column="py" property="py" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="getShopEntityLinkInfo" resultMap="BaseResultMap">
+		SELECT
+		entity.shop_entity_id AS obj_id,
+		entity.shop_entity_name AS obj_name,
+		ap.map_id AS map_id,
+		'S' AS type,
+		info.px AS px,
+		info.py AS py
+	FROM
+		gooagoo_shop.shop_entity_info entity,
+		gooagoo_shop.area_info info,
+		gooagoo_shop.area_para ap
+	WHERE
+		info.map_id = ap.map_id
+	AND ap.shop_entity_id = entity.shop_entity_id
+	AND info.is_del = 'N'
+	AND ap.is_del = 'N'
+	AND entity.is_del = 'N'
+	AND entity.shop_entity_id IN(
+	SELECT
+		p.lessee_shop_id
+	FROM
+		gooagoo_shop.shop_position p
+	WHERE
+		p.shop_entity_id in
+	<foreach collection="entityIds" item="entityId"  open="(" separator="," close=")">  
+	  		  #{entityId} 
+	</foreach>
+	)
+	<if test="name!=null">
+	AND	entity.shop_entity_name LIKE CONCAT('%',#{name},'%')
+	</if>
+  </select>
+  
+    <select id="getGoodsLinkShopEntityInfo" resultMap="BaseResultMap">
+		SELECT
+		base.goods_id AS obj_id,
+		base.goods_name AS obj_name,
+		ap.map_id AS map_id,
+		'G' AS type,
+		info.px AS px,
+		info.py AS py
+	FROM
+		gooagoo_shop.area_info info,
+		gooagoo_shop.area_para ap,
+		gooagoo_goods.goods_marketing_info gmi,
+		gooagoo_goods.goods_base_info base
+	WHERE
+		info.map_id = ap.map_id
+	AND base.goods_id = gmi.goods_id
+	AND info.position_id = gmi.position_id
+	AND ap.shop_entity_id = gmi.shop_entity_id
+	AND info.is_del = 'N'
+	AND gmi.is_del = 'N'
+	AND base.is_del='N'
+	AND gmi.shop_entity_id IN
+	<foreach collection="entityIds" item="entityId"  open="(" separator="," close=")">  
+	  		  #{entityId} 
+	</foreach>
+	<if test="name!=null">
+	AND	base.goods_name LIKE CONCAT('%',#{name},'%')
+	</if>
+  </select>
+
+</mapper>
