@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<root alias="uploadOrderRoot"><!--商家订单、数据上传-->
-	<result></result><!--结果编码，true成功，false失败-->
-	<msg></msg><!--结果描述-->
-	<msgcode></msgcode><!-- 提示信息编号 -->
-</root>

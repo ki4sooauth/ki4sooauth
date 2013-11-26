@@ -1,7 +1,0 @@
-{
-    "result":"",
-    "msg":"",
-    "submitOrderForm":{
-        "billid":""
-    }
-}

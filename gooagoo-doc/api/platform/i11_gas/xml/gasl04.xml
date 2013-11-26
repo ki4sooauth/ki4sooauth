@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<root alias="CheckDishFlagRoot"><!--已上菜品订单标记-->
-	<result/><!--结果编码，true-上菜成功，false-上菜失败-->
-	<msg/><!--结果描述-->
-	<msgcode></msgcode><!-- 提示信息编号 -->
- </root>

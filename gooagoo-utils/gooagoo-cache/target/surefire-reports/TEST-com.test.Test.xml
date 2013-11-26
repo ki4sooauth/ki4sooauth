@@ -25,7 +25,7 @@
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="D:\workspace\fetchview\.metadata\.plugins\org.maven.ide.eclipse\launches\m2conf721910114593278183.tmp"/>
+    <property name="classworlds.conf" value="D:\workspace\fetchview\.metadata\.plugins\org.maven.ide.eclipse\launches\m2conf1090751732635650146.tmp"/>
     <property name="sun.jnu.encoding" value="GBK"/>
     <property name="java.library.path" value="D:\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\jdk\jre\bin;D:/jdk/bin/../jre/bin/client;D:/jdk/bin/../jre/bin;D:/jdk/bin/../jre/lib/i386;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\jdk\bin; D:\apache-maven-3.0.4\bin; D:\apache-tomcat-6.0.32\bin;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\TortoiseGit\bin;D:\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>

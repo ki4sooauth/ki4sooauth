@@ -87,7 +87,7 @@ public class MongoDBUtils
                 opt.connectTimeout = 10000;
                 opt.socketTimeout = 10000;
                 mongo = new Mongo(address, opt);
-                mongo.setWriteConcern(WriteConcern.NORMAL);
+                mongo.setWriteConcern(WriteConcern.SAFE);
                 pool.put(host + dbName, mongo);
             }
             db = mongo.getDB(dbName);

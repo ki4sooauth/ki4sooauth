@@ -1,9 +1,0 @@
-{
-"result":"设置查询结果编码，Y-成功，N-失败",
-"msg":"设置查询结果描述",
-"loginInfo":{
-  "userId":"用户id",
-  "realName":"用户姓名",
-  "userName":"用户登录号",
-  "storeId":"店铺ID"}
-}

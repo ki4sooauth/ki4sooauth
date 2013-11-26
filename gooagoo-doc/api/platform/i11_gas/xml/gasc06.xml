@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<root alias="swipeCardRoot"><!--店员助理刷卡-->
-	<result></result><!--结果编码，true成功，false失败-->
-	<msg></msg><!--结果描述-->
-	<msgcode></msgcode><!-- 提示信息编号 -->
-</root>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<root alias="SubmitOrderRoot"><!--提交订单-->
-	<result></result><!--结果编码，true-提交成功，false-提交失败-->
-	<msg></msg><!--查询结果描述-->
-	<msgcode></msgcode><!-- 提示信息编号 -->
-</root>

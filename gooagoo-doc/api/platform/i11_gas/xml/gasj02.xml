@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<root alias="QueueRoot"><!--排队-->
-	 <result/><!--结果编码，true成功，false失败-->
-	 <msg/><!--结果描述-->
-	 <msgcode></msgcode><!-- 提示信息编号 -->
-	 <present></present><!-- 当前排队号码 -->
-	 <alreadyno></alreadyno><!--已到排队号码  -->
- </root>
