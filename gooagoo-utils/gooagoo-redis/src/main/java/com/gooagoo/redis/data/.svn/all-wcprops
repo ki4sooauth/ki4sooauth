@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/gooagoo/!svn/ver/16594/trunk/gooagoo-utils/gooagoo-redis/src/main/java/com/gooagoo/redis/data
+END
+RedisObjectDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/gooagoo/!svn/ver/16594/trunk/gooagoo-utils/gooagoo-redis/src/main/java/com/gooagoo/redis/data/RedisObjectDao.java
+END
+RedisStringDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/gooagoo/!svn/ver/1574/trunk/gooagoo-utils/gooagoo-redis/src/main/java/com/gooagoo/redis/data/RedisStringDao.java
+END
+RedisListDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/16594/trunk/gooagoo-utils/gooagoo-redis/src/main/java/com/gooagoo/redis/data/RedisListDao.java
+END
+RedisSetDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/gooagoo/!svn/ver/1574/trunk/gooagoo-utils/gooagoo-redis/src/main/java/com/gooagoo/redis/data/RedisSetDao.java
+END
+RedisSortedSetDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/gooagoo/!svn/ver/16151/trunk/gooagoo-utils/gooagoo-redis/src/main/java/com/gooagoo/redis/data/RedisSortedSetDao.java
+END
+RedisDatabase.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/1571/trunk/gooagoo-utils/gooagoo-redis/src/main/java/com/gooagoo/redis/data/RedisDatabase.java
+END
+RedisHashDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/gooagoo/!svn/ver/2136/trunk/gooagoo-utils/gooagoo-redis/src/main/java/com/gooagoo/redis/data/RedisHashDao.java
+END

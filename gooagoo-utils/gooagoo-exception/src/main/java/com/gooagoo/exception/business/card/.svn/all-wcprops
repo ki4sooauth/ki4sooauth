@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/gooagoo/!svn/ver/14389/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card
+END
+AttentionCardNotExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/gooagoo/!svn/ver/3675/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/AttentionCardNotExistsException.java
+END
+CardNotBelongUserException.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/14389/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/CardNotBelongUserException.java
+END
+GiveCardFailException.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/gooagoo/!svn/ver/3675/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/GiveCardFailException.java
+END
+AttentionCardAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/gooagoo/!svn/ver/3933/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/AttentionCardAlreadyExistsException.java
+END
+CardTypeNotEnoughException.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/4228/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/CardTypeNotEnoughException.java
+END
+CardAlreadyGivenException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/3933/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/CardAlreadyGivenException.java
+END
+BaseCardNotExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/3675/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/BaseCardNotExistsException.java
+END
+CardAlreadyConvertedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/gooagoo/!svn/ver/3675/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/CardAlreadyConvertedException.java
+END
+CardAlreadyOverdueException.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/5179/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/CardAlreadyOverdueException.java
+END
+BaseCardAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/gooagoo/!svn/ver/3933/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/BaseCardAlreadyExistsException.java
+END
+CardNotExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/3675/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/CardNotExistsException.java
+END
+CardAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/8107/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/CardAlreadyExistsException.java
+END
+CardNotBelongShopException.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/5179/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/CardNotBelongShopException.java
+END
+CardNameAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/gooagoo/!svn/ver/3933/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/card/CardNameAlreadyExistsException.java
+END

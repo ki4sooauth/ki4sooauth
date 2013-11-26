@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/gooagoo/!svn/ver/15713/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/member
+END
+MemberFeatureCodeTooLongException.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/gooagoo/!svn/ver/8284/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/member/MemberFeatureCodeTooLongException.java
+END
+MemberFeatureValueTooLongException.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/gooagoo/!svn/ver/8284/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/member/MemberFeatureValueTooLongException.java
+END
+ShopMemberNotExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/gooagoo/!svn/ver/2967/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/member/ShopMemberNotExistsException.java
+END
+MemberFeatureException.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/8286/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/member/MemberFeatureException.java
+END
+MemberIntegralNotEnoughException.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/gooagoo/!svn/ver/15713/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/member/MemberIntegralNotEnoughException.java
+END
+MemberFeatureCodeIsNullException.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/gooagoo/!svn/ver/8284/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/member/MemberFeatureCodeIsNullException.java
+END
+MemberFeatureValueIsNullException.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/gooagoo/!svn/ver/8284/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/member/MemberFeatureValueIsNullException.java
+END

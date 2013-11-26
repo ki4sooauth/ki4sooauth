@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/gooagoo/!svn/ver/15033/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/behave
+END
+AlreadyArrangedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/12338/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/behave/AlreadyArrangedException.java
+END
+NotNeedArrangeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/13773/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/behave/NotNeedArrangeException.java
+END
+UserAlreadyCommentGoodsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/gooagoo/!svn/ver/15033/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/behave/UserAlreadyCommentGoodsException.java
+END

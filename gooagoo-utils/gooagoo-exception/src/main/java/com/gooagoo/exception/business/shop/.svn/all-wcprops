@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/gooagoo/!svn/ver/16421/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/shop
+END
+ShopAdDeletedOrNotExistException.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/gooagoo/!svn/ver/8957/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/shop/ShopAdDeletedOrNotExistException.java
+END
+TableNotExistException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/13451/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/shop/TableNotExistException.java
+END
+ShopBidAmountLackException.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/7955/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/shop/ShopBidAmountLackException.java
+END
+ShopCardStatusException.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/16421/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/shop/ShopCardStatusException.java
+END
+CouponExhaustiveException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/8660/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/shop/CouponExhaustiveException.java
+END
+TableStateNotFreeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/13622/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/shop/TableStateNotFreeException.java
+END
+ShopBidTimeInvalidException.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/8957/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/shop/ShopBidTimeInvalidException.java
+END

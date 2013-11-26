@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/gooagoo/!svn/ver/17747/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils
+END
+HttpClientUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gooagoo/!svn/ver/16870/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/HttpClientUtils.java
+END
+SerialUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/gooagoo/!svn/ver/13893/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/SerialUtils.java
+END
+FileUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/gooagoo/!svn/ver/1685/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/FileUtils.java
+END
+ZipUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/gooagoo/!svn/ver/8042/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/ZipUtil.java
+END
+LogUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/gooagoo/!svn/ver/3664/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/LogUtils.java
+END
+ServletUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/gooagoo/!svn/ver/16723/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/ServletUtils.java
+END
+HttpUploadUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gooagoo/!svn/ver/16836/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/HttpUploadUtils.java
+END
+UUID.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/gooagoo/!svn/ver/9311/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/UUID.java
+END
+PubUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/gooagoo/!svn/ver/11542/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/PubUtils.java
+END
+SpringBeanUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/gooagoo/!svn/ver/1685/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/SpringBeanUtils.java
+END
+GB2AlphaUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/gooagoo/!svn/ver/1685/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/GB2AlphaUtil.java
+END
+DeviceDetectionUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/1685/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/DeviceDetectionUtils.java
+END
+TimeUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/10496/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/TimeUtils.java
+END
+UrlUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/gooagoo/!svn/ver/16369/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/UrlUtils.java
+END
+StringUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/gooagoo/!svn/ver/2888/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/StringUtils.java
+END
+HttpServerUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gooagoo/!svn/ver/17467/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/HttpServerUtils.java
+END
+DataPatternUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gooagoo/!svn/ver/1685/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/DataPatternUtils.java
+END
+MapCoordinatesUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/17747/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/MapCoordinatesUtils.java
+END
+JsonUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/gooagoo/!svn/ver/1685/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/JsonUtils.java
+END
+DataUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/11579/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/DataUtils.java
+END
+EntityTools.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/gooagoo/!svn/ver/2888/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/EntityTools.java
+END
+HostUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/17361/trunk/gooagoo-utils/gooagoo-common/src/main/java/com/gooagoo/common/utils/HostUtils.java
+END

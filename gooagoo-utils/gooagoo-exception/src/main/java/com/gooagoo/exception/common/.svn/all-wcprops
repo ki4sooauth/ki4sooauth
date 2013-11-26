@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/gooagoo/!svn/ver/7783/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common
+END
+FormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/FormatErrorException.java
+END
+AccountAlreadyDisabledException.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/7173/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/AccountAlreadyDisabledException.java
+END
+NoDataException.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/NoDataException.java
+END
+AccountNotActiveException.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/AccountNotActiveException.java
+END
+AccountIsLockedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/AccountIsLockedException.java
+END
+AccountNotExistException.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/AccountNotExistException.java
+END
+NullException.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/NullException.java
+END
+OperateFailException.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/OperateFailException.java
+END
+PasswordIncorrectException.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/PasswordIncorrectException.java
+END
+AccountAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/AccountAlreadyExistsException.java
+END
+SecurityCardNotExistException.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/7783/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/common/SecurityCardNotExistException.java
+END

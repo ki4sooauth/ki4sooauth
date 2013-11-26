@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/gooagoo/!svn/ver/6831/trunk/gooagoo-utils/gooagoo-casclient/src/main/java/com/gooagoo/entity/casclient/shop
+END
+ShopAndUserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/6831/trunk/gooagoo-utils/gooagoo-casclient/src/main/java/com/gooagoo/entity/casclient/shop/ShopAndUserInfo.java
+END
+ShopAuth.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/6831/trunk/gooagoo-utils/gooagoo-casclient/src/main/java/com/gooagoo/entity/casclient/shop/ShopAuth.java
+END
+ShopLoginInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/gooagoo/!svn/ver/6831/trunk/gooagoo-utils/gooagoo-casclient/src/main/java/com/gooagoo/entity/casclient/shop/ShopLoginInfo.java
+END

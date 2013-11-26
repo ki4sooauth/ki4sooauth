@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/gooagoo/!svn/ver/18093/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/webapp/WEB-INF/views
+END
+register.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/gooagoo/!svn/ver/18093/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/webapp/WEB-INF/views/register.jsp
+END
+get_resource.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/gooagoo/!svn/ver/18093/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/webapp/WEB-INF/views/get_resource.jsp
+END
+index.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/gooagoo/!svn/ver/18093/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/webapp/WEB-INF/views/index.jsp
+END
+resource.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/gooagoo/!svn/ver/18093/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/webapp/WEB-INF/views/resource.jsp
+END
+request_token.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/18093/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/webapp/WEB-INF/views/request_token.jsp
+END
+get_authz.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/gooagoo/!svn/ver/18093/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/webapp/WEB-INF/views/get_authz.jsp
+END

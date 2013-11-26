@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/gooagoo/!svn/ver/15828/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user
+END
+SexFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/7297/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/SexFormatErrorException.java
+END
+UserCanNotRepetitionApplyMemberException.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/gooagoo/!svn/ver/15828/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/UserCanNotRepetitionApplyMemberException.java
+END
+PasswordFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/gooagoo/!svn/ver/7211/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/PasswordFormatErrorException.java
+END
+MobileCodeAlreadyUsedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/gooagoo/!svn/ver/13902/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/MobileCodeAlreadyUsedException.java
+END
+AlreadyExceedUserOwnCouponNumException.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/gooagoo/!svn/ver/6884/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/AlreadyExceedUserOwnCouponNumException.java
+END
+UserAlreadyApplyException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/7977/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/UserAlreadyApplyException.java
+END
+AlreadyCollectException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/1686/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/AlreadyCollectException.java
+END
+ShopNotExistAttentionCardException.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/gooagoo/!svn/ver/6657/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/ShopNotExistAttentionCardException.java
+END
+EmailAlreadyActivedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/gooagoo/!svn/ver/13902/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/EmailAlreadyActivedException.java
+END
+BirthdayFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/gooagoo/!svn/ver/7297/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/BirthdayFormatErrorException.java
+END
+SecurityQuestionAnswerErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/gooagoo/!svn/ver/13616/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/SecurityQuestionAnswerErrorException.java
+END
+CouponAlreadyPastPublishEndTimeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/gooagoo/!svn/ver/6895/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/CouponAlreadyPastPublishEndTimeException.java
+END
+SecurityCardIsNotExistException.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/gooagoo/!svn/ver/9380/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/SecurityCardIsNotExistException.java
+END
+PhoneFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/7650/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/PhoneFormatErrorException.java
+END
+NoShoppingPlanException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/4550/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/NoShoppingPlanException.java
+END
+SecurityCardAlreadyBindException.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/gooagoo/!svn/ver/9380/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/SecurityCardAlreadyBindException.java
+END
+UserAlreadyAttentionShopException.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/gooagoo/!svn/ver/6657/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/UserAlreadyAttentionShopException.java
+END
+UserAlreadyShopMemberException.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/gooagoo/!svn/ver/6657/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/UserAlreadyShopMemberException.java
+END
+PostCodeFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/gooagoo/!svn/ver/7297/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/PostCodeFormatErrorException.java
+END
+NameFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/7297/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/NameFormatErrorException.java
+END
+FavoriteNotExistOrDeletedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/gooagoo/!svn/ver/6895/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/FavoriteNotExistOrDeletedException.java
+END
+TelephoneFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/gooagoo/!svn/ver/7650/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/TelephoneFormatErrorException.java
+END
+AddressFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/7297/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/AddressFormatErrorException.java
+END
+EmailFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/7211/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/EmailFormatErrorException.java
+END
+AlreadyOverdueException.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/13900/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/AlreadyOverdueException.java
+END
+IdNoFormatErrorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/7297/trunk/gooagoo-utils/gooagoo-exception/src/main/java/com/gooagoo/exception/business/user/IdNoFormatErrorException.java
+END
