@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gooagoo/!svn/ver/18667/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity
+END
+InterfaceUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/18667/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity/InterfaceUtils.java
+END
+TransData.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/gooagoo/!svn/ver/18667/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity/TransData.java
+END
+ResultRoot.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/gooagoo/!svn/ver/18667/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity/ResultRoot.java
+END
+IssuerTransData.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/18667/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity/IssuerTransData.java
+END

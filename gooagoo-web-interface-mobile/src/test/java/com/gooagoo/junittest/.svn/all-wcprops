@@ -1,0 +1,539 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/gooagoo/!svn/ver/18119/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest
+END
+HttpClientUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/gooagoo/!svn/ver/16456/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/HttpClientUtils.java
+END
+MOBA10Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA10Test.java
+END
+MOBA02Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA02Test.java
+END
+MOBB11Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/9598/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB11Test.java
+END
+MOBB03Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8968/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB03Test.java
+END
+MOBD01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8566/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBD01Test.java
+END
+MOBA14Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA14Test.java
+END
+MOBC04Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8453/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBC04Test.java
+END
+MOBA06Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA06Test.java
+END
+MOBE02Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE02Test.java
+END
+MOBH01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH01Test.java
+END
+MOBB07Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8968/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB07Test.java
+END
+MOBD05Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBD05Test.java
+END
+MOBF03Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8894/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBF03Test.java
+END
+MOBE14Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE14Test.java
+END
+MOBE06Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE06Test.java
+END
+MOBI02Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBI02Test.java
+END
+MOBF07Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/9083/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBF07Test.java
+END
+MOBH05Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH05Test.java
+END
+MOBE18Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE18Test.java
+END
+MOBH09Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH09Test.java
+END
+MOBA11Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA11Test.java
+END
+MOBC01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8453/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBC01Test.java
+END
+MOBD02Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8581/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBD02Test.java
+END
+MOBB04Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8968/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB04Test.java
+END
+MOBE11Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE11Test.java
+END
+MOBC05Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8453/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBC05Test.java
+END
+MOBG01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBG01Test.java
+END
+MOBH10Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH10Test.java
+END
+MOBH02Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH02Test.java
+END
+MOBF04Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8894/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBF04Test.java
+END
+MOBD06Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8696/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBD06Test.java
+END
+MOBB08Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8891/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB08Test.java
+END
+MOBE15Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE15Test.java
+END
+MOBI03Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/15224/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBI03Test.java
+END
+MOBE07Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE07Test.java
+END
+MOBH06Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH06Test.java
+END
+MOBF08Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/9083/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBF08Test.java
+END
+MOBE19Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/9599/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE19Test.java
+END
+JsonTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/gooagoo/!svn/ver/7800/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/JsonTool.java
+END
+MOBB01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8468/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB01Test.java
+END
+MOBA12Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA12Test.java
+END
+MOBC02Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8455/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBC02Test.java
+END
+MOBA04Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA04Test.java
+END
+MOBB05Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8968/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB05Test.java
+END
+GetLoginInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/gooagoo/!svn/ver/12853/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/GetLoginInfo.java
+END
+LoginInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/gooagoo/!svn/ver/7572/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/LoginInfo.java
+END
+MOBD03Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBD03Test.java
+END
+MOBF01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8894/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBF01Test.java
+END
+MOBE12Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE12Test.java
+END
+MOBA08Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA08Test.java
+END
+MOBC06Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBC06Test.java
+END
+MOBE04Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE04Test.java
+END
+MOBH11Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH11Test.java
+END
+MOBJ01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBJ01Test.java
+END
+MOBH03Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH03Test.java
+END
+MOBB09Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8968/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB09Test.java
+END
+MOBD07Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/9125/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBD07Test.java
+END
+MOBF05Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8965/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBF05Test.java
+END
+MOBE16Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE16Test.java
+END
+MOBI04Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBI04Test.java
+END
+MessageTestConst.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/gooagoo/!svn/ver/14811/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MessageTestConst.java
+END
+MOBH07Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH07Test.java
+END
+MOBF09Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/9083/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBF09Test.java
+END
+MOBA01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA01Test.java
+END
+MOBB10Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/15223/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB10Test.java
+END
+MOBB02Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8968/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB02Test.java
+END
+MOBA13Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA13Test.java
+END
+MOBE01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8967/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE01Test.java
+END
+MOBA05Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA05Test.java
+END
+MOBC03Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8807/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBC03Test.java
+END
+MOBF10Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/9083/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBF10Test.java
+END
+MOBD04Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8609/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBD04Test.java
+END
+MOBB06Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8968/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBB06Test.java
+END
+MOBE13Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE13Test.java
+END
+MOBA17Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8468/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA17Test.java
+END
+MOBE05Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE05Test.java
+END
+MOBC07Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8453/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBC07Test.java
+END
+MOBA09Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBA09Test.java
+END
+MOBI01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBI01Test.java
+END
+MOBH12Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/18119/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH12Test.java
+END
+MOBF06Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8986/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBF06Test.java
+END
+MOBD08Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8895/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBD08Test.java
+END
+MOBH04Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH04Test.java
+END
+MOBE17Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE17Test.java
+END
+MOBE09Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBE09Test.java
+END
+MOBI05Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBI05Test.java
+END
+MOBM01Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/17792/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBM01Test.java
+END
+MOBH08Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/8392/trunk/gooagoo-api/gooagoo-web-interface-mobile/src/test/java/com/gooagoo/junittest/MOBH08Test.java
+END
