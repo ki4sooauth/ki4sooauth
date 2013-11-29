@@ -1,0 +1,6 @@
+package business.dao;
+
+public class TestOauthCodeMapper
+{
+
+}

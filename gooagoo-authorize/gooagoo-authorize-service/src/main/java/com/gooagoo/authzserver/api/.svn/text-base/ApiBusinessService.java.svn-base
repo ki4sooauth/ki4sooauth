@@ -1,9 +1,12 @@
 package com.gooagoo.authzserver.api;
 
+/**
+ * 资源处理
+ */
 public interface ApiBusinessService
 {
     /**
-     * 获取api资源
+     * 获取用户授权api资源
      */
     public void getApiBusiness();
 }

@@ -1,7 +1,7 @@
 package com.gooagoo.authzserver.api;
 
 /**
- * 返回code|accesstoken|refreshtoken
+ * 返回code,token
  */
 public interface CodeGeneratorService
 {

@@ -1,15 +1,15 @@
 10
 
 dir
-18145
+18901
 http://192.168.3.200/svn/gooagoo/trunk/gooagoo-authorize/gooagoo-authorize-service/src/test/java
 http://192.168.3.200/svn/gooagoo
 
 
 
-2013-11-26T02:03:41.518802Z
-18093
-yanglu
+2013-11-29T09:47:46.169230Z
+18901
+lvhaoran
 
 
 
@@ -26,6 +26,6 @@ yanglu
 
 6546c589-0bc2-e64c-84de-df1aef16c20e
 
-client
+business
 dir
 

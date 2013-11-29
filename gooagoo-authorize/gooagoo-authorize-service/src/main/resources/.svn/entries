@@ -1,15 +1,15 @@
 10
 
 dir
-18145
+18901
 http://192.168.3.200/svn/gooagoo/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources
 http://192.168.3.200/svn/gooagoo
 
 
 
-2013-11-26T02:03:41.518802Z
-18093
-yanglu
+2013-11-29T08:24:02.944807Z
+18843
+lvhaoran
 
 
 
@@ -28,14 +28,14 @@ yanglu
 
 app-config.xml
 file
-18668
+18924
 
 
 
-2013-11-26T05:39:49.457818Z
-90b3e7be3ba2f17e02cac39fcea5917a
-2013-11-28T09:03:50.804856Z
-18668
+2013-11-29T10:34:31.312650Z
+b9c5f19c34cab6a0550f563a6b3ee602
+2013-11-29T10:36:54.012808Z
+18924
 lvhaoran
 
 
@@ -58,7 +58,10 @@ lvhaoran
 
 
 
-1576
+3724
+
+dao
+dir
 
 mvc-config.xml
 file
@@ -94,33 +97,9 @@ yanglu
 
 1765
 
-applicationContext.xml
-file
-18671
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 log4j.properties
 file
-18668
+
 
 
 
@@ -151,4 +130,38 @@ lvhaoran
 
 
 951
+
+jdbc.properties
+file
+
+
+
+
+2013-11-28T06:45:36.013000Z
+ac2588eb54eb06560a0097ef6130ddcd
+2013-11-29T03:41:09.740595Z
+18775
+lvhaoran
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1726
 

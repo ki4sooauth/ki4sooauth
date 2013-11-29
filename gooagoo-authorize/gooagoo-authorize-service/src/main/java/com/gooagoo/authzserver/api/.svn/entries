@@ -1,14 +1,14 @@
 10
 
 dir
-18667
+18901
 http://192.168.3.200/svn/gooagoo/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api
 http://192.168.3.200/svn/gooagoo
 
 
 
-2013-11-28T09:03:36.655631Z
-18667
+2013-11-29T09:08:11.813860Z
+18867
 lvhaoran
 
 
@@ -25,6 +25,15 @@ lvhaoran
 
 
 6546c589-0bc2-e64c-84de-df1aef16c20e
+
+
+
+
+
+
+
+
+((conflict ApplyBusinessService.java file update deleted deleted (version http://192.168.3.200/svn/gooagoo 5 18718 117 trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api/ApplyBusinessService.java none) (version http://192.168.3.200/svn/gooagoo 5 18860 117 trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api/ApplyBusinessService.java none)))
 
 impl
 dir
@@ -35,10 +44,10 @@ file
 
 
 
-2013-11-28T07:25:31.885028Z
-843ca5c6aa55568eb0af05fa4ff673a0
-2013-11-28T09:03:36.655631Z
-18667
+2013-11-29T08:50:03.116130Z
+f4592015dc3fb0e2e83db36227f39ba6
+2013-11-29T08:49:17.551467Z
+18852
 lvhaoran
 
 
@@ -61,52 +70,18 @@ lvhaoran
 
 
 
-210
-
-ApplyBusinessService.java
-file
-18718
-
-
-
-2013-11-28T10:32:17.135931Z
-a210bb2875da487fbc20ee085dd86105
-2013-11-28T10:31:30.868894Z
-18718
-lvhaoran
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-634
+191
 
 ApiBusinessService.java
 file
-18719
 
 
 
-2013-11-28T10:40:13.828197Z
-a5484618d2b5118df31e3e832863193a
-2013-11-28T10:39:38.978152Z
-18719
+
+2013-11-29T08:54:26.538197Z
+6c480647519b45f72a29624b898bbf2d
+2013-11-29T08:53:40.833130Z
+18857
 lvhaoran
 
 
@@ -129,5 +104,39 @@ lvhaoran
 
 
 
-160
+199
+
+AuthzBusinessService.java
+file
+
+
+
+
+2013-11-29T09:08:15.819629Z
+679115ae441d2610a265b6d6d97d4221
+2013-11-29T09:08:11.813860Z
+18867
+lvhaoran
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1033
 

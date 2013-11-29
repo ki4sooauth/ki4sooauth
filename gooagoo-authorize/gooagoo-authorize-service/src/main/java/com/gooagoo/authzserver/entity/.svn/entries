@@ -1,14 +1,14 @@
 10
 
 dir
-18667
+18901
 http://192.168.3.200/svn/gooagoo/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity
 http://192.168.3.200/svn/gooagoo
 
 
 
-2013-11-28T09:03:36.655631Z
-18667
+2013-11-29T09:08:45.619119Z
+18868
 lvhaoran
 
 
@@ -25,6 +25,15 @@ lvhaoran
 
 
 6546c589-0bc2-e64c-84de-df1aef16c20e
+
+
+
+
+
+
+
+
+((conflict apply dir update deleted deleted (version http://192.168.3.200/svn/gooagoo 5 18667 100 trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity/apply none) (version http://192.168.3.200/svn/gooagoo 5 18868 100 trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity/apply none)))
 
 token
 dir
@@ -131,10 +140,10 @@ lvhaoran
 
 2320
 
-apply
+code
 dir
 
-code
+business
 dir
 
 IssuerTransData.java

@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gooagoo.authzserver.OAuthParam;
-import com.gooagoo.authzserver.api.ApplyBusinessService;
+import com.gooagoo.authzserver.api.AuthzBusinessService;
 import com.gooagoo.authzserver.api.CodeGeneratorService;
 import com.gooagoo.authzserver.entity.InterfaceUtils;
 import com.gooagoo.authzserver.entity.IssuerTransData;
+import com.gooagoo.authzserver.entity.business.OauthCodeBusiness;
+import com.gooagoo.authzserver.entity.business.OpenAppInfoBusiness;
 import com.gooagoo.authzserver.entity.token.AccessTokenBusiness;
 import com.gooagoo.authzserver.service.IAuthIssuerService;
 import com.gooagoo.cache.ExceptionCache;
@@ -28,7 +30,7 @@ public class AccessTokenServiceImpl implements IAuthIssuerService
     @Autowired
     private CodeGeneratorService codeGeneratorService;
     @Autowired
-    private ApplyBusinessService applyBusinessService;
+    private AuthzBusinessService authzBusinessService;
 
     @Override
     public String doIAuthIssuer(HttpServletRequest request) throws Exception
@@ -42,18 +44,15 @@ public class AccessTokenServiceImpl implements IAuthIssuerService
             String redirectUri = parameter.getString(OAuthParam.OAUTH_REDIRECT_URI);
             String grantType = parameter.getString(OAuthParam.OAUTH_GRANT_TYPE);
             String code = parameter.getString(OAuthParam.OAUTH_CODE);
-            if (!StringUtils.isBlank(clientId))
+
+            if (!StringUtils.isBlank(clientId) && !StringUtils.isBlank(clientSecret))
             {
-                if (this.applyBusinessService.getApplyBusiness(clientId) == null)
+                OpenAppInfoBusiness openAppInfoBusiness = new OpenAppInfoBusiness();
+                openAppInfoBusiness.setAppKey(clientId);
+                openAppInfoBusiness.setAppSecret(clientSecret);
+                if (this.authzBusinessService.getOpenAppInfoBusiness(openAppInfoBusiness) == null)
                 {
-                    throw new NullException("clientId不能为空");
-                }
-            }
-            if (!StringUtils.isBlank(clientSecret))
-            {
-                if (this.applyBusinessService.getApplyBusiness(clientSecret) == null)
-                {
-                    throw new NullException("clientSecret不能为空");
+                    throw new NullException("openAppInfoBusiness不能为空");
                 }
             }
             if (StringUtils.isBlank(redirectUri))
@@ -69,9 +68,12 @@ public class AccessTokenServiceImpl implements IAuthIssuerService
             }
             if (!StringUtils.isBlank(code))
             {
-                if (code != OAuthParam.OAUTH_CODE)
+                OauthCodeBusiness oauthCodeBusiness = new OauthCodeBusiness();
+                oauthCodeBusiness.setCode(code);
+                oauthCodeBusiness.setAppKey(clientId);
+                if (this.authzBusinessService.getOauthCodeBusiness(oauthCodeBusiness) == null)
                 {
-                    throw new NullException("code不能为空");
+                    throw new NullException("oauthCodeBusiness不能为空");
                 }
             }
             accessTokenBusiness.setAccesstoken(this.codeGeneratorService.generateValue());

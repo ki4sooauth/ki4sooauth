@@ -1,14 +1,14 @@
 10
 
 dir
-18667
+18901
 http://192.168.3.200/svn/gooagoo/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity/token
 http://192.168.3.200/svn/gooagoo
 
 
 
-2013-11-28T09:03:36.655631Z
-18667
+2013-11-28T09:37:27.919598Z
+18689
 lvhaoran
 
 
@@ -62,7 +62,7 @@ lvhaoran
 
 AccessTokenBusiness.java
 file
-18689
+
 
 
 

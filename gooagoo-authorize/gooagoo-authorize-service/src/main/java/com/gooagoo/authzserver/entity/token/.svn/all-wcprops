@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 128
-/svn/gooagoo/!svn/ver/18667/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity/token
+/svn/gooagoo/!svn/ver/18689/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/entity/token
 END
 RefreshTokenBusiness.java
 K 25

@@ -7,10 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gooagoo.authzserver.OAuthParam;
-import com.gooagoo.authzserver.api.ApplyBusinessService;
+import com.gooagoo.authzserver.api.AuthzBusinessService;
 import com.gooagoo.authzserver.api.CodeGeneratorService;
 import com.gooagoo.authzserver.entity.InterfaceUtils;
 import com.gooagoo.authzserver.entity.IssuerTransData;
+import com.gooagoo.authzserver.entity.business.OpenAppInfoBusiness;
 import com.gooagoo.authzserver.entity.code.AuthorizationBusiness;
 import com.gooagoo.authzserver.service.IAuthIssuerService;
 import com.gooagoo.cache.ExceptionCache;
@@ -27,7 +28,7 @@ public class AuthorizationCodeServiceImpl implements IAuthIssuerService
     @Autowired
     private CodeGeneratorService codeGeneratorService;
     @Autowired
-    private ApplyBusinessService applyBusinessService;
+    private AuthzBusinessService applyBusinessService;
 
     @Override
     public String doIAuthIssuer(HttpServletRequest request) throws Exception
@@ -40,11 +41,13 @@ public class AuthorizationCodeServiceImpl implements IAuthIssuerService
             String redirectUri = parameter.getString(OAuthParam.OAUTH_REDIRECT_URI);
             String responseType = parameter.getString(OAuthParam.OAUTH_RESPONSE_TYPE);
             String scope = parameter.getString(OAuthParam.OAUTH_SCOPE);
-            if (!StringUtils.isBlank(clientId))
+            OpenAppInfoBusiness openAppInfoBusiness = new OpenAppInfoBusiness();
+            openAppInfoBusiness.setAppKey(clientId);
+            if (openAppInfoBusiness != null)
             {
-                if (this.applyBusinessService.getApplyBusiness(clientId) == null)
+                if (this.applyBusinessService.getOpenAppInfoBusiness(openAppInfoBusiness) == null)
                 {
-                    throw new NullException("clientId不能为空");
+                    throw new NullException("openAppInfoBusiness不能为空");
                 }
             }
             if (StringUtils.isBlank(redirectUri))

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/gooagoo/!svn/ver/18845/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/dao
+END
+OauthCodeMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/18801/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/dao/OauthCodeMapper.java
+END
+OpenAppInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/18801/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/dao/OpenAppInfoMapper.java
+END
+OpenUserTokenRelMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/18845/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/dao/OpenUserTokenRelMapper.java
+END

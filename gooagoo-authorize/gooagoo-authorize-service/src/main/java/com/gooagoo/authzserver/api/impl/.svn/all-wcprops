@@ -1,17 +1,23 @@
 K 25
 svn:wc:ra_dav:version-url
 V 124
-/svn/gooagoo/!svn/ver/18667/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api/impl
+/svn/gooagoo/!svn/ver/18866/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api/impl
 END
 UUIDGeneratorServiceImpl.java
 K 25
 svn:wc:ra_dav:version-url
 V 154
-/svn/gooagoo/!svn/ver/18667/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api/impl/UUIDGeneratorServiceImpl.java
+/svn/gooagoo/!svn/ver/18853/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api/impl/UUIDGeneratorServiceImpl.java
 END
-ApplyBusinessServiceImpl.java
+ApiBusinessServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/gooagoo/!svn/ver/18858/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api/impl/ApiBusinessServiceImpl.java
+END
+AuthzBusinessServiceImpl.java
 K 25
 svn:wc:ra_dav:version-url
 V 154
-/svn/gooagoo/!svn/ver/18667/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api/impl/ApplyBusinessServiceImpl.java
+/svn/gooagoo/!svn/ver/18866/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/api/impl/AuthzBusinessServiceImpl.java
 END

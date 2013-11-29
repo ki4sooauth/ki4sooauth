@@ -6,7 +6,7 @@ import com.gooagoo.authzserver.api.CodeGeneratorService;
 import com.gooagoo.common.utils.UUID;
 
 /**
- *根据uuid生成code | accesstoken | refreshtoken
+ *生成code,token 
  */
 @Service
 public class UUIDGeneratorServiceImpl implements CodeGeneratorService

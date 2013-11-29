@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svn/gooagoo/!svn/ver/18093/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources
+/svn/gooagoo/!svn/ver/18843/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources
 END
 app-config.xml
 K 25
 svn:wc:ra_dav:version-url
 V 111
-/svn/gooagoo/!svn/ver/18668/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources/app-config.xml
+/svn/gooagoo/!svn/ver/18924/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources/app-config.xml
 END
 mvc-config.xml
 K 25
@@ -20,4 +20,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 113
 /svn/gooagoo/!svn/ver/18668/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources/log4j.properties
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/gooagoo/!svn/ver/18775/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources/jdbc.properties
 END

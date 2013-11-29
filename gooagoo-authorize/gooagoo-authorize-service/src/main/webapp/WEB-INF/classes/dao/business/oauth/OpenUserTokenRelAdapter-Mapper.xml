@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.authzserver.dao.OpenUserTokenRelMapper">
+	<resultMap id="BaseResultMap"
+		type="com.gooagoo.authzserver.entity.business.OpenUserTokenRelBusiness">
+		<id column="token_id" property="tokenId" jdbcType="CHAR" />
+		<result column="user_id" property="userId" jdbcType="CHAR" />
+		<result column="app_key" property="appKey" jdbcType="CHAR" />
+		<result column="expire_time" property="expireTime" jdbcType="TIMESTAMP" />
+		<result column="update_dt" property="updateDt" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<insert id="addOpenUserTokenRel"
+		parameterType="com.gooagoo.authzserver.entity.business.OpenUserTokenRelBusiness">
+		insert into gooagoo_open.open_user_token_rel
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			token_id,
+			user_id,
+			app_key,
+			expire_time,
+			update_dt
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			#{openUserTokenRelBusiness.tokenId,jdbcType=CHAR},
+			#{openUserTokenRelBusiness.userId,jdbcType=CHAR},
+			#{openUserTokenRelBusiness.appKey,jdbcType=CHAR},
+			#{openUserTokenRelBusiness.expireTime,jdbcType=TIMESTAMP},
+			SYSDATE()
+		</trim>
+	</insert>
+	<select id="getOpenUserTokenRel" resultMap="BaseResultMap">
+		SELECT
+		gooutr.token_id AS token_id,
+		gooutr.user_id AS user_id,
+		gooutr.app_key AS app_key,
+		gooutr.expire_time AS expire_time,
+		gooutr.update_dt AS update_dt
+		FROM
+		gooagoo_open.open_user_token_rel gooutr
+		where
+		1=1
+		AND gooutr.token_id
+		=#{openUserTokenRelBusiness.tokenId}
+		AND
+		SYSDATE() &lt;=
+		#{openUserTokenRelBusiness.expireTime}
+	</select>
+</mapper>

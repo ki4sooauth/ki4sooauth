@@ -1,35 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-          Copyright 2010 Newcastle University
-
-             http://research.ncl.ac.uk/smart/
-
-    Licensed to the Apache Software Foundation (ASF) under one or more
-    contributor license agreements.  See the NOTICE file distributed with
-    this work for additional information regarding copyright ownership.
-    The ASF licenses this file to You under the Apache License, Version 2.0
-    (the "License"); you may not use this file except in compliance with
-    the License.  You may obtain a copy of the License at
-
-         http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
--->
-
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="
-		http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context-3.0.xsd
+      http://www.springframework.org/schema/aop
+      http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+      http://www.springframework.org/schema/tx 
+      http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
-    <!-- Scans within the base package of the application for @Components to configure as beans -->
-    <context:component-scan base-package="com.gooagoo.authzserver"/>
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	<bean class="com.gooagoo.common.monitor.MonitorService">
+		<constructor-arg value="core"></constructor-arg>
+		<constructor-arg value="1.0.2"></constructor-arg>
+	</bean>
+	<bean id="SpringBeanUtils" class="com.gooagoo.common.utils.SpringBeanUtils"></bean>
+	
+	<context:component-scan base-package="com.gooagoo">
+		<context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect" />
+	</context:component-scan>
+	
+	<!-- 启动@AspectJ支持 -->
+	<aop:aspectj-autoproxy />
+	
+	<!--JOTM本地实例 -->
+	<bean id="jotm" class="org.springframework.transaction.jta.JotmFactoryBean" />
+	
+	<!--JTA事务管理器 -->
+	<bean id="txManager"
+		class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="userTransaction" ref="jotm" /><!--指定userTransaction属性引用JOTM本地实例 -->
+	</bean>
 
+	<!--注解事务驱动 -->
+	<tx:annotation-driven transaction-manager="txManager"
+		proxy-target-class="true" />
+	<!-- 配置JMS连接工厂 -->  
+    <bean id="connectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory">  
+        <property name="brokerURL" value="tcp://192.168.6.15:61616"/>  
+    </bean>  
+  
+    <!-- 配置JMS模版 -->  
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">  
+        <property name="connectionFactory" ref="connectionFactory"/>  
+    </bean>  
+  
+    <!-- 发送消息的目的地（一个队列） -->  
+    <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">  
+        <!-- Set the Queue Name -->  
+        <constructor-arg index="0" value="HelloWorldQueue"/>  
+    </bean>
+	<!--配置gooagoo_oauth库 -->
+	<bean id="oauthSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
+		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
+				<property name="driverName" value="${mysql.driver}" />
+				<property name="url" value="${sys.url}" />
+			</bean>
+		</property>
+		<property name="user" value="${sys.username}" />
+		<property name="password" value="${sys.password}" />
+	</bean>
+	<bean id="sysSqlSessionFactory"
+		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="sysSource" />
+		<property name="configLocations">
+			<list>
+				<value>classpath*:dao/mybatis-oauth-adapter.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean name="sysMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.authzserver.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sysSqlSessionFactory" />
+	</bean>
 </beans>
