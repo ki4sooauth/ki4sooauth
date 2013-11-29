@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/gooagoo/!svn/ver/18575/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/goods/manage
+END
+TestGoodsFeatureCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/gooagoo/!svn/ver/5502/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/goods/manage/TestGoodsFeatureCoreService.java
+END
+TestGoodsCategoryCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/gooagoo/!svn/ver/16507/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/goods/manage/TestGoodsCategoryCoreService.java
+END
+TestGoodsCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/gooagoo/!svn/ver/18575/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/goods/manage/TestGoodsCoreService.java
+END
+TestGoodsBrandCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/gooagoo/!svn/ver/5489/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/goods/manage/TestGoodsBrandCoreService.java
+END

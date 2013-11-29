@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member
+END
+MemberBaseInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/MemberBaseInfo-Mapper.xml
+END
+MemberFeatureInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/MemberFeatureInfo-Mapper.xml
+END
+IntegralInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/IntegralInfo-Mapper.xml
+END
+MemberCard-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/MemberCard-Mapper.xml
+END
+MemberFeature-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/MemberFeature-Mapper.xml
+END
+IntegralDetailInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/IntegralDetailInfo-Mapper.xml
+END
+ConvertApply-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/ConvertApply-Mapper.xml
+END
+MemberOfCard-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/MemberOfCard-Mapper.xml
+END
+CardUpInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/CardUpInfo-Mapper.xml
+END
+MemberApply-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/member/MemberApply-Mapper.xml
+END

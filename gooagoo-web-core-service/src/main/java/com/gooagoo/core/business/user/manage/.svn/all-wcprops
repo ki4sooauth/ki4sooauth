@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/gooagoo/!svn/ver/18330/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/user/manage
+END
+UserRegisterCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/gooagoo/!svn/ver/16298/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/user/manage/UserRegisterCoreServiceImpl.java
+END
+UserActiveCodeCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/gooagoo/!svn/ver/14315/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/user/manage/UserActiveCodeCoreServiceImpl.java
+END
+UserLoginCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/gooagoo/!svn/ver/18330/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/user/manage/UserLoginCoreServiceImpl.java
+END
+UserCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/8405/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/user/manage/UserCoreServiceImpl.java
+END
+UserPasswordCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/gooagoo/!svn/ver/13643/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/user/manage/UserPasswordCoreServiceImpl.java
+END

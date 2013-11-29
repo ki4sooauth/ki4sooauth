@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.behave.UserCommentMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.behave.UserComment" >
+    <id column="comment_id" property="commentId" jdbcType="CHAR" />
+    <result column="user_id" property="userId" jdbcType="CHAR" />
+    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="goods_id" property="goodsId" jdbcType="CHAR" />
+    <result column="comment_type" property="commentType" jdbcType="CHAR" />
+    <result column="comment_level" property="commentLevel" jdbcType="INTEGER" />
+    <result column="content" property="content" jdbcType="CHAR" />
+    <result column="source" property="source" jdbcType="CHAR" />
+    <result column="come_ip" property="comeIp" jdbcType="CHAR" />
+    <result column="is_auditing" property="isAuditing" jdbcType="CHAR" />
+    <result column="audit_note" property="auditNote" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      comment_id, user_id, shop_id, 
+      goods_id, comment_type, comment_level, 
+      content, source, come_ip, 
+      is_auditing, audit_note, is_del, 
+      create_time, c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.behave.UserCommentExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from user_comment
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.behave.UserCommentExample" resultType="java.lang.Integer">
+    select count(*) from user_comment
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.behave.UserCommentKey" >
+    select 
+      comment_id, user_id, shop_id, 
+      goods_id, comment_type, comment_level, 
+      content, source, come_ip, 
+      is_auditing, audit_note, is_del, 
+      create_time, c_time_stamp
+    from user_comment where comment_id = #{commentId,jdbcType=CHAR}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.behave.UserCommentExample">
+    delete from user_comment
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.behave.UserCommentKey" >
+    delete from user_comment where comment_id = #{commentId,jdbcType=CHAR}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.behave.UserComment" >
+    insert into user_comment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "commentId != null">
+         comment_id,
+      </if>
+      <if test= "userId != null">
+         user_id,
+      </if>
+      <if test= "shopId != null">
+         shop_id,
+      </if>
+      <if test= "goodsId != null">
+         goods_id,
+      </if>
+      <if test= "commentType != null">
+         comment_type,
+      </if>
+      <if test= "commentLevel != null">
+         comment_level,
+      </if>
+      <if test= "content != null">
+         content,
+      </if>
+      <if test= "source != null">
+         source,
+      </if>
+      <if test= "comeIp != null">
+         come_ip,
+      </if>
+      <if test= "isAuditing != null">
+         is_auditing,
+      </if>
+      <if test= "auditNote != null">
+         audit_note,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp,
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "commentId != null">
+         #{commentId,jdbcType=CHAR},
+      </if>
+      <if test= "userId != null">
+         #{userId,jdbcType=CHAR},
+      </if>
+      <if test= "shopId != null">
+         #{shopId,jdbcType=CHAR},
+      </if>
+      <if test= "goodsId != null">
+         #{goodsId,jdbcType=CHAR},
+      </if>
+      <if test= "commentType != null">
+         #{commentType,jdbcType=CHAR},
+      </if>
+      <if test= "commentLevel != null">
+         #{commentLevel,jdbcType=INTEGER},
+      </if>
+      <if test= "content != null">
+         #{content,jdbcType=CHAR},
+      </if>
+      <if test= "source != null">
+         #{source,jdbcType=CHAR},
+      </if>
+      <if test= "comeIp != null">
+         #{comeIp,jdbcType=CHAR},
+      </if>
+      <if test= "isAuditing != null">
+         #{isAuditing,jdbcType=CHAR},
+      </if>
+      <if test= "auditNote != null">
+         #{auditNote,jdbcType=CHAR},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update user_comment
+    <set>
+        comment_id = #{record.commentId,jdbcType=CHAR},
+        user_id = #{record.userId,jdbcType=CHAR},
+        shop_id = #{record.shopId,jdbcType=CHAR},
+        goods_id = #{record.goodsId,jdbcType=CHAR},
+        comment_type = #{record.commentType,jdbcType=CHAR},
+        comment_level = #{record.commentLevel,jdbcType=INTEGER},
+        content = #{record.content,jdbcType=CHAR},
+        source = #{record.source,jdbcType=CHAR},
+        come_ip = #{record.comeIp,jdbcType=CHAR},
+        is_auditing = #{record.isAuditing,jdbcType=CHAR},
+        audit_note = #{record.auditNote,jdbcType=CHAR},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update user_comment
+    <set>
+      <if test="record.commentId !=null">
+        comment_id = #{record.commentId,jdbcType=CHAR},
+      </if>
+      <if test="record.userId !=null">
+        user_id = #{record.userId,jdbcType=CHAR},
+      </if>
+      <if test="record.shopId !=null">
+        shop_id = #{record.shopId,jdbcType=CHAR},
+      </if>
+      <if test="record.goodsId !=null">
+        goods_id = #{record.goodsId,jdbcType=CHAR},
+      </if>
+      <if test="record.commentType !=null">
+        comment_type = #{record.commentType,jdbcType=CHAR},
+      </if>
+      <if test="record.commentLevel !=null">
+        comment_level = #{record.commentLevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.content !=null">
+        content = #{record.content,jdbcType=CHAR},
+      </if>
+      <if test="record.source !=null">
+        source = #{record.source,jdbcType=CHAR},
+      </if>
+      <if test="record.comeIp !=null">
+        come_ip = #{record.comeIp,jdbcType=CHAR},
+      </if>
+      <if test="record.isAuditing !=null">
+        is_auditing = #{record.isAuditing,jdbcType=CHAR},
+      </if>
+      <if test="record.auditNote !=null">
+        audit_note = #{record.auditNote,jdbcType=CHAR},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.behave.UserComment" >
+    update user_comment
+    <set>
+      <if test="commentId !=null">
+      comment_id = #{commentId,jdbcType=CHAR},
+      </if>
+      <if test="userId !=null">
+      user_id = #{userId,jdbcType=CHAR},
+      </if>
+      <if test="shopId !=null">
+      shop_id = #{shopId,jdbcType=CHAR},
+      </if>
+      <if test="goodsId !=null">
+      goods_id = #{goodsId,jdbcType=CHAR},
+      </if>
+      <if test="commentType !=null">
+      comment_type = #{commentType,jdbcType=CHAR},
+      </if>
+      <if test="commentLevel !=null">
+      comment_level = #{commentLevel,jdbcType=INTEGER},
+      </if>
+      <if test="content !=null">
+      content = #{content,jdbcType=CHAR},
+      </if>
+      <if test="source !=null">
+      source = #{source,jdbcType=CHAR},
+      </if>
+      <if test="comeIp !=null">
+      come_ip = #{comeIp,jdbcType=CHAR},
+      </if>
+      <if test="isAuditing !=null">
+      is_auditing = #{isAuditing,jdbcType=CHAR},
+      </if>
+      <if test="auditNote !=null">
+      audit_note = #{auditNote,jdbcType=CHAR},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where comment_id = #{commentId,jdbcType=CHAR}
+  </update>
+
+</mapper>

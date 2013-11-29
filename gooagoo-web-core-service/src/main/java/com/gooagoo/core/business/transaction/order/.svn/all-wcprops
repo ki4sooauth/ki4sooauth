@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/gooagoo/!svn/ver/18440/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order
+END
+ShopOrderCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/gooagoo/!svn/ver/18274/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order/ShopOrderCoreServiceImpl.java
+END
+UserOrderCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/gooagoo/!svn/ver/18440/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order/UserOrderCoreServiceImpl.java
+END
+OrderCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/gooagoo/!svn/ver/16276/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order/OrderCoreServiceImpl.java
+END
+ServeFoodCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/gooagoo/!svn/ver/16274/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order/ServeFoodCoreServiceImpl.java
+END
+ShopBillCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/gooagoo/!svn/ver/18273/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order/ShopBillCoreServiceImpl.java
+END
+ChangeFoodCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/gooagoo/!svn/ver/14876/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order/ChangeFoodCoreServiceImpl.java
+END
+ChangeTableCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/gooagoo/!svn/ver/16275/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order/ChangeTableCoreServiceImpl.java
+END
+BillManualCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/gooagoo/!svn/ver/2486/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order/BillManualCoreServiceImpl.java
+END
+ShoppingCartCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/gooagoo/!svn/ver/18158/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/transaction/order/ShoppingCartCoreServiceImpl.java
+END

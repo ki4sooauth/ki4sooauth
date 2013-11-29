@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/13406/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/shop/table
+END
+TestTableCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/gooagoo/!svn/ver/6406/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/shop/table/TestTableCoreService.java
+END
+TestTableTypeCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/gooagoo/!svn/ver/6409/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/shop/table/TestTableTypeCoreService.java
+END
+TestTableStatusCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/gooagoo/!svn/ver/13406/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/shop/table/TestTableStatusCoreService.java
+END

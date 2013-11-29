@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.base.UserCityareaMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.base.UserCityarea" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="city_id" property="cityId" jdbcType="CHAR" />
+    <result column="city_name" property="cityName" jdbcType="CHAR" />
+    <result column="parent_city_id" property="parentCityId" jdbcType="CHAR" />
+    <result column="parent_city_name" property="parentCityName" jdbcType="CHAR" />
+    <result column="level_code" property="levelCode" jdbcType="CHAR" />
+    <result column="sort_order" property="sortOrder" jdbcType="INTEGER" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      id, city_id, city_name, 
+      parent_city_id, parent_city_name, level_code, 
+      sort_order, is_del, create_time, 
+      c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.base.UserCityareaExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from user_cityarea
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.base.UserCityareaExample" resultType="java.lang.Integer">
+    select count(*) from user_cityarea
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.base.UserCityareaKey" >
+    select 
+      id, city_id, city_name, 
+      parent_city_id, parent_city_name, level_code, 
+      sort_order, is_del, create_time, 
+      c_time_stamp
+    from user_cityarea where id = #{id,jdbcType=INTEGER}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.base.UserCityareaExample">
+    delete from user_cityarea
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.base.UserCityareaKey" >
+    delete from user_cityarea where id = #{id,jdbcType=INTEGER}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.base.UserCityarea" >
+    insert into user_cityarea
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "id != null">
+         id,
+      </if>
+      <if test= "cityId != null">
+         city_id,
+      </if>
+      <if test= "cityName != null">
+         city_name,
+      </if>
+      <if test= "parentCityId != null">
+         parent_city_id,
+      </if>
+      <if test= "parentCityName != null">
+         parent_city_name,
+      </if>
+      <if test= "levelCode != null">
+         level_code,
+      </if>
+      <if test= "sortOrder != null">
+         sort_order,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp,
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "id != null">
+         #{id,jdbcType=INTEGER},
+      </if>
+      <if test= "cityId != null">
+         #{cityId,jdbcType=CHAR},
+      </if>
+      <if test= "cityName != null">
+         #{cityName,jdbcType=CHAR},
+      </if>
+      <if test= "parentCityId != null">
+         #{parentCityId,jdbcType=CHAR},
+      </if>
+      <if test= "parentCityName != null">
+         #{parentCityName,jdbcType=CHAR},
+      </if>
+      <if test= "levelCode != null">
+         #{levelCode,jdbcType=CHAR},
+      </if>
+      <if test= "sortOrder != null">
+         #{sortOrder,jdbcType=INTEGER},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update user_cityarea
+    <set>
+        id = #{record.id,jdbcType=INTEGER},
+        city_id = #{record.cityId,jdbcType=CHAR},
+        city_name = #{record.cityName,jdbcType=CHAR},
+        parent_city_id = #{record.parentCityId,jdbcType=CHAR},
+        parent_city_name = #{record.parentCityName,jdbcType=CHAR},
+        level_code = #{record.levelCode,jdbcType=CHAR},
+        sort_order = #{record.sortOrder,jdbcType=INTEGER},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update user_cityarea
+    <set>
+      <if test="record.id !=null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.cityId !=null">
+        city_id = #{record.cityId,jdbcType=CHAR},
+      </if>
+      <if test="record.cityName !=null">
+        city_name = #{record.cityName,jdbcType=CHAR},
+      </if>
+      <if test="record.parentCityId !=null">
+        parent_city_id = #{record.parentCityId,jdbcType=CHAR},
+      </if>
+      <if test="record.parentCityName !=null">
+        parent_city_name = #{record.parentCityName,jdbcType=CHAR},
+      </if>
+      <if test="record.levelCode !=null">
+        level_code = #{record.levelCode,jdbcType=CHAR},
+      </if>
+      <if test="record.sortOrder !=null">
+        sort_order = #{record.sortOrder,jdbcType=INTEGER},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.base.UserCityarea" >
+    update user_cityarea
+    <set>
+      <if test="id !=null">
+      id = #{id,jdbcType=INTEGER},
+      </if>
+      <if test="cityId !=null">
+      city_id = #{cityId,jdbcType=CHAR},
+      </if>
+      <if test="cityName !=null">
+      city_name = #{cityName,jdbcType=CHAR},
+      </if>
+      <if test="parentCityId !=null">
+      parent_city_id = #{parentCityId,jdbcType=CHAR},
+      </if>
+      <if test="parentCityName !=null">
+      parent_city_name = #{parentCityName,jdbcType=CHAR},
+      </if>
+      <if test="levelCode !=null">
+      level_code = #{levelCode,jdbcType=CHAR},
+      </if>
+      <if test="sortOrder !=null">
+      sort_order = #{sortOrder,jdbcType=INTEGER},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

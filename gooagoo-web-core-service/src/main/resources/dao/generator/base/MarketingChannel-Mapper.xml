@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.base.MarketingChannelMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.base.MarketingChannel" >
+    <id column="channel_code" property="channelCode" jdbcType="INTEGER" />
+    <result column="channel_name" property="channelName" jdbcType="CHAR" />
+    <result column="parent_channel_code" property="parentChannelCode" jdbcType="INTEGER" />
+    <result column="sort_order" property="sortOrder" jdbcType="INTEGER" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      channel_code, channel_name, parent_channel_code, 
+      sort_order, is_del, create_time, 
+      c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.base.MarketingChannelExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from marketing_channel
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.base.MarketingChannelExample" resultType="java.lang.Integer">
+    select count(*) from marketing_channel
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.base.MarketingChannelKey" >
+    select 
+      channel_code, channel_name, parent_channel_code, 
+      sort_order, is_del, create_time, 
+      c_time_stamp
+    from marketing_channel where channel_code = #{channelCode,jdbcType=INTEGER}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.base.MarketingChannelExample">
+    delete from marketing_channel
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.base.MarketingChannelKey" >
+    delete from marketing_channel where channel_code = #{channelCode,jdbcType=INTEGER}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.base.MarketingChannel" >
+    insert into marketing_channel
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "channelCode != null">
+         channel_code,
+      </if>
+      <if test= "channelName != null">
+         channel_name,
+      </if>
+      <if test= "parentChannelCode != null">
+         parent_channel_code,
+      </if>
+      <if test= "sortOrder != null">
+         sort_order,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp,
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "channelCode != null">
+         #{channelCode,jdbcType=INTEGER},
+      </if>
+      <if test= "channelName != null">
+         #{channelName,jdbcType=CHAR},
+      </if>
+      <if test= "parentChannelCode != null">
+         #{parentChannelCode,jdbcType=INTEGER},
+      </if>
+      <if test= "sortOrder != null">
+         #{sortOrder,jdbcType=INTEGER},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update marketing_channel
+    <set>
+        channel_code = #{record.channelCode,jdbcType=INTEGER},
+        channel_name = #{record.channelName,jdbcType=CHAR},
+        parent_channel_code = #{record.parentChannelCode,jdbcType=INTEGER},
+        sort_order = #{record.sortOrder,jdbcType=INTEGER},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update marketing_channel
+    <set>
+      <if test="record.channelCode !=null">
+        channel_code = #{record.channelCode,jdbcType=INTEGER},
+      </if>
+      <if test="record.channelName !=null">
+        channel_name = #{record.channelName,jdbcType=CHAR},
+      </if>
+      <if test="record.parentChannelCode !=null">
+        parent_channel_code = #{record.parentChannelCode,jdbcType=INTEGER},
+      </if>
+      <if test="record.sortOrder !=null">
+        sort_order = #{record.sortOrder,jdbcType=INTEGER},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.base.MarketingChannel" >
+    update marketing_channel
+    <set>
+      <if test="channelCode !=null">
+      channel_code = #{channelCode,jdbcType=INTEGER},
+      </if>
+      <if test="channelName !=null">
+      channel_name = #{channelName,jdbcType=CHAR},
+      </if>
+      <if test="parentChannelCode !=null">
+      parent_channel_code = #{parentChannelCode,jdbcType=INTEGER},
+      </if>
+      <if test="sortOrder !=null">
+      sort_order = #{sortOrder,jdbcType=INTEGER},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where channel_code = #{channelCode,jdbcType=INTEGER}
+  </update>
+
+</mapper>

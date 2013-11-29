@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/behave
+END
+ShoppingPlanGoods-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/behave/ShoppingPlanGoods-Mapper.xml
+END
+UserStoreQueue-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/behave/UserStoreQueue-Mapper.xml
+END
+UserComment-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/behave/UserComment-Mapper.xml
+END
+UserLastTime-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/behave/UserLastTime-Mapper.xml
+END
+UserShoppingPlan-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/behave/UserShoppingPlan-Mapper.xml
+END
+UserFeedback-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/behave/UserFeedback-Mapper.xml
+END
+FavoriteInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/behave/FavoriteInfo-Mapper.xml
+END

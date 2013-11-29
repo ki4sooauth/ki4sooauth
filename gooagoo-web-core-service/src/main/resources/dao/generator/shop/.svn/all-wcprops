@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop
+END
+ShopPosition-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopPosition-Mapper.xml
+END
+ShopGpsInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopGpsInfo-Mapper.xml
+END
+ShopInvoiceInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopInvoiceInfo-Mapper.xml
+END
+ShopToolList-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopToolList-Mapper.xml
+END
+ShopWifiinfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopWifiinfo-Mapper.xml
+END
+ShopRoleAuthority-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopRoleAuthority-Mapper.xml
+END
+ServiceToolSort-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ServiceToolSort-Mapper.xml
+END
+DeviceWifisensor-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/DeviceWifisensor-Mapper.xml
+END
+ShopEmailactiveCode-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopEmailactiveCode-Mapper.xml
+END
+ShopUserRole2-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopUserRole2-Mapper.xml
+END
+AreaPara-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/AreaPara-Mapper.xml
+END
+ShopRole2-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopRole2-Mapper.xml
+END
+ShopLidInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopLidInfo-Mapper.xml
+END
+DeviceTransponder-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/DeviceTransponder-Mapper.xml
+END
+ShopAuthority-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopAuthority-Mapper.xml
+END
+ShopEntityInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopEntityInfo-Mapper.xml
+END
+ShopEntityLink-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopEntityLink-Mapper.xml
+END
+GeneratrixInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/GeneratrixInfo-Mapper.xml
+END
+ShopUserInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopUserInfo-Mapper.xml
+END
+ShopLidDetail-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopLidDetail-Mapper.xml
+END
+ShopInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopInfo-Mapper.xml
+END
+ShopRoleAuthority2-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopRoleAuthority2-Mapper.xml
+END
+SectionLineInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/SectionLineInfo-Mapper.xml
+END
+DeviceAssistant-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/DeviceAssistant-Mapper.xml
+END
+ShopUserRole-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopUserRole-Mapper.xml
+END
+ShopRole-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopRole-Mapper.xml
+END
+ShopTableTypeManage-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopTableTypeManage-Mapper.xml
+END
+ShopTableInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/shop/ShopTableInfo-Mapper.xml
+END

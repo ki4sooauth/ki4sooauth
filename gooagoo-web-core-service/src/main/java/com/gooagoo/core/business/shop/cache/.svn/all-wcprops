@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gooagoo/!svn/ver/17302/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/shop/cache
+END
+ShopEntityCacheCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/gooagoo/!svn/ver/17302/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/shop/cache/ShopEntityCacheCoreServiceImpl.java
+END
+TableCacheCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/gooagoo/!svn/ver/16269/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/shop/cache/TableCacheCoreServiceImpl.java
+END
+ShopCacheCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/gooagoo/!svn/ver/16365/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/shop/cache/ShopCacheCoreServiceImpl.java
+END
+ShopPositionCacheCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/gooagoo/!svn/ver/16360/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/shop/cache/ShopPositionCacheCoreServiceImpl.java
+END

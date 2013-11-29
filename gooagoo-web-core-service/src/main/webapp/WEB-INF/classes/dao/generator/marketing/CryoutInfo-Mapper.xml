@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.marketing.CryoutInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.marketing.CryoutInfo" >
+    <id column="cryout_info_id" property="cryoutInfoId" jdbcType="CHAR" />
+    <result column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="activity_id" property="activityId" jdbcType="CHAR" />
+    <result column="cryout_title" property="cryoutTitle" jdbcType="CHAR" />
+    <result column="cryout_type" property="cryoutType" jdbcType="CHAR" />
+    <result column="marketing_link_type" property="marketingLinkType" jdbcType="CHAR" />
+    <result column="marketing_link_id" property="marketingLinkId" jdbcType="CHAR" />
+    <result column="cryout_text_mobile" property="cryoutTextMobile" jdbcType="VARCHAR" />
+    <result column="cryout_text_web" property="cryoutTextWeb" jdbcType="VARCHAR" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+    <result column="publish_status" property="publishStatus" jdbcType="CHAR" />
+    <result column="audit_note" property="auditNote" jdbcType="CHAR" />
+    <result column="rule_id" property="ruleId" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      cryout_info_id, shop_id, activity_id, 
+      cryout_title, cryout_type, marketing_link_type, 
+      marketing_link_id, cryout_text_mobile, cryout_text_web, 
+      img, publish_status, audit_note, 
+      rule_id, is_del, create_time, 
+      c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfoExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from cryout_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfoExample" resultType="java.lang.Integer">
+    select count(*) from cryout_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfoKey" >
+    select 
+      cryout_info_id, shop_id, activity_id, 
+      cryout_title, cryout_type, marketing_link_type, 
+      marketing_link_id, cryout_text_mobile, cryout_text_web, 
+      img, publish_status, audit_note, 
+      rule_id, is_del, create_time, 
+      c_time_stamp
+    from cryout_info where cryout_info_id = #{cryoutInfoId,jdbcType=CHAR}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfoExample">
+    delete from cryout_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfoKey" >
+    delete from cryout_info where cryout_info_id = #{cryoutInfoId,jdbcType=CHAR}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfo" >
+    insert into cryout_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "cryoutInfoId != null">
+         cryout_info_id,
+      </if>
+      <if test= "shopId != null">
+         shop_id,
+      </if>
+      <if test= "activityId != null">
+         activity_id,
+      </if>
+      <if test= "cryoutTitle != null">
+         cryout_title,
+      </if>
+      <if test= "cryoutType != null">
+         cryout_type,
+      </if>
+      <if test= "marketingLinkType != null">
+         marketing_link_type,
+      </if>
+      <if test= "marketingLinkId != null">
+         marketing_link_id,
+      </if>
+      <if test= "cryoutTextMobile != null">
+         cryout_text_mobile,
+      </if>
+      <if test= "cryoutTextWeb != null">
+         cryout_text_web,
+      </if>
+      <if test= "img != null">
+         img,
+      </if>
+      <if test= "publishStatus != null">
+         publish_status,
+      </if>
+      <if test= "auditNote != null">
+         audit_note,
+      </if>
+      <if test= "ruleId != null">
+         rule_id,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp,
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "cryoutInfoId != null">
+         #{cryoutInfoId,jdbcType=CHAR},
+      </if>
+      <if test= "shopId != null">
+         #{shopId,jdbcType=CHAR},
+      </if>
+      <if test= "activityId != null">
+         #{activityId,jdbcType=CHAR},
+      </if>
+      <if test= "cryoutTitle != null">
+         #{cryoutTitle,jdbcType=CHAR},
+      </if>
+      <if test= "cryoutType != null">
+         #{cryoutType,jdbcType=CHAR},
+      </if>
+      <if test= "marketingLinkType != null">
+         #{marketingLinkType,jdbcType=CHAR},
+      </if>
+      <if test= "marketingLinkId != null">
+         #{marketingLinkId,jdbcType=CHAR},
+      </if>
+      <if test= "cryoutTextMobile != null">
+         #{cryoutTextMobile,jdbcType=VARCHAR},
+      </if>
+      <if test= "cryoutTextWeb != null">
+         #{cryoutTextWeb,jdbcType=VARCHAR},
+      </if>
+      <if test= "img != null">
+         #{img,jdbcType=VARCHAR},
+      </if>
+      <if test= "publishStatus != null">
+         #{publishStatus,jdbcType=CHAR},
+      </if>
+      <if test= "auditNote != null">
+         #{auditNote,jdbcType=CHAR},
+      </if>
+      <if test= "ruleId != null">
+         #{ruleId,jdbcType=CHAR},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update cryout_info
+    <set>
+        cryout_info_id = #{record.cryoutInfoId,jdbcType=CHAR},
+        shop_id = #{record.shopId,jdbcType=CHAR},
+        activity_id = #{record.activityId,jdbcType=CHAR},
+        cryout_title = #{record.cryoutTitle,jdbcType=CHAR},
+        cryout_type = #{record.cryoutType,jdbcType=CHAR},
+        marketing_link_type = #{record.marketingLinkType,jdbcType=CHAR},
+        marketing_link_id = #{record.marketingLinkId,jdbcType=CHAR},
+        cryout_text_mobile = #{record.cryoutTextMobile,jdbcType=VARCHAR},
+        cryout_text_web = #{record.cryoutTextWeb,jdbcType=VARCHAR},
+        img = #{record.img,jdbcType=VARCHAR},
+        publish_status = #{record.publishStatus,jdbcType=CHAR},
+        audit_note = #{record.auditNote,jdbcType=CHAR},
+        rule_id = #{record.ruleId,jdbcType=CHAR},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update cryout_info
+    <set>
+      <if test="record.cryoutInfoId !=null">
+        cryout_info_id = #{record.cryoutInfoId,jdbcType=CHAR},
+      </if>
+      <if test="record.shopId !=null">
+        shop_id = #{record.shopId,jdbcType=CHAR},
+      </if>
+      <if test="record.activityId !=null">
+        activity_id = #{record.activityId,jdbcType=CHAR},
+      </if>
+      <if test="record.cryoutTitle !=null">
+        cryout_title = #{record.cryoutTitle,jdbcType=CHAR},
+      </if>
+      <if test="record.cryoutType !=null">
+        cryout_type = #{record.cryoutType,jdbcType=CHAR},
+      </if>
+      <if test="record.marketingLinkType !=null">
+        marketing_link_type = #{record.marketingLinkType,jdbcType=CHAR},
+      </if>
+      <if test="record.marketingLinkId !=null">
+        marketing_link_id = #{record.marketingLinkId,jdbcType=CHAR},
+      </if>
+      <if test="record.cryoutTextMobile !=null">
+        cryout_text_mobile = #{record.cryoutTextMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cryoutTextWeb !=null">
+        cryout_text_web = #{record.cryoutTextWeb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.img !=null">
+        img = #{record.img,jdbcType=VARCHAR},
+      </if>
+      <if test="record.publishStatus !=null">
+        publish_status = #{record.publishStatus,jdbcType=CHAR},
+      </if>
+      <if test="record.auditNote !=null">
+        audit_note = #{record.auditNote,jdbcType=CHAR},
+      </if>
+      <if test="record.ruleId !=null">
+        rule_id = #{record.ruleId,jdbcType=CHAR},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.marketing.CryoutInfo" >
+    update cryout_info
+    <set>
+      <if test="cryoutInfoId !=null">
+      cryout_info_id = #{cryoutInfoId,jdbcType=CHAR},
+      </if>
+      <if test="shopId !=null">
+      shop_id = #{shopId,jdbcType=CHAR},
+      </if>
+      <if test="activityId !=null">
+      activity_id = #{activityId,jdbcType=CHAR},
+      </if>
+      <if test="cryoutTitle !=null">
+      cryout_title = #{cryoutTitle,jdbcType=CHAR},
+      </if>
+      <if test="cryoutType !=null">
+      cryout_type = #{cryoutType,jdbcType=CHAR},
+      </if>
+      <if test="marketingLinkType !=null">
+      marketing_link_type = #{marketingLinkType,jdbcType=CHAR},
+      </if>
+      <if test="marketingLinkId !=null">
+      marketing_link_id = #{marketingLinkId,jdbcType=CHAR},
+      </if>
+      <if test="cryoutTextMobile !=null">
+      cryout_text_mobile = #{cryoutTextMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="cryoutTextWeb !=null">
+      cryout_text_web = #{cryoutTextWeb,jdbcType=VARCHAR},
+      </if>
+      <if test="img !=null">
+      img = #{img,jdbcType=VARCHAR},
+      </if>
+      <if test="publishStatus !=null">
+      publish_status = #{publishStatus,jdbcType=CHAR},
+      </if>
+      <if test="auditNote !=null">
+      audit_note = #{auditNote,jdbcType=CHAR},
+      </if>
+      <if test="ruleId !=null">
+      rule_id = #{ruleId,jdbcType=CHAR},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where cryout_info_id = #{cryoutInfoId,jdbcType=CHAR}
+  </update>
+
+</mapper>

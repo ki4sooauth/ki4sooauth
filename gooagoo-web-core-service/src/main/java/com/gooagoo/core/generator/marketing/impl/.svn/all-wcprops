@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/gooagoo/!svn/ver/16307/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl
+END
+MarketingViewGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/MarketingViewGeneratorCoreServiceImpl.java
+END
+MarketingItemLinkGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/MarketingItemLinkGeneratorCoreServiceImpl.java
+END
+MarketingEventGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/MarketingEventGeneratorCoreServiceImpl.java
+END
+RuleInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/RuleInfoGeneratorCoreServiceImpl.java
+END
+MarketingQualityGoodsGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/MarketingQualityGoodsGeneratorCoreServiceImpl.java
+END
+NoticeInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/NoticeInfoGeneratorCoreServiceImpl.java
+END
+RuleConfigGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/RuleConfigGeneratorCoreServiceImpl.java
+END
+MarketingActivityGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/MarketingActivityGeneratorCoreServiceImpl.java
+END
+MarketingUserLinkGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/MarketingUserLinkGeneratorCoreServiceImpl.java
+END
+ShopIntegralGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/ShopIntegralGeneratorCoreServiceImpl.java
+END
+ShopIntegralConvertGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/ShopIntegralConvertGeneratorCoreServiceImpl.java
+END
+CryoutInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/CryoutInfoGeneratorCoreServiceImpl.java
+END
+CouponGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/gooagoo/!svn/ver/16307/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/CouponGeneratorCoreServiceImpl.java
+END
+ShortMessageGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/ShortMessageGeneratorCoreServiceImpl.java
+END
+RuleResultGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/RuleResultGeneratorCoreServiceImpl.java
+END
+CouponGrantInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svn/gooagoo/!svn/ver/11300/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/marketing/impl/CouponGrantInfoGeneratorCoreServiceImpl.java
+END

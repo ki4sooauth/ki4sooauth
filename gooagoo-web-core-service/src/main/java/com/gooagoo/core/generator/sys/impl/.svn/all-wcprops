@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/gooagoo/!svn/ver/15512/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl
+END
+MobileVersionGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/gooagoo/!svn/ver/13645/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/MobileVersionGeneratorCoreServiceImpl.java
+END
+CmsContentGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/gooagoo/!svn/ver/7110/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/CmsContentGeneratorCoreServiceImpl.java
+END
+ShopAdGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/gooagoo/!svn/ver/7110/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/ShopAdGeneratorCoreServiceImpl.java
+END
+AdsManageGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/gooagoo/!svn/ver/7189/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/AdsManageGeneratorCoreServiceImpl.java
+END
+InterfaceRequestInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/gooagoo/!svn/ver/5103/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/InterfaceRequestInfoGeneratorCoreServiceImpl.java
+END
+SysAuthorityGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/SysAuthorityGeneratorCoreServiceImpl.java
+END
+NominateActivityGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/NominateActivityGeneratorCoreServiceImpl.java
+END
+TemplateInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/gooagoo/!svn/ver/7853/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/TemplateInfoGeneratorCoreServiceImpl.java
+END
+ShopBidGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/gooagoo/!svn/ver/7110/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/ShopBidGeneratorCoreServiceImpl.java
+END
+PlatformRegionGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/gooagoo/!svn/ver/15512/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/PlatformRegionGeneratorCoreServiceImpl.java
+END
+TradeAreaGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/gooagoo/!svn/ver/15512/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/TradeAreaGeneratorCoreServiceImpl.java
+END
+SysUserInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/SysUserInfoGeneratorCoreServiceImpl.java
+END
+NominateCouponGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/NominateCouponGeneratorCoreServiceImpl.java
+END
+SysUserRoleGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/SysUserRoleGeneratorCoreServiceImpl.java
+END
+SysRoleGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/SysRoleGeneratorCoreServiceImpl.java
+END
+NominateShopGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/NominateShopGeneratorCoreServiceImpl.java
+END
+ShopInterfaceInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/ShopInterfaceInfoGeneratorCoreServiceImpl.java
+END
+NominateGoodsGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/NominateGoodsGeneratorCoreServiceImpl.java
+END
+InterfaceBaseInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/InterfaceBaseInfoGeneratorCoreServiceImpl.java
+END
+SysRoleAuthorityGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/sys/impl/SysRoleAuthorityGeneratorCoreServiceImpl.java
+END

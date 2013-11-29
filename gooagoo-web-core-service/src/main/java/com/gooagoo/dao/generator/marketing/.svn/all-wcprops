@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing
+END
+NoticeInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/NoticeInfoMapper.java
+END
+RuleConfigMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/RuleConfigMapper.java
+END
+MarketingActivityMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/MarketingActivityMapper.java
+END
+MarketingUserLinkMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/MarketingUserLinkMapper.java
+END
+ShopIntegralMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/ShopIntegralMapper.java
+END
+ShopIntegralConvertMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/ShopIntegralConvertMapper.java
+END
+CryoutInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/CryoutInfoMapper.java
+END
+CouponMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/CouponMapper.java
+END
+ShortMessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/ShortMessageMapper.java
+END
+RuleResultMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/RuleResultMapper.java
+END
+CouponGrantInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/CouponGrantInfoMapper.java
+END
+MarketingViewMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/MarketingViewMapper.java
+END
+MarketingItemLinkMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/MarketingItemLinkMapper.java
+END
+MarketingEventMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/MarketingEventMapper.java
+END
+RuleInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/RuleInfoMapper.java
+END
+MarketingQualityGoodsMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/marketing/MarketingQualityGoodsMapper.java
+END

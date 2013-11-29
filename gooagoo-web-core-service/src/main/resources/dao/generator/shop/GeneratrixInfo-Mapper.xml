@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.shop.GeneratrixInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.shop.GeneratrixInfo" >
+    <id column="generatrix_id" property="generatrixId" jdbcType="CHAR" />
+    <result column="map_id" property="mapId" jdbcType="CHAR" />
+    <result column="generatrix_type" property="generatrixType" jdbcType="CHAR" />
+    <result column="svg_tag_id" property="svgTagId" jdbcType="CHAR" />
+    <result column="svg_tag_code" property="svgTagCode" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      generatrix_id, map_id, generatrix_type, 
+      svg_tag_id, svg_tag_code, create_time
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.shop.GeneratrixInfoExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from generatrix_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.shop.GeneratrixInfoExample" resultType="java.lang.Integer">
+    select count(*) from generatrix_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.shop.GeneratrixInfoKey" >
+    select 
+      generatrix_id, map_id, generatrix_type, 
+      svg_tag_id, svg_tag_code, create_time
+    from generatrix_info where generatrix_id = #{generatrixId,jdbcType=CHAR}
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.shop.GeneratrixInfoExample">
+    delete from generatrix_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.shop.GeneratrixInfoKey" >
+    delete from generatrix_info where generatrix_id = #{generatrixId,jdbcType=CHAR}
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.shop.GeneratrixInfo" >
+    insert into generatrix_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "generatrixId != null">
+         generatrix_id,
+      </if>
+      <if test= "mapId != null">
+         map_id,
+      </if>
+      <if test= "generatrixType != null">
+         generatrix_type,
+      </if>
+      <if test= "svgTagId != null">
+         svg_tag_id,
+      </if>
+      <if test= "svgTagCode != null">
+         svg_tag_code,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "generatrixId != null">
+         #{generatrixId,jdbcType=CHAR},
+      </if>
+      <if test= "mapId != null">
+         #{mapId,jdbcType=CHAR},
+      </if>
+      <if test= "generatrixType != null">
+         #{generatrixType,jdbcType=CHAR},
+      </if>
+      <if test= "svgTagId != null">
+         #{svgTagId,jdbcType=CHAR},
+      </if>
+      <if test= "svgTagCode != null">
+         #{svgTagCode,jdbcType=VARCHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update generatrix_info
+    <set>
+        generatrix_id = #{record.generatrixId,jdbcType=CHAR},
+        map_id = #{record.mapId,jdbcType=CHAR},
+        generatrix_type = #{record.generatrixType,jdbcType=CHAR},
+        svg_tag_id = #{record.svgTagId,jdbcType=CHAR},
+        svg_tag_code = #{record.svgTagCode,jdbcType=VARCHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update generatrix_info
+    <set>
+      <if test="record.generatrixId !=null">
+        generatrix_id = #{record.generatrixId,jdbcType=CHAR},
+      </if>
+      <if test="record.mapId !=null">
+        map_id = #{record.mapId,jdbcType=CHAR},
+      </if>
+      <if test="record.generatrixType !=null">
+        generatrix_type = #{record.generatrixType,jdbcType=CHAR},
+      </if>
+      <if test="record.svgTagId !=null">
+        svg_tag_id = #{record.svgTagId,jdbcType=CHAR},
+      </if>
+      <if test="record.svgTagCode !=null">
+        svg_tag_code = #{record.svgTagCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.shop.GeneratrixInfo" >
+    update generatrix_info
+    <set>
+      <if test="generatrixId !=null">
+      generatrix_id = #{generatrixId,jdbcType=CHAR},
+      </if>
+      <if test="mapId !=null">
+      map_id = #{mapId,jdbcType=CHAR},
+      </if>
+      <if test="generatrixType !=null">
+      generatrix_type = #{generatrixType,jdbcType=CHAR},
+      </if>
+      <if test="svgTagId !=null">
+      svg_tag_id = #{svgTagId,jdbcType=CHAR},
+      </if>
+      <if test="svgTagCode !=null">
+      svg_tag_code = #{svgTagCode,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where generatrix_id = #{generatrixId,jdbcType=CHAR}
+  </update>
+
+</mapper>

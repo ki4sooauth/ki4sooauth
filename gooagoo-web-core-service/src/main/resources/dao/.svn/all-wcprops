@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao
+END
+mybatis-base.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gooagoo/!svn/ver/10740/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-base.xml
+END
+mybatis-behave.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/gooagoo/!svn/ver/2224/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-behave.xml
+END
+mybatis-goods.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gooagoo/!svn/ver/1765/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-goods.xml
+END
+mybatis-sys-adapter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/gooagoo/!svn/ver/8859/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-sys-adapter.xml
+END
+mybatis-sys.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/gooagoo/!svn/ver/15512/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-sys.xml
+END
+mybatis-user.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gooagoo/!svn/ver/14003/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-user.xml
+END
+mybatis-marketing-adapter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/gooagoo/!svn/ver/3944/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-marketing-adapter.xml
+END
+mybatis-log.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/gooagoo/!svn/ver/1765/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-log.xml
+END
+mybatis-marketing.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/13356/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-marketing.xml
+END
+mybatis-bill.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gooagoo/!svn/ver/16793/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-bill.xml
+END
+mybatis-member.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/gooagoo/!svn/ver/3094/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-member.xml
+END
+mybatis-goods-adapter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/gooagoo/!svn/ver/10727/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-goods-adapter.xml
+END
+mybatis-shop.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gooagoo/!svn/ver/17420/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/mybatis-shop.xml
+END

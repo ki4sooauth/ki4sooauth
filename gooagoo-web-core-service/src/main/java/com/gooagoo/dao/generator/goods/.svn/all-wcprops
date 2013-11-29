@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/goods
+END
+GoodsBaseInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/goods/GoodsBaseInfoMapper.java
+END
+GoodsBrandMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/goods/GoodsBrandMapper.java
+END
+GoodsFeatureInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/goods/GoodsFeatureInfoMapper.java
+END
+GoodsFeatureMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/goods/GoodsFeatureMapper.java
+END
+GoodsCategoryMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/goods/GoodsCategoryMapper.java
+END
+GoodsMarketingInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/goods/GoodsMarketingInfoMapper.java
+END

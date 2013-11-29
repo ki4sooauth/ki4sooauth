@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/gooagoo/!svn/ver/16270/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/system/resource/recommend
+END
+RecommendActivityCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/gooagoo/!svn/ver/16270/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/system/resource/recommend/RecommendActivityCoreServiceImpl.java
+END
+RecommendCouponCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/gooagoo/!svn/ver/16270/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/system/resource/recommend/RecommendCouponCoreServiceImpl.java
+END
+RecommendProductsCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/gooagoo/!svn/ver/16270/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/system/resource/recommend/RecommendProductsCoreServiceImpl.java
+END

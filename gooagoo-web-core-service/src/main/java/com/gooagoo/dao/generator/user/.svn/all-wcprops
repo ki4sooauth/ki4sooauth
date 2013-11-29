@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user
+END
+UserInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/UserInfoMapper.java
+END
+UserEmailactiveCodeMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/UserEmailactiveCodeMapper.java
+END
+SysSecurityQuestionMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/SysSecurityQuestionMapper.java
+END
+UserSecurityQuestionMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/UserSecurityQuestionMapper.java
+END
+UserProfileMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/UserProfileMapper.java
+END
+UserSecurityCardMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/UserSecurityCardMapper.java
+END
+UserMobileCodeMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/UserMobileCodeMapper.java
+END
+UserMobileInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/UserMobileInfoMapper.java
+END
+ConsigneeInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/ConsigneeInfoMapper.java
+END
+ReceiptInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/ReceiptInfoMapper.java
+END
+UserAccountBindMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/UserAccountBindMapper.java
+END
+ProductSerialNumberMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/user/ProductSerialNumberMapper.java
+END

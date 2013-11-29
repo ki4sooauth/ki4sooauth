@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing
+END
+MarketingActivity-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/MarketingActivity-Mapper.xml
+END
+MarketingUserLink-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/MarketingUserLink-Mapper.xml
+END
+ShopIntegral-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/ShopIntegral-Mapper.xml
+END
+ShopIntegralConvert-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/ShopIntegralConvert-Mapper.xml
+END
+CryoutInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/CryoutInfo-Mapper.xml
+END
+Coupon-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/Coupon-Mapper.xml
+END
+ShortMessage-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/ShortMessage-Mapper.xml
+END
+RuleResult-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/RuleResult-Mapper.xml
+END
+CouponGrantInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/CouponGrantInfo-Mapper.xml
+END
+MarketingView-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/MarketingView-Mapper.xml
+END
+MarketingItemLink-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/MarketingItemLink-Mapper.xml
+END
+MarketingEvent-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/MarketingEvent-Mapper.xml
+END
+RuleInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/RuleInfo-Mapper.xml
+END
+MarketingQualityGoods-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/MarketingQualityGoods-Mapper.xml
+END
+NoticeInfo-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/NoticeInfo-Mapper.xml
+END
+RuleConfig-Mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/18431/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/dao/generator/marketing/RuleConfig-Mapper.xml
+END

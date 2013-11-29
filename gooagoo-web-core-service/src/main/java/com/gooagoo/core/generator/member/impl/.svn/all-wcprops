@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/gooagoo/!svn/ver/17782/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl
+END
+MemberApplyGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/MemberApplyGeneratorCoreServiceImpl.java
+END
+MemberBaseInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/gooagoo/!svn/ver/16338/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/MemberBaseInfoGeneratorCoreServiceImpl.java
+END
+MemberFeatureInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/MemberFeatureInfoGeneratorCoreServiceImpl.java
+END
+IntegralInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/17782/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/IntegralInfoGeneratorCoreServiceImpl.java
+END
+MemberCardGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/MemberCardGeneratorCoreServiceImpl.java
+END
+MemberFeatureGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/MemberFeatureGeneratorCoreServiceImpl.java
+END
+IntegralDetailInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/IntegralDetailInfoGeneratorCoreServiceImpl.java
+END
+ConvertApplyGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/ConvertApplyGeneratorCoreServiceImpl.java
+END
+MemberOfCardGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/16340/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/MemberOfCardGeneratorCoreServiceImpl.java
+END
+CardUpInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/gooagoo/!svn/ver/3106/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/member/impl/CardUpInfoGeneratorCoreServiceImpl.java
+END

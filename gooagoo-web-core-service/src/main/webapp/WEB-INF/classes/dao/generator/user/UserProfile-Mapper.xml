@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.user.UserProfileMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.user.UserProfile" >
+    <id column="user_id" property="userId" jdbcType="CHAR" />
+    <result column="real_name" property="realName" jdbcType="CHAR" />
+    <result column="sex" property="sex" jdbcType="CHAR" />
+    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="id_type" property="idType" jdbcType="CHAR" />
+    <result column="id_no" property="idNo" jdbcType="CHAR" />
+    <result column="telephone" property="telephone" jdbcType="CHAR" />
+    <result column="post_code" property="postCode" jdbcType="CHAR" />
+    <result column="province" property="province" jdbcType="CHAR" />
+    <result column="city" property="city" jdbcType="CHAR" />
+    <result column="area" property="area" jdbcType="CHAR" />
+    <result column="address" property="address" jdbcType="CHAR" />
+    <result column="reg_ip" property="regIp" jdbcType="CHAR" />
+    <result column="is_allow_friend" property="isAllowFriend" jdbcType="CHAR" />
+    <result column="head_pic" property="headPic" jdbcType="CHAR" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      user_id, real_name, sex, 
+      birthday, id_type, id_no, 
+      telephone, post_code, province, 
+      city, area, address, 
+      reg_ip, is_allow_friend, head_pic, 
+      c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.user.UserProfileExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from user_profile
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.user.UserProfileExample" resultType="java.lang.Integer">
+    select count(*) from user_profile
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.user.UserProfileKey" >
+    select 
+      user_id, real_name, sex, 
+      birthday, id_type, id_no, 
+      telephone, post_code, province, 
+      city, area, address, 
+      reg_ip, is_allow_friend, head_pic, 
+      c_time_stamp
+    from user_profile where user_id = #{userId,jdbcType=CHAR}
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.user.UserProfileExample">
+    delete from user_profile
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.user.UserProfileKey" >
+    delete from user_profile where user_id = #{userId,jdbcType=CHAR}
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.user.UserProfile" >
+    insert into user_profile
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "userId != null">
+         user_id,
+      </if>
+      <if test= "realName != null">
+         real_name,
+      </if>
+      <if test= "sex != null">
+         sex,
+      </if>
+      <if test= "birthday != null">
+         birthday,
+      </if>
+      <if test= "idType != null">
+         id_type,
+      </if>
+      <if test= "idNo != null">
+         id_no,
+      </if>
+      <if test= "telephone != null">
+         telephone,
+      </if>
+      <if test= "postCode != null">
+         post_code,
+      </if>
+      <if test= "province != null">
+         province,
+      </if>
+      <if test= "city != null">
+         city,
+      </if>
+      <if test= "area != null">
+         area,
+      </if>
+      <if test= "address != null">
+         address,
+      </if>
+      <if test= "regIp != null">
+         reg_ip,
+      </if>
+      <if test= "isAllowFriend != null">
+         is_allow_friend,
+      </if>
+      <if test= "headPic != null">
+         head_pic,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "userId != null">
+         #{userId,jdbcType=CHAR},
+      </if>
+      <if test= "realName != null">
+         #{realName,jdbcType=CHAR},
+      </if>
+      <if test= "sex != null">
+         #{sex,jdbcType=CHAR},
+      </if>
+      <if test= "birthday != null">
+         #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "idType != null">
+         #{idType,jdbcType=CHAR},
+      </if>
+      <if test= "idNo != null">
+         #{idNo,jdbcType=CHAR},
+      </if>
+      <if test= "telephone != null">
+         #{telephone,jdbcType=CHAR},
+      </if>
+      <if test= "postCode != null">
+         #{postCode,jdbcType=CHAR},
+      </if>
+      <if test= "province != null">
+         #{province,jdbcType=CHAR},
+      </if>
+      <if test= "city != null">
+         #{city,jdbcType=CHAR},
+      </if>
+      <if test= "area != null">
+         #{area,jdbcType=CHAR},
+      </if>
+      <if test= "address != null">
+         #{address,jdbcType=CHAR},
+      </if>
+      <if test= "regIp != null">
+         #{regIp,jdbcType=CHAR},
+      </if>
+      <if test= "isAllowFriend != null">
+         #{isAllowFriend,jdbcType=CHAR},
+      </if>
+      <if test= "headPic != null">
+         #{headPic,jdbcType=CHAR},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update user_profile
+    <set>
+        user_id = #{record.userId,jdbcType=CHAR},
+        real_name = #{record.realName,jdbcType=CHAR},
+        sex = #{record.sex,jdbcType=CHAR},
+        birthday = #{record.birthday,jdbcType=TIMESTAMP},
+        id_type = #{record.idType,jdbcType=CHAR},
+        id_no = #{record.idNo,jdbcType=CHAR},
+        telephone = #{record.telephone,jdbcType=CHAR},
+        post_code = #{record.postCode,jdbcType=CHAR},
+        province = #{record.province,jdbcType=CHAR},
+        city = #{record.city,jdbcType=CHAR},
+        area = #{record.area,jdbcType=CHAR},
+        address = #{record.address,jdbcType=CHAR},
+        reg_ip = #{record.regIp,jdbcType=CHAR},
+        is_allow_friend = #{record.isAllowFriend,jdbcType=CHAR},
+        head_pic = #{record.headPic,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update user_profile
+    <set>
+      <if test="record.userId !=null">
+        user_id = #{record.userId,jdbcType=CHAR},
+      </if>
+      <if test="record.realName !=null">
+        real_name = #{record.realName,jdbcType=CHAR},
+      </if>
+      <if test="record.sex !=null">
+        sex = #{record.sex,jdbcType=CHAR},
+      </if>
+      <if test="record.birthday !=null">
+        birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.idType !=null">
+        id_type = #{record.idType,jdbcType=CHAR},
+      </if>
+      <if test="record.idNo !=null">
+        id_no = #{record.idNo,jdbcType=CHAR},
+      </if>
+      <if test="record.telephone !=null">
+        telephone = #{record.telephone,jdbcType=CHAR},
+      </if>
+      <if test="record.postCode !=null">
+        post_code = #{record.postCode,jdbcType=CHAR},
+      </if>
+      <if test="record.province !=null">
+        province = #{record.province,jdbcType=CHAR},
+      </if>
+      <if test="record.city !=null">
+        city = #{record.city,jdbcType=CHAR},
+      </if>
+      <if test="record.area !=null">
+        area = #{record.area,jdbcType=CHAR},
+      </if>
+      <if test="record.address !=null">
+        address = #{record.address,jdbcType=CHAR},
+      </if>
+      <if test="record.regIp !=null">
+        reg_ip = #{record.regIp,jdbcType=CHAR},
+      </if>
+      <if test="record.isAllowFriend !=null">
+        is_allow_friend = #{record.isAllowFriend,jdbcType=CHAR},
+      </if>
+      <if test="record.headPic !=null">
+        head_pic = #{record.headPic,jdbcType=CHAR},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.user.UserProfile" >
+    update user_profile
+    <set>
+      <if test="userId !=null">
+      user_id = #{userId,jdbcType=CHAR},
+      </if>
+      <if test="realName !=null">
+      real_name = #{realName,jdbcType=CHAR},
+      </if>
+      <if test="sex !=null">
+      sex = #{sex,jdbcType=CHAR},
+      </if>
+      <if test="birthday !=null">
+      birthday = #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="idType !=null">
+      id_type = #{idType,jdbcType=CHAR},
+      </if>
+      <if test="idNo !=null">
+      id_no = #{idNo,jdbcType=CHAR},
+      </if>
+      <if test="telephone !=null">
+      telephone = #{telephone,jdbcType=CHAR},
+      </if>
+      <if test="postCode !=null">
+      post_code = #{postCode,jdbcType=CHAR},
+      </if>
+      <if test="province !=null">
+      province = #{province,jdbcType=CHAR},
+      </if>
+      <if test="city !=null">
+      city = #{city,jdbcType=CHAR},
+      </if>
+      <if test="area !=null">
+      area = #{area,jdbcType=CHAR},
+      </if>
+      <if test="address !=null">
+      address = #{address,jdbcType=CHAR},
+      </if>
+      <if test="regIp !=null">
+      reg_ip = #{regIp,jdbcType=CHAR},
+      </if>
+      <if test="isAllowFriend !=null">
+      is_allow_friend = #{isAllowFriend,jdbcType=CHAR},
+      </if>
+      <if test="headPic !=null">
+      head_pic = #{headPic,jdbcType=CHAR},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=CHAR}
+  </update>
+
+</mapper>

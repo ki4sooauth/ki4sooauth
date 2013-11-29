@@ -1,0 +1,73 @@
+10
+
+dir
+18602
+http://192.168.3.200/svn/gooagoo/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/shop
+http://192.168.3.200/svn/gooagoo
+
+
+
+2013-11-27T02:26:26.801381Z
+18296
+cuijingzhi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6546c589-0bc2-e64c-84de-df1aef16c20e
+
+queue
+dir
+
+shopinfo
+dir
+
+table
+dir
+
+wifisensor
+dir
+
+wifi
+dir
+
+transponder
+dir
+
+auth
+dir
+
+cache
+dir
+
+position
+dir
+
+shopentity
+dir
+
+shoptool
+dir
+
+lid
+dir
+
+assistant
+dir
+
+map
+dir
+
+user
+dir
+

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base
+END
+MarketingChannelMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/MarketingChannelMapper.java
+END
+ShopInterfaceNameMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/ShopInterfaceNameMapper.java
+END
+ShopTypeMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/ShopTypeMapper.java
+END
+EmailConfigMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/EmailConfigMapper.java
+END
+UserCityareaMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/UserCityareaMapper.java
+END
+ShoppingListGoodsTypeMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/ShoppingListGoodsTypeMapper.java
+END
+ShopToolInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/ShopToolInfoMapper.java
+END
+PromptingMessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/PromptingMessageMapper.java
+END
+SysConfigMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/SysConfigMapper.java
+END
+SysDictionaryMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/SysDictionaryMapper.java
+END
+QualitySquareGoodsTypeMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/base/QualitySquareGoodsTypeMapper.java
+END

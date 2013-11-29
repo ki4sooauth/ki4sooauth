@@ -1,0 +1,86 @@
+10
+
+dir
+18602
+http://192.168.3.200/svn/gooagoo/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/system
+http://192.168.3.200/svn/gooagoo
+
+
+
+2013-11-27T06:18:57.734284Z
+18341
+cuijingzhi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6546c589-0bc2-e64c-84de-df1aef16c20e
+
+cms
+dir
+
+interf
+dir
+
+resource
+dir
+
+template
+dir
+
+SystemBusinessCoreServiceImpl.java
+file
+
+
+
+
+2013-11-28T06:45:32.815809Z
+cf1e8b46a6a1347bab880b01b0d746f1
+2013-08-28T09:07:00.671024Z
+8859
+cuijingzhi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+623
+
+bid
+dir
+
+hierarchy
+dir
+
+sys
+dir
+
+user
+dir
+

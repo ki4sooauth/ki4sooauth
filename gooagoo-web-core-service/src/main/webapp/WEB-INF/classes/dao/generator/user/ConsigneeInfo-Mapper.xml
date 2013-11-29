@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.user.ConsigneeInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.user.ConsigneeInfo" >
+    <id column="consignee_id" property="consigneeId" jdbcType="CHAR" />
+    <result column="user_id" property="userId" jdbcType="CHAR" />
+    <result column="consignee_name" property="consigneeName" jdbcType="CHAR" />
+    <result column="province" property="province" jdbcType="CHAR" />
+    <result column="city" property="city" jdbcType="CHAR" />
+    <result column="area" property="area" jdbcType="CHAR" />
+    <result column="address" property="address" jdbcType="CHAR" />
+    <result column="phone" property="phone" jdbcType="CHAR" />
+    <result column="telephone" property="telephone" jdbcType="CHAR" />
+    <result column="post_code" property="postCode" jdbcType="CHAR" />
+    <result column="is_default" property="isDefault" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      consignee_id, user_id, consignee_name, 
+      province, city, area, 
+      address, phone, telephone, 
+      post_code, is_default, is_del, 
+      create_time, c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.user.ConsigneeInfoExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from consignee_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.user.ConsigneeInfoExample" resultType="java.lang.Integer">
+    select count(*) from consignee_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.user.ConsigneeInfoKey" >
+    select 
+      consignee_id, user_id, consignee_name, 
+      province, city, area, 
+      address, phone, telephone, 
+      post_code, is_default, is_del, 
+      create_time, c_time_stamp
+    from consignee_info where consignee_id = #{consigneeId,jdbcType=CHAR}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.user.ConsigneeInfoExample">
+    delete from consignee_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.user.ConsigneeInfoKey" >
+    delete from consignee_info where consignee_id = #{consigneeId,jdbcType=CHAR}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.user.ConsigneeInfo" >
+    insert into consignee_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "consigneeId != null">
+         consignee_id,
+      </if>
+      <if test= "userId != null">
+         user_id,
+      </if>
+      <if test= "consigneeName != null">
+         consignee_name,
+      </if>
+      <if test= "province != null">
+         province,
+      </if>
+      <if test= "city != null">
+         city,
+      </if>
+      <if test= "area != null">
+         area,
+      </if>
+      <if test= "address != null">
+         address,
+      </if>
+      <if test= "phone != null">
+         phone,
+      </if>
+      <if test= "telephone != null">
+         telephone,
+      </if>
+      <if test= "postCode != null">
+         post_code,
+      </if>
+      <if test= "isDefault != null">
+         is_default,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp,
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "consigneeId != null">
+         #{consigneeId,jdbcType=CHAR},
+      </if>
+      <if test= "userId != null">
+         #{userId,jdbcType=CHAR},
+      </if>
+      <if test= "consigneeName != null">
+         #{consigneeName,jdbcType=CHAR},
+      </if>
+      <if test= "province != null">
+         #{province,jdbcType=CHAR},
+      </if>
+      <if test= "city != null">
+         #{city,jdbcType=CHAR},
+      </if>
+      <if test= "area != null">
+         #{area,jdbcType=CHAR},
+      </if>
+      <if test= "address != null">
+         #{address,jdbcType=CHAR},
+      </if>
+      <if test= "phone != null">
+         #{phone,jdbcType=CHAR},
+      </if>
+      <if test= "telephone != null">
+         #{telephone,jdbcType=CHAR},
+      </if>
+      <if test= "postCode != null">
+         #{postCode,jdbcType=CHAR},
+      </if>
+      <if test= "isDefault != null">
+         #{isDefault,jdbcType=CHAR},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update consignee_info
+    <set>
+        consignee_id = #{record.consigneeId,jdbcType=CHAR},
+        user_id = #{record.userId,jdbcType=CHAR},
+        consignee_name = #{record.consigneeName,jdbcType=CHAR},
+        province = #{record.province,jdbcType=CHAR},
+        city = #{record.city,jdbcType=CHAR},
+        area = #{record.area,jdbcType=CHAR},
+        address = #{record.address,jdbcType=CHAR},
+        phone = #{record.phone,jdbcType=CHAR},
+        telephone = #{record.telephone,jdbcType=CHAR},
+        post_code = #{record.postCode,jdbcType=CHAR},
+        is_default = #{record.isDefault,jdbcType=CHAR},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update consignee_info
+    <set>
+      <if test="record.consigneeId !=null">
+        consignee_id = #{record.consigneeId,jdbcType=CHAR},
+      </if>
+      <if test="record.userId !=null">
+        user_id = #{record.userId,jdbcType=CHAR},
+      </if>
+      <if test="record.consigneeName !=null">
+        consignee_name = #{record.consigneeName,jdbcType=CHAR},
+      </if>
+      <if test="record.province !=null">
+        province = #{record.province,jdbcType=CHAR},
+      </if>
+      <if test="record.city !=null">
+        city = #{record.city,jdbcType=CHAR},
+      </if>
+      <if test="record.area !=null">
+        area = #{record.area,jdbcType=CHAR},
+      </if>
+      <if test="record.address !=null">
+        address = #{record.address,jdbcType=CHAR},
+      </if>
+      <if test="record.phone !=null">
+        phone = #{record.phone,jdbcType=CHAR},
+      </if>
+      <if test="record.telephone !=null">
+        telephone = #{record.telephone,jdbcType=CHAR},
+      </if>
+      <if test="record.postCode !=null">
+        post_code = #{record.postCode,jdbcType=CHAR},
+      </if>
+      <if test="record.isDefault !=null">
+        is_default = #{record.isDefault,jdbcType=CHAR},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.user.ConsigneeInfo" >
+    update consignee_info
+    <set>
+      <if test="consigneeId !=null">
+      consignee_id = #{consigneeId,jdbcType=CHAR},
+      </if>
+      <if test="userId !=null">
+      user_id = #{userId,jdbcType=CHAR},
+      </if>
+      <if test="consigneeName !=null">
+      consignee_name = #{consigneeName,jdbcType=CHAR},
+      </if>
+      <if test="province !=null">
+      province = #{province,jdbcType=CHAR},
+      </if>
+      <if test="city !=null">
+      city = #{city,jdbcType=CHAR},
+      </if>
+      <if test="area !=null">
+      area = #{area,jdbcType=CHAR},
+      </if>
+      <if test="address !=null">
+      address = #{address,jdbcType=CHAR},
+      </if>
+      <if test="phone !=null">
+      phone = #{phone,jdbcType=CHAR},
+      </if>
+      <if test="telephone !=null">
+      telephone = #{telephone,jdbcType=CHAR},
+      </if>
+      <if test="postCode !=null">
+      post_code = #{postCode,jdbcType=CHAR},
+      </if>
+      <if test="isDefault !=null">
+      is_default = #{isDefault,jdbcType=CHAR},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where consignee_id = #{consigneeId,jdbcType=CHAR}
+  </update>
+
+</mapper>

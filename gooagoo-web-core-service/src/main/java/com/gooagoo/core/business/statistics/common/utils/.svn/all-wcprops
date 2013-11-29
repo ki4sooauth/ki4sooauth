@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gooagoo/!svn/ver/17017/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/common/utils
+END
+ShopCommonOperate.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/gooagoo/!svn/ver/17017/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/common/utils/ShopCommonOperate.java
+END
+StatisticsDataUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/gooagoo/!svn/ver/17017/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/common/utils/StatisticsDataUtil.java
+END
+Page.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/7844/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/common/utils/Page.java
+END
+MongoOperateDate.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/gooagoo/!svn/ver/17017/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/common/utils/MongoOperateDate.java
+END

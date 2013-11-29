@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gooagoo.dao.generator.shop.ShopInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gooagoo.entity.generator.shop.ShopInfo" >
+    <id column="shop_id" property="shopId" jdbcType="CHAR" />
+    <result column="email" property="email" jdbcType="CHAR" />
+    <result column="nick_name" property="nickName" jdbcType="CHAR" />
+    <result column="shop_status" property="shopStatus" jdbcType="CHAR" />
+    <result column="is_chain" property="isChain" jdbcType="CHAR" />
+    <result column="service_style" property="serviceStyle" jdbcType="CHAR" />
+    <result column="shop_name" property="shopName" jdbcType="CHAR" />
+    <result column="shop_type_root" property="shopTypeRoot" jdbcType="INTEGER" />
+    <result column="shop_type_leaf" property="shopTypeLeaf" jdbcType="INTEGER" />
+    <result column="logo1" property="logo1" jdbcType="CHAR" />
+    <result column="logo2" property="logo2" jdbcType="CHAR" />
+    <result column="logo3" property="logo3" jdbcType="CHAR" />
+    <result column="scope" property="scope" jdbcType="CHAR" />
+    <result column="note" property="note" jdbcType="CHAR" />
+    <result column="is_del" property="isDel" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="c_time_stamp" property="cTimeStamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+<!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- 修改where部分sql限制条件集合 -->
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+<!-- select部分查询字段集合 -->
+  <sql id="Base_Column_List">
+      shop_id, email, nick_name, 
+      shop_status, is_chain, service_style, 
+      shop_name, shop_type_root, shop_type_leaf, 
+      logo1, logo2, logo3, 
+      scope, note, is_del, 
+      create_time, c_time_stamp
+  </sql>
+
+  <!-- 按对象可分页可去重查询 -->
+  <select id="selectByExample" parameterType="com.gooagoo.entity.generator.shop.ShopInfoExample" resultMap="BaseResultMap">
+    select
+      <if test="distinct">
+         distinct
+      </if>
+      <include refid="Base_Column_List" />
+    from shop_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+
+  <!-- 按对象查询数据条数 -->
+  <select id="countByExample" parameterType="com.gooagoo.entity.generator.shop.ShopInfoExample" resultType="java.lang.Integer">
+    select count(*) from shop_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 按主键实体查询表信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.gooagoo.entity.generator.shop.ShopInfoKey" >
+    select 
+      shop_id, email, nick_name, 
+      shop_status, is_chain, service_style, 
+      shop_name, shop_type_root, shop_type_leaf, 
+      logo1, logo2, logo3, 
+      scope, note, is_del, 
+      create_time, c_time_stamp
+    from shop_info where shop_id = #{shopId,jdbcType=CHAR}
+      <if test= "isDel != null">
+         and is_del=#{isDel}
+      </if>
+  </select>
+
+  <!-- 按对象删除数据 -->
+  <delete id="deleteByExample" parameterType="com.gooagoo.entity.generator.shop.ShopInfoExample">
+    delete from shop_info
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <!-- 按表主键删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="com.gooagoo.entity.generator.shop.ShopInfoKey" >
+    delete from shop_info where shop_id = #{shopId,jdbcType=CHAR}
+    <if test= "isDel != null">
+        and is_del=#{isDel}
+    </if>
+  </delete>
+
+  <!-- 可选择性添加数据 -->
+  <insert id="insertSelective" parameterType="com.gooagoo.entity.generator.shop.ShopInfo" >
+    insert into shop_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test= "shopId != null">
+         shop_id,
+      </if>
+      <if test= "email != null">
+         email,
+      </if>
+      <if test= "nickName != null">
+         nick_name,
+      </if>
+      <if test= "shopStatus != null">
+         shop_status,
+      </if>
+      <if test= "isChain != null">
+         is_chain,
+      </if>
+      <if test= "serviceStyle != null">
+         service_style,
+      </if>
+      <if test= "shopName != null">
+         shop_name,
+      </if>
+      <if test= "shopTypeRoot != null">
+         shop_type_root,
+      </if>
+      <if test= "shopTypeLeaf != null">
+         shop_type_leaf,
+      </if>
+      <if test= "logo1 != null">
+         logo1,
+      </if>
+      <if test= "logo2 != null">
+         logo2,
+      </if>
+      <if test= "logo3 != null">
+         logo3,
+      </if>
+      <if test= "scope != null">
+         scope,
+      </if>
+      <if test= "note != null">
+         note,
+      </if>
+      <if test= "isDel != null">
+         is_del,
+      </if>
+      <if test= "createTime != null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp != null">
+         c_time_stamp,
+      </if>
+      <if test= "createTime == null">
+         create_time,
+      </if>
+      <if test= "cTimeStamp == null">
+         c_time_stamp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test= "shopId != null">
+         #{shopId,jdbcType=CHAR},
+      </if>
+      <if test= "email != null">
+         #{email,jdbcType=CHAR},
+      </if>
+      <if test= "nickName != null">
+         #{nickName,jdbcType=CHAR},
+      </if>
+      <if test= "shopStatus != null">
+         #{shopStatus,jdbcType=CHAR},
+      </if>
+      <if test= "isChain != null">
+         #{isChain,jdbcType=CHAR},
+      </if>
+      <if test= "serviceStyle != null">
+         #{serviceStyle,jdbcType=CHAR},
+      </if>
+      <if test= "shopName != null">
+         #{shopName,jdbcType=CHAR},
+      </if>
+      <if test= "shopTypeRoot != null">
+         #{shopTypeRoot,jdbcType=INTEGER},
+      </if>
+      <if test= "shopTypeLeaf != null">
+         #{shopTypeLeaf,jdbcType=INTEGER},
+      </if>
+      <if test= "logo1 != null">
+         #{logo1,jdbcType=CHAR},
+      </if>
+      <if test= "logo2 != null">
+         #{logo2,jdbcType=CHAR},
+      </if>
+      <if test= "logo3 != null">
+         #{logo3,jdbcType=CHAR},
+      </if>
+      <if test= "scope != null">
+         #{scope,jdbcType=CHAR},
+      </if>
+      <if test= "note != null">
+         #{note,jdbcType=CHAR},
+      </if>
+      <if test= "isDel != null">
+         #{isDel,jdbcType=CHAR},
+      </if>
+      <if test= "createTime != null">
+         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "cTimeStamp != null">
+         #{cTimeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test= "createTime == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+      <if test= "cTimeStamp == null">
+         CURRENT_TIMESTAMP(),
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 按对象更新表所有字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateAllByExample">
+    update shop_info
+    <set>
+        shop_id = #{record.shopId,jdbcType=CHAR},
+        email = #{record.email,jdbcType=CHAR},
+        nick_name = #{record.nickName,jdbcType=CHAR},
+        shop_status = #{record.shopStatus,jdbcType=CHAR},
+        is_chain = #{record.isChain,jdbcType=CHAR},
+        service_style = #{record.serviceStyle,jdbcType=CHAR},
+        shop_name = #{record.shopName,jdbcType=CHAR},
+        shop_type_root = #{record.shopTypeRoot,jdbcType=INTEGER},
+        shop_type_leaf = #{record.shopTypeLeaf,jdbcType=INTEGER},
+        logo1 = #{record.logo1,jdbcType=CHAR},
+        logo2 = #{record.logo2,jdbcType=CHAR},
+        logo3 = #{record.logo3,jdbcType=CHAR},
+        scope = #{record.scope,jdbcType=CHAR},
+        note = #{record.note,jdbcType=CHAR},
+        is_del = #{record.isDel,jdbcType=CHAR}
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按对象选择性更新表字段信息（create_time,c_time_stamp字段除外） -->
+  <update id="updateByExampleSelective">
+    update shop_info
+    <set>
+      <if test="record.shopId !=null">
+        shop_id = #{record.shopId,jdbcType=CHAR},
+      </if>
+      <if test="record.email !=null">
+        email = #{record.email,jdbcType=CHAR},
+      </if>
+      <if test="record.nickName !=null">
+        nick_name = #{record.nickName,jdbcType=CHAR},
+      </if>
+      <if test="record.shopStatus !=null">
+        shop_status = #{record.shopStatus,jdbcType=CHAR},
+      </if>
+      <if test="record.isChain !=null">
+        is_chain = #{record.isChain,jdbcType=CHAR},
+      </if>
+      <if test="record.serviceStyle !=null">
+        service_style = #{record.serviceStyle,jdbcType=CHAR},
+      </if>
+      <if test="record.shopName !=null">
+        shop_name = #{record.shopName,jdbcType=CHAR},
+      </if>
+      <if test="record.shopTypeRoot !=null">
+        shop_type_root = #{record.shopTypeRoot,jdbcType=INTEGER},
+      </if>
+      <if test="record.shopTypeLeaf !=null">
+        shop_type_leaf = #{record.shopTypeLeaf,jdbcType=INTEGER},
+      </if>
+      <if test="record.logo1 !=null">
+        logo1 = #{record.logo1,jdbcType=CHAR},
+      </if>
+      <if test="record.logo2 !=null">
+        logo2 = #{record.logo2,jdbcType=CHAR},
+      </if>
+      <if test="record.logo3 !=null">
+        logo3 = #{record.logo3,jdbcType=CHAR},
+      </if>
+      <if test="record.scope !=null">
+        scope = #{record.scope,jdbcType=CHAR},
+      </if>
+      <if test="record.note !=null">
+        note = #{record.note,jdbcType=CHAR},
+      </if>
+      <if test="record.isDel !=null">
+        is_del = #{record.isDel,jdbcType=CHAR},
+      </if>
+      <if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTimeStamp !=null">
+        c_time_stamp = #{record.cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    <if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <!-- 按主键更新表中所有字段信息（create_time,c_time_stamp字段除外）-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.gooagoo.entity.generator.shop.ShopInfo" >
+    update shop_info
+    <set>
+      <if test="shopId !=null">
+      shop_id = #{shopId,jdbcType=CHAR},
+      </if>
+      <if test="email !=null">
+      email = #{email,jdbcType=CHAR},
+      </if>
+      <if test="nickName !=null">
+      nick_name = #{nickName,jdbcType=CHAR},
+      </if>
+      <if test="shopStatus !=null">
+      shop_status = #{shopStatus,jdbcType=CHAR},
+      </if>
+      <if test="isChain !=null">
+      is_chain = #{isChain,jdbcType=CHAR},
+      </if>
+      <if test="serviceStyle !=null">
+      service_style = #{serviceStyle,jdbcType=CHAR},
+      </if>
+      <if test="shopName !=null">
+      shop_name = #{shopName,jdbcType=CHAR},
+      </if>
+      <if test="shopTypeRoot !=null">
+      shop_type_root = #{shopTypeRoot,jdbcType=INTEGER},
+      </if>
+      <if test="shopTypeLeaf !=null">
+      shop_type_leaf = #{shopTypeLeaf,jdbcType=INTEGER},
+      </if>
+      <if test="logo1 !=null">
+      logo1 = #{logo1,jdbcType=CHAR},
+      </if>
+      <if test="logo2 !=null">
+      logo2 = #{logo2,jdbcType=CHAR},
+      </if>
+      <if test="logo3 !=null">
+      logo3 = #{logo3,jdbcType=CHAR},
+      </if>
+      <if test="scope !=null">
+      scope = #{scope,jdbcType=CHAR},
+      </if>
+      <if test="note !=null">
+      note = #{note,jdbcType=CHAR},
+      </if>
+      <if test="isDel !=null">
+      is_del = #{isDel,jdbcType=CHAR},
+      </if>
+      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTimeStamp !=null">
+      c_time_stamp = #{cTimeStamp,jdbcType=TIMESTAMP}
+      </if>
+    </set>
+    where shop_id = #{shopId,jdbcType=CHAR}
+  </update>
+
+</mapper>

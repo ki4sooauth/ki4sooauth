@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/gooagoo/!svn/ver/18576/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/gooagoo/!svn/ver/9750/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/ehcache.xml
+END
+mongoDB.properties
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/gooagoo/!svn/ver/16031/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/mongoDB.properties
+END
+cacheConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/gooagoo/!svn/ver/1765/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/cacheConfig.properties
+END
+hessian-core-business-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/gooagoo/!svn/ver/17380/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/hessian-core-business-service.xml
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/gooagoo/!svn/ver/18189/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/applicationContext.xml
+END
+redisConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/gooagoo/!svn/ver/16876/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/redisConfig.properties
+END
+coreConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/gooagoo/!svn/ver/18576/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/coreConfig.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/gooagoo/!svn/ver/4015/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/log4j.properties
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/gooagoo/!svn/ver/1765/trunk/gooagoo-core/gooagoo-web-core-service/src/main/resources/jdbc.properties
+END

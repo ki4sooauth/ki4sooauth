@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gooagoo/!svn/ver/5195/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/user
+END
+GoodsStatisticCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/gooagoo/!svn/ver/5195/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/user/GoodsStatisticCoreServiceImpl.java
+END
+ActivityStatisticCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/gooagoo/!svn/ver/5195/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/user/ActivityStatisticCoreServiceImpl.java
+END
+CouponStatisticCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/gooagoo/!svn/ver/5195/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/user/CouponStatisticCoreServiceImpl.java
+END
+CryoutStatisticCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/gooagoo/!svn/ver/5195/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/statistics/user/CryoutStatisticCoreServiceImpl.java
+END

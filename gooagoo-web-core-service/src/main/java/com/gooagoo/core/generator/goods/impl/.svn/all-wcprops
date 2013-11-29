@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/gooagoo/!svn/ver/16309/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/goods/impl
+END
+GoodsBaseInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/16308/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/goods/impl/GoodsBaseInfoGeneratorCoreServiceImpl.java
+END
+GoodsBrandGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/goods/impl/GoodsBrandGeneratorCoreServiceImpl.java
+END
+GoodsFeatureInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/goods/impl/GoodsFeatureInfoGeneratorCoreServiceImpl.java
+END
+GoodsFeatureGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/gooagoo/!svn/ver/2080/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/goods/impl/GoodsFeatureGeneratorCoreServiceImpl.java
+END
+GoodsCategoryGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/gooagoo/!svn/ver/16304/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/goods/impl/GoodsCategoryGeneratorCoreServiceImpl.java
+END
+GoodsMarketingInfoGeneratorCoreServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/gooagoo/!svn/ver/16309/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/generator/goods/impl/GoodsMarketingInfoGeneratorCoreServiceImpl.java
+END

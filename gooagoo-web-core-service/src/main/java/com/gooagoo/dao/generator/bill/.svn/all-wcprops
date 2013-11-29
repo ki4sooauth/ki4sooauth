@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/16795/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill
+END
+OriginalBillDetailMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/OriginalBillDetailMapper.java
+END
+UserOrderDetailMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/UserOrderDetailMapper.java
+END
+UserOrderCouponMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/UserOrderCouponMapper.java
+END
+ShoppingCartMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/16795/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/ShoppingCartMapper.java
+END
+ShopOrderPicMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/ShopOrderPicMapper.java
+END
+BillInvoiceLogMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/BillInvoiceLogMapper.java
+END
+OriginalBillPicMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/OriginalBillPicMapper.java
+END
+OrderPicMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/OrderPicMapper.java
+END
+BillAddInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/BillAddInfoMapper.java
+END
+OrderDetailInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/OrderDetailInfoMapper.java
+END
+OrderCouponInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/OrderCouponInfoMapper.java
+END
+BillPayApplicationMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/BillPayApplicationMapper.java
+END
+BillManualMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/BillManualMapper.java
+END
+ShopOrderInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/ShopOrderInfoMapper.java
+END
+OriginalBillInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/OriginalBillInfoMapper.java
+END
+UserOrderInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/UserOrderInfoMapper.java
+END
+OrderInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/OrderInfoMapper.java
+END
+ShopOrderDetailMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/gooagoo/!svn/ver/14188/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/dao/generator/bill/ShopOrderDetailMapper.java
+END
