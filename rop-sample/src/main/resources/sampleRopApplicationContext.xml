@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:rop="http://www.bookegou.com/schema/rop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.bookegou.com/schema/rop http://www.bookegou.com/schema/rop/rop-1.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <!--① 扫描Spring Bean-->
+    <context:component-scan base-package="com.rop.sample"/>
+
+    <!-- 启动Rop框架 -->
+    <rop:annotation-driven
+            session-manager="sampleSessionManager"
+            app-secret-manager="appSecretManager"
+            service-access-controller="serviceAccessController"
+            formatting-conversion-service="conversionService"
+            ext-error-base-name="i18n/rop/sampleRopError"
+            service-timeout-seconds="10"
+            thread-ferry-class="com.rop.sample.SampleThreadFerry"
+            invoke-times-controller="invokeTimesController"
+            upload-file-max-size="10"
+            upload-file-types="png,gif"
+            core-pool-size="200"
+            max-pool-size="500"
+            queue-capacity="50"
+            keep-alive-seconds="300"
+            sign-enable="true"/>
+
+    <bean id="sampleSessionManager" class="com.rop.sample.SampleSessionManager" />
+    <bean id="invokeTimesController" class="com.rop.sample.SampleInvokeTimesController"/>
+
+    <bean id="appSecretManager"
+          class="com.rop.sample.SampleAppSecretManager"/>
+
+    <bean id="serviceAccessController" class="com.rop.sample.SampleServiceAccessController"/>
+
+    <!--设置自定义的类型转换服务，注册自定义的类型转换器-->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <!--将xxxx-yyyyyyy格式的电话转换为内部的Telephone对象-->
+                <bean class="com.rop.sample.request.TelephoneConverter"/>
+            </set>
+        </property>
+    </bean>
+
+    <!--注册拦截器，可配置多个-->
+    <rop:interceptors>
+        <bean class="com.rop.sample.ReservedUserNameInterceptor"/>
+    </rop:interceptors>
+
+    <!--注册监听器，可配置多具-->
+    <rop:listeners>
+        <bean class="com.rop.sample.SamplePostInitializeEventListener"/>
+        <bean class="com.rop.sample.SamplePreDoServiceEventListener"/>
+        <bean class="com.rop.sample.SampleAfterDoServiceEventListener"/>
+    </rop:listeners>
+
+    <!--自定义method,appKey等这些系统级参数的参数名-->
+    <rop:sysparams format-param-name="messageFormat"/>
+
+</beans>
