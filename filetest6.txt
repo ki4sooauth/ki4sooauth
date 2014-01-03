@@ -1,1 +1,8 @@
 http://lenj.blog.163.com/blog/static/127420388201081642741448/
+ZipInputStream
+
+	<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+		</dependency>
