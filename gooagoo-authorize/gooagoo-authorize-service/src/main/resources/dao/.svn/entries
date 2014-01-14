@@ -1,14 +1,14 @@
 10
 
 dir
-18901
+24344
 http://192.168.3.200/svn/gooagoo/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources/dao
 http://192.168.3.200/svn/gooagoo
 
 
 
-2013-11-29T08:24:02.944807Z
-18843
+2014-01-14T03:46:26.036998Z
+24309
 lvhaoran
 
 
@@ -26,16 +26,19 @@ lvhaoran
 
 6546c589-0bc2-e64c-84de-df1aef16c20e
 
-mybatis-oauth-adapter.xml
+generator
+dir
+
+mybatis-open.xml
 file
 
 
 
 
-2013-11-29T02:36:23.347825Z
-c8b43080c61ce14cb08ed767ae5aa36e
-2013-11-29T03:41:02.704983Z
-18774
+2014-01-14T09:11:35.865125Z
+31e6fa5d7ec5b85d5df22394b8bd3607
+2014-01-14T02:58:42.237310Z
+24294
 lvhaoran
 
 
@@ -58,8 +61,5 @@ lvhaoran
 
 
 
-444
-
-business
-dir
+432
 

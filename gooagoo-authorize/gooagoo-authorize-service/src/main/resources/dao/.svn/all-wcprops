@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 100
-/svn/gooagoo/!svn/ver/18843/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources/dao
+/svn/gooagoo/!svn/ver/24309/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources/dao
 END
-mybatis-oauth-adapter.xml
+mybatis-open.xml
 K 25
 svn:wc:ra_dav:version-url
-V 126
-/svn/gooagoo/!svn/ver/18774/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources/dao/mybatis-oauth-adapter.xml
+V 117
+/svn/gooagoo/!svn/ver/24294/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/resources/dao/mybatis-open.xml
 END

@@ -11,71 +11,40 @@
       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
       http://www.springframework.org/schema/tx 
       http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-
+      
 	<context:property-placeholder location="classpath:jdbc.properties" />
+	
 	<bean class="com.gooagoo.common.monitor.MonitorService">
-		<constructor-arg value="core"></constructor-arg>
-		<constructor-arg value="1.0.2"></constructor-arg>
+		<constructor-arg value="authzserver"></constructor-arg>
+		<constructor-arg value="1.0.0"></constructor-arg>
 	</bean>
 	<bean id="SpringBeanUtils" class="com.gooagoo.common.utils.SpringBeanUtils"></bean>
-	
+
 	<context:component-scan base-package="com.gooagoo">
-		<context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect" />
+		<context:include-filter type="annotation"
+			expression="org.aspectj.lang.annotation.Aspect" />
 	</context:component-scan>
-	
+
 	<!-- 启动@AspectJ支持 -->
 	<aop:aspectj-autoproxy />
-	
-	<!--JOTM本地实例 -->
-	<bean id="jotm" class="org.springframework.transaction.jta.JotmFactoryBean" />
-	
-	<!--JTA事务管理器 -->
-	<bean id="txManager"
-		class="org.springframework.transaction.jta.JtaTransactionManager">
-		<property name="userTransaction" ref="jotm" /><!--指定userTransaction属性引用JOTM本地实例 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url" value="${open.url}" />
+		<property name="username" value="${open.username}" />
+		<property name="password" value="${open.password}" />
+		<property name="driverClassName" value="${mysql.driver}" />
 	</bean>
 
-	<!--注解事务驱动 -->
-	<tx:annotation-driven transaction-manager="txManager"
-		proxy-target-class="true" />
-	<!-- 配置JMS连接工厂 -->  
-    <bean id="connectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory">  
-        <property name="brokerURL" value="tcp://192.168.6.15:61616"/>  
-    </bean>  
-  
-    <!-- 配置JMS模版 -->  
-    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">  
-        <property name="connectionFactory" ref="connectionFactory"/>  
-    </bean>  
-  
-    <!-- 发送消息的目的地（一个队列） -->  
-    <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">  
-        <!-- Set the Queue Name -->  
-        <constructor-arg index="0" value="HelloWorldQueue"/>  
-    </bean>
-	<!--配置gooagoo_oauth库 -->
-	<bean id="oauthSource" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource" destroy-method="shutdown">
-		<property name="dataSource"><!--内部XA数据源，与dao相连 -->
-			<bean class="org.enhydra.jdbc.standard.StandardXADataSource" destroy-method="shutdown">
-				<property name="transactionManager" ref="jotm" /><!--引入了JOTM本地实例，实现jta分布式事务管理 -->
-				<property name="driverName" value="${mysql.driver}" />
-				<property name="url" value="${sys.url}" />
-			</bean>
-		</property>
-		<property name="user" value="${sys.username}" />
-		<property name="password" value="${sys.password}" />
-	</bean>
-	<bean id="sysSqlSessionFactory"
-		class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
-		<property name="dataSource" ref="sysSource" />
+	<bean id="openSqlSessionFactory" class="com.gooagoo.common.mybatis.FetchviewSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
 		<property name="configLocations">
 			<list>
-				<value>classpath*:dao/mybatis-oauth-adapter.xml</value>
+				<value>classpath*:dao/mybatis-open.xml</value>
 			</list>
 		</property>
 	</bean>
-	<bean name="sysMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.gooagoo.authzserver.dao" />
-		<property name="sqlSessionFactoryBeanName" value="sysSqlSessionFactory" />
+	<bean name="openMapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.gooagoo.dao.generator.open" />
+		<property name="sqlSessionFactoryBeanName" value="openSqlSessionFactory" />
 	</bean>
+
 </beans>

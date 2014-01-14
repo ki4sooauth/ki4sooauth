@@ -94,14 +94,22 @@
 	</build>
 	<dependencies>
 		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.gooagoo</groupId>
 			<artifactId>gooagoo-core-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.gooagoo</groupId>
 			<artifactId>gooagoo-core-entity</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.1</version>
 		</dependency>
 
 		<dependency>
@@ -167,14 +175,7 @@
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpmime</artifactId>
-		</dependency>
+		
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>

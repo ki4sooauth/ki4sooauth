@@ -9,6 +9,12 @@ svn:wc:ra_dav:version-url
 V 110
 /svn/gooagoo/!svn/ver/18093/trunk/gooagoo-authorize/gooagoo-authorize-client/src/main/resources/app-config.xml
 END
+authConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/gooagoo/!svn/ver/24366/trunk/gooagoo-authorize/gooagoo-authorize-client/src/main/resources/authConfig.properties
+END
 mvc-config.xml
 K 25
 svn:wc:ra_dav:version-url

@@ -4,13 +4,13 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Service;
 
-import com.gooagoo.authzserver.service.IAuthIssuerService;
+import com.gooagoo.authzserver.service.IAuthService;
 
 /**
  *请求刷新token
  */
 @Service("refreshtoken")
-public class RefreshTokenServiceImpl implements IAuthIssuerService
+public class RefreshTokenServiceImpl implements IAuthService
 {
 
     @Override

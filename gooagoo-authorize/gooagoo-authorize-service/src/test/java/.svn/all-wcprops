@@ -1,5 +1,23 @@
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/gooagoo/!svn/ver/18901/trunk/gooagoo-authorize/gooagoo-authorize-service/src/test/java
+/svn/gooagoo/!svn/ver/24325/trunk/gooagoo-authorize/gooagoo-authorize-service/src/test/java
+END
+请求code
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/gooagoo/!svn/ver/24359/trunk/gooagoo-authorize/gooagoo-authorize-service/src/test/java/%E8%AF%B7%E6%B1%82code
+END
+请求access
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/gooagoo/!svn/ver/24359/trunk/gooagoo-authorize/gooagoo-authorize-service/src/test/java/%E8%AF%B7%E6%B1%82access
+END
+重定向，转发
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/gooagoo/!svn/ver/24367/trunk/gooagoo-authorize/gooagoo-authorize-service/src/test/java/%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%8C%E8%BD%AC%E5%8F%91
 END

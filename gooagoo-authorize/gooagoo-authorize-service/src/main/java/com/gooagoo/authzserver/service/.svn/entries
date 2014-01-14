@@ -1,14 +1,14 @@
 10
 
 dir
-18901
+24344
 http://192.168.3.200/svn/gooagoo/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/service
 http://192.168.3.200/svn/gooagoo
 
 
 
-2013-11-28T09:03:36.655631Z
-18667
+2014-01-14T02:57:44.731422Z
+24287
 lvhaoran
 
 
@@ -26,16 +26,16 @@ lvhaoran
 
 6546c589-0bc2-e64c-84de-df1aef16c20e
 
-IAuthIssuerService.java
+IAuthService.java
 file
 
 
 
 
-2013-11-28T03:20:33.691103Z
-a0ec8243ee830cb612d12745584a8ffd
-2013-11-28T09:03:36.655631Z
-18667
+2014-01-14T09:11:34.903070Z
+1f5481c61a07cecdc7b74e21cebad28b
+2014-01-14T02:57:44.731422Z
+24287
 lvhaoran
 
 
@@ -58,5 +58,5 @@ lvhaoran
 
 
 
-215
+209
 
