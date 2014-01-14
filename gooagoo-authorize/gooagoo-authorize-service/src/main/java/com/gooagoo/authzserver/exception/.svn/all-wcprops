@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/gooagoo/!svn/ver/24285/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/exception
+END
+RequestValidationUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/gooagoo/!svn/ver/24285/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/exception/RequestValidationUtils.java
+END
+ValidationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/gooagoo/!svn/ver/24285/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/authzserver/exception/ValidationException.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/gooagoo/!svn/ver/24280/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/api/generator/core/open
+END
+OpenAppInfoGeneratorCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/gooagoo/!svn/ver/24280/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/api/generator/core/open/OpenAppInfoGeneratorCoreService.java
+END
+OpenUserTokenRelGeneratorCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/gooagoo/!svn/ver/24280/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/api/generator/core/open/OpenUserTokenRelGeneratorCoreService.java
+END
+OauthCodeGeneratorCoreService.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/gooagoo/!svn/ver/24280/trunk/gooagoo-authorize/gooagoo-authorize-service/src/main/java/com/gooagoo/api/generator/core/open/OauthCodeGeneratorCoreService.java
+END
