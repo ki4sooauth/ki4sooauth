@@ -1,64 +1,0 @@
-10
-
-dir
-18602
-http://192.168.3.200/svn/gooagoo/trunk/gooagoo-core/gooagoo-web-core-service/src/main/java/com/gooagoo/core/business/user
-http://192.168.3.200/svn/gooagoo
-
-
-
-2013-11-27T05:39:06.936485Z
-18330
-yanglu
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6546c589-0bc2-e64c-84de-df1aef16c20e
-
-favorite
-dir
-
-app
-dir
-
-notice
-dir
-
-comment
-dir
-
-password
-dir
-
-shoppingplan
-dir
-
-cache
-dir
-
-queue
-dir
-
-manage
-dir
-
-deliveryaddress
-dir
-
-behave
-dir
-
-invoice
-dir
-

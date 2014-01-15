@@ -1,1 +1,0 @@
-http://localhost:8088/oauth/authorize.do?appMethod=code&clientId=10001&clientSecret=11&responseType=json

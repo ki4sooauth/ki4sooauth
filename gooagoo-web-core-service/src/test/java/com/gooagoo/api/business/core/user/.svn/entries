@@ -1,58 +1,0 @@
-10
-
-dir
-18602
-http://192.168.3.200/svn/gooagoo/trunk/gooagoo-core/gooagoo-web-core-service/src/test/java/com/gooagoo/api/business/core/user
-http://192.168.3.200/svn/gooagoo
-
-
-
-2013-10-17T05:50:05.546468Z
-14265
-cuijingzhi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6546c589-0bc2-e64c-84de-df1aef16c20e
-
-favorite
-dir
-
-app
-dir
-
-notice
-dir
-
-comment
-dir
-
-shoppingplan
-dir
-
-cache
-dir
-
-queue
-dir
-
-manage
-dir
-
-deliveryaddress
-dir
-
-invoice
-dir
-
